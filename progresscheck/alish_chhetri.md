@@ -21,16 +21,10 @@ Week 4 goals:
 #### Subject Programs
 
 - [Reflex](https://github.com/reflex-dev/reflex) 
-    - Python 3.8 to 3.11
-
-- [Pupil](https://github.com/pupil-labs/pupil) 
-    - Python 3.7 or newer, targeting  python 3.11
-
-- [Resoto](https://github.com/someengineering/resoto) 
-    - Python 3.11
+    - Python 3.11, uses poetry, uses pytest
 
 - [Onionshare](https://github.com/onionshare/onionshare) 
-    - Python 3.11
+    - Python 3.11, uses poetry, uses pytest
 
-- [Awesome-fastapi-projects](https://github.com/Kludex/awesome-fastapi-projects) 
-    - Python 3.11
+- [Poetry](https://github.com/python-poetry/poetry)
+    - Python, uses poetry, uses pytest
