@@ -18,13 +18,32 @@ Week 4 goals:
 
 * Divide up the implementation tasks from the whiteboard pictures for the main tool that we are going to implement
 
+Checks used for evaluating chasten on the subject programs:
+
+```text
+checks:
+  - name: "all-function-definition"
+    code: "FUNC"
+    id: "FUNC001"
+    description: "First executable line of a function, skipping over docstrings and/or comments"
+    pattern: '//FunctionDef/body/Expr[value/Constant]/following-sibling::*[1] | //FunctionDef/body[not(Expr/value/Constant)]/*[1]'
+  - name: "all-function-definition-with-docstring"
+    code: "FUNC"
+    id: "FUNC002"
+    description: "First executable line of a function with a docstring, skipping over docstrings and/or comments"
+    pattern: '//FunctionDef/body/Expr[value/Constant]/following-sibling::*[1]'
+```
+
 #### Subject Programs
 
 - [Reflex](https://github.com/reflex-dev/reflex) 
     - Python 3.11, uses poetry, uses pytest
+    - Chasten works with this program
 
 - [Onionshare](https://github.com/onionshare/onionshare) 
     - Python 3.11, uses poetry, uses pytest
+    - Chasten works with this program
 
 - [Poetry](https://github.com/python-poetry/poetry)
     - Python, uses poetry, uses pytest
+    - Chasten works with this program
