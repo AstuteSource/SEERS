@@ -18,13 +18,33 @@ Week 4 goals:
 
 * Divide up the implementation tasks from the whiteboard pictures for the main tool that we are going to implement
 
+Checks used for evaluating chasten on the subject programs:
+
+```text
+checks:
+- name: "nested-if-statements"
+  code: "IFIF"
+  id: "NESTEDIF001"
+  description: "Detects nested 'if' statements"
+  pattern: '//If/If'
+
+- name: "print-instead-of-return"
+  code: "PIR"
+  id: "OUTPUT001"
+  description: "Detects 'print' statements inside functions instead of 'return'"
+  pattern: '//FunctionDef[body//Call[func/Name/@id="print"]][not(.//Return)]'
+```
+
 #### Subject Programs
 
 - [Reflex](https://github.com/reflex-dev/reflex) 
     - Python 3.11, uses poetry, uses pytest
+    - Chasten works with this program
 
 - [Onionshare](https://github.com/onionshare/onionshare) 
     - Python 3.11, uses poetry, uses pytest
+    - Chasten works with this program
 
 - [Poetry](https://github.com/python-poetry/poetry)
     - Python, uses poetry, uses pytest
+    - Chasten works with this program
