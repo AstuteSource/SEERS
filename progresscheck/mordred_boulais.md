@@ -12,6 +12,14 @@ This week's goals are:
 
 Feb 7, 2024. Created a release of Chasten that successfully pushed to PyPI.
 
+Feb 12, 2024. Identified 3 potential projects for use.
+
+<https://github.com/dmyersturnbull/tyrannosaurus>
+
+<https://github.com/obervinov/messages-package>
+
+<https://github.com/Constantin-Hentgen/Ctrl_Alt_Discuss>
+
 # Week 2 (Feb 12 2024 - Feb 16 2024)
 
 # Week 3 (Feb 19 2024 - Feb 23 2024)
