@@ -22,16 +22,17 @@ Checks used for evaluating chasten on the subject programs:
 
 ```text
 checks:
-  - name: "all-function-definition"
-    code: "FUNC"
-    id: "FUNC001"
-    description: "First executable line of a function, skipping over docstrings and/or comments"
-    pattern: '//FunctionDef/body/Expr[value/Constant]/following-sibling::*[1] | //FunctionDef/body[not(Expr/value/Constant)]/*[1]'
-  - name: "all-function-definition-with-docstring"
-    code: "FUNC"
-    id: "FUNC002"
-    description: "First executable line of a function with a docstring, skipping over docstrings and/or comments"
-    pattern: '//FunctionDef/body/Expr[value/Constant]/following-sibling::*[1]'
+- name: "nested-if-statements"
+  code: "IFIF"
+  id: "NESTEDIF001"
+  description: "Detects nested 'if' statements"
+  pattern: '//If/If'
+
+- name: "print-instead-of-return"
+  code: "PIR"
+  id: "OUTPUT001"
+  description: "Detects 'print' statements inside functions instead of 'return'"
+  pattern: '//FunctionDef[body//Call[func/Name/@id="print"]][not(.//Return)]'
 ```
 
 #### Subject Programs
