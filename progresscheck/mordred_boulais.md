@@ -22,6 +22,15 @@ Feb 12, 2024. Identified 3 potential projects for use.
 
 # Week 2 (Feb 12 2024 - Feb 16 2024)
 
+This week's goals are:
+- Document and define Python programming antipatterns in the SEERS documentation
+(Antipattern team)
+- Create a script that can take in the output files from antipattern and mutation analysis
+and process them into a json file (Script team)
+- Brainstorm tool names
+
+I am on script team.
+
 # Week 3 (Feb 19 2024 - Feb 23 2024)
 
 # Week 4 (Feb 26 2024 - Mar 1 2024)
