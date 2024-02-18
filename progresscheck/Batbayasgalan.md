@@ -19,6 +19,8 @@ https://github.com/sphinx-toolbox/sphinx-pyprojecto
 # Goal   
 Document and define Python programming antipatterns in the SEERS documentation 
 
+Markdown table for anti patterns, It is just a common anti patterns trying looking for more.
+
 | #   | Name        |  Definition |         
 | --- | ----------- | ------------------------------------------------------------------| 
 | 1   |   is_void          | Whether the return value of the function is None or not |
@@ -46,4 +48,4 @@ Document and define Python programming antipatterns in the SEERS documentation
 | 23  |  deep_nesting                | The number of levels of nesting within loops, conditional statements, or function calls in the code.|
 | 24  |  Polluting_namespace         |Importing all symbols from a module using `import *`, leading to namespace pollution and potential confusion about symbol origins.|
 | 25  |  Misuse_of_List_Comprehensions|Overusing or misusing list comprehensions, leading to reduced readability, complexity, or performance issues.|
-
+ 
