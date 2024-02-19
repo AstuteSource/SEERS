@@ -49,7 +49,12 @@ if __name__=="__main__":
         install_package('mutmut')
 
     #Step 2: Execute chasten and save the result
-        execute_chasten()
+        chasten_result = execute_chasten()
 
     #Step 3: Run mutmut and save its result
-        execute_mutmut()
+        mutmut_result = execute_mutmut()
+
+    #Step 4: Save results in a file
+        save_results(chasten_result,mutmut_result,'combined_result.json')
+        print("Code analysis and mutation complete!")
+        print("Result is stored in file name combined_result.json")
