@@ -1,5 +1,6 @@
 """Program to execute and store Chasten and Mutmut analysis for lazytracker"""
 
+# TODO: add cli
 import subprocess
 #Resource: https://docs.python.org/3/library/subprocess.html
 import json
@@ -22,11 +23,13 @@ def check_installation(package)->bool:
 def execute_chasten():
     """Execute the chasten analyze command for lazytracker."""
     # Resource: https://github.com/AstuteSource/chasten/tree/chastenversion
+    # TODO: will be replaced by our antipattern checks
     chasten_config_path = os.getcwd() + '/chasten-configuration'
+    # TODO: update to general use/take input
     search_path = os.getcwd() + '/lazytracker/subject-data'
     save_directory = os.path.abspath(os.path.dirname(__file__))  # Save in the script's directory
     save_file_path = os.path.join(save_directory, 'combined_result.json')
-
+        
     chasten_command = [
         'chasten', 'analyze', 'lazytracker',
         '--config', chasten_config_path,
@@ -34,8 +37,11 @@ def execute_chasten():
         '--save-directory', save_directory,
         '--save'
     ]
-    
-    subprocess.run(chasten_command, check=True)
+
+    try:
+        subprocess.run(chasten_command, check=True)
+    except subprocess.CalledProcessError:
+        print('Chasten check(s) failed, file will save.')
     return save_file_path
 
 def execute_mutmut():
