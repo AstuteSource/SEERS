@@ -13,7 +13,7 @@ def check_installation(package)->bool:
     """Check if the specified Python package is installed."""
     try:
         subprocess.run([package, '--version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True )
-        # I learned to use a pip with the subprocess module here: https://stackoverflow.com/questions/13332268/how-to-use-subprocess-command-with-pipes
+        # I learned to use a PIPE with the subprocess module here: https://stackoverflow.com/questions/13332268/how-to-use-subprocess-command-with-pipes
     except subprocess.CalledProcessError:
         #  The package isn't installed, then return false: https://stackoverflow.com/questions/32942207/python-subprocess-calledprocesserror-command-returned-non-zero-exit-s
         return False
@@ -35,6 +35,7 @@ def execute_chasten():
         '--save'
     ]
     subprocess.run(chasten_command, check=True)
+    return save_file_path
 
 def execute_mutmut():
     """Execute the mutmut run command."""
