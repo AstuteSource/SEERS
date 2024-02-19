@@ -31,6 +31,10 @@ and process them into a json file (Script team)
 
 I am on script team.
 
+Progress:
+- Testing mutatest as a potential option
+- Testing/modifying draft script
+
 # Week 3 (Feb 19 2024 - Feb 23 2024)
 
 # Week 4 (Feb 26 2024 - Mar 1 2024)
