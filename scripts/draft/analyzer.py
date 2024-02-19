@@ -1,6 +1,7 @@
 """Program to execute and store Chasten and Mutmut analysis for lazytracker"""
 
 import subprocess
+#Resource: https://docs.python.org/3/library/subprocess.html
 import json
 
 def install_package(package):
@@ -10,13 +11,16 @@ def install_package(package):
 def check_installation(package)->bool:
     """Check if the specified Python package is installed."""
     try:
-        subprocess.run([package, '--version'], stdout=subprocess.PIPE. stderr=subprocess.PIPE, check=True )
+        subprocess.run([package, '--version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True )
+        # I learned to use a pip with the subprocess module here: https://stackoverflow.com/questions/13332268/how-to-use-subprocess-command-with-pipes
     except subprocess.CalledProcessError:
+        #  The package isn't installed, then return false: https://stackoverflow.com/questions/32942207/python-subprocess-calledprocesserror-command-returned-non-zero-exit-s
         return False
     return True
 
 def execute_chasten():
     """Execute the chasten analyze command for lazytracker."""
+    # Resource: https://github.com/AstuteSource/chasten/tree/chastenversion
     chasten_command = [
         'chasten', 'analyze', 'lazytracker',
         '--config', '<path to the chasten-configuration/ directory>',
@@ -38,7 +42,8 @@ def save_results(chasten_result, mutmut_result, save_file):
         'mutmut_result': mutmut_result
     }
     with open(save_file, 'w') as f:
-        json.dump(result,f,indent=2) 
+        json.dump(result,f,indent=2).splitlines()
+        # Need a custom pretty-print, so I learned from this resource: https://stackoverflow.com/questions/63949556/how-to-custom-indent-json-dump
 
 if __name__=="__main__":
     #Step 1: Check and install chasten and mutmut if not installed
