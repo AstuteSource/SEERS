@@ -150,3 +150,41 @@ checks:
 
     😂 All checks passed. Elapsed Time: 14.058250904083252 seconds
     ```
+
+
+## Week 5
+
+Table 5 from Zhu:
+
+| #   | Name                 | Definition                                                                                  |
+|-----|----------------------|---------------------------------------------------------------------------------------------|
+| 1   | is_void              | Whether the return value of the method is void or not                                       |
+| 2   | non_void_percent     | (class-level) The percent of non-void methods in the class                                   |
+| 3   | getter_percentage    | The percentage of getter methods in the class                                               |
+| 4   | is_public            | Whether the method is public or not                                                         |
+| 5   | is_static            | Whether the method is static or not                                                         |
+| 6   | is_nested            | (class-level) Whether the method is located in a nested class or not                         |
+| 7   | nested_depth         | The maximum number of nested depth (MDN from Section 2.2)                                    |
+| 8   | (cond)               | The number of conditions (if, if-else and switch) in the method                              |
+| 9   | (cond(cond))         | The number of nested conditions (e.g.,if{if{}}) in the method                                |
+| 10  | (cond(loop))         | The number of nested condition-loops (e.g.,if{for{}}) in the method                           |
+| 11  | (loop)               | The number of loops (for, while and do-while) in the method (LOOP from Section 2.2)          |
+| 12  | (loop(cond))         | The number of nested loop-conditions (e.g.,for{if{}}) in the method.                          |
+| 13  | (loop(loop))         | The number of nested loop-conditions (e.g.,for{for{}}) in the method.                         |
+| 14  | method_length        | The number of lines of code in the method (NLOC from Section 2.2)                             |
+| 15  | direct_test_no.      | The number of test methods directly invoking the method under test (production code)         |
+| 16  | test_distance        | The shortest method call sequence required to invoke the method (production code) by test methods |
+| 17  | assertion_no.        | The number of assertions in direct tests                                                   |
+| 18  | assertion-McCabe_Ratio | The ratio between the total number of assertions in direct tests and the McCabe Cyclomatic complexity |
+| 19  | assertion_density    | The ratio between the total number of assertions in direct tests and the lines |
+
+
+My anti-pattern table:
+
+| #   | Name                           | Definition                                                                                          |
+|-----|--------------------------------|-----------------------------------------------------------------------------------------------------|
+| 1   | wildcard imports               | An import statement in the pattern of `import MODULE from *`                                        |
+| 2   | boolean comparison             | Using `=` or `==` operators to compare boolean values or None values                                |
+| 3   | return in `__init__`           | Using an explicit return statement in the `__init__` function                                       |
+| 4   | No exception type(s)           | A function that uses `try` and `except` does not define the exception type                          |
+| 5   | function annotations           | A function does not explicitly annotate arguments/parameters or the expected output                 |
