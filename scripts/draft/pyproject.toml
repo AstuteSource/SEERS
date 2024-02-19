@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "analyzer"
+version = "0.0.0"
+description = "Chasten and Mutation Analysis"
+authors = ["Jaclyn Pham", "Daniel Bekele", "Mordred Boulais"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rich = "^13.4.2"
+typer = {extras = ["all"], version = "^0.9.0"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
