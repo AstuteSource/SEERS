@@ -30,3 +30,26 @@ def execute_mutmut():
     """Execute the mutmut run command."""
     mutmut_command = ['mutmut','run']
     subprocess.run(mutmut_command,check=True)
+
+def save_results(chasten_result, mutmut_result, save_file):
+    """Save chasten and mutmut results in a JSON file"""
+    result = {
+        'chasten_result': chasten_result,
+        'mutmut_result': mutmut_result
+    }
+    with open(save_file, 'w') as f:
+        json.dump(result,f,indent=2) 
+
+if __name__=="__main__":
+    #Step 1: Check and install chasten and mutmut if not installed
+    if not check_installation('chasten'):
+        install_package('chasten')
+
+    if not check_installation('mutmut'):
+        install_package('mutmut')
+
+    #Step 2: Execute chasten and save the result
+        execute_chasten()
+
+    #Step 3: Run mutmut and save its result
+        execute_mutmut()
