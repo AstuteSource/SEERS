@@ -1,0 +1,23 @@
+{
+  "configuration": {
+    "chastenversion": "1.0.0",
+    "debuglevel": "ERROR",
+    "debugdestination": "CONSOLE",
+    "projectname": "lazytracker",
+    "configdirectory": "C:\\Users\\Exalt\\cmpsci\\SEERS\\chasten-configuration",
+    "searchpath": "C:\\Users\\Exalt\\cmpsci\\SEERS\\lazytracker\\subject-data",
+    "fileuuid": "f27410b9d18e438382fc83db4f838e82",
+    "datetime": "2024-02-19 13:58:48.045490",
+    "checkinclude": {
+      "attribute": "",
+      "value": "",
+      "confidence": 0
+    },
+    "checkexclude": {
+      "attribute": "",
+      "value": "",
+      "confidence": 0
+    }
+  },
+  "sources": []
+}
