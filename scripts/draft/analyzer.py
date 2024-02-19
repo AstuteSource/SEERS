@@ -3,6 +3,7 @@
 import subprocess
 #Resource: https://docs.python.org/3/library/subprocess.html
 import json
+import os
 
 def install_package(package):
     """Install the specified Python package using pip."""
@@ -21,11 +22,16 @@ def check_installation(package)->bool:
 def execute_chasten():
     """Execute the chasten analyze command for lazytracker."""
     # Resource: https://github.com/AstuteSource/chasten/tree/chastenversion
+    chasten_config_path = '/Users/jaclynpham/CMPSCI203/chasten-configuration'
+    search_path = '/Users/jaclynpham/CMPSCI203/subject-data/lazytracker'
+    save_directory = os.path.abspath(os.path.dirname(__file__))  # Save in the script's directory
+    save_file_path = os.path.join(save_directory, 'combined_result.json')
+
     chasten_command = [
         'chasten', 'analyze', 'lazytracker',
-        '--config', '<path to the chasten-configuration/ directory>',
-        '--search-path', '<path to the lazytracker/ directory>',
-        '--save-directory', '<path to the subject-data/lazytracker/ directory>',
+        '--config', chasten_config_path,
+        '--search-path', search_path,
+        '--save-directory', save_directory,
         '--save'
     ]
     subprocess.run(chasten_command, check=True)
