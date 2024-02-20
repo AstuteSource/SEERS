@@ -60,9 +60,12 @@ def save_results(chasten_result, mutmut_result, save_file):
         # Need a custom pretty-print, so I learned from this resource: https://stackoverflow.com/questions/63949556/how-to-custom-indent-json-dump
 
 
-if __name__ == "__main__":
+
+@cli.command()
+def analyzer(
     search_path: Path = os.getcwd() + '/lazytracker/subject-data',
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
+):
     #Step 1: Check and install chasten and mutmut if not installed
     # Save in the script's directory default
     save_file_path = os.path.join(save_directory, 'combined_result.json')
@@ -83,30 +86,3 @@ if __name__ == "__main__":
         save_results(chasten_result,mutmut_result,'combined_result.json')
         print("Code analysis and mutation complete!")
         print("Result is stored in file name combined_result.json")
-
-
-#@cli.command()
-#def analyzer(
-#    search_path: Path = os.getcwd() + '/lazytracker/subject-data',
-#    save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
-#):
-    #Step 1: Check and install chasten and mutmut if not installed
-    # Save in the script's directory default
-#    save_file_path = os.path.join(save_directory, 'combined_result.json')
-
-#    if not check_installation('chasten'):
-#        install_package('chasten')
-
- #   if not check_installation('mutmut'):
-#        install_package('mutmut')
-
-    #Step 2: Execute chasten and save the result
-#        chasten_result = execute_chasten(search_path, save_directory, save_file_path)
-
-    #Step 3: Run mutmut and save its result
-#        mutmut_result = execute_mutmut(search_path)
-
-    #Step 4: Save results in a file
-#        save_results(chasten_result,mutmut_result,'combined_result.json')
-#        print("Code analysis and mutation complete!")
-#       print("Result is stored in file name combined_result.json")
