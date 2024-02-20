@@ -46,8 +46,14 @@ def execute_chasten(search_path, save_directory, save_file_path):
 
 def execute_mutmut(search_path):
     """Execute the mutmut run command."""
-    mutmut_command = ['mutmut','run', '--paths-to-mutate', search_path]
-    subprocess.run(mutmut_command,check=True)
+    subprocess.run(['mutmut','run'],stdout=subprocess.DEVNULL)
+    junit = subprocess.run(['mutmut','junitxml'],capture_output=True,text=True,check=True)
+    with open("mutation.xml", "x") as f:
+        f.write(junit.stdout)
+    json = subprocess.run(['npx','junit2json','mutation.xml'],capture_output=True,text=True,check=True)
+    os.remove("mutation.xml")
+    return json.stdout
+
 
 def save_results(chasten_result, mutmut_result, save_file):
     """Save chasten and mutmut results in a JSON file"""
