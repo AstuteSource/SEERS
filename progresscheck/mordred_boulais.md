@@ -35,6 +35,11 @@ Progress:
 - Testing mutatest as a potential option
 - Testing/modifying draft script
 
+Feb 21.
+- Script draft completed.
+- pyproject.toml file completed.
+Awaiting mutation team and antipattern team contributions.
+
 # Week 3 (Feb 19 2024 - Feb 23 2024)
 
 # Week 4 (Feb 26 2024 - Mar 1 2024)
