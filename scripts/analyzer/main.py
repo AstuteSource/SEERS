@@ -64,7 +64,7 @@ def save_results(chasten_result, mutmut_result, save_file):
 
 @cli.command()
 def analyzer(
-    search_path: Path = os.getcwd() + '/lazytracker/subject-data',
+    search_path: Path = os.getcwd() + '/lazytracker',
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
 ):
     console = Console()
