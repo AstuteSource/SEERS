@@ -62,7 +62,7 @@ def save_results(chasten_result, mutmut_result, save_file):
         'mutmut_result': mutmut_result
     }
     with open(save_file, 'w') as f:
-        json.dump(result,f,indent=2).splitlines()
+        json.dump(result,f,indent=2)
         # Need a custom pretty-print, so I learned from this resource: https://stackoverflow.com/questions/63949556/how-to-custom-indent-json-dump
 
 @cli.command()
