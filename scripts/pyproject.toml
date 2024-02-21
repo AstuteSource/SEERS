@@ -4,6 +4,9 @@ version = "0.0.0"
 description = "Chasten and Mutation Analysis"
 authors = ["Jaclyn Pham", "Daniel Bekele", "Mordred Boulais"]
 
+[tool.poetry.scripts]
+analyzer = "analyzer.main:cli"
+
 [tool.poetry.dependencies]
 python = "^3.11"
 rich = "^13.4.2"

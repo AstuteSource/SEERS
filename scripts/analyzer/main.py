@@ -5,9 +5,10 @@ import subprocess
 #Resource: https://docs.python.org/3/library/subprocess.html
 import json
 import os
+from rich.console import Console
 from pathlib import Path
 
-cli = typer.Typer(no_args_is_help=True)
+cli = typer.Typer()
 
 def install_package(package):
     """Install the specified Python package using pip."""
@@ -65,11 +66,14 @@ def save_results(chasten_result, mutmut_result, save_file):
         json.dump(result,f,indent=2)
         # Need a custom pretty-print, so I learned from this resource: https://stackoverflow.com/questions/63949556/how-to-custom-indent-json-dump
 
+
+
 @cli.command()
 def analyzer(
-    search_path: Path = os.getcwd() + '/lazytracker/subject-data',
+    search_path: Path = os.getcwd() + '/lazytracker',
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
 ):
+    console = Console()
     #Step 1: Check and install chasten and mutmut if not installed
     # Save in the script's directory default
     save_file_path = os.path.join(save_directory, 'combined_result.json')
@@ -88,5 +92,5 @@ def analyzer(
 
     #Step 4: Save results in a file
         save_results(chasten_result,mutmut_result,'combined_result.json')
-        print("Code analysis and mutation complete!")
-        print("Result is stored in file name combined_result.json")
+        console.print("Code analysis and mutation complete!")
+        console.print("Result is stored in file name combined_result.json")
