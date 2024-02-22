@@ -94,6 +94,35 @@ I acknowledge that my knowledge of this field is very limited, and I would like 
 
 # Week 2 (Feb 12 2024 - Feb 16 2024)
 
+## Weekly Goals
+
+This week's goals are:
+
+- Develop a simple script to execute Chasten and Mutmut and dump them in a JSON file
+
+### Progress Notes
+
+#### Development Tasks
+
+I created a simple program `analyzer` for the purpose, the program now can run Chasten but still has trouble with Mutmut
+
+
 # Week 3 (Feb 19 2024 - Feb 23 2024)
 
+## Weekly Goals
+
+This week's goals are:
+
+- Fixing output problems and JSON output file
+- Integrate command-line interface command into the tool
+- Work on dependencies management
+
+### Progress Notes
+
+#### Development Tasks
+
+1. `Analyzer` now successfully runs on `lazy tracker` based on Caleb's solutions
+2. Worked with Mordred to implement cli, now can execute command `poetry run analyzer`
+3. Poetry dependency management, troubleshooting in `pyproject.toml` and `poetry.lock`, add `.gitignore` file to tackle with npm
+   
 # Week 4 (Feb 26 2024 - Mar 1 2024)
