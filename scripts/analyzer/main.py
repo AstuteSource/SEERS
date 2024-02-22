@@ -41,8 +41,8 @@ def execute_chasten(search_path, save_directory, save_file_path, chasten_config_
     ]
     subprocess.run(chasten_command)
     json_name = max(glob('*'), key=os.path.getctime)
-    with open(json_name, 'r') as f:
-        file = f.read()
+    with open(json_name) as f:
+        file = json.load(f)
     os.remove(json_name)
     return file
 
@@ -53,9 +53,9 @@ def execute_mutmut(search_path):
         junit = subprocess.run(['mutmut','junitxml'],capture_output=True,text=True,check=True)
         with open("mutation.xml", "x") as f:
             f.write(junit.stdout)
-        json = subprocess.run(['npx','junit2json','mutation.xml'],capture_output=True,text=True,check=True)
+        result = subprocess.run(['npx','junit2json','mutation.xml'],capture_output=True,text=True,check=True)
         os.remove("mutation.xml")
-    return json.stdout
+    return json.loads(result.stdout)
 
 
 def save_results(chasten_result, mutmut_result, save_file):
