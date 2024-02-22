@@ -54,7 +54,7 @@ def execute_chasten(search_path, save_directory, save_file_path, chasten_config_
         "--save",
     ]
     subprocess.run(chasten_command)
-    json_name = max(glob("*"), key=os.path.getctime)
+    json_name = max(glob("*.json"), key=os.path.getctime)
     with open(json_name) as f:
         file = json.load(f)
     os.remove(json_name)
@@ -92,7 +92,7 @@ def save_results(chasten_result, mutmut_result, save_file):
 def analyzer(
     search_path: Path = os.getcwd() + "/demo/lazytracker",
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
-    chasten_config_path: str = os.path.expanduser("~") + "/.config/chasten",
+    chasten_config_path: str = os.getcwd() + "/Config",
 ):
     console = Console()
     # Step 1: Check and install chasten and mutmut if not installed

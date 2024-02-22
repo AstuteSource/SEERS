@@ -5,10 +5,10 @@
       "debuglevel": "ERROR",
       "debugdestination": "CONSOLE",
       "projectname": "lazytracker",
-      "configdirectory": "/home/caleb/.config/chasten",
+      "configdirectory": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/Config",
       "searchpath": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/lazytracker",
-      "fileuuid": "a5566faabf7d469a9e610256b64858ad",
-      "datetime": "2024-02-21 21:52:12.288634",
+      "fileuuid": "662ef784872a4b03bdbbc27b409f1010",
+      "datetime": "2024-02-21 22:11:22.422523",
       "checkinclude": {
         "attribute": "",
         "value": "",
