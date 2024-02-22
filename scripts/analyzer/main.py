@@ -92,7 +92,7 @@ def save_results(chasten_result, mutmut_result, save_file):
 def analyzer(
     search_path: Path = os.getcwd() + "/demo/lazytracker",
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
-    chasten_config_path: str = "/home/caleb/.config/chasten",
+    chasten_config_path: str = os.path.expanduser("~") + "/.config/chasten",
 ):
     console = Console()
     # Step 1: Check and install chasten and mutmut if not installed
