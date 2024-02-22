@@ -2,7 +2,7 @@ checks:
   - name: "class-definition"
     code: "CDF"
     id: "C001"
-    description: "place holder"
+    description: "Ensure the presence of class definitions in the codebase."
     pattern: './/ClassDef'
     count:
       min: 1
@@ -10,7 +10,7 @@ checks:
   - name: "all-function-definition"
     code: "AFD"
     id: "F001"
-    description: "place holder"
+    description: "Ensure the presence of function definitions in the codebase."
     pattern: './/FunctionDef'
     count:
       min: 1
@@ -18,7 +18,7 @@ checks:
   - name: "dummy-test-non-test-function-definition"
     code: "NTF"
     id: "F002"
-    description: "place holder"
+    description: "Ensure the presence of non-test function definitions in the codebase."
     pattern: './/FunctionDef[not(contains(@name, "test_"))]'
     count:
       min: 1
@@ -26,7 +26,7 @@ checks:
   - name: "dummy-test-single-nested-if"
     code: "SNI"
     id: "CL001"
-    description: "place holder"
+    description: "Ensure the presence of single nested 'if' statements within function bodies."
     pattern: './/FunctionDef/body//If'
     count:
       min: 1
@@ -34,7 +34,7 @@ checks:
   - name: "dummy-test-double-nested-if"
     code: "DNI"
     id: "CL002"
-    description: "place holder"
+    description: "Ensure the presence of double nested 'if' statements within function bodies."
     pattern: './/FunctionDef/body//If[ancestor::If and not(parent::orelse)]'
     count:
       min: 1
@@ -42,7 +42,7 @@ checks:
   - name: "import-from-star"
     code: "IMP"
     id: "IMP001"
-    description: "An import statement in the pattern of import MODULE from *"
+    description: "An import statement in the pattern of from MODULE Import *"
     pattern: '//ImportFrom/keyword[@name="from"]'
     count:
       min: 1
@@ -138,7 +138,7 @@ checks:
   - name: "Nested Depth (Set value)"
     code: "ND"
     id: "F001"
-    description: "place holder"
+    description: "Ensure the depth of nesting within functions does not exceed the set value."
     pattern: '//FunctionDef//FunctionDef/ancestor::*'
     count:
       min: 1
@@ -146,7 +146,7 @@ checks:
   - name: "Number of conditions (if, if-else, and switch) in a Function"
     code: "#Cond"
     id: "F002"
-    description: "place holder"
+    description: "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
     pattern: '//FunctionDef//If/following-sibling::If | //FunctionDef//If/following-sibling::Elif | //FunctionDef//If/following-sibling::Else'
     count:
       min: 1
@@ -154,7 +154,7 @@ checks:
   - name: "The number of nested conditions (e.g., if{if{}}) in a Function"
     code: "IFIF"
     id: "CL001"
-    description: "place holder"
+    description: "Ensure there is at least one nested condition (e.g., if{if{}}) in a function."
     pattern: '//FunctionDef//If/descendant::If'
     count:
       min: 1
@@ -162,15 +162,15 @@ checks:
   - name: "The number of nested condition-loops (e.g., if{for{}}) in a Function"
     code: "IFOR"
     id: "CL002"
-    description: "place holder"
-    pattern: '//FunctionDef//For//if'
+    description: "Ensure the presence of nested condition-loops (e.g., if{for{}}) in a function."
+    pattern: '//FunctionDef//if//For'
     count:
       min: 1
       max: 10
   - name: "The number of nested loop-conditions (e.g., for{if{}}) in a Function"
     code: "VFF"
     id: "C002" 
-    description: "place holder"
+    description: "Ensure the presence of nested loop-conditions (e.g., for{if{}}) in a function."
     pattern: '//FunctionDef[//(If/following-sibling::For | For/following-sibling::If)]'
     count:
       min: 1
@@ -178,7 +178,7 @@ checks:
   - name: "The number of nested loop-conditions (e.g., for{for{}}) in a Function"
     code: "FF"
     id: "F001"
-    description: "place holder"
+    description: "Ensure the presence of nested loop-conditions (e.g., for{for{}}) in a function."
     pattern: '//FunctionDef//For[.//For]'
     count:
       min: 1
@@ -186,7 +186,7 @@ checks:
   - name : "number-of-assertions"
     code: "NOA"
     id: "NOA001"
-    description: "place holder"
+    description: "Ensure the presence of assertions within function bodies of type 'str'."
     pattern : "//FunctionDef[@type='str']/body/Assert"
     count: 
       min: 1
@@ -194,7 +194,7 @@ checks:
   - name : "count-test-method-lines"
     code: "LOF"
     id: "LOF001"
-    description: "place holder"
+    description: "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     pattern : "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*"
     count: 
       min: 1
@@ -202,7 +202,7 @@ checks:
   - name: "count-method-lines"
     code: "CML"
     id: "CML001"
-    description: "place holder"
+    description: "Count the lines within methods in functions of type 'str'."
     pattern: "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return"
     count: 
       min: 1
@@ -210,7 +210,7 @@ checks:
   - name : "test-methods-invoking-method"
     code: "TMIM"
     id: "TMIM001"
-    description: "place holder"
+    description: "Identify test methods invoking specific methods."
     pattern : "//Assert[count(.//Call[func/Name/@id='test_function']) > 0]"
     count: 
       min: 1
