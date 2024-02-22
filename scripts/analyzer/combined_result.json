@@ -7,8 +7,8 @@
       "projectname": "lazytracker",
       "configdirectory": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/Config",
       "searchpath": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/lazytracker",
-      "fileuuid": "b8f8c8133ae141229653ca5b19e17589",
-      "datetime": "2024-02-21 22:40:19.044756",
+      "fileuuid": "b0ae5c62a71f40da8e3abb00caae3a46",
+      "datetime": "2024-02-22 15:31:33.312250",
       "checkinclude": {
         "attribute": "",
         "value": "",
@@ -26,7 +26,7 @@
         "check": {
           "id": "C001",
           "name": "class-definition",
-          "description": "place holder",
+          "description": "Ensure the presence of class definitions in the codebase.",
           "min": 1,
           "max": 10,
           "pattern": ".//ClassDef",
@@ -46,7 +46,7 @@
         "check": {
           "id": "F001",
           "name": "all-function-definition",
-          "description": "place holder",
+          "description": "Ensure the presence of function definitions in the codebase.",
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef",
@@ -96,7 +96,7 @@
         "check": {
           "id": "F001",
           "name": "all-function-definition",
-          "description": "place holder",
+          "description": "Ensure the presence of function definitions in the codebase.",
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef",
@@ -122,7 +122,7 @@
         "check": {
           "id": "F001",
           "name": "all-function-definition",
-          "description": "place holder",
+          "description": "Ensure the presence of function definitions in the codebase.",
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef",
@@ -172,7 +172,7 @@
         "check": {
           "id": "F001",
           "name": "all-function-definition",
-          "description": "place holder",
+          "description": "Ensure the presence of function definitions in the codebase.",
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef",
@@ -204,7 +204,7 @@
         "check": {
           "id": "F002",
           "name": "dummy-test-non-test-function-definition",
-          "description": "place holder",
+          "description": "Ensure the presence of non-test function definitions in the codebase.",
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
@@ -230,7 +230,7 @@
         "check": {
           "id": "F002",
           "name": "dummy-test-non-test-function-definition",
-          "description": "place holder",
+          "description": "Ensure the presence of non-test function definitions in the codebase.",
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
@@ -280,7 +280,7 @@
         "check": {
           "id": "F002",
           "name": "dummy-test-non-test-function-definition",
-          "description": "place holder",
+          "description": "Ensure the presence of non-test function definitions in the codebase.",
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
@@ -312,7 +312,7 @@
         "check": {
           "id": "CL001",
           "name": "dummy-test-single-nested-if",
-          "description": "place holder",
+          "description": "Ensure the presence of single nested 'if' statements within function bodies.",
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef/body//If",
@@ -332,7 +332,7 @@
         "check": {
           "id": "CL001",
           "name": "dummy-test-single-nested-if",
-          "description": "place holder",
+          "description": "Ensure the presence of single nested 'if' statements within function bodies.",
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef/body//If",
@@ -710,7 +710,7 @@
         "check": {
           "id": "F001",
           "name": "Nested Depth (Set value)",
-          "description": "place holder",
+          "description": "Ensure the depth of nesting within functions does not exceed the set value.",
           "min": 1,
           "max": 10,
           "pattern": "//FunctionDef//FunctionDef/ancestor::*",
@@ -730,7 +730,7 @@
         "check": {
           "id": "F001",
           "name": "Nested Depth (Set value)",
-          "description": "place holder",
+          "description": "Ensure the depth of nesting within functions does not exceed the set value.",
           "min": 1,
           "max": 10,
           "pattern": "//FunctionDef//FunctionDef/ancestor::*",
@@ -756,7 +756,7 @@
         "check": {
           "id": "F001",
           "name": "Nested Depth (Set value)",
-          "description": "place holder",
+          "description": "Ensure the depth of nesting within functions does not exceed the set value.",
           "min": 1,
           "max": 10,
           "pattern": "//FunctionDef//FunctionDef/ancestor::*",
@@ -782,7 +782,7 @@
         "check": {
           "id": "F002",
           "name": "Number of conditions (if, if-else, and switch) in a Function",
-          "description": "place holder",
+          "description": "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits.",
           "min": 1,
           "max": 10,
           "pattern": "//FunctionDef//If/following-sibling::If | //FunctionDef//If/following-sibling::Elif | //FunctionDef//If/following-sibling::Else",
@@ -826,7 +826,7 @@
         "check": {
           "id": "CL001",
           "name": "The number of nested conditions (e.g., if{if{}}) in a Function",
-          "description": "place holder",
+          "description": "Ensure there is at least one nested condition (e.g., if{if{}}) in a function.",
           "min": 1,
           "max": 1,
           "pattern": "//FunctionDef//If/descendant::If",
@@ -852,7 +852,7 @@
         "check": {
           "id": "NOA001",
           "name": "number-of-assertions",
-          "description": "place holder",
+          "description": "Ensure the presence of assertions within function bodies of type 'str'.",
           "min": 1,
           "max": 10,
           "pattern": "//FunctionDef[@type='str']/body/Assert",
@@ -890,7 +890,7 @@
         "check": {
           "id": "LOF001",
           "name": "count-test-method-lines",
-          "description": "place holder",
+          "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'.",
           "min": 1,
           "max": 10,
           "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
@@ -1036,7 +1036,7 @@
         "check": {
           "id": "LOF001",
           "name": "count-test-method-lines",
-          "description": "place holder",
+          "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'.",
           "min": 1,
           "max": 10,
           "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
@@ -1080,7 +1080,7 @@
         "check": {
           "id": "CML001",
           "name": "count-method-lines",
-          "description": "place holder",
+          "description": "Count the lines within methods in functions of type 'str'.",
           "min": 1,
           "max": 10,
           "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
@@ -1238,7 +1238,7 @@
         "check": {
           "id": "CML001",
           "name": "count-method-lines",
-          "description": "place holder",
+          "description": "Count the lines within methods in functions of type 'str'.",
           "min": 1,
           "max": 10,
           "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
@@ -1282,7 +1282,7 @@
         "check": {
           "id": "CML001",
           "name": "count-method-lines",
-          "description": "place holder",
+          "description": "Count the lines within methods in functions of type 'str'.",
           "min": 1,
           "max": 10,
           "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
@@ -1386,7 +1386,7 @@
         "check": {
           "id": "CML001",
           "name": "count-method-lines",
-          "description": "place holder",
+          "description": "Count the lines within methods in functions of type 'str'.",
           "min": 1,
           "max": 10,
           "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
@@ -1448,7 +1448,7 @@
         "check": {
           "id": "TMIM001",
           "name": "test-methods-invoking-method",
-          "description": "place holder",
+          "description": "Identify test methods invoking specific methods.",
           "min": 1,
           "max": 10,
           "pattern": "//Assert[count(.//Call[func/Name/@id='test_function']) > 0]",
