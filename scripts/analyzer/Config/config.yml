@@ -1,0 +1,139 @@
+checks:
+  - name: "class-definition"
+    code: "CDF"
+    id: "C001"
+    pattern: './/ClassDef'
+    count:
+      min: 1
+      max: null
+  - name: "all-function-definition"
+    code: "AFD"
+    id: "F001"
+    pattern: './/FunctionDef'
+    count:
+      min: 1
+      max: null
+  - name: "dummy-test-non-test-function-definition"
+    code: "NTF"
+    id: "F002"
+    pattern: './/FunctionDef[not(contains(@name, "test_"))]'
+    count:
+      min: null
+      max: null
+  - name: "dummy-test-single-nested-if"
+    code: "SNI"
+    id: "CL001"
+    pattern: './/FunctionDef/body//If'
+    count:
+      min: null
+      max: null
+  - name: "dummy-test-double-nested-if"
+    code: "DNI"
+    id: "CL002"
+    pattern: './/FunctionDef/body//If[ancestor::If and not(parent::orelse)]'
+    count:
+      min: null
+      max: null
+  - name: "import-from-star"
+    code: "IMP"
+    id: "IMP001"
+    description: "An import statement in the pattern of import MODULE from *"
+    pattern: '//ImportFrom/keyword[@name="from"]'
+    count:
+      min: 1
+      max: 100
+  - name: "explicit-return-in-init"
+    code: "RET"
+    id: "RET001"
+    description: "Using an explicit return statement in the __init__ function"
+    pattern: '//FunctionDef[@name="init"]/body/Return'
+    count:
+      min: 1
+      max: 10
+  - name: "none-comparison"
+    code: "NONE"
+    id: "NONE001"
+    description: "Using != None to check for non-None values"
+    pattern: '//Compare/left[@id="input_dirs"]/following-sibling::Compare/ops/NotEq | //Compare/comparators[@id="input_dirs"]/following-sibling::Compare/ops/NotEq'
+    count:
+      min: 1
+      max: 10
+  - name: "no-exception-type"
+    code: "EXC"
+    id: "EXC001"
+    description: "No exception type(s)"
+    pattern: './/Try/ExceptHandler[not(ExceptHandler/type)]'
+    count:
+      min: 1
+      max: 10
+  - name: "boolean-comparison"
+    code: "BOOL"
+    id: "BOOL001"
+    description: "Using = or == operators to compare boolean values"
+    pattern: '//Compare/ops/Is | //Compare/ops/Eq'
+    count:
+      min: 1
+      max: 10
+  - name: "no-exception-type"
+    code: "EXC"
+    id: "EXC001"
+    description: "A function that uses try and except does not define the exception type"
+    pattern: '//Try/ExceptHandler[not(ExceptHandler/type)]'
+    count:
+      min: 1
+      max: 1
+  - name: "missing-annotations"
+    code: "ANNOT"
+    id: "ANNOT001"
+    description: "A function does not explicitly annotate arguments/parameters or the expected output"
+    pattern: '//FunctionDef[not(args/arg/annotation) or not(returns)]'
+    count:
+      min: 1
+      max: 10
+  - name: "Key function"
+    code: "KFUN"
+    id: "KF001"
+    description: "The use of .keys() function"
+    pattern: '//FunctionDef//Call/func/Attribute[@attr="keys"]'
+    count:
+      min: 1
+      max: 10
+
+  - name: "Multi Value Key Literal"
+    code: "MVKL"
+    id: "MVKL001"
+    description: "Looks to see if a key has been repeated"
+    pattern: '//FunctionDef[@name="tp"]/body/Assign/value/Dict/keys/Name[preceding-sibling::Name/@id = @id]'
+    count:
+      min: 1
+      max: 10
+
+  - name: "Assert Tuple"
+    code: "AT"
+    id: "AT001"
+    description: "Looks to see if assert is used on a tuple"
+    pattern: "//FunctionDef[./body/Assert/test/Tuple]"
+    count:
+      min: 1
+      max: 10
+
+  - name: "Loop variable iterates overrides iterator"
+    code: "LVITOI"
+    id: "LVITOI001"
+    description: "if the iterator has the same name as the things it's iterating through"
+    pattern: "//FunctionDef/body/For[target/Name/@id = iter/Name/@id]"
+    count:
+      min: 1
+      max: 10
+
+  - name: "Function uses loop variable"
+    code: "FLV"
+    id: "FLV001"
+    description: "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
+    pattern: "//FunctionDef[body//comprehension/target/Name]"
+    count:
+      min: 1
+      max: 10
+
+  
+  
