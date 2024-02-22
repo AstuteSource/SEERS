@@ -5,6 +5,7 @@ import subprocess
 #Resource: https://docs.python.org/3/library/subprocess.html
 import json
 import os
+from contextlib import chdir
 from rich.console import Console
 from pathlib import Path
 
@@ -24,21 +25,19 @@ def check_installation(package)->bool:
         return False
     return True
 
-def execute_chasten(search_path, save_directory, save_file_path):
+def execute_chasten(search_path, save_directory, save_file_path,chasten_config_path):
     """Execute the chasten analyze command for lazytracker."""
     # Resource: https://github.com/AstuteSource/chasten/tree/chastenversion
     # TODO: will be replaced by our antipattern checks
-    chasten_config_path = os.getcwd() + '/chasten-configuration'
     # TODO: update to general use/take input
         
     chasten_command = [
         'chasten', 'analyze', 'lazytracker',
         '--config', chasten_config_path,
-        '--search-path', search_path,
-        '--save-directory', save_directory,
+        '--search-path', str(search_path),
+        '--save-directory', str(save_directory),
         '--save'
     ]
-
     try:
         subprocess.run(chasten_command, check=True)
     except subprocess.CalledProcessError:
@@ -47,12 +46,13 @@ def execute_chasten(search_path, save_directory, save_file_path):
 
 def execute_mutmut(search_path):
     """Execute the mutmut run command."""
-    subprocess.run(['mutmut','run','--paths-to-mutate', search_path],stdout=subprocess.DEVNULL)
-    junit = subprocess.run(['mutmut','junitxml'],capture_output=True,text=True,check=True)
-    with open("mutation.xml", "x") as f:
-        f.write(junit.stdout)
-    json = subprocess.run(['npx','junit2json','mutation.xml'],capture_output=True,text=True,check=True)
-    os.remove("mutation.xml")
+    with chdir(os.getcwd() + '/demo/lazytracker'):
+        subprocess.run(['mutmut','run'])
+        junit = subprocess.run(['mutmut','junitxml'],capture_output=True,text=True,check=True)
+        with open("mutation.xml", "x") as f:
+            f.write(junit.stdout)
+        json = subprocess.run(['npx','junit2json','mutation.xml'],capture_output=True,text=True,check=True)
+        os.remove("mutation.xml")
     return json.stdout
 
 
@@ -67,11 +67,11 @@ def save_results(chasten_result, mutmut_result, save_file):
         # Need a custom pretty-print, so I learned from this resource: https://stackoverflow.com/questions/63949556/how-to-custom-indent-json-dump
 
 
-
 @cli.command()
 def analyzer(
-    search_path: Path = os.getcwd() + '/lazytracker',
+    search_path: Path = os.getcwd() + '/demo/lazytracker/lazytracker',
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
+    chasten_config_path: str = '/home/caleb/.config/chasten'
 ):
     console = Console()
     #Step 1: Check and install chasten and mutmut if not installed
@@ -85,12 +85,12 @@ def analyzer(
         install_package('mutmut')
 
     #Step 2: Execute chasten and save the result
-        chasten_result = execute_chasten(search_path, save_directory, save_file_path)
+        chasten_result = execute_chasten(search_path, save_directory, save_file_path, chasten_config_path)
 
     #Step 3: Run mutmut and save its result
         mutmut_result = execute_mutmut(search_path)
 
     #Step 4: Save results in a file
         save_results(chasten_result,mutmut_result,'combined_result.json')
-        console.print("Code analysis and mutation complete!")
+        console.print("\n\nCode analysis and mutation complete!")
         console.print("Result is stored in file name combined_result.json")
