@@ -1,8 +1,8 @@
-
 checks:
   - name: "class-definition"
     code: "CDF"
     id: "C001"
+    description: "place holder"
     pattern: './/ClassDef'
     count:
       min: 1
@@ -10,28 +10,249 @@ checks:
   - name: "all-function-definition"
     code: "AFD"
     id: "F001"
+    description: "place holder"
     pattern: './/FunctionDef'
     count:
       min: 1
       max: 10
-  - name: "non-test-function-definition"
+  - name: "dummy-test-non-test-function-definition"
     code: "NTF"
     id: "F002"
+    description: "place holder"
     pattern: './/FunctionDef[not(contains(@name, "test_"))]'
     count:
       min: 1
       max: 10
-  - name: "single-nested-if"
+  - name: "dummy-test-single-nested-if"
     code: "SNI"
     id: "CL001"
+    description: "place holder"
     pattern: './/FunctionDef/body//If'
     count:
       min: 1
       max: 10
-  - name: "double-nested-if"
+  - name: "dummy-test-double-nested-if"
     code: "DNI"
     id: "CL002"
+    description: "place holder"
     pattern: './/FunctionDef/body//If[ancestor::If and not(parent::orelse)]'
     count:
       min: 1
       max: 10
+  - name: "import-from-star"
+    code: "IMP"
+    id: "IMP001"
+    description: "An import statement in the pattern of import MODULE from *"
+    pattern: '//ImportFrom/keyword[@name="from"]'
+    count:
+      min: 1
+      max: 10
+  - name: "explicit-return-in-init"
+    code: "RET"
+    id: "RET001"
+    description: "Using an explicit return statement in the __init__ function"
+    pattern: '//FunctionDef[@name="init"]/body/Return'
+    count:
+      min: 1
+      max: 10
+  - name: "none-comparison"
+    code: "NONE"
+    id: "NONE001"
+    description: "Using != None to check for non-None values"
+    pattern: '//Compare/left[@id="input_dirs"]/following-sibling::Compare/ops/NotEq | //Compare/comparators[@id="input_dirs"]/following-sibling::Compare/ops/NotEq'
+    count:
+      min: 1
+      max: 10
+  - name: "no-exception-type"
+    code: "EXC"
+    id: "EXC001"
+    description: "No exception type(s)"
+    pattern: './/Try/ExceptHandler[not(ExceptHandler/type)]'
+    count:
+      min: 1
+      max: 10
+  - name: "boolean-comparison"
+    code: "BOOL"
+    id: "BOOL001"
+    description: "Using = or == operators to compare boolean values"
+    pattern: '//Compare/ops/Is | //Compare/ops/Eq'
+    count:
+      min: 1
+      max: 10
+  - name: "no-exception-type"
+    code: "EXC"
+    id: "EXC001"
+    description: "A function that uses try and except does not define the exception type"
+    pattern: '//Try/ExceptHandler[not(ExceptHandler/type)]'
+    count:
+      min: 1
+      max: 10
+  - name: "missing-annotations"
+    code: "ANNOT"
+    id: "ANNOT001"
+    description: "A function does not explicitly annotate arguments/parameters or the expected output"
+    pattern: '//FunctionDef[not(args/arg/annotation) or not(returns)]'
+    count:
+      min: 1
+      max: 10
+  - name: "Key function"
+    code: "KFUN"
+    id: "KF001"
+    description: "The use of .keys() function"
+    pattern: '//FunctionDef//Call/func/Attribute[@attr="keys"]'
+    count:
+      min: 1
+      max: 10
+  - name: "Multi Value Key Literal"
+    code: "MVKL"
+    id: "MVKL001"
+    description: "Looks to see if a key has been repeated"
+    pattern: '//FunctionDef[@name="tp"]/body/Assign/value/Dict/keys/Name[preceding-sibling::Name/@id = @id]'
+    count:
+      min: 1
+      max: 10
+  - name: "Assert Tuple"
+    code: "AT"
+    id: "AT001"
+    description: "Looks to see if assert is used on a tuple"
+    pattern: "//FunctionDef[./body/Assert/test/Tuple]"
+    count:
+      min: 1
+      max: 10
+  - name: "Loop variable iterates overrides iterator"
+    code: "LVITOI"
+    id: "LVITOI001"
+    description: "if the iterator has the same name as the things it's iterating through"
+    pattern: "//FunctionDef/body/For[target/Name/@id = iter/Name/@id]"
+    count:
+      min: 1
+      max: 10
+  - name: "Function uses loop variable"
+    code: "FLV"
+    id: "FLV001"
+    description: "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
+    pattern: "//FunctionDef[body//comprehension/target/Name]"
+    count:
+      min: 1
+      max: 10
+  - name: "Nested Depth (Set value)"
+    code: "ND"
+    id: "F001"
+    description: "place holder"
+    pattern: '//FunctionDef//FunctionDef/ancestor::*'
+    count:
+      min: 1
+      max: 10
+  - name: "Number of conditions (if, if-else, and switch) in a Function"
+    code: "#Cond"
+    id: "F002"
+    description: "place holder"
+    pattern: '//FunctionDef//If/following-sibling::If | //FunctionDef//If/following-sibling::Elif | //FunctionDef//If/following-sibling::Else'
+    count:
+      min: 1
+      max: 10
+  - name: "The number of nested conditions (e.g., if{if{}}) in a Function"
+    code: "IFIF"
+    id: "CL001"
+    description: "place holder"
+    pattern: '//FunctionDef//If/descendant::If'
+    count:
+      min: 1
+      max: 1
+  - name: "The number of nested condition-loops (e.g., if{for{}}) in a Function"
+    code: "IFOR"
+    id: "CL002"
+    description: "place holder"
+    pattern: '//FunctionDef//For//if'
+    count:
+      min: 1
+      max: 10
+  - name: "The number of nested loop-conditions (e.g., for{if{}}) in a Function"
+    code: "VFF"
+    id: "C002" 
+    description: "place holder"
+    pattern: '//FunctionDef[//(If/following-sibling::For | For/following-sibling::If)]'
+    count:
+      min: 1
+      max: 10
+  - name: "The number of nested loop-conditions (e.g., for{for{}}) in a Function"
+    code: "FF"
+    id: "F001"
+    description: "place holder"
+    pattern: '//FunctionDef//For[.//For]'
+    count:
+      min: 1
+      max: 10
+  - name : "number-of-assertions"
+    code: "NOA"
+    id: "NOA001"
+    description: "place holder"
+    pattern : "//FunctionDef[@type='str']/body/Assert"
+    count: 
+      min: 1
+      max: 10
+  - name : "count-test-method-lines"
+    code: "LOF"
+    id: "LOF001"
+    description: "place holder"
+    pattern : "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*"
+    count: 
+      min: 1
+      max: 10
+  - name: "count-method-lines"
+    code: "CML"
+    id: "CML001"
+    description: "place holder"
+    pattern: "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return"
+    count: 
+      min: 1
+      max: 10
+  - name : "test-methods-invoking-method"
+    code: "TMIM"
+    id: "TMIM001"
+    description: "place holder"
+    pattern : "//Assert[count(.//Call[func/Name/@id='test_function']) > 0]"
+    count: 
+      min: 1
+      max: 10
+  - name: " notusingcontextmanager"
+    code: "DUCM"
+    id: "DUCM001"
+    description: "Whether file handling is done without using the context manager (with statement) "
+    pattern: "//*[starts-with(., 'with open')]"
+    count:
+      min: 1
+      max: 10
+  - name: "importfuture"
+    code: "IF"
+    id: "IF001"
+    description:  "Importing undefined or unsupported members from the _future module is a SyntaxError. "
+    pattern: "//ImportFrom[@module='__future']/alias[not(starts-with(@name, 'division') or starts-with(@name, 'absolute_import') or starts-with(@name, 'print_function') or starts-with(@name, 'unicode_literals'))]"
+    count:
+      min: 1
+      max: 10
+  - name: "undefined-local-with-nested-import-star-usage"
+    code: "F1"
+    id: "F406"
+    description: "from {name} import * only allowed at module level"
+    pattern: "//FunctionDef//ImportFrom[starts-with(@module, 'import') and @names=('*')]"
+    count:
+      min: 1
+      max: 10
+  - name: "Use_of ==_to_compare_constant  "
+    code: "F2"
+    id: "F632"
+    description: "Use == to compare constant literals "
+    pattern: "//function[@name='your_function_name']/*[your_xpath_condition]"
+    count:
+      min: 1
+      max: 10
+  - name: "break_outside_loop"
+    code: "F3"
+    id: "F701"
+    description: "break outside loop"
+    pattern:  "//FunctionDef[BreakStmt[count(ancestor::For|ancestor::While|ancestor::If) = 0]]"
+    count:
+      min: 1
+      max: 10
+  
