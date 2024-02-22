@@ -206,4 +206,48 @@ checks:
       min: null
       max: null
   
+  - name: " notusingcontextmanager"
+    code: "DUCM"
+    id: "DUCM001"
+    description: "Whether file handling is done without using the context manager (with statement) "
+    pattern: "//*[starts-with(., 'with open')]"
+    count:
+      min: null
+      max: null
+
+  - name: "importfuture"
+    code: "IF"
+    id: "IF001"
+    description:  "Importing undefined or unsupported members from the _future module is a SyntaxError. "
+    pattern: "//ImportFrom[@module='__future']/alias[not(starts-with(@name, 'division') or starts-with(@name, 'absolute_import') or starts-with(@name, 'print_function') or starts-with(@name, 'unicode_literals'))]"
+    count:
+      min: 1
+      max: null
+  - name: "undefined-local-with-nested-import-star-usage"
+    code: "F1"
+    id: "F406"
+    description: "from {name} import * only allowed at module level"
+    pattern: "//FunctionDef//ImportFrom[starts-with(@module, 'import') and @names=('*')]"
+    count:
+      min: 1
+      max: null
+
+  - name: "Use_of ==_to_compare_constant  "
+    code: "F2"
+    id: "F632"
+    description: "Use == to compare constant literals "
+    pattern: "//function[@name='your_function_name']/*[your_xpath_condition]"
+    count:
+      min: 1
+      max: null
+    
+  - name: "break_outside_loop"
+    code: "F3"
+    id: "F701"
+    description: "break outside loop"
+    pattern:  "//FunctionDef[BreakStmt[count(ancestor::For|ancestor::While|ancestor::If) = 0]]"
+    count:
+      min: 1
+      max: null
+  
   
