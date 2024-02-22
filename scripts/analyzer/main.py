@@ -90,7 +90,7 @@ def save_results(chasten_result, mutmut_result, save_file):
 
 @cli.command()
 def analyzer(
-    search_path: Path = os.getcwd() + "/demo/lazytracker/lazytracker",
+    search_path: Path = os.getcwd() + "/demo/lazytracker",
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
     chasten_config_path: str = "/home/caleb/.config/chasten",
 ):

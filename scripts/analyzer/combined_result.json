@@ -6,9 +6,9 @@
       "debugdestination": "CONSOLE",
       "projectname": "lazytracker",
       "configdirectory": "/home/caleb/.config/chasten",
-      "searchpath": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/lazytracker/lazytracker",
-      "fileuuid": "d348478bdda24c90985e82f19840e09a",
-      "datetime": "2024-02-21 21:34:25.872158",
+      "searchpath": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/lazytracker",
+      "fileuuid": "42630ddad2c34028b7ce78fd47224d2d",
+      "datetime": "2024-02-21 21:42:31.501978",
       "checkinclude": {
         "attribute": "",
         "value": "",
@@ -42,6 +42,82 @@
         }
       },
       {
+        "filename": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "check": {
+          "id": "F001",
+          "name": "all-function-definition",
+          "description": "",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//FunctionDef",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 6,
+              "coloffset": 0,
+              "linematch": "def test_hparams():",
+              "linematch_context": "import shutil\nfrom tempfile import TemporaryDirectory, tempdir\nfrom lazytracker import LazyTracker\n\ndef test_hparams():\n    hparams_1 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 1"
+            },
+            {
+              "lineno": 35,
+              "coloffset": 0,
+              "linematch": "def test_picable_function():",
+              "linematch_context": "\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n"
+            },
+            {
+              "lineno": 53,
+              "coloffset": 0,
+              "linematch": "def test_files():",
+              "linematch_context": "\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n\n        with open(f'{tmpdir}/b.txt', 'w') as f:"
+            },
+            {
+              "lineno": 76,
+              "coloffset": 0,
+              "linematch": "def test_directories():",
+              "linematch_context": "\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()\n\ndef test_directories():\n    with TemporaryDirectory() as tmpdir:\n        os.makedirs(f\"{tmpdir}/1\", exist_ok=True)\n\n        with open(f'{tmpdir}/1/a.txt', 'w') as f:\n            f.write(\"test file 1\")"
+            },
+            {
+              "lineno": 36,
+              "coloffset": 4,
+              "linematch": "def func_1(x):",
+              "linematch_context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()"
+            },
+            {
+              "lineno": 38,
+              "coloffset": 4,
+              "linematch": "def func_2(x):",
+              "linematch_context": "\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "check": {
+          "id": "F001",
+          "name": "all-function-definition",
+          "description": "",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//FunctionDef",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 5,
+              "coloffset": 0,
+              "linematch": "def test_cached():",
+              "linematch_context": "from tempfile import TemporaryDirectory\nfrom lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,"
+            },
+            {
+              "lineno": 14,
+              "coloffset": 8,
+              "linematch": "def test_function(input_dir: str, output_dir: str, parameter: int):",
+              "linematch_context": "            cache_dir=cache_dir,\n            input_dirs=[\"input_dir\"],\n            output_dirs=[\"output_dir\"]\n        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n"
+            }
+          ]
+        }
+      },
+      {
         "filename": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
         "check": {
           "id": "F001",
@@ -50,7 +126,7 @@
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef",
-          "passed": true,
+          "passed": false,
           "matches": [
             {
               "lineno": 9,
@@ -100,7 +176,7 @@
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef",
-          "passed": true,
+          "passed": false,
           "matches": [
             {
               "lineno": 14,
@@ -124,6 +200,32 @@
         }
       },
       {
+        "filename": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "check": {
+          "id": "F002",
+          "name": "non-test-function-definition",
+          "description": "",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 36,
+              "coloffset": 4,
+              "linematch": "def func_1(x):",
+              "linematch_context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()"
+            },
+            {
+              "lineno": 38,
+              "coloffset": 4,
+              "linematch": "def func_2(x):",
+              "linematch_context": "\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n"
+            }
+          ]
+        }
+      },
+      {
         "filename": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
         "check": {
           "id": "F002",
@@ -132,7 +234,7 @@
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
-          "passed": true,
+          "passed": false,
           "matches": [
             {
               "lineno": 9,
@@ -182,7 +284,7 @@
           "min": 1,
           "max": 10,
           "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
-          "passed": true,
+          "passed": false,
           "matches": [
             {
               "lineno": 14,
