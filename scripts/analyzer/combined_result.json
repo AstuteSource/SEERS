@@ -1,0 +1,1934 @@
+{
+  "chasten_result": {
+    "configuration": {
+      "chastenversion": "1.0.0",
+      "debuglevel": "ERROR",
+      "debugdestination": "CONSOLE",
+      "projectname": "lazytracker",
+      "configdirectory": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/Config",
+      "searchpath": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker",
+      "fileuuid": "b61fd4a80cee47d085bcb548bb6fa3a0",
+      "datetime": "2024-02-22 17:58:55.877072",
+      "checkinclude": {
+        "attribute": "",
+        "value": "",
+        "confidence": 0
+      },
+      "checkexclude": {
+        "attribute": "",
+        "value": "",
+        "confidence": 0
+      }
+    },
+    "sources": [
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+        "check": {
+          "id": "C001",
+          "name": "class-definition",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//ClassDef",
+          "passed": true,
+          "matches": [
+            {
+              "lineno": 8,
+              "coloffset": 0,
+              "linematch": "class LazyTracker:",
+              "linematch_context": "import dill\nfrom pathlib import Path\n\n\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "check": {
+          "id": "F001",
+          "name": "all-function-definition",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//FunctionDef",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 6,
+              "coloffset": 0,
+              "linematch": "def test_hparams():",
+              "linematch_context": "import shutil\nfrom tempfile import TemporaryDirectory, tempdir\nfrom lazytracker import LazyTracker\n\ndef test_hparams():\n    hparams_1 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 1"
+            },
+            {
+              "lineno": 35,
+              "coloffset": 0,
+              "linematch": "def test_picable_function():",
+              "linematch_context": "\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n"
+            },
+            {
+              "lineno": 53,
+              "coloffset": 0,
+              "linematch": "def test_files():",
+              "linematch_context": "\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n\n        with open(f'{tmpdir}/b.txt', 'w') as f:"
+            },
+            {
+              "lineno": 76,
+              "coloffset": 0,
+              "linematch": "def test_directories():",
+              "linematch_context": "\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()\n\ndef test_directories():\n    with TemporaryDirectory() as tmpdir:\n        os.makedirs(f\"{tmpdir}/1\", exist_ok=True)\n\n        with open(f'{tmpdir}/1/a.txt', 'w') as f:\n            f.write(\"test file 1\")"
+            },
+            {
+              "lineno": 36,
+              "coloffset": 4,
+              "linematch": "def func_1(x):",
+              "linematch_context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()"
+            },
+            {
+              "lineno": 38,
+              "coloffset": 4,
+              "linematch": "def func_2(x):",
+              "linematch_context": "\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "check": {
+          "id": "F001",
+          "name": "all-function-definition",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//FunctionDef",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 5,
+              "coloffset": 0,
+              "linematch": "def test_cached():",
+              "linematch_context": "from tempfile import TemporaryDirectory\nfrom lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,"
+            },
+            {
+              "lineno": 14,
+              "coloffset": 8,
+              "linematch": "def test_function(input_dir: str, output_dir: str, parameter: int):",
+              "linematch_context": "            cache_dir=cache_dir,\n            input_dirs=[\"input_dir\"],\n            output_dirs=[\"output_dir\"]\n        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+        "check": {
+          "id": "F001",
+          "name": "all-function-definition",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//FunctionDef",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 9,
+              "coloffset": 4,
+              "linematch": "def __init__(self):",
+              "linematch_context": "from pathlib import Path\n\n\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)"
+            },
+            {
+              "lineno": 13,
+              "coloffset": 4,
+              "linematch": "def add_directories(self, directories: List[str], chunk_num_blocks=128):",
+              "linematch_context": "    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)\n\n        Args:\n            directories (List[str]): List of directories to take files from\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128."
+            },
+            {
+              "lineno": 29,
+              "coloffset": 4,
+              "linematch": "def add_files(self, filepaths: List[str], chunk_num_blocks=128):",
+              "linematch_context": "        files_to_check = sorted(files_to_check)\n\n        self.add_files(files_to_check, chunk_num_blocks)\n\n    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of files\n\n        Args:\n            filepaths (List[str]): List of paths to files\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128."
+            },
+            {
+              "lineno": 44,
+              "coloffset": 4,
+              "linematch": "def add_hparams(self, hparams: dict):",
+              "linematch_context": "                        self._hasher.update(chunk)\n            else:\n                self._hasher.update(dill.dumps(None))\n\n    def add_hparams(self, hparams: dict):\n        \"\"\"Add hash of python dictionary. Utility function for storing pickable\n\n        Args:\n            hparams (dict): A dictionary to be included\n        \"\"\""
+            },
+            {
+              "lineno": 52,
+              "coloffset": 4,
+              "linematch": "def add_picklables(self, objects: List[Any], recursive: bool=False):",
+              "linematch_context": "            hparams (dict): A dictionary to be included\n        \"\"\"\n        self.add_picklables([hparams])\n\n    def add_picklables(self, objects: List[Any], recursive: bool=False):\n        \"\"\"Include hash of any picklable python objects (pickable by dill)\n\n        Args:\n            objects (List[Any]): List of python objects to hash\n            recursive (bool): Wheter to track dependencies of object. Eg.: if function calls another function, if "
+            },
+            {
+              "lineno": 63,
+              "coloffset": 4,
+              "linematch": "def hash(self) -> str:",
+              "linematch_context": "        \"\"\"\n        for obj in objects:\n            self._hasher.update(dill.dumps(obj, recurse=recursive))\n\n    def hash(self) -> str:\n        \"\"\"Compute hash\n\n        Returns:\n            str: Computed checksum of all things tracked\n        \"\"\""
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "check": {
+          "id": "F001",
+          "name": "all-function-definition",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//FunctionDef",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 14,
+              "coloffset": 0,
+              "linematch": "def cached(",
+              "linematch_context": "shelve.Pickler = Pickler\nshelve.Unpickler = Unpickler\n\n\ndef cached(\n    cache_dir: str = \".lazytracker\",\n    input_files: Optional[List[str]] = None,\n    input_dirs: Optional[List[str]] = None,\n    output_dirs: Optional[List[str]] = None,\n    output_files: Optional[List[str]] = None,"
+            },
+            {
+              "lineno": 31,
+              "coloffset": 4,
+              "linematch": "def inner_func(function: Callable):",
+              "linematch_context": "        output_dirs (Optional[List[str]], optional): name of function parameters, that are paths to otuput files. Defaults to None.\n        output_files (Optional[List[str]], optional): name of function parameters, that are paths to directories with output files. Defaults to None.\n    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)"
+            },
+            {
+              "lineno": 33,
+              "coloffset": 8,
+              "linematch": "def wrapper(*args, **kwargs):",
+              "linematch_context": "    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "check": {
+          "id": "F002",
+          "name": "dummy-test-non-test-function-definition",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 36,
+              "coloffset": 4,
+              "linematch": "def func_1(x):",
+              "linematch_context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()"
+            },
+            {
+              "lineno": 38,
+              "coloffset": 4,
+              "linematch": "def func_2(x):",
+              "linematch_context": "\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+        "check": {
+          "id": "F002",
+          "name": "dummy-test-non-test-function-definition",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 9,
+              "coloffset": 4,
+              "linematch": "def __init__(self):",
+              "linematch_context": "from pathlib import Path\n\n\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)"
+            },
+            {
+              "lineno": 13,
+              "coloffset": 4,
+              "linematch": "def add_directories(self, directories: List[str], chunk_num_blocks=128):",
+              "linematch_context": "    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)\n\n        Args:\n            directories (List[str]): List of directories to take files from\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128."
+            },
+            {
+              "lineno": 29,
+              "coloffset": 4,
+              "linematch": "def add_files(self, filepaths: List[str], chunk_num_blocks=128):",
+              "linematch_context": "        files_to_check = sorted(files_to_check)\n\n        self.add_files(files_to_check, chunk_num_blocks)\n\n    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of files\n\n        Args:\n            filepaths (List[str]): List of paths to files\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128."
+            },
+            {
+              "lineno": 44,
+              "coloffset": 4,
+              "linematch": "def add_hparams(self, hparams: dict):",
+              "linematch_context": "                        self._hasher.update(chunk)\n            else:\n                self._hasher.update(dill.dumps(None))\n\n    def add_hparams(self, hparams: dict):\n        \"\"\"Add hash of python dictionary. Utility function for storing pickable\n\n        Args:\n            hparams (dict): A dictionary to be included\n        \"\"\""
+            },
+            {
+              "lineno": 52,
+              "coloffset": 4,
+              "linematch": "def add_picklables(self, objects: List[Any], recursive: bool=False):",
+              "linematch_context": "            hparams (dict): A dictionary to be included\n        \"\"\"\n        self.add_picklables([hparams])\n\n    def add_picklables(self, objects: List[Any], recursive: bool=False):\n        \"\"\"Include hash of any picklable python objects (pickable by dill)\n\n        Args:\n            objects (List[Any]): List of python objects to hash\n            recursive (bool): Wheter to track dependencies of object. Eg.: if function calls another function, if "
+            },
+            {
+              "lineno": 63,
+              "coloffset": 4,
+              "linematch": "def hash(self) -> str:",
+              "linematch_context": "        \"\"\"\n        for obj in objects:\n            self._hasher.update(dill.dumps(obj, recurse=recursive))\n\n    def hash(self) -> str:\n        \"\"\"Compute hash\n\n        Returns:\n            str: Computed checksum of all things tracked\n        \"\"\""
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "check": {
+          "id": "F002",
+          "name": "dummy-test-non-test-function-definition",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 14,
+              "coloffset": 0,
+              "linematch": "def cached(",
+              "linematch_context": "shelve.Pickler = Pickler\nshelve.Unpickler = Unpickler\n\n\ndef cached(\n    cache_dir: str = \".lazytracker\",\n    input_files: Optional[List[str]] = None,\n    input_dirs: Optional[List[str]] = None,\n    output_dirs: Optional[List[str]] = None,\n    output_files: Optional[List[str]] = None,"
+            },
+            {
+              "lineno": 31,
+              "coloffset": 4,
+              "linematch": "def inner_func(function: Callable):",
+              "linematch_context": "        output_dirs (Optional[List[str]], optional): name of function parameters, that are paths to otuput files. Defaults to None.\n        output_files (Optional[List[str]], optional): name of function parameters, that are paths to directories with output files. Defaults to None.\n    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)"
+            },
+            {
+              "lineno": 33,
+              "coloffset": 8,
+              "linematch": "def wrapper(*args, **kwargs):",
+              "linematch_context": "    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+        "check": {
+          "id": "CL001",
+          "name": "dummy-test-single-nested-if",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//FunctionDef/body//If",
+          "passed": true,
+          "matches": [
+            {
+              "lineno": 37,
+              "coloffset": 12,
+              "linematch": "if os.path.exists(p):",
+              "linematch_context": "            filepaths (List[str]): List of paths to files\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.\n        \"\"\"\n        for p in filepaths:\n            if os.path.exists(p):\n                with open(p, \"rb\") as f:\n                    while chunk := f.read(chunk_num_blocks * self._hasher.block_size):\n                        self._hasher.update(chunk)\n            else:\n                self._hasher.update(dill.dumps(None))"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "check": {
+          "id": "CL001",
+          "name": "dummy-test-single-nested-if",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": ".//FunctionDef/body//If",
+          "passed": true,
+          "matches": [
+            {
+              "lineno": 41,
+              "coloffset": 16,
+              "linematch": "if input_dirs is not None:",
+              "linematch_context": "            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()\n                input_tracker.add_picklables([function], recursive=True)\n                input_tracker.add_hparams(kwargs)\n                if input_dirs is not None:\n                    input_dirs_values = [kwargs[input_dir] for input_dir in input_dirs]\n                    input_tracker.add_directories(input_dirs_values)\n                if input_files is not None:\n                    input_files_values = [\n                        kwargs[input_file] for input_file in input_files"
+            },
+            {
+              "lineno": 44,
+              "coloffset": 16,
+              "linematch": "if input_files is not None:",
+              "linematch_context": "                input_tracker.add_hparams(kwargs)\n                if input_dirs is not None:\n                    input_dirs_values = [kwargs[input_dir] for input_dir in input_dirs]\n                    input_tracker.add_directories(input_dirs_values)\n                if input_files is not None:\n                    input_files_values = [\n                        kwargs[input_file] for input_file in input_files\n                    ]\n                    input_tracker.add_files(input_files_values)\n"
+            },
+            {
+              "lineno": 51,
+              "coloffset": 16,
+              "linematch": "if output_dirs is not None:",
+              "linematch_context": "                    ]\n                    input_tracker.add_files(input_files_values)\n\n                test_output_tracker = LazyTracker()\n                if output_dirs is not None:\n                    output_dirs_values = [\n                        kwargs[output_dir] for output_dir in output_dirs\n                    ]\n                    test_output_tracker.add_directories(output_dirs_values)\n                if output_files is not None:"
+            },
+            {
+              "lineno": 56,
+              "coloffset": 16,
+              "linematch": "if output_files is not None:",
+              "linematch_context": "                    output_dirs_values = [\n                        kwargs[output_dir] for output_dir in output_dirs\n                    ]\n                    test_output_tracker.add_directories(output_dirs_values)\n                if output_files is not None:\n                    output_files_values = [\n                        kwargs[output_file] for output_file in output_files\n                    ]\n                    test_output_tracker.add_files(output_files_values)\n"
+            },
+            {
+              "lineno": 65,
+              "coloffset": 16,
+              "linematch": "if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+              "linematch_context": "\n                input_hash = input_tracker.hash()\n                output_hash = test_output_tracker.hash()\n\n                if input_hash in db and db[input_hash][\"hash\"] == output_hash:\n                    return db[input_hash][\"return_value\"]\n                else:\n                    return_value = function(**kwargs)\n\n                    output_tracker = LazyTracker()"
+            },
+            {
+              "lineno": 71,
+              "coloffset": 20,
+              "linematch": "if output_dirs is not None:",
+              "linematch_context": "                else:\n                    return_value = function(**kwargs)\n\n                    output_tracker = LazyTracker()\n                    if output_dirs is not None:\n                        output_dirs_values = [\n                            kwargs[output_dir] for output_dir in output_dirs\n                        ]\n                        output_tracker.add_directories(output_dirs_values)\n                    if output_files is not None:"
+            },
+            {
+              "lineno": 76,
+              "coloffset": 20,
+              "linematch": "if output_files is not None:",
+              "linematch_context": "                        output_dirs_values = [\n                            kwargs[output_dir] for output_dir in output_dirs\n                        ]\n                        output_tracker.add_directories(output_dirs_values)\n                    if output_files is not None:\n                        output_files_values = [\n                            kwargs[output_file] for output_file in output_files\n                        ]\n                        output_tracker.add_files(output_files_values)\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "check": {
+          "id": "BOOL001",
+          "name": "boolean-comparison",
+          "description": "Using = or == operators to compare boolean values",
+          "min": 1,
+          "max": 10,
+          "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 104,
+              "coloffset": 15,
+              "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+              "linematch_context": "\n        tracker_3 = LazyTracker()\n        tracker_3.add_directories([f\"{tmpdir}/3\"])\n\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()"
+            },
+            {
+              "lineno": 104,
+              "coloffset": 15,
+              "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+              "linematch_context": "\n        tracker_3 = LazyTracker()\n        tracker_3.add_directories([f\"{tmpdir}/3\"])\n\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()"
+            },
+            {
+              "lineno": 104,
+              "coloffset": 15,
+              "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+              "linematch_context": "\n        tracker_3 = LazyTracker()\n        tracker_3.add_directories([f\"{tmpdir}/3\"])\n\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()"
+            },
+            {
+              "lineno": 104,
+              "coloffset": 15,
+              "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+              "linematch_context": "\n        tracker_3 = LazyTracker()\n        tracker_3.add_directories([f\"{tmpdir}/3\"])\n\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "check": {
+          "id": "BOOL001",
+          "name": "boolean-comparison",
+          "description": "Using = or == operators to compare boolean values",
+          "min": 1,
+          "max": 10,
+          "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 73,
+              "coloffset": 23,
+              "linematch": "assert updated == True",
+              "linematch_context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            },
+            {
+              "lineno": 73,
+              "coloffset": 23,
+              "linematch": "assert updated == True",
+              "linematch_context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            },
+            {
+              "lineno": 73,
+              "coloffset": 23,
+              "linematch": "assert updated == True",
+              "linematch_context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            },
+            {
+              "lineno": 73,
+              "coloffset": 23,
+              "linematch": "assert updated == True",
+              "linematch_context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            },
+            {
+              "lineno": 73,
+              "coloffset": 23,
+              "linematch": "assert updated == True",
+              "linematch_context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            },
+            {
+              "lineno": 73,
+              "coloffset": 23,
+              "linematch": "assert updated == True",
+              "linematch_context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            },
+            {
+              "lineno": 73,
+              "coloffset": 23,
+              "linematch": "assert updated == True",
+              "linematch_context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            },
+            {
+              "lineno": 73,
+              "coloffset": 23,
+              "linematch": "assert updated == True",
+              "linematch_context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            },
+            {
+              "lineno": 73,
+              "coloffset": 23,
+              "linematch": "assert updated == True",
+              "linematch_context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            },
+            {
+              "lineno": 73,
+              "coloffset": 23,
+              "linematch": "assert updated == True",
+              "linematch_context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "check": {
+          "id": "BOOL001",
+          "name": "boolean-comparison",
+          "description": "Using = or == operators to compare boolean values",
+          "min": 1,
+          "max": 10,
+          "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 65,
+              "coloffset": 40,
+              "linematch": "if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+              "linematch_context": "\n                input_hash = input_tracker.hash()\n                output_hash = test_output_tracker.hash()\n\n                if input_hash in db and db[input_hash][\"hash\"] == output_hash:\n                    return db[input_hash][\"return_value\"]\n                else:\n                    return_value = function(**kwargs)\n\n                    output_tracker = LazyTracker()"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "check": {
+          "id": "ANNOT001",
+          "name": "missing-annotations",
+          "description": "A function does not explicitly annotate arguments/parameters or the expected output",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 6,
+              "coloffset": 0,
+              "linematch": "def test_hparams():",
+              "linematch_context": "import shutil\nfrom tempfile import TemporaryDirectory, tempdir\nfrom lazytracker import LazyTracker\n\ndef test_hparams():\n    hparams_1 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 1"
+            },
+            {
+              "lineno": 35,
+              "coloffset": 0,
+              "linematch": "def test_picable_function():",
+              "linematch_context": "\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n"
+            },
+            {
+              "lineno": 36,
+              "coloffset": 4,
+              "linematch": "def func_1(x):",
+              "linematch_context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()"
+            },
+            {
+              "lineno": 38,
+              "coloffset": 4,
+              "linematch": "def func_2(x):",
+              "linematch_context": "\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n"
+            },
+            {
+              "lineno": 53,
+              "coloffset": 0,
+              "linematch": "def test_files():",
+              "linematch_context": "\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n\n        with open(f'{tmpdir}/b.txt', 'w') as f:"
+            },
+            {
+              "lineno": 76,
+              "coloffset": 0,
+              "linematch": "def test_directories():",
+              "linematch_context": "\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()\n\ndef test_directories():\n    with TemporaryDirectory() as tmpdir:\n        os.makedirs(f\"{tmpdir}/1\", exist_ok=True)\n\n        with open(f'{tmpdir}/1/a.txt', 'w') as f:\n            f.write(\"test file 1\")"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "check": {
+          "id": "ANNOT001",
+          "name": "missing-annotations",
+          "description": "A function does not explicitly annotate arguments/parameters or the expected output",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 5,
+              "coloffset": 0,
+              "linematch": "def test_cached():",
+              "linematch_context": "from tempfile import TemporaryDirectory\nfrom lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,"
+            },
+            {
+              "lineno": 14,
+              "coloffset": 8,
+              "linematch": "def test_function(input_dir: str, output_dir: str, parameter: int):",
+              "linematch_context": "            cache_dir=cache_dir,\n            input_dirs=[\"input_dir\"],\n            output_dirs=[\"output_dir\"]\n        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+        "check": {
+          "id": "ANNOT001",
+          "name": "missing-annotations",
+          "description": "A function does not explicitly annotate arguments/parameters or the expected output",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 9,
+              "coloffset": 4,
+              "linematch": "def __init__(self):",
+              "linematch_context": "from pathlib import Path\n\n\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)"
+            },
+            {
+              "lineno": 13,
+              "coloffset": 4,
+              "linematch": "def add_directories(self, directories: List[str], chunk_num_blocks=128):",
+              "linematch_context": "    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)\n\n        Args:\n            directories (List[str]): List of directories to take files from\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128."
+            },
+            {
+              "lineno": 29,
+              "coloffset": 4,
+              "linematch": "def add_files(self, filepaths: List[str], chunk_num_blocks=128):",
+              "linematch_context": "        files_to_check = sorted(files_to_check)\n\n        self.add_files(files_to_check, chunk_num_blocks)\n\n    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of files\n\n        Args:\n            filepaths (List[str]): List of paths to files\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128."
+            },
+            {
+              "lineno": 44,
+              "coloffset": 4,
+              "linematch": "def add_hparams(self, hparams: dict):",
+              "linematch_context": "                        self._hasher.update(chunk)\n            else:\n                self._hasher.update(dill.dumps(None))\n\n    def add_hparams(self, hparams: dict):\n        \"\"\"Add hash of python dictionary. Utility function for storing pickable\n\n        Args:\n            hparams (dict): A dictionary to be included\n        \"\"\""
+            },
+            {
+              "lineno": 52,
+              "coloffset": 4,
+              "linematch": "def add_picklables(self, objects: List[Any], recursive: bool=False):",
+              "linematch_context": "            hparams (dict): A dictionary to be included\n        \"\"\"\n        self.add_picklables([hparams])\n\n    def add_picklables(self, objects: List[Any], recursive: bool=False):\n        \"\"\"Include hash of any picklable python objects (pickable by dill)\n\n        Args:\n            objects (List[Any]): List of python objects to hash\n            recursive (bool): Wheter to track dependencies of object. Eg.: if function calls another function, if "
+            },
+            {
+              "lineno": 63,
+              "coloffset": 4,
+              "linematch": "def hash(self) -> str:",
+              "linematch_context": "        \"\"\"\n        for obj in objects:\n            self._hasher.update(dill.dumps(obj, recurse=recursive))\n\n    def hash(self) -> str:\n        \"\"\"Compute hash\n\n        Returns:\n            str: Computed checksum of all things tracked\n        \"\"\""
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "check": {
+          "id": "ANNOT001",
+          "name": "missing-annotations",
+          "description": "A function does not explicitly annotate arguments/parameters or the expected output",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 14,
+              "coloffset": 0,
+              "linematch": "def cached(",
+              "linematch_context": "shelve.Pickler = Pickler\nshelve.Unpickler = Unpickler\n\n\ndef cached(\n    cache_dir: str = \".lazytracker\",\n    input_files: Optional[List[str]] = None,\n    input_dirs: Optional[List[str]] = None,\n    output_dirs: Optional[List[str]] = None,\n    output_files: Optional[List[str]] = None,"
+            },
+            {
+              "lineno": 31,
+              "coloffset": 4,
+              "linematch": "def inner_func(function: Callable):",
+              "linematch_context": "        output_dirs (Optional[List[str]], optional): name of function parameters, that are paths to otuput files. Defaults to None.\n        output_files (Optional[List[str]], optional): name of function parameters, that are paths to directories with output files. Defaults to None.\n    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)"
+            },
+            {
+              "lineno": 33,
+              "coloffset": 8,
+              "linematch": "def wrapper(*args, **kwargs):",
+              "linematch_context": "    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "check": {
+          "id": "FLV001",
+          "name": "Function uses loop variable",
+          "description": "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef[body//comprehension/target/Name]",
+          "passed": true,
+          "matches": [
+            {
+              "lineno": 14,
+              "coloffset": 0,
+              "linematch": "def cached(",
+              "linematch_context": "shelve.Pickler = Pickler\nshelve.Unpickler = Unpickler\n\n\ndef cached(\n    cache_dir: str = \".lazytracker\",\n    input_files: Optional[List[str]] = None,\n    input_dirs: Optional[List[str]] = None,\n    output_dirs: Optional[List[str]] = None,\n    output_files: Optional[List[str]] = None,"
+            },
+            {
+              "lineno": 31,
+              "coloffset": 4,
+              "linematch": "def inner_func(function: Callable):",
+              "linematch_context": "        output_dirs (Optional[List[str]], optional): name of function parameters, that are paths to otuput files. Defaults to None.\n        output_files (Optional[List[str]], optional): name of function parameters, that are paths to directories with output files. Defaults to None.\n    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)"
+            },
+            {
+              "lineno": 33,
+              "coloffset": 8,
+              "linematch": "def wrapper(*args, **kwargs):",
+              "linematch_context": "    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "check": {
+          "id": "F001",
+          "name": "Nested Depth (Set value)",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef//FunctionDef/ancestor::*",
+          "passed": true,
+          "matches": [
+            {
+              "lineno": 35,
+              "coloffset": 0,
+              "linematch": "def test_picable_function():",
+              "linematch_context": "\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "check": {
+          "id": "F001",
+          "name": "Nested Depth (Set value)",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef//FunctionDef/ancestor::*",
+          "passed": true,
+          "matches": [
+            {
+              "lineno": 5,
+              "coloffset": 0,
+              "linematch": "def test_cached():",
+              "linematch_context": "from tempfile import TemporaryDirectory\nfrom lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,"
+            },
+            {
+              "lineno": 6,
+              "coloffset": 4,
+              "linematch": "with TemporaryDirectory() as cache_dir:",
+              "linematch_context": "from lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,\n            input_dirs=[\"input_dir\"],"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "check": {
+          "id": "F001",
+          "name": "Nested Depth (Set value)",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef//FunctionDef/ancestor::*",
+          "passed": true,
+          "matches": [
+            {
+              "lineno": 14,
+              "coloffset": 0,
+              "linematch": "def cached(",
+              "linematch_context": "shelve.Pickler = Pickler\nshelve.Unpickler = Unpickler\n\n\ndef cached(\n    cache_dir: str = \".lazytracker\",\n    input_files: Optional[List[str]] = None,\n    input_dirs: Optional[List[str]] = None,\n    output_dirs: Optional[List[str]] = None,\n    output_files: Optional[List[str]] = None,"
+            },
+            {
+              "lineno": 31,
+              "coloffset": 4,
+              "linematch": "def inner_func(function: Callable):",
+              "linematch_context": "        output_dirs (Optional[List[str]], optional): name of function parameters, that are paths to otuput files. Defaults to None.\n        output_files (Optional[List[str]], optional): name of function parameters, that are paths to directories with output files. Defaults to None.\n    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "check": {
+          "id": "F002",
+          "name": "Number of conditions (if, if-else, and switch) in a Function",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef//If/following-sibling::If | //FunctionDef//If/following-sibling::Elif | //FunctionDef//If/following-sibling::Else",
+          "passed": true,
+          "matches": [
+            {
+              "lineno": 44,
+              "coloffset": 16,
+              "linematch": "if input_files is not None:",
+              "linematch_context": "                input_tracker.add_hparams(kwargs)\n                if input_dirs is not None:\n                    input_dirs_values = [kwargs[input_dir] for input_dir in input_dirs]\n                    input_tracker.add_directories(input_dirs_values)\n                if input_files is not None:\n                    input_files_values = [\n                        kwargs[input_file] for input_file in input_files\n                    ]\n                    input_tracker.add_files(input_files_values)\n"
+            },
+            {
+              "lineno": 51,
+              "coloffset": 16,
+              "linematch": "if output_dirs is not None:",
+              "linematch_context": "                    ]\n                    input_tracker.add_files(input_files_values)\n\n                test_output_tracker = LazyTracker()\n                if output_dirs is not None:\n                    output_dirs_values = [\n                        kwargs[output_dir] for output_dir in output_dirs\n                    ]\n                    test_output_tracker.add_directories(output_dirs_values)\n                if output_files is not None:"
+            },
+            {
+              "lineno": 56,
+              "coloffset": 16,
+              "linematch": "if output_files is not None:",
+              "linematch_context": "                    output_dirs_values = [\n                        kwargs[output_dir] for output_dir in output_dirs\n                    ]\n                    test_output_tracker.add_directories(output_dirs_values)\n                if output_files is not None:\n                    output_files_values = [\n                        kwargs[output_file] for output_file in output_files\n                    ]\n                    test_output_tracker.add_files(output_files_values)\n"
+            },
+            {
+              "lineno": 65,
+              "coloffset": 16,
+              "linematch": "if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+              "linematch_context": "\n                input_hash = input_tracker.hash()\n                output_hash = test_output_tracker.hash()\n\n                if input_hash in db and db[input_hash][\"hash\"] == output_hash:\n                    return db[input_hash][\"return_value\"]\n                else:\n                    return_value = function(**kwargs)\n\n                    output_tracker = LazyTracker()"
+            },
+            {
+              "lineno": 76,
+              "coloffset": 20,
+              "linematch": "if output_files is not None:",
+              "linematch_context": "                        output_dirs_values = [\n                            kwargs[output_dir] for output_dir in output_dirs\n                        ]\n                        output_tracker.add_directories(output_dirs_values)\n                    if output_files is not None:\n                        output_files_values = [\n                            kwargs[output_file] for output_file in output_files\n                        ]\n                        output_tracker.add_files(output_files_values)\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "check": {
+          "id": "CL001",
+          "name": "The number of nested conditions (e.g., if{if{}}) in a Function",
+          "description": "place holder",
+          "min": 1,
+          "max": 1,
+          "pattern": "//FunctionDef//If/descendant::If",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 71,
+              "coloffset": 20,
+              "linematch": "if output_dirs is not None:",
+              "linematch_context": "                else:\n                    return_value = function(**kwargs)\n\n                    output_tracker = LazyTracker()\n                    if output_dirs is not None:\n                        output_dirs_values = [\n                            kwargs[output_dir] for output_dir in output_dirs\n                        ]\n                        output_tracker.add_directories(output_dirs_values)\n                    if output_files is not None:"
+            },
+            {
+              "lineno": 76,
+              "coloffset": 20,
+              "linematch": "if output_files is not None:",
+              "linematch_context": "                        output_dirs_values = [\n                            kwargs[output_dir] for output_dir in output_dirs\n                        ]\n                        output_tracker.add_directories(output_dirs_values)\n                    if output_files is not None:\n                        output_files_values = [\n                            kwargs[output_file] for output_file in output_files\n                        ]\n                        output_tracker.add_files(output_files_values)\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "check": {
+          "id": "NOA001",
+          "name": "number-of-assertions",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef[@type='str']/body/Assert",
+          "passed": true,
+          "matches": [
+            {
+              "lineno": 32,
+              "coloffset": 4,
+              "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+              "linematch_context": "\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1"
+            },
+            {
+              "lineno": 33,
+              "coloffset": 4,
+              "linematch": "assert tracker_1.hash() != tracker_3.hash()",
+              "linematch_context": "    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):"
+            },
+            {
+              "lineno": 50,
+              "coloffset": 4,
+              "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+              "linematch_context": "\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:"
+            },
+            {
+              "lineno": 51,
+              "coloffset": 4,
+              "linematch": "assert tracker_1.hash() != tracker_3.hash()",
+              "linematch_context": "    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "check": {
+          "id": "LOF001",
+          "name": "count-test-method-lines",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 7,
+              "coloffset": 4,
+              "linematch": "hparams_1 = {",
+              "linematch_context": "from tempfile import TemporaryDirectory, tempdir\nfrom lazytracker import LazyTracker\n\ndef test_hparams():\n    hparams_1 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 1\n        }"
+            },
+            {
+              "lineno": 15,
+              "coloffset": 4,
+              "linematch": "hparams_2 = {",
+              "linematch_context": "            'd': 1\n        }\n    }\n\n    hparams_2 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 2\n        }"
+            },
+            {
+              "lineno": 23,
+              "coloffset": 4,
+              "linematch": "tracker_1 = LazyTracker()",
+              "linematch_context": "            'd': 2\n        }\n    }\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n"
+            },
+            {
+              "lineno": 24,
+              "coloffset": 4,
+              "linematch": "tracker_1.add_hparams(hparams_1)",
+              "linematch_context": "        }\n    }\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()"
+            },
+            {
+              "lineno": 26,
+              "coloffset": 4,
+              "linematch": "tracker_2 = LazyTracker()",
+              "linematch_context": "\n    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n"
+            },
+            {
+              "lineno": 27,
+              "coloffset": 4,
+              "linematch": "tracker_2.add_hparams(hparams_1)",
+              "linematch_context": "    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()"
+            },
+            {
+              "lineno": 29,
+              "coloffset": 4,
+              "linematch": "tracker_3 = LazyTracker()",
+              "linematch_context": "\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n"
+            },
+            {
+              "lineno": 30,
+              "coloffset": 4,
+              "linematch": "tracker_3.add_hparams(hparams_2)",
+              "linematch_context": "    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():"
+            },
+            {
+              "lineno": 32,
+              "coloffset": 4,
+              "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+              "linematch_context": "\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1"
+            },
+            {
+              "lineno": 33,
+              "coloffset": 4,
+              "linematch": "assert tracker_1.hash() != tracker_3.hash()",
+              "linematch_context": "    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):"
+            },
+            {
+              "lineno": 36,
+              "coloffset": 4,
+              "linematch": "def func_1(x):",
+              "linematch_context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()"
+            },
+            {
+              "lineno": 38,
+              "coloffset": 4,
+              "linematch": "def func_2(x):",
+              "linematch_context": "\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n"
+            },
+            {
+              "lineno": 41,
+              "coloffset": 4,
+              "linematch": "tracker_1 = LazyTracker()",
+              "linematch_context": "        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n"
+            },
+            {
+              "lineno": 42,
+              "coloffset": 4,
+              "linematch": "tracker_1.add_picklables([func_1])",
+              "linematch_context": "    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()"
+            },
+            {
+              "lineno": 44,
+              "coloffset": 4,
+              "linematch": "tracker_2 = LazyTracker()",
+              "linematch_context": "\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n"
+            },
+            {
+              "lineno": 45,
+              "coloffset": 4,
+              "linematch": "tracker_2.add_picklables([func_1])",
+              "linematch_context": "    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()"
+            },
+            {
+              "lineno": 47,
+              "coloffset": 4,
+              "linematch": "tracker_3 = LazyTracker()",
+              "linematch_context": "\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n"
+            },
+            {
+              "lineno": 48,
+              "coloffset": 4,
+              "linematch": "tracker_3.add_hparams([func_2])",
+              "linematch_context": "    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():"
+            },
+            {
+              "lineno": 50,
+              "coloffset": 4,
+              "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+              "linematch_context": "\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:"
+            },
+            {
+              "lineno": 51,
+              "coloffset": 4,
+              "linematch": "assert tracker_1.hash() != tracker_3.hash()",
+              "linematch_context": "    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")"
+            },
+            {
+              "lineno": 54,
+              "coloffset": 4,
+              "linematch": "with TemporaryDirectory() as tmpdir:",
+              "linematch_context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n\n        with open(f'{tmpdir}/b.txt', 'w') as f:\n            f.write(\"test file 1\")"
+            },
+            {
+              "lineno": 77,
+              "coloffset": 4,
+              "linematch": "with TemporaryDirectory() as tmpdir:",
+              "linematch_context": "        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()\n\ndef test_directories():\n    with TemporaryDirectory() as tmpdir:\n        os.makedirs(f\"{tmpdir}/1\", exist_ok=True)\n\n        with open(f'{tmpdir}/1/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "check": {
+          "id": "LOF001",
+          "name": "count-test-method-lines",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 6,
+              "coloffset": 4,
+              "linematch": "with TemporaryDirectory() as cache_dir:",
+              "linematch_context": "from lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,\n            input_dirs=[\"input_dir\"],"
+            },
+            {
+              "lineno": 15,
+              "coloffset": 12,
+              "linematch": "nonlocal updated",
+              "linematch_context": "            input_dirs=[\"input_dir\"],\n            output_dirs=[\"output_dir\"]\n        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True"
+            },
+            {
+              "lineno": 17,
+              "coloffset": 12,
+              "linematch": "with open(f\"{output_dir}/test.txt\", 'w') as f:",
+              "linematch_context": "        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True\n            return parameter\n"
+            },
+            {
+              "lineno": 20,
+              "coloffset": 12,
+              "linematch": "updated = True",
+              "linematch_context": "\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True\n            return parameter\n\n        with TemporaryDirectory() as input_dir:\n            with open(f\"{input_dir}/test.txt\", 'w') as f:\n                f.write(\"test_file\")"
+            },
+            {
+              "lineno": 21,
+              "coloffset": 12,
+              "linematch": "return parameter",
+              "linematch_context": "            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True\n            return parameter\n\n        with TemporaryDirectory() as input_dir:\n            with open(f\"{input_dir}/test.txt\", 'w') as f:\n                f.write(\"test_file\")\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "check": {
+          "id": "CML001",
+          "name": "count-method-lines",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 7,
+              "coloffset": 4,
+              "linematch": "hparams_1 = {",
+              "linematch_context": "from tempfile import TemporaryDirectory, tempdir\nfrom lazytracker import LazyTracker\n\ndef test_hparams():\n    hparams_1 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 1\n        }"
+            },
+            {
+              "lineno": 15,
+              "coloffset": 4,
+              "linematch": "hparams_2 = {",
+              "linematch_context": "            'd': 1\n        }\n    }\n\n    hparams_2 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 2\n        }"
+            },
+            {
+              "lineno": 23,
+              "coloffset": 4,
+              "linematch": "tracker_1 = LazyTracker()",
+              "linematch_context": "            'd': 2\n        }\n    }\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n"
+            },
+            {
+              "lineno": 24,
+              "coloffset": 4,
+              "linematch": "tracker_1.add_hparams(hparams_1)",
+              "linematch_context": "        }\n    }\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()"
+            },
+            {
+              "lineno": 26,
+              "coloffset": 4,
+              "linematch": "tracker_2 = LazyTracker()",
+              "linematch_context": "\n    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n"
+            },
+            {
+              "lineno": 27,
+              "coloffset": 4,
+              "linematch": "tracker_2.add_hparams(hparams_1)",
+              "linematch_context": "    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()"
+            },
+            {
+              "lineno": 29,
+              "coloffset": 4,
+              "linematch": "tracker_3 = LazyTracker()",
+              "linematch_context": "\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n"
+            },
+            {
+              "lineno": 30,
+              "coloffset": 4,
+              "linematch": "tracker_3.add_hparams(hparams_2)",
+              "linematch_context": "    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():"
+            },
+            {
+              "lineno": 32,
+              "coloffset": 4,
+              "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+              "linematch_context": "\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1"
+            },
+            {
+              "lineno": 33,
+              "coloffset": 4,
+              "linematch": "assert tracker_1.hash() != tracker_3.hash()",
+              "linematch_context": "    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):"
+            },
+            {
+              "lineno": 36,
+              "coloffset": 4,
+              "linematch": "def func_1(x):",
+              "linematch_context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()"
+            },
+            {
+              "lineno": 37,
+              "coloffset": 8,
+              "linematch": "return x+1",
+              "linematch_context": "    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])"
+            },
+            {
+              "lineno": 38,
+              "coloffset": 4,
+              "linematch": "def func_2(x):",
+              "linematch_context": "\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n"
+            },
+            {
+              "lineno": 39,
+              "coloffset": 8,
+              "linematch": "return x+2",
+              "linematch_context": "def test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()"
+            },
+            {
+              "lineno": 41,
+              "coloffset": 4,
+              "linematch": "tracker_1 = LazyTracker()",
+              "linematch_context": "        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n"
+            },
+            {
+              "lineno": 42,
+              "coloffset": 4,
+              "linematch": "tracker_1.add_picklables([func_1])",
+              "linematch_context": "    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()"
+            },
+            {
+              "lineno": 44,
+              "coloffset": 4,
+              "linematch": "tracker_2 = LazyTracker()",
+              "linematch_context": "\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n"
+            },
+            {
+              "lineno": 45,
+              "coloffset": 4,
+              "linematch": "tracker_2.add_picklables([func_1])",
+              "linematch_context": "    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()"
+            },
+            {
+              "lineno": 47,
+              "coloffset": 4,
+              "linematch": "tracker_3 = LazyTracker()",
+              "linematch_context": "\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n"
+            },
+            {
+              "lineno": 48,
+              "coloffset": 4,
+              "linematch": "tracker_3.add_hparams([func_2])",
+              "linematch_context": "    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():"
+            },
+            {
+              "lineno": 50,
+              "coloffset": 4,
+              "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+              "linematch_context": "\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:"
+            },
+            {
+              "lineno": 51,
+              "coloffset": 4,
+              "linematch": "assert tracker_1.hash() != tracker_3.hash()",
+              "linematch_context": "    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")"
+            },
+            {
+              "lineno": 54,
+              "coloffset": 4,
+              "linematch": "with TemporaryDirectory() as tmpdir:",
+              "linematch_context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n\n        with open(f'{tmpdir}/b.txt', 'w') as f:\n            f.write(\"test file 1\")"
+            },
+            {
+              "lineno": 77,
+              "coloffset": 4,
+              "linematch": "with TemporaryDirectory() as tmpdir:",
+              "linematch_context": "        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()\n\ndef test_directories():\n    with TemporaryDirectory() as tmpdir:\n        os.makedirs(f\"{tmpdir}/1\", exist_ok=True)\n\n        with open(f'{tmpdir}/1/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "check": {
+          "id": "CML001",
+          "name": "count-method-lines",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 6,
+              "coloffset": 4,
+              "linematch": "with TemporaryDirectory() as cache_dir:",
+              "linematch_context": "from lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,\n            input_dirs=[\"input_dir\"],"
+            },
+            {
+              "lineno": 15,
+              "coloffset": 12,
+              "linematch": "nonlocal updated",
+              "linematch_context": "            input_dirs=[\"input_dir\"],\n            output_dirs=[\"output_dir\"]\n        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True"
+            },
+            {
+              "lineno": 17,
+              "coloffset": 12,
+              "linematch": "with open(f\"{output_dir}/test.txt\", 'w') as f:",
+              "linematch_context": "        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True\n            return parameter\n"
+            },
+            {
+              "lineno": 20,
+              "coloffset": 12,
+              "linematch": "updated = True",
+              "linematch_context": "\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True\n            return parameter\n\n        with TemporaryDirectory() as input_dir:\n            with open(f\"{input_dir}/test.txt\", 'w') as f:\n                f.write(\"test_file\")"
+            },
+            {
+              "lineno": 21,
+              "coloffset": 12,
+              "linematch": "return parameter",
+              "linematch_context": "            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True\n            return parameter\n\n        with TemporaryDirectory() as input_dir:\n            with open(f\"{input_dir}/test.txt\", 'w') as f:\n                f.write(\"test_file\")\n"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+        "check": {
+          "id": "CML001",
+          "name": "count-method-lines",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 10,
+              "coloffset": 8,
+              "linematch": "\"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"",
+              "linematch_context": "\n\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)\n"
+            },
+            {
+              "lineno": 11,
+              "coloffset": 8,
+              "linematch": "self._hasher = hashlib.md5()",
+              "linematch_context": "\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)\n\n        Args:"
+            },
+            {
+              "lineno": 14,
+              "coloffset": 8,
+              "linematch": "\"\"\"Include hash of all files inside directory (including files in subdirectories)",
+              "linematch_context": "        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)\n\n        Args:\n            directories (List[str]): List of directories to take files from\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.\n        \"\"\""
+            },
+            {
+              "lineno": 20,
+              "coloffset": 8,
+              "linematch": "files_to_check = []",
+              "linematch_context": "        Args:\n            directories (List[str]): List of directories to take files from\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.\n        \"\"\"\n        files_to_check = []\n\n        for directory in directories:\n            files_to_check.extend(list(Path(directory).rglob(\"*\")))\n\n        files_to_check = sorted(files_to_check)"
+            },
+            {
+              "lineno": 22,
+              "coloffset": 8,
+              "linematch": "for directory in directories:",
+              "linematch_context": "            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.\n        \"\"\"\n        files_to_check = []\n\n        for directory in directories:\n            files_to_check.extend(list(Path(directory).rglob(\"*\")))\n\n        files_to_check = sorted(files_to_check)\n\n        self.add_files(files_to_check, chunk_num_blocks)"
+            },
+            {
+              "lineno": 25,
+              "coloffset": 8,
+              "linematch": "files_to_check = sorted(files_to_check)",
+              "linematch_context": "\n        for directory in directories:\n            files_to_check.extend(list(Path(directory).rglob(\"*\")))\n\n        files_to_check = sorted(files_to_check)\n\n        self.add_files(files_to_check, chunk_num_blocks)\n\n    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of files"
+            },
+            {
+              "lineno": 27,
+              "coloffset": 8,
+              "linematch": "self.add_files(files_to_check, chunk_num_blocks)",
+              "linematch_context": "            files_to_check.extend(list(Path(directory).rglob(\"*\")))\n\n        files_to_check = sorted(files_to_check)\n\n        self.add_files(files_to_check, chunk_num_blocks)\n\n    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of files\n\n        Args:"
+            },
+            {
+              "lineno": 30,
+              "coloffset": 8,
+              "linematch": "\"\"\"Include hash of files",
+              "linematch_context": "\n        self.add_files(files_to_check, chunk_num_blocks)\n\n    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of files\n\n        Args:\n            filepaths (List[str]): List of paths to files\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.\n        \"\"\""
+            },
+            {
+              "lineno": 36,
+              "coloffset": 8,
+              "linematch": "for p in filepaths:",
+              "linematch_context": "        Args:\n            filepaths (List[str]): List of paths to files\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.\n        \"\"\"\n        for p in filepaths:\n            if os.path.exists(p):\n                with open(p, \"rb\") as f:\n                    while chunk := f.read(chunk_num_blocks * self._hasher.block_size):\n                        self._hasher.update(chunk)\n            else:"
+            },
+            {
+              "lineno": 45,
+              "coloffset": 8,
+              "linematch": "\"\"\"Add hash of python dictionary. Utility function for storing pickable",
+              "linematch_context": "            else:\n                self._hasher.update(dill.dumps(None))\n\n    def add_hparams(self, hparams: dict):\n        \"\"\"Add hash of python dictionary. Utility function for storing pickable\n\n        Args:\n            hparams (dict): A dictionary to be included\n        \"\"\"\n        self.add_picklables([hparams])"
+            },
+            {
+              "lineno": 50,
+              "coloffset": 8,
+              "linematch": "self.add_picklables([hparams])",
+              "linematch_context": "\n        Args:\n            hparams (dict): A dictionary to be included\n        \"\"\"\n        self.add_picklables([hparams])\n\n    def add_picklables(self, objects: List[Any], recursive: bool=False):\n        \"\"\"Include hash of any picklable python objects (pickable by dill)\n\n        Args:"
+            },
+            {
+              "lineno": 53,
+              "coloffset": 8,
+              "linematch": "\"\"\"Include hash of any picklable python objects (pickable by dill)",
+              "linematch_context": "        \"\"\"\n        self.add_picklables([hparams])\n\n    def add_picklables(self, objects: List[Any], recursive: bool=False):\n        \"\"\"Include hash of any picklable python objects (pickable by dill)\n\n        Args:\n            objects (List[Any]): List of python objects to hash\n            recursive (bool): Wheter to track dependencies of object. Eg.: if function calls another function, if \n                recursive is set to true the changes in inner function are also tracked"
+            },
+            {
+              "lineno": 60,
+              "coloffset": 8,
+              "linematch": "for obj in objects:",
+              "linematch_context": "            objects (List[Any]): List of python objects to hash\n            recursive (bool): Wheter to track dependencies of object. Eg.: if function calls another function, if \n                recursive is set to true the changes in inner function are also tracked\n        \"\"\"\n        for obj in objects:\n            self._hasher.update(dill.dumps(obj, recurse=recursive))\n\n    def hash(self) -> str:\n        \"\"\"Compute hash\n"
+            },
+            {
+              "lineno": 64,
+              "coloffset": 8,
+              "linematch": "\"\"\"Compute hash",
+              "linematch_context": "        for obj in objects:\n            self._hasher.update(dill.dumps(obj, recurse=recursive))\n\n    def hash(self) -> str:\n        \"\"\"Compute hash\n\n        Returns:\n            str: Computed checksum of all things tracked\n        \"\"\"\n"
+            },
+            {
+              "lineno": 70,
+              "coloffset": 8,
+              "linematch": "return self._hasher.hexdigest()",
+              "linematch_context": "        Returns:\n            str: Computed checksum of all things tracked\n        \"\"\"\n\n        return self._hasher.hexdigest()"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "check": {
+          "id": "CML001",
+          "name": "count-method-lines",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+          "passed": false,
+          "matches": [
+            {
+              "lineno": 21,
+              "coloffset": 4,
+              "linematch": "\"\"\"Function decorator for caching execution",
+              "linematch_context": "    input_dirs: Optional[List[str]] = None,\n    output_dirs: Optional[List[str]] = None,\n    output_files: Optional[List[str]] = None,\n):\n    \"\"\"Function decorator for caching execution\n\n    Args:\n        cache_dir (str, optional): Directory where the lazytracker cache information will be stored. Defaults to \".lazytracker\".\n        input_files (Optional[List[str]], optional): name of function parameters, that are paths to input files. Defaults to None.\n        input_dirs (Optional[List[str]], optional): name of function parameters, that are paths to directories with input files. Defaults to None."
+            },
+            {
+              "lineno": 31,
+              "coloffset": 4,
+              "linematch": "def inner_func(function: Callable):",
+              "linematch_context": "        output_dirs (Optional[List[str]], optional): name of function parameters, that are paths to otuput files. Defaults to None.\n        output_files (Optional[List[str]], optional): name of function parameters, that are paths to directories with output files. Defaults to None.\n    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)"
+            },
+            {
+              "lineno": 33,
+              "coloffset": 8,
+              "linematch": "def wrapper(*args, **kwargs):",
+              "linematch_context": "    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()"
+            },
+            {
+              "lineno": 34,
+              "coloffset": 12,
+              "linematch": "kwargs.update(dict(zip(function.__code__.co_varnames, args)))",
+              "linematch_context": "\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()\n                input_tracker.add_picklables([function], recursive=True)"
+            },
+            {
+              "lineno": 36,
+              "coloffset": 12,
+              "linematch": "os.makedirs(f\"{cache_dir}\", exist_ok=True)",
+              "linematch_context": "        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()\n                input_tracker.add_picklables([function], recursive=True)\n                input_tracker.add_hparams(kwargs)\n                if input_dirs is not None:"
+            },
+            {
+              "lineno": 37,
+              "coloffset": 12,
+              "linematch": "with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:",
+              "linematch_context": "        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()\n                input_tracker.add_picklables([function], recursive=True)\n                input_tracker.add_hparams(kwargs)\n                if input_dirs is not None:\n                    input_dirs_values = [kwargs[input_dir] for input_dir in input_dirs]"
+            },
+            {
+              "lineno": 89,
+              "coloffset": 8,
+              "linematch": "return wrapper",
+              "linematch_context": "                    }\n\n                    return return_value\n\n        return wrapper\n\n    return inner_func"
+            },
+            {
+              "lineno": 91,
+              "coloffset": 4,
+              "linematch": "return inner_func",
+              "linematch_context": "                    return return_value\n\n        return wrapper\n\n    return inner_func"
+            }
+          ]
+        }
+      },
+      {
+        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "check": {
+          "id": "TMIM001",
+          "name": "test-methods-invoking-method",
+          "description": "place holder",
+          "min": 1,
+          "max": 10,
+          "pattern": "//Assert[count(.//Call[func/Name/@id='test_function']) > 0]",
+          "passed": true,
+          "matches": [
+            {
+              "lineno": 28,
+              "coloffset": 16,
+              "linematch": "assert test_function(",
+              "linematch_context": "            with open(f\"{input_dir}/test.txt\", 'w') as f:\n                f.write(\"test_file\")\n\n            with TemporaryDirectory() as output_dir:\n                assert test_function(\n                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=3\n                ) == 3\n                assert updated == True"
+            },
+            {
+              "lineno": 37,
+              "coloffset": 16,
+              "linematch": "assert test_function(",
+              "linematch_context": "                assert updated == True\n\n                # Don't change antything\n                updated = False\n                assert test_function(\n                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=3\n                ) == 3\n                assert updated == False"
+            },
+            {
+              "lineno": 45,
+              "coloffset": 16,
+              "linematch": "assert test_function(",
+              "linematch_context": "                ) == 3\n                assert updated == False\n\n                # Change parameter\n                assert test_function(\n                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            },
+            {
+              "lineno": 57,
+              "coloffset": 16,
+              "linematch": "assert test_function(",
+              "linematch_context": "                updated = False\n                with open(f\"{input_dir}/test.txt\", 'w') as f:\n                    f.write(\"changed_test_file\")\n\n                assert test_function(\n                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            },
+            {
+              "lineno": 68,
+              "coloffset": 16,
+              "linematch": "assert test_function(",
+              "linematch_context": "                # Corrupt output\n                with open(f\"{output_dir}/test.txt\", 'w') as f:\n                    f.write(\"corrupted output\")\n\n                assert test_function(\n                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "mutmut_result": {
+    "disabled": 0,
+    "errors": 0,
+    "failures": 10,
+    "tests": 44,
+    "time": 0,
+    "testsuite": [
+      {
+        "disabled": 0,
+        "errors": 0,
+        "failures": 10,
+        "name": "mutmut",
+        "skipped": 0,
+        "tests": 44,
+        "time": 0,
+        "testcase": [
+          {
+            "name": "Mutant #1",
+            "file": "lazytracker/lazytracker.py",
+            "line": 11,
+            "system-out": [
+              "        self._hasher = hashlib.md5()"
+            ]
+          },
+          {
+            "name": "Mutant #2",
+            "file": "lazytracker/lazytracker.py",
+            "line": 13,
+            "failure": [
+              {
+                "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -10,7 +10,7 @@\n         \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n         self._hasher = hashlib.md5()\n \n-    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n+    def add_directories(self, directories: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of all files inside directory (including files in subdirectories)\n \n         Args:\n",
+                "type": "failure",
+                "message": "bad_survived"
+              }
+            ],
+            "system-out": [
+              "    def add_directories(self, directories: List[str], chunk_num_blocks=128):"
+            ]
+          },
+          {
+            "name": "Mutant #3",
+            "file": "lazytracker/lazytracker.py",
+            "line": 20,
+            "system-out": [
+              "        files_to_check = []"
+            ]
+          },
+          {
+            "name": "Mutant #4",
+            "file": "lazytracker/lazytracker.py",
+            "line": 23,
+            "system-out": [
+              "            files_to_check.extend(list(Path(directory).rglob(\"*\")))"
+            ]
+          },
+          {
+            "name": "Mutant #5",
+            "file": "lazytracker/lazytracker.py",
+            "line": 25,
+            "system-out": [
+              "        files_to_check = sorted(files_to_check)"
+            ]
+          },
+          {
+            "name": "Mutant #6",
+            "file": "lazytracker/lazytracker.py",
+            "line": 29,
+            "failure": [
+              {
+                "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -26,7 +26,7 @@\n \n         self.add_files(files_to_check, chunk_num_blocks)\n \n-    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n+    def add_files(self, filepaths: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of files\n \n         Args:\n",
+                "type": "failure",
+                "message": "bad_survived"
+              }
+            ],
+            "system-out": [
+              "    def add_files(self, filepaths: List[str], chunk_num_blocks=128):"
+            ]
+          },
+          {
+            "name": "Mutant #7",
+            "file": "lazytracker/lazytracker.py",
+            "line": 38,
+            "system-out": [
+              "                with open(p, \"rb\") as f:"
+            ]
+          },
+          {
+            "name": "Mutant #8",
+            "file": "lazytracker/lazytracker.py",
+            "line": 39,
+            "system-out": [
+              "                    while chunk := f.read(chunk_num_blocks * self._hasher.block_size):"
+            ]
+          },
+          {
+            "name": "Mutant #9",
+            "file": "lazytracker/lazytracker.py",
+            "line": 52,
+            "failure": [
+              {
+                "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -49,7 +49,7 @@\n         \"\"\"\n         self.add_picklables([hparams])\n \n-    def add_picklables(self, objects: List[Any], recursive: bool=False):\n+    def add_picklables(self, objects: List[Any], recursive: bool=True):\n         \"\"\"Include hash of any picklable python objects (pickable by dill)\n \n         Args:\n",
+                "type": "failure",
+                "message": "bad_survived"
+              }
+            ],
+            "system-out": [
+              "    def add_picklables(self, objects: List[Any], recursive: bool=False):"
+            ]
+          },
+          {
+            "name": "Mutant #10",
+            "file": "lazytracker/tracked.py",
+            "line": 10,
+            "system-out": [
+              "shelve.Pickler = Pickler"
+            ]
+          },
+          {
+            "name": "Mutant #11",
+            "file": "lazytracker/tracked.py",
+            "line": 11,
+            "system-out": [
+              "shelve.Unpickler = Unpickler"
+            ]
+          },
+          {
+            "name": "Mutant #12",
+            "file": "lazytracker/tracked.py",
+            "line": 15,
+            "failure": [
+              {
+                "inner": "--- lazytracker/tracked.py\n+++ lazytracker/tracked.py\n@@ -12,7 +12,7 @@\n \n \n def cached(\n-    cache_dir: str = \".lazytracker\",\n+    cache_dir: str = \"XX.lazytrackerXX\",\n     input_files: Optional[List[str]] = None,\n     input_dirs: Optional[List[str]] = None,\n     output_dirs: Optional[List[str]] = None,\n",
+                "type": "failure",
+                "message": "bad_survived"
+              }
+            ],
+            "system-out": [
+              "    cache_dir: str = \".lazytracker\","
+            ]
+          },
+          {
+            "name": "Mutant #13",
+            "file": "lazytracker/tracked.py",
+            "line": 32,
+            "failure": [
+              {
+                "inner": "--- lazytracker/tracked.py\n+++ lazytracker/tracked.py\n@@ -29,7 +29,7 @@\n     \"\"\"\n \n     def inner_func(function: Callable):\n-        @wraps(function)\n+\n         def wrapper(*args, **kwargs):\n             kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n \n",
+                "type": "failure",
+                "message": "bad_survived"
+              }
+            ],
+            "system-out": [
+              "        @wraps(function)"
+            ]
+          },
+          {
+            "name": "Mutant #14",
+            "file": "lazytracker/tracked.py",
+            "line": 36,
+            "failure": [
+              {
+                "inner": "--- lazytracker/tracked.py\n+++ lazytracker/tracked.py\n@@ -33,7 +33,7 @@\n         def wrapper(*args, **kwargs):\n             kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n \n-            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n+            os.makedirs(f\"XX{cache_dir}XX\", exist_ok=True)\n             with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                 input_tracker = LazyTracker()\n                 input_tracker.add_picklables([function], recursive=True)\n",
+                "type": "failure",
+                "message": "bad_survived"
+              }
+            ],
+            "system-out": [
+              "            os.makedirs(f\"{cache_dir}\", exist_ok=True)"
+            ]
+          },
+          {
+            "name": "Mutant #15",
+            "file": "lazytracker/tracked.py",
+            "line": 36,
+            "system-out": [
+              "            os.makedirs(f\"{cache_dir}\", exist_ok=True)"
+            ]
+          },
+          {
+            "name": "Mutant #16",
+            "file": "lazytracker/tracked.py",
+            "line": 37,
+            "system-out": [
+              "            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:"
+            ]
+          },
+          {
+            "name": "Mutant #17",
+            "file": "lazytracker/tracked.py",
+            "line": 37,
+            "system-out": [
+              "            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:"
+            ]
+          },
+          {
+            "name": "Mutant #18",
+            "file": "lazytracker/tracked.py",
+            "line": 38,
+            "system-out": [
+              "                input_tracker = LazyTracker()"
+            ]
+          },
+          {
+            "name": "Mutant #19",
+            "file": "lazytracker/tracked.py",
+            "line": 39,
+            "failure": [
+              {
+                "inner": "--- lazytracker/tracked.py\n+++ lazytracker/tracked.py\n@@ -36,7 +36,7 @@\n             os.makedirs(f\"{cache_dir}\", exist_ok=True)\n             with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                 input_tracker = LazyTracker()\n-                input_tracker.add_picklables([function], recursive=True)\n+                input_tracker.add_picklables([function], recursive=False)\n                 input_tracker.add_hparams(kwargs)\n                 if input_dirs is not None:\n                     input_dirs_values = [kwargs[input_dir] for input_dir in input_dirs]\n",
+                "type": "failure",
+                "message": "bad_survived"
+              }
+            ],
+            "system-out": [
+              "                input_tracker.add_picklables([function], recursive=True)"
+            ]
+          },
+          {
+            "name": "Mutant #20",
+            "file": "lazytracker/tracked.py",
+            "line": 41,
+            "system-out": [
+              "                if input_dirs is not None:"
+            ]
+          },
+          {
+            "name": "Mutant #21",
+            "file": "lazytracker/tracked.py",
+            "line": 42,
+            "system-out": [
+              "                    input_dirs_values = [kwargs[input_dir] for input_dir in input_dirs]"
+            ]
+          },
+          {
+            "name": "Mutant #22",
+            "file": "lazytracker/tracked.py",
+            "line": 44,
+            "system-out": [
+              "                if input_files is not None:"
+            ]
+          },
+          {
+            "name": "Mutant #23",
+            "file": "lazytracker/tracked.py",
+            "line": 47,
+            "failure": [
+              {
+                "inner": "--- lazytracker/tracked.py\n+++ lazytracker/tracked.py\n@@ -42,9 +42,7 @@\n                     input_dirs_values = [kwargs[input_dir] for input_dir in input_dirs]\n                     input_tracker.add_directories(input_dirs_values)\n                 if input_files is not None:\n-                    input_files_values = [\n-                        kwargs[input_file] for input_file in input_files\n-                    ]\n+                    input_files_values = None\n                     input_tracker.add_files(input_files_values)\n \n                 test_output_tracker = LazyTracker()\n",
+                "type": "failure",
+                "message": "bad_survived"
+              }
+            ],
+            "system-out": [
+              "                    ]"
+            ]
+          },
+          {
+            "name": "Mutant #24",
+            "file": "lazytracker/tracked.py",
+            "line": 50,
+            "system-out": [
+              "                test_output_tracker = LazyTracker()"
+            ]
+          },
+          {
+            "name": "Mutant #25",
+            "file": "lazytracker/tracked.py",
+            "line": 51,
+            "system-out": [
+              "                if output_dirs is not None:"
+            ]
+          },
+          {
+            "name": "Mutant #26",
+            "file": "lazytracker/tracked.py",
+            "line": 54,
+            "system-out": [
+              "                    ]"
+            ]
+          },
+          {
+            "name": "Mutant #27",
+            "file": "lazytracker/tracked.py",
+            "line": 56,
+            "system-out": [
+              "                if output_files is not None:"
+            ]
+          },
+          {
+            "name": "Mutant #28",
+            "file": "lazytracker/tracked.py",
+            "line": 59,
+            "failure": [
+              {
+                "inner": "--- lazytracker/tracked.py\n+++ lazytracker/tracked.py\n@@ -54,9 +54,7 @@\n                     ]\n                     test_output_tracker.add_directories(output_dirs_values)\n                 if output_files is not None:\n-                    output_files_values = [\n-                        kwargs[output_file] for output_file in output_files\n-                    ]\n+                    output_files_values = None\n                     test_output_tracker.add_files(output_files_values)\n \n                 input_hash = input_tracker.hash()\n",
+                "type": "failure",
+                "message": "bad_survived"
+              }
+            ],
+            "system-out": [
+              "                    ]"
+            ]
+          },
+          {
+            "name": "Mutant #29",
+            "file": "lazytracker/tracked.py",
+            "line": 62,
+            "system-out": [
+              "                input_hash = input_tracker.hash()"
+            ]
+          },
+          {
+            "name": "Mutant #30",
+            "file": "lazytracker/tracked.py",
+            "line": 63,
+            "system-out": [
+              "                output_hash = test_output_tracker.hash()"
+            ]
+          },
+          {
+            "name": "Mutant #31",
+            "file": "lazytracker/tracked.py",
+            "line": 65,
+            "system-out": [
+              "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+            ]
+          },
+          {
+            "name": "Mutant #32",
+            "file": "lazytracker/tracked.py",
+            "line": 65,
+            "system-out": [
+              "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+            ]
+          },
+          {
+            "name": "Mutant #33",
+            "file": "lazytracker/tracked.py",
+            "line": 65,
+            "system-out": [
+              "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+            ]
+          },
+          {
+            "name": "Mutant #34",
+            "file": "lazytracker/tracked.py",
+            "line": 65,
+            "system-out": [
+              "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+            ]
+          },
+          {
+            "name": "Mutant #35",
+            "file": "lazytracker/tracked.py",
+            "line": 66,
+            "system-out": [
+              "                    return db[input_hash][\"return_value\"]"
+            ]
+          },
+          {
+            "name": "Mutant #36",
+            "file": "lazytracker/tracked.py",
+            "line": 68,
+            "system-out": [
+              "                    return_value = function(**kwargs)"
+            ]
+          },
+          {
+            "name": "Mutant #37",
+            "file": "lazytracker/tracked.py",
+            "line": 70,
+            "system-out": [
+              "                    output_tracker = LazyTracker()"
+            ]
+          },
+          {
+            "name": "Mutant #38",
+            "file": "lazytracker/tracked.py",
+            "line": 71,
+            "system-out": [
+              "                    if output_dirs is not None:"
+            ]
+          },
+          {
+            "name": "Mutant #39",
+            "file": "lazytracker/tracked.py",
+            "line": 74,
+            "system-out": [
+              "                        ]"
+            ]
+          },
+          {
+            "name": "Mutant #40",
+            "file": "lazytracker/tracked.py",
+            "line": 76,
+            "system-out": [
+              "                    if output_files is not None:"
+            ]
+          },
+          {
+            "name": "Mutant #41",
+            "file": "lazytracker/tracked.py",
+            "line": 79,
+            "failure": [
+              {
+                "inner": "--- lazytracker/tracked.py\n+++ lazytracker/tracked.py\n@@ -74,9 +74,7 @@\n                         ]\n                         output_tracker.add_directories(output_dirs_values)\n                     if output_files is not None:\n-                        output_files_values = [\n-                            kwargs[output_file] for output_file in output_files\n-                        ]\n+                        output_files_values = None\n                         output_tracker.add_files(output_files_values)\n \n                     db[input_hash] = {\n",
+                "type": "failure",
+                "message": "bad_survived"
+              }
+            ],
+            "system-out": [
+              "                        ]"
+            ]
+          },
+          {
+            "name": "Mutant #42",
+            "file": "lazytracker/tracked.py",
+            "line": 83,
+            "system-out": [
+              "                        \"return_value\": return_value,"
+            ]
+          },
+          {
+            "name": "Mutant #43",
+            "file": "lazytracker/tracked.py",
+            "line": 84,
+            "system-out": [
+              "                        \"hash\": output_tracker.hash(),"
+            ]
+          },
+          {
+            "name": "Mutant #44",
+            "file": "lazytracker/tracked.py",
+            "line": 85,
+            "system-out": [
+              "                    }"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
