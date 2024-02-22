@@ -5,6 +5,7 @@ import subprocess
 #Resource: https://docs.python.org/3/library/subprocess.html
 import json
 import os
+from glob import glob
 from contextlib import chdir
 from rich.console import Console
 from pathlib import Path
@@ -25,7 +26,7 @@ def check_installation(package)->bool:
         return False
     return True
 
-def execute_chasten(search_path, save_directory, save_file_path,chasten_config_path):
+def execute_chasten(search_path, save_directory, save_file_path, chasten_config_path):
     """Execute the chasten analyze command for lazytracker."""
     # Resource: https://github.com/AstuteSource/chasten/tree/chastenversion
     # TODO: will be replaced by our antipattern checks
@@ -38,11 +39,12 @@ def execute_chasten(search_path, save_directory, save_file_path,chasten_config_p
         '--save-directory', str(save_directory),
         '--save'
     ]
-    try:
-        subprocess.run(chasten_command, check=True)
-    except subprocess.CalledProcessError:
-        pass
-    return save_file_path
+    subprocess.run(chasten_command)
+    json_name = max(glob('*'), key=os.path.getctime)
+    with open(json_name, 'r') as f:
+        file = f.read()
+    os.remove(json_name)
+    return file
 
 def execute_mutmut(search_path):
     """Execute the mutmut run command."""
