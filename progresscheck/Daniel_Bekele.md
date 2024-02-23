@@ -13,6 +13,16 @@
                 - https://github.com/Danniyb/cookiecutter-poetry
                 - https://github.com/Danniyb/sidewinder
                 - https://github.com/UltiRequiem/python-playground
+
+##### Wednesday Febuary 14, 2024
+        - Divide up work to two team for analysising anti patterns for python and another team to work on a script that will run all the tool we are using to create a unified json with all there output. 
+        - Started testing a new tool for mututation test `Mutatest`
+        - switched out subject python program due to finding out that the test cases were written poorly
+        New Projects
+                - https://github.com/Danniyb/fastapi_quickstart
+                - https://github.com/UltiRequiem/python-playground
+                - https://github.com/timhughes/cookiecutter-poetry
+
 ##### Wednesday Febuary 21, 2024
         - Tried to create a tool that can hopefully parse the output from `mutmut`.
         - The `mutmutdiffparsers.py` is a code that runs mutation testing using the mutmut tool and organizes the results by function. It
