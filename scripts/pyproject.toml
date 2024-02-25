@@ -11,6 +11,8 @@ analyzer = "analyzer.main:cli"
 python = "^3.11"
 rich = "^13.4.2"
 typer = {extras = ["all"], version = "^0.9.0"}
+pytest = "^8.0.1"
+lazytracker = {path = "./analyzer/demo/lazytracker"}
 
 [build-system]
 requires = ["poetry-core"]
