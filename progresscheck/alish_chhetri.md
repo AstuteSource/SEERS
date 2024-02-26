@@ -178,7 +178,7 @@ Table 5 from Zhu:
 | 18  | assertion-McCabe_Ratio | The ratio between the total number of assertions in direct tests and the McCabe Cyclomatic complexity |
 | 19  | assertion_density    | The ratio between the total number of assertions in direct tests and the lines |
 
-
+    
 My anti-pattern table:
 
 | #   | Name                           | Definition                                                                                          |

@@ -1,0 +1,3 @@
+[submodule "scripts/analyzer/demo/lazytracker"]
+	path = scripts/analyzer/demo/lazytracker
+	url = git@github.com:AstuteSource/lazytracker.git
