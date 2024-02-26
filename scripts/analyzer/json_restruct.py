@@ -43,7 +43,7 @@ def restructure_json(chasten_data, mutmut_data):
 
     return structured_data
 
-def main():
+def restruct():
     with open('combined_result.json') as f:
         data = json.load(f)
 
