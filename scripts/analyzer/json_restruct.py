@@ -1,4 +1,5 @@
-"""Danny's Approach to tidy Json data from both Chasten and Mutmut"""
+"""Tidy Json data from both Chasten and Mutmut"""
+
 import json
 
 def restructure_json(chasten_data, mutmut_data):
