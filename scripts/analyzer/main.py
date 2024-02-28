@@ -11,6 +11,7 @@ from contextlib import chdir
 from rich.console import Console
 from pathlib import Path
 from json_restruct import json_restruct
+from add_function_json import add_function_to_json
 
 cli = typer.Typer()
 
@@ -92,6 +93,7 @@ def analyzer(
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
     chasten_config_path: str = os.getcwd() + "/config",
 ):
+    """Runs chasten and mutmut, consolidates the data into a json."""
     console = Console()
     # Step 1: Check and install chasten and mutmut if not installed
     # Save in the script's directory default
@@ -116,4 +118,5 @@ def analyzer(
         console.print("\n\nCode analysis and mutation complete!")
         console.print("Result is stored in file named combined_result.json")
         json_restruct()
-        console.print("Cleaned results stored in file name restructured_result.json")
+        console.print("Cleaned json results.")
+        add_function_to_json("combined_result.json", search_path, "combined_result.json")

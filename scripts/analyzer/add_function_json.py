@@ -60,7 +60,7 @@ def save_output(data, output_file):
     with open(output_file, 'w') as f:
         json.dump(data, f, indent=2)
 
-def main(json_file, source_directory, output_file):
+def add_function_to_json(json_file, source_directory, output_file):
     data = load_json_data(json_file)
     process_directory(source_directory, data)
     save_output(data, output_file)
@@ -69,4 +69,4 @@ if __name__ == '__main__':
     json_input_file = 'restructured_result.json'  # Path to your JSON input
     source_code_directory = 'demo/lazytracker'    # Path to your source code directory
     json_output_file = 'output_with_functions.json'  # Path to your JSON output
-    main(json_input_file, source_code_directory, json_output_file)
+    add_function_to_json(json_input_file, source_code_directory, json_output_file)
