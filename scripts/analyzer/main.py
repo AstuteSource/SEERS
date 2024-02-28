@@ -14,7 +14,6 @@ from json_restruct import json_restruct
 
 cli = typer.Typer()
 
-
 def install_package(package):
     """Install the specified Python package using pip."""
     subprocess.run(["pipx", "install", package])
@@ -39,8 +38,6 @@ def check_installation(package) -> bool:
 def execute_chasten(search_path, save_directory, save_file_path, chasten_config_path):
     """Execute the chasten analyze command for lazytracker."""
     # Resource: https://github.com/AstuteSource/chasten/tree/chastenversion
-    # TODO: will be replaced by our antipattern checks
-    # TODO: update to general use/take input
 
     chasten_command = [
         "chasten",
@@ -64,7 +61,7 @@ def execute_chasten(search_path, save_directory, save_file_path, chasten_config_
 
 def execute_mutmut(search_path):
     """Execute the mutmut run command."""
-    with chdir(os.getcwd() + "/demo/lazytracker"):
+    with chdir(search_path):
         subprocess.run(["mutmut", "run"])
         junit = subprocess.run(
             ["mutmut", "junitxml"], capture_output=True, text=True, check=True
@@ -93,7 +90,7 @@ def save_results(chasten_result, mutmut_result, save_file):
 def analyzer(
     search_path: Path = os.getcwd() + "/demo/lazytracker",
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
-    chasten_config_path: str = os.getcwd() + "/Config",
+    chasten_config_path: str = os.getcwd() + "/config",
 ):
     console = Console()
     # Step 1: Check and install chasten and mutmut if not installed

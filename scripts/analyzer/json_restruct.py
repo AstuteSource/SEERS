@@ -1,4 +1,4 @@
-"""Tidy Json data from both Chasten and Mutmut"""
+"""Tidy Json data from both Chasten and Mutmut and store in a new file."""
 
 import json
 
@@ -46,6 +46,7 @@ def restructure_json(chasten_data, mutmut_data):
 
 def json_restruct():
     with open('combined_result.json') as f:
+        # load in data
         data = json.load(f)
 
     chasten_result = data['chasten_result']
@@ -53,7 +54,8 @@ def json_restruct():
 
     structured_result = restructure_json(chasten_result, mutmut_result)
 
-    with open('restructured_result.json', 'w') as f:
+    with open('combined_result.json', 'w') as f:
+        # rewrite results json
         json.dump(structured_result, f, indent=2)
 
 if __name__ == '__main__':
