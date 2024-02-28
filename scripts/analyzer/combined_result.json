@@ -1,14 +1,14 @@
 {
   "chasten_result": {
     "configuration": {
-      "chastenversion": "1.0.0",
+      "chastenversion": "0.2.0",
       "debuglevel": "ERROR",
       "debugdestination": "CONSOLE",
       "projectname": "lazytracker",
-      "configdirectory": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/Config",
-      "searchpath": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker",
-      "fileuuid": "4e069acbf20044728a2ca9d4421e5bb3",
-      "datetime": "2024-02-26 13:44:56.152512",
+      "configdirectory": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/Config",
+      "searchpath": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker",
+      "fileuuid": "cce227d9e5b4471bb31184ed7a9f285c",
+      "datetime": "2024-02-26 13:56:22.480803",
       "checkinclude": {
         "attribute": "",
         "value": "",
@@ -22,7 +22,7 @@
     },
     "sources": [
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
         "check": {
           "id": "C001",
           "name": "class-definition",
@@ -42,7 +42,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
         "check": {
           "id": "F001",
           "name": "all-function-definition",
@@ -92,7 +92,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
         "check": {
           "id": "F001",
           "name": "all-function-definition",
@@ -118,7 +118,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
         "check": {
           "id": "F001",
           "name": "all-function-definition",
@@ -168,7 +168,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
         "check": {
           "id": "F001",
           "name": "all-function-definition",
@@ -200,7 +200,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
         "check": {
           "id": "F002",
           "name": "dummy-test-non-test-function-definition",
@@ -226,7 +226,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
         "check": {
           "id": "F002",
           "name": "dummy-test-non-test-function-definition",
@@ -276,7 +276,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
         "check": {
           "id": "F002",
           "name": "dummy-test-non-test-function-definition",
@@ -308,7 +308,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
         "check": {
           "id": "CL001",
           "name": "dummy-test-single-nested-if",
@@ -328,7 +328,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
         "check": {
           "id": "CL001",
           "name": "dummy-test-single-nested-if",
@@ -384,7 +384,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
         "check": {
           "id": "BOOL001",
           "name": "boolean-comparison",
@@ -422,7 +422,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
         "check": {
           "id": "BOOL001",
           "name": "boolean-comparison",
@@ -496,7 +496,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
         "check": {
           "id": "BOOL001",
           "name": "boolean-comparison",
@@ -516,7 +516,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
         "check": {
           "id": "ANNOT001",
           "name": "missing-annotations",
@@ -566,7 +566,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
         "check": {
           "id": "ANNOT001",
           "name": "missing-annotations",
@@ -592,7 +592,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
         "check": {
           "id": "ANNOT001",
           "name": "missing-annotations",
@@ -642,7 +642,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
         "check": {
           "id": "ANNOT001",
           "name": "missing-annotations",
@@ -674,7 +674,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
         "check": {
           "id": "FLV001",
           "name": "Function uses loop variable",
@@ -706,7 +706,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
         "check": {
           "id": "F001",
           "name": "Nested Depth (Set value)",
@@ -726,7 +726,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
         "check": {
           "id": "F001",
           "name": "Nested Depth (Set value)",
@@ -752,7 +752,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
         "check": {
           "id": "F001",
           "name": "Nested Depth (Set value)",
@@ -778,7 +778,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
         "check": {
           "id": "F002",
           "name": "Number of conditions (if, if-else, and switch) in a Function",
@@ -822,7 +822,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
         "check": {
           "id": "CL001",
           "name": "The number of nested conditions (e.g., if{if{}}) in a Function",
@@ -848,7 +848,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
         "check": {
           "id": "NOA001",
           "name": "number-of-assertions",
@@ -886,7 +886,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
         "check": {
           "id": "LOF001",
           "name": "count-test-method-lines",
@@ -1032,7 +1032,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
         "check": {
           "id": "LOF001",
           "name": "count-test-method-lines",
@@ -1076,7 +1076,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
         "check": {
           "id": "CML001",
           "name": "count-method-lines",
@@ -1234,7 +1234,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
         "check": {
           "id": "CML001",
           "name": "count-method-lines",
@@ -1278,7 +1278,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
         "check": {
           "id": "CML001",
           "name": "count-method-lines",
@@ -1382,7 +1382,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
         "check": {
           "id": "CML001",
           "name": "count-method-lines",
@@ -1444,7 +1444,7 @@
         }
       },
       {
-        "filename": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+        "filename": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
         "check": {
           "id": "TMIM001",
           "name": "test-methods-invoking-method",

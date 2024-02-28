@@ -1,6 +1,6 @@
 [
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 8,
       "coloffset": 0,
@@ -13,10 +13,11 @@
       "check_name": "class-definition",
       "description": "Ensure the presence of class definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": null
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 6,
       "coloffset": 0,
@@ -29,10 +30,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 35,
       "coloffset": 0,
@@ -45,10 +47,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 53,
       "coloffset": 0,
@@ -61,10 +64,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_files"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 76,
       "coloffset": 0,
@@ -77,10 +81,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 4,
@@ -93,10 +98,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 38,
       "coloffset": 4,
@@ -109,10 +115,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 5,
       "coloffset": 0,
@@ -125,10 +132,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 8,
@@ -141,10 +149,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 9,
       "coloffset": 4,
@@ -157,10 +166,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "__init__"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 13,
       "coloffset": 4,
@@ -188,10 +198,11 @@
           }
         ]
       }
-    ]
+    ],
+    "function": "add_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 29,
       "coloffset": 4,
@@ -219,10 +230,11 @@
           }
         ]
       }
-    ]
+    ],
+    "function": "add_files"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 4,
@@ -235,10 +247,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 52,
       "coloffset": 4,
@@ -266,10 +279,11 @@
           }
         ]
       }
-    ]
+    ],
+    "function": "add_picklables"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 63,
       "coloffset": 4,
@@ -282,10 +296,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "hash"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 0,
@@ -298,10 +313,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 31,
       "coloffset": 4,
@@ -314,10 +330,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 8,
@@ -330,10 +347,11 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 4,
@@ -346,10 +364,11 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 38,
       "coloffset": 4,
@@ -362,10 +381,11 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 9,
       "coloffset": 4,
@@ -378,10 +398,11 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "__init__"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 13,
       "coloffset": 4,
@@ -409,10 +430,11 @@
           }
         ]
       }
-    ]
+    ],
+    "function": "add_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 29,
       "coloffset": 4,
@@ -440,10 +462,11 @@
           }
         ]
       }
-    ]
+    ],
+    "function": "add_files"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 4,
@@ -456,10 +479,11 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 52,
       "coloffset": 4,
@@ -487,10 +511,11 @@
           }
         ]
       }
-    ]
+    ],
+    "function": "add_picklables"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 63,
       "coloffset": 4,
@@ -503,10 +528,11 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "hash"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 0,
@@ -519,10 +545,11 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 31,
       "coloffset": 4,
@@ -535,10 +562,11 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 8,
@@ -551,10 +579,11 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 37,
       "coloffset": 12,
@@ -567,10 +596,11 @@
       "check_name": "dummy-test-single-nested-if",
       "description": "Ensure the presence of single nested 'if' statements within function bodies."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_files"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 41,
       "coloffset": 16,
@@ -592,10 +622,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 16,
@@ -617,10 +648,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 51,
       "coloffset": 16,
@@ -642,10 +674,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 56,
       "coloffset": 16,
@@ -667,10 +700,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 65,
       "coloffset": 16,
@@ -716,10 +750,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 71,
       "coloffset": 20,
@@ -741,10 +776,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 76,
       "coloffset": 20,
@@ -766,10 +802,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 104,
       "coloffset": 15,
@@ -782,10 +819,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 104,
       "coloffset": 15,
@@ -798,10 +836,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 104,
       "coloffset": 15,
@@ -814,10 +853,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 104,
       "coloffset": 15,
@@ -830,10 +870,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -846,10 +887,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -862,10 +904,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -878,10 +921,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -894,10 +938,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -910,10 +955,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -926,10 +972,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -942,10 +989,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -958,10 +1006,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -974,10 +1023,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -990,10 +1040,11 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 65,
       "coloffset": 40,
@@ -1039,10 +1090,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 6,
       "coloffset": 0,
@@ -1055,10 +1107,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 35,
       "coloffset": 0,
@@ -1071,10 +1124,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 4,
@@ -1087,10 +1141,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 38,
       "coloffset": 4,
@@ -1103,10 +1158,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 53,
       "coloffset": 0,
@@ -1119,10 +1175,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_files"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 76,
       "coloffset": 0,
@@ -1135,10 +1192,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 5,
       "coloffset": 0,
@@ -1151,10 +1209,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 8,
@@ -1167,10 +1226,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 9,
       "coloffset": 4,
@@ -1183,10 +1243,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "__init__"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 13,
       "coloffset": 4,
@@ -1214,10 +1275,11 @@
           }
         ]
       }
-    ]
+    ],
+    "function": "add_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 29,
       "coloffset": 4,
@@ -1245,10 +1307,11 @@
           }
         ]
       }
-    ]
+    ],
+    "function": "add_files"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 4,
@@ -1261,10 +1324,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 52,
       "coloffset": 4,
@@ -1292,10 +1356,11 @@
           }
         ]
       }
-    ]
+    ],
+    "function": "add_picklables"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 63,
       "coloffset": 4,
@@ -1308,10 +1373,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "hash"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 0,
@@ -1324,10 +1390,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 31,
       "coloffset": 4,
@@ -1340,10 +1407,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 8,
@@ -1356,10 +1424,11 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 0,
@@ -1372,10 +1441,11 @@
       "check_name": "Function uses loop variable",
       "description": "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 31,
       "coloffset": 4,
@@ -1388,10 +1458,11 @@
       "check_name": "Function uses loop variable",
       "description": "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 8,
@@ -1404,10 +1475,11 @@
       "check_name": "Function uses loop variable",
       "description": "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 35,
       "coloffset": 0,
@@ -1420,10 +1492,11 @@
       "check_name": "Nested Depth (Set value)",
       "description": "Ensure the depth of nesting within functions does not exceed the set value."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 5,
       "coloffset": 0,
@@ -1436,10 +1509,11 @@
       "check_name": "Nested Depth (Set value)",
       "description": "Ensure the depth of nesting within functions does not exceed the set value."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 6,
       "coloffset": 4,
@@ -1452,10 +1526,11 @@
       "check_name": "Nested Depth (Set value)",
       "description": "Ensure the depth of nesting within functions does not exceed the set value."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 0,
@@ -1468,10 +1543,11 @@
       "check_name": "Nested Depth (Set value)",
       "description": "Ensure the depth of nesting within functions does not exceed the set value."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 31,
       "coloffset": 4,
@@ -1484,10 +1560,11 @@
       "check_name": "Nested Depth (Set value)",
       "description": "Ensure the depth of nesting within functions does not exceed the set value."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 16,
@@ -1509,10 +1586,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 51,
       "coloffset": 16,
@@ -1534,10 +1612,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 56,
       "coloffset": 16,
@@ -1559,10 +1638,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 65,
       "coloffset": 16,
@@ -1608,10 +1688,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 76,
       "coloffset": 20,
@@ -1633,10 +1714,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 71,
       "coloffset": 20,
@@ -1658,10 +1740,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 76,
       "coloffset": 20,
@@ -1683,10 +1766,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 32,
       "coloffset": 4,
@@ -1699,10 +1783,11 @@
       "check_name": "number-of-assertions",
       "description": "Ensure the presence of assertions within function bodies of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 4,
@@ -1715,10 +1800,11 @@
       "check_name": "number-of-assertions",
       "description": "Ensure the presence of assertions within function bodies of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 50,
       "coloffset": 4,
@@ -1731,10 +1817,11 @@
       "check_name": "number-of-assertions",
       "description": "Ensure the presence of assertions within function bodies of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 51,
       "coloffset": 4,
@@ -1747,10 +1834,11 @@
       "check_name": "number-of-assertions",
       "description": "Ensure the presence of assertions within function bodies of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 7,
       "coloffset": 4,
@@ -1763,10 +1851,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 15,
       "coloffset": 4,
@@ -1779,10 +1868,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 23,
       "coloffset": 4,
@@ -1795,10 +1885,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 24,
       "coloffset": 4,
@@ -1811,10 +1902,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 26,
       "coloffset": 4,
@@ -1827,10 +1919,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 27,
       "coloffset": 4,
@@ -1843,10 +1936,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 29,
       "coloffset": 4,
@@ -1859,10 +1953,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 30,
       "coloffset": 4,
@@ -1875,10 +1970,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 32,
       "coloffset": 4,
@@ -1891,10 +1987,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 4,
@@ -1907,10 +2004,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 4,
@@ -1923,10 +2021,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 38,
       "coloffset": 4,
@@ -1939,10 +2038,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 41,
       "coloffset": 4,
@@ -1955,10 +2055,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 42,
       "coloffset": 4,
@@ -1971,10 +2072,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 4,
@@ -1987,10 +2089,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 45,
       "coloffset": 4,
@@ -2003,10 +2106,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 47,
       "coloffset": 4,
@@ -2019,10 +2123,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 48,
       "coloffset": 4,
@@ -2035,10 +2140,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 50,
       "coloffset": 4,
@@ -2051,10 +2157,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 51,
       "coloffset": 4,
@@ -2067,10 +2174,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 54,
       "coloffset": 4,
@@ -2083,10 +2191,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_files"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 77,
       "coloffset": 4,
@@ -2099,10 +2208,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 6,
       "coloffset": 4,
@@ -2115,10 +2225,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 15,
       "coloffset": 12,
@@ -2131,10 +2242,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 17,
       "coloffset": 12,
@@ -2147,10 +2259,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 20,
       "coloffset": 12,
@@ -2163,10 +2276,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 21,
       "coloffset": 12,
@@ -2179,10 +2293,11 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 7,
       "coloffset": 4,
@@ -2195,10 +2310,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 15,
       "coloffset": 4,
@@ -2211,10 +2327,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 23,
       "coloffset": 4,
@@ -2227,10 +2344,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 24,
       "coloffset": 4,
@@ -2243,10 +2361,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 26,
       "coloffset": 4,
@@ -2259,10 +2378,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 27,
       "coloffset": 4,
@@ -2275,10 +2395,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 29,
       "coloffset": 4,
@@ -2291,10 +2412,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 30,
       "coloffset": 4,
@@ -2307,10 +2429,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 32,
       "coloffset": 4,
@@ -2323,10 +2446,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 4,
@@ -2339,10 +2463,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 4,
@@ -2355,10 +2480,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 37,
       "coloffset": 8,
@@ -2371,10 +2497,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 38,
       "coloffset": 4,
@@ -2387,10 +2514,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 39,
       "coloffset": 8,
@@ -2403,10 +2531,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 41,
       "coloffset": 4,
@@ -2419,10 +2548,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 42,
       "coloffset": 4,
@@ -2435,10 +2565,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 4,
@@ -2451,10 +2582,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 45,
       "coloffset": 4,
@@ -2467,10 +2599,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 47,
       "coloffset": 4,
@@ -2483,10 +2616,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 48,
       "coloffset": 4,
@@ -2499,10 +2633,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 50,
       "coloffset": 4,
@@ -2515,10 +2650,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 51,
       "coloffset": 4,
@@ -2531,10 +2667,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_picable_function"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 54,
       "coloffset": 4,
@@ -2547,10 +2684,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_files"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 77,
       "coloffset": 4,
@@ -2563,10 +2701,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 6,
       "coloffset": 4,
@@ -2579,10 +2718,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 15,
       "coloffset": 12,
@@ -2595,10 +2735,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 17,
       "coloffset": 12,
@@ -2611,10 +2752,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 20,
       "coloffset": 12,
@@ -2627,10 +2769,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 21,
       "coloffset": 12,
@@ -2643,10 +2786,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 10,
       "coloffset": 8,
@@ -2659,10 +2803,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "__init__"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 11,
       "coloffset": 8,
@@ -2684,10 +2829,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "__init__"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 8,
@@ -2700,10 +2846,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 20,
       "coloffset": 8,
@@ -2725,10 +2872,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "add_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 22,
       "coloffset": 8,
@@ -2741,10 +2889,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 25,
       "coloffset": 8,
@@ -2766,10 +2915,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "add_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 27,
       "coloffset": 8,
@@ -2782,10 +2932,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_directories"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 30,
       "coloffset": 8,
@@ -2798,10 +2949,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_files"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 8,
@@ -2814,10 +2966,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_files"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 45,
       "coloffset": 8,
@@ -2830,10 +2983,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 50,
       "coloffset": 8,
@@ -2846,10 +3000,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_hparams"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 53,
       "coloffset": 8,
@@ -2862,10 +3017,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_picklables"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 60,
       "coloffset": 8,
@@ -2878,10 +3034,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "add_picklables"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 64,
       "coloffset": 8,
@@ -2894,10 +3051,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "hash"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 70,
       "coloffset": 8,
@@ -2910,10 +3068,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "hash"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 21,
       "coloffset": 4,
@@ -2926,10 +3085,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 31,
       "coloffset": 4,
@@ -2942,10 +3102,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 8,
@@ -2958,10 +3119,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 34,
       "coloffset": 12,
@@ -2974,10 +3136,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 12,
@@ -3013,10 +3176,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 37,
       "coloffset": 12,
@@ -3046,10 +3210,11 @@
         ],
         "failure": null
       }
-    ]
+    ],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 89,
       "coloffset": 8,
@@ -3062,10 +3227,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 91,
       "coloffset": 4,
@@ -3078,10 +3244,11 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 28,
       "coloffset": 16,
@@ -3094,10 +3261,11 @@
       "check_name": "test-methods-invoking-method",
       "description": "Identify test methods invoking specific methods."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 37,
       "coloffset": 16,
@@ -3110,10 +3278,11 @@
       "check_name": "test-methods-invoking-method",
       "description": "Identify test methods invoking specific methods."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 45,
       "coloffset": 16,
@@ -3126,10 +3295,11 @@
       "check_name": "test-methods-invoking-method",
       "description": "Identify test methods invoking specific methods."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 57,
       "coloffset": 16,
@@ -3142,10 +3312,11 @@
       "check_name": "test-methods-invoking-method",
       "description": "Identify test methods invoking specific methods."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 68,
       "coloffset": 16,
@@ -3158,6 +3329,7 @@
       "check_name": "test-methods-invoking-method",
       "description": "Identify test methods invoking specific methods."
     },
-    "mutants": []
+    "mutants": [],
+    "function": "test_cached"
   }
 ]
