@@ -39,11 +39,12 @@ def match_patterns_to_functions(json_data, functions):
             start = int(details['start'])  # Ensure start is an integer
             end = int(details['end'])  # Ensure end is an integer, handle None case
             if start <= lineno <= (end or lineno):
-                entry['function'] = function
+                entry['function_name'] = function
+                entry['function_start_line'] = start  # Add the function's start line
                 break
-        if 'function' not in entry:
-            entry['function'] = None  # or 'global scope' if you prefer
-
+        if 'function_name' not in entry:
+            entry['function_name'] = None  # or 'global scope' if you prefer
+            entry['function_start_line'] = None
 
 def process_directory(directory, json_data):
     for entry in json_data:
@@ -53,6 +54,7 @@ def process_directory(directory, json_data):
         if os.path.isfile(full_path):
             functions = parse_source_code(full_path)
             match_patterns_to_functions([entry], functions)
+
 
 def save_output(data, output_file):
     with open(output_file, 'w') as f:
