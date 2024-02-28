@@ -10,6 +10,7 @@ from glob import glob
 from contextlib import chdir
 from rich.console import Console
 from pathlib import Path
+from json_restruct import json_restruct
 
 cli = typer.Typer()
 
@@ -116,4 +117,6 @@ def analyzer(
         # Step 4: Save results in a file
         save_results(chasten_result, mutmut_result, "combined_result.json")
         console.print("\n\nCode analysis and mutation complete!")
-        console.print("Result is stored in file name combined_result.json")
+        console.print("Result is stored in file named combined_result.json")
+        json_restruct()
+        console.print("Cleaned results stored in file name restructured_result.json")

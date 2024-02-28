@@ -1,4 +1,5 @@
-"""Danny's Approach to tidy Json data from both Chasten and Mutmut"""
+"""Tidy Json data from both Chasten and Mutmut"""
+
 import json
 
 def restructure_json(chasten_data, mutmut_data):
@@ -43,7 +44,7 @@ def restructure_json(chasten_data, mutmut_data):
 
     return structured_data
 
-def main():
+def json_restruct():
     with open('combined_result.json') as f:
         data = json.load(f)
 
@@ -56,4 +57,4 @@ def main():
         json.dump(structured_result, f, indent=2)
 
 if __name__ == '__main__':
-    main()
+    json_restruct()

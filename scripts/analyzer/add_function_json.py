@@ -44,7 +44,6 @@ def match_patterns_to_functions(json_data, functions):
             entry['function_name'] = None  # or 'global scope' if you prefer
             entry['function_start_line'] = None
 
-
 def process_directory(directory, json_data):
     for entry in json_data:
         file_path = entry['file']
