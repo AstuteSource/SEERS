@@ -30,7 +30,7 @@ def check_installation(package) -> bool:
             check=True,
         )
         # I learned to use a PIPE with the subprocess module here: https://stackoverflow.com/questions/13332268/how-to-use-subprocess-command-with-pipes
-    except subprocess.CalledProcessError:
+    except subprocess.CalledProcessError or FileNotFoundError:
         #  The package isn't installed, then return false: https://stackoverflow.com/questions/32942207/python-subprocess-calledprocesserror-command-returned-non-zero-exit-s
         return False
     return True
@@ -74,7 +74,7 @@ def execute_mutmut(search_path):
         junit = subprocess.run(
             ["mutmut", "junitxml"], capture_output=True, text=True, check=True
         )
-        with open("mutation.xml", "x") as f:
+        with open("mutation.xml", "w") as f:
             f.write(junit.stdout)
         result = subprocess.run(
             ["npx", "junit2json", "mutation.xml"],
