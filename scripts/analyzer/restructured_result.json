@@ -13,7 +13,14 @@
       "check_name": "class-definition",
       "description": "Ensure the presence of class definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -29,7 +36,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -45,7 +59,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -61,7 +82,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -77,7 +105,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -93,7 +128,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -109,7 +151,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -125,7 +174,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -141,7 +197,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -157,7 +220,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -173,22 +243,24 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": [
-      {
-        "name": "Mutant #2",
+    "mutants": {
+      "Mutant #2": {
         "line": 13,
-        "description": [
-          "    def add_directories(self, directories: List[str], chunk_num_blocks=128):"
-        ],
-        "failure": [
-          {
-            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -10,7 +10,7 @@\n         \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n         self._hasher = hashlib.md5()\n \n-    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n+    def add_directories(self, directories: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of all files inside directory (including files in subdirectories)\n \n         Args:\n",
-            "type": "failure",
-            "message": "bad_survived"
-          }
-        ]
+        "description": "    def add_directories(self, directories: List[str], chunk_num_blocks=128):",
+        "failure": {
+          "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -10,7 +10,7 @@\n         \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n         self._hasher = hashlib.md5()\n \n-    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n+    def add_directories(self, directories: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of all files inside directory (including files in subdirectories)\n \n         Args:\n",
+          "type": "failure",
+          "message": "bad_survived"
+        }
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -204,22 +276,24 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": [
-      {
-        "name": "Mutant #6",
+    "mutants": {
+      "Mutant #6": {
         "line": 29,
-        "description": [
-          "    def add_files(self, filepaths: List[str], chunk_num_blocks=128):"
-        ],
-        "failure": [
-          {
-            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -26,7 +26,7 @@\n \n         self.add_files(files_to_check, chunk_num_blocks)\n \n-    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n+    def add_files(self, filepaths: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of files\n \n         Args:\n",
-            "type": "failure",
-            "message": "bad_survived"
-          }
-        ]
+        "description": "    def add_files(self, filepaths: List[str], chunk_num_blocks=128):",
+        "failure": {
+          "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -26,7 +26,7 @@\n \n         self.add_files(files_to_check, chunk_num_blocks)\n \n-    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n+    def add_files(self, filepaths: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of files\n \n         Args:\n",
+          "type": "failure",
+          "message": "bad_survived"
+        }
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -235,7 +309,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -251,22 +332,24 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": [
-      {
-        "name": "Mutant #9",
+    "mutants": {
+      "Mutant #9": {
         "line": 52,
-        "description": [
-          "    def add_picklables(self, objects: List[Any], recursive: bool=False):"
-        ],
-        "failure": [
-          {
-            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -49,7 +49,7 @@\n         \"\"\"\n         self.add_picklables([hparams])\n \n-    def add_picklables(self, objects: List[Any], recursive: bool=False):\n+    def add_picklables(self, objects: List[Any], recursive: bool=True):\n         \"\"\"Include hash of any picklable python objects (pickable by dill)\n \n         Args:\n",
-            "type": "failure",
-            "message": "bad_survived"
-          }
-        ]
+        "description": "    def add_picklables(self, objects: List[Any], recursive: bool=False):",
+        "failure": {
+          "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -49,7 +49,7 @@\n         \"\"\"\n         self.add_picklables([hparams])\n \n-    def add_picklables(self, objects: List[Any], recursive: bool=False):\n+    def add_picklables(self, objects: List[Any], recursive: bool=True):\n         \"\"\"Include hash of any picklable python objects (pickable by dill)\n \n         Args:\n",
+          "type": "failure",
+          "message": "bad_survived"
+        }
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -282,7 +365,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -298,7 +388,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -314,7 +411,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -330,7 +434,14 @@
       "check_name": "all-function-definition",
       "description": "Ensure the presence of function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -346,7 +457,14 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -362,7 +480,14 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -378,7 +503,14 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -394,22 +526,24 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": [
-      {
-        "name": "Mutant #2",
+    "mutants": {
+      "Mutant #2": {
         "line": 13,
-        "description": [
-          "    def add_directories(self, directories: List[str], chunk_num_blocks=128):"
-        ],
-        "failure": [
-          {
-            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -10,7 +10,7 @@\n         \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n         self._hasher = hashlib.md5()\n \n-    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n+    def add_directories(self, directories: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of all files inside directory (including files in subdirectories)\n \n         Args:\n",
-            "type": "failure",
-            "message": "bad_survived"
-          }
-        ]
+        "description": "    def add_directories(self, directories: List[str], chunk_num_blocks=128):",
+        "failure": {
+          "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -10,7 +10,7 @@\n         \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n         self._hasher = hashlib.md5()\n \n-    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n+    def add_directories(self, directories: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of all files inside directory (including files in subdirectories)\n \n         Args:\n",
+          "type": "failure",
+          "message": "bad_survived"
+        }
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -425,22 +559,24 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": [
-      {
-        "name": "Mutant #6",
+    "mutants": {
+      "Mutant #6": {
         "line": 29,
-        "description": [
-          "    def add_files(self, filepaths: List[str], chunk_num_blocks=128):"
-        ],
-        "failure": [
-          {
-            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -26,7 +26,7 @@\n \n         self.add_files(files_to_check, chunk_num_blocks)\n \n-    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n+    def add_files(self, filepaths: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of files\n \n         Args:\n",
-            "type": "failure",
-            "message": "bad_survived"
-          }
-        ]
+        "description": "    def add_files(self, filepaths: List[str], chunk_num_blocks=128):",
+        "failure": {
+          "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -26,7 +26,7 @@\n \n         self.add_files(files_to_check, chunk_num_blocks)\n \n-    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n+    def add_files(self, filepaths: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of files\n \n         Args:\n",
+          "type": "failure",
+          "message": "bad_survived"
+        }
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -456,7 +592,14 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -472,22 +615,24 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": [
-      {
-        "name": "Mutant #9",
+    "mutants": {
+      "Mutant #9": {
         "line": 52,
-        "description": [
-          "    def add_picklables(self, objects: List[Any], recursive: bool=False):"
-        ],
-        "failure": [
-          {
-            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -49,7 +49,7 @@\n         \"\"\"\n         self.add_picklables([hparams])\n \n-    def add_picklables(self, objects: List[Any], recursive: bool=False):\n+    def add_picklables(self, objects: List[Any], recursive: bool=True):\n         \"\"\"Include hash of any picklable python objects (pickable by dill)\n \n         Args:\n",
-            "type": "failure",
-            "message": "bad_survived"
-          }
-        ]
+        "description": "    def add_picklables(self, objects: List[Any], recursive: bool=False):",
+        "failure": {
+          "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -49,7 +49,7 @@\n         \"\"\"\n         self.add_picklables([hparams])\n \n-    def add_picklables(self, objects: List[Any], recursive: bool=False):\n+    def add_picklables(self, objects: List[Any], recursive: bool=True):\n         \"\"\"Include hash of any picklable python objects (pickable by dill)\n \n         Args:\n",
+          "type": "failure",
+          "message": "bad_survived"
+        }
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -503,7 +648,14 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -519,7 +671,14 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -535,7 +694,14 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -551,7 +717,14 @@
       "check_name": "dummy-test-non-test-function-definition",
       "description": "Ensure the presence of non-test function definitions in the codebase."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -567,7 +740,14 @@
       "check_name": "dummy-test-single-nested-if",
       "description": "Ensure the presence of single nested 'if' statements within function bodies."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -583,16 +763,20 @@
       "check_name": "dummy-test-single-nested-if",
       "description": "Ensure the presence of single nested 'if' statements within function bodies."
     },
-    "mutants": [
-      {
-        "name": "Mutant #20",
+    "mutants": {
+      "Mutant #20": {
         "line": 41,
-        "description": [
-          "                if input_dirs is not None:"
-        ],
-        "failure": null
+        "description": "                if input_dirs is not None:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -608,16 +792,20 @@
       "check_name": "dummy-test-single-nested-if",
       "description": "Ensure the presence of single nested 'if' statements within function bodies."
     },
-    "mutants": [
-      {
-        "name": "Mutant #22",
+    "mutants": {
+      "Mutant #22": {
         "line": 44,
-        "description": [
-          "                if input_files is not None:"
-        ],
-        "failure": null
+        "description": "                if input_files is not None:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -633,16 +821,20 @@
       "check_name": "dummy-test-single-nested-if",
       "description": "Ensure the presence of single nested 'if' statements within function bodies."
     },
-    "mutants": [
-      {
-        "name": "Mutant #25",
+    "mutants": {
+      "Mutant #25": {
         "line": 51,
-        "description": [
-          "                if output_dirs is not None:"
-        ],
-        "failure": null
+        "description": "                if output_dirs is not None:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -658,16 +850,20 @@
       "check_name": "dummy-test-single-nested-if",
       "description": "Ensure the presence of single nested 'if' statements within function bodies."
     },
-    "mutants": [
-      {
-        "name": "Mutant #27",
+    "mutants": {
+      "Mutant #27": {
         "line": 56,
-        "description": [
-          "                if output_files is not None:"
-        ],
-        "failure": null
+        "description": "                if output_files is not None:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -683,40 +879,35 @@
       "check_name": "dummy-test-single-nested-if",
       "description": "Ensure the presence of single nested 'if' statements within function bodies."
     },
-    "mutants": [
-      {
-        "name": "Mutant #31",
+    "mutants": {
+      "Mutant #31": {
         "line": 65,
-        "description": [
-          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
-        ],
-        "failure": null
+        "description": "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+        "failure": {}
       },
-      {
-        "name": "Mutant #32",
+      "Mutant #32": {
         "line": 65,
-        "description": [
-          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
-        ],
-        "failure": null
+        "description": "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+        "failure": {}
       },
-      {
-        "name": "Mutant #33",
+      "Mutant #33": {
         "line": 65,
-        "description": [
-          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
-        ],
-        "failure": null
+        "description": "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+        "failure": {}
       },
-      {
-        "name": "Mutant #34",
+      "Mutant #34": {
         "line": 65,
-        "description": [
-          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
-        ],
-        "failure": null
+        "description": "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -732,16 +923,20 @@
       "check_name": "dummy-test-single-nested-if",
       "description": "Ensure the presence of single nested 'if' statements within function bodies."
     },
-    "mutants": [
-      {
-        "name": "Mutant #38",
+    "mutants": {
+      "Mutant #38": {
         "line": 71,
-        "description": [
-          "                    if output_dirs is not None:"
-        ],
-        "failure": null
+        "description": "                    if output_dirs is not None:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -757,16 +952,20 @@
       "check_name": "dummy-test-single-nested-if",
       "description": "Ensure the presence of single nested 'if' statements within function bodies."
     },
-    "mutants": [
-      {
-        "name": "Mutant #40",
+    "mutants": {
+      "Mutant #40": {
         "line": 76,
-        "description": [
-          "                    if output_files is not None:"
-        ],
-        "failure": null
+        "description": "                    if output_files is not None:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -782,7 +981,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -798,7 +1004,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -814,7 +1027,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -830,7 +1050,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -846,7 +1073,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -862,7 +1096,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -878,7 +1119,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -894,7 +1142,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -910,7 +1165,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -926,7 +1188,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -942,7 +1211,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -958,7 +1234,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -974,7 +1257,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -990,7 +1280,14 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1006,40 +1303,35 @@
       "check_name": "boolean-comparison",
       "description": "Using = or == operators to compare boolean values"
     },
-    "mutants": [
-      {
-        "name": "Mutant #31",
+    "mutants": {
+      "Mutant #31": {
         "line": 65,
-        "description": [
-          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
-        ],
-        "failure": null
+        "description": "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+        "failure": {}
       },
-      {
-        "name": "Mutant #32",
+      "Mutant #32": {
         "line": 65,
-        "description": [
-          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
-        ],
-        "failure": null
+        "description": "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+        "failure": {}
       },
-      {
-        "name": "Mutant #33",
+      "Mutant #33": {
         "line": 65,
-        "description": [
-          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
-        ],
-        "failure": null
+        "description": "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+        "failure": {}
       },
-      {
-        "name": "Mutant #34",
+      "Mutant #34": {
         "line": 65,
-        "description": [
-          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
-        ],
-        "failure": null
+        "description": "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1055,7 +1347,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1071,7 +1370,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1087,7 +1393,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1103,7 +1416,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1119,7 +1439,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1135,7 +1462,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -1151,7 +1485,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -1167,7 +1508,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -1183,7 +1531,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -1199,22 +1554,24 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": [
-      {
-        "name": "Mutant #2",
+    "mutants": {
+      "Mutant #2": {
         "line": 13,
-        "description": [
-          "    def add_directories(self, directories: List[str], chunk_num_blocks=128):"
-        ],
-        "failure": [
-          {
-            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -10,7 +10,7 @@\n         \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n         self._hasher = hashlib.md5()\n \n-    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n+    def add_directories(self, directories: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of all files inside directory (including files in subdirectories)\n \n         Args:\n",
-            "type": "failure",
-            "message": "bad_survived"
-          }
-        ]
+        "description": "    def add_directories(self, directories: List[str], chunk_num_blocks=128):",
+        "failure": {
+          "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -10,7 +10,7 @@\n         \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n         self._hasher = hashlib.md5()\n \n-    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n+    def add_directories(self, directories: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of all files inside directory (including files in subdirectories)\n \n         Args:\n",
+          "type": "failure",
+          "message": "bad_survived"
+        }
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -1230,22 +1587,24 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": [
-      {
-        "name": "Mutant #6",
+    "mutants": {
+      "Mutant #6": {
         "line": 29,
-        "description": [
-          "    def add_files(self, filepaths: List[str], chunk_num_blocks=128):"
-        ],
-        "failure": [
-          {
-            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -26,7 +26,7 @@\n \n         self.add_files(files_to_check, chunk_num_blocks)\n \n-    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n+    def add_files(self, filepaths: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of files\n \n         Args:\n",
-            "type": "failure",
-            "message": "bad_survived"
-          }
-        ]
+        "description": "    def add_files(self, filepaths: List[str], chunk_num_blocks=128):",
+        "failure": {
+          "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -26,7 +26,7 @@\n \n         self.add_files(files_to_check, chunk_num_blocks)\n \n-    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n+    def add_files(self, filepaths: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of files\n \n         Args:\n",
+          "type": "failure",
+          "message": "bad_survived"
+        }
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -1261,7 +1620,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -1277,22 +1643,24 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": [
-      {
-        "name": "Mutant #9",
+    "mutants": {
+      "Mutant #9": {
         "line": 52,
-        "description": [
-          "    def add_picklables(self, objects: List[Any], recursive: bool=False):"
-        ],
-        "failure": [
-          {
-            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -49,7 +49,7 @@\n         \"\"\"\n         self.add_picklables([hparams])\n \n-    def add_picklables(self, objects: List[Any], recursive: bool=False):\n+    def add_picklables(self, objects: List[Any], recursive: bool=True):\n         \"\"\"Include hash of any picklable python objects (pickable by dill)\n \n         Args:\n",
-            "type": "failure",
-            "message": "bad_survived"
-          }
-        ]
+        "description": "    def add_picklables(self, objects: List[Any], recursive: bool=False):",
+        "failure": {
+          "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -49,7 +49,7 @@\n         \"\"\"\n         self.add_picklables([hparams])\n \n-    def add_picklables(self, objects: List[Any], recursive: bool=False):\n+    def add_picklables(self, objects: List[Any], recursive: bool=True):\n         \"\"\"Include hash of any picklable python objects (pickable by dill)\n \n         Args:\n",
+          "type": "failure",
+          "message": "bad_survived"
+        }
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -1308,7 +1676,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1324,7 +1699,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1340,7 +1722,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1356,7 +1745,14 @@
       "check_name": "missing-annotations",
       "description": "A function does not explicitly annotate arguments/parameters or the expected output"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1372,7 +1768,14 @@
       "check_name": "Function uses loop variable",
       "description": "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1388,7 +1791,14 @@
       "check_name": "Function uses loop variable",
       "description": "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1404,7 +1814,14 @@
       "check_name": "Function uses loop variable",
       "description": "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1420,7 +1837,14 @@
       "check_name": "Nested Depth (Set value)",
       "description": "Ensure the depth of nesting within functions does not exceed the set value."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -1436,7 +1860,14 @@
       "check_name": "Nested Depth (Set value)",
       "description": "Ensure the depth of nesting within functions does not exceed the set value."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -1452,7 +1883,14 @@
       "check_name": "Nested Depth (Set value)",
       "description": "Ensure the depth of nesting within functions does not exceed the set value."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1468,7 +1906,14 @@
       "check_name": "Nested Depth (Set value)",
       "description": "Ensure the depth of nesting within functions does not exceed the set value."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1484,7 +1929,14 @@
       "check_name": "Nested Depth (Set value)",
       "description": "Ensure the depth of nesting within functions does not exceed the set value."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1500,16 +1952,20 @@
       "check_name": "Number of conditions (if, if-else, and switch) in a Function",
       "description": "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
     },
-    "mutants": [
-      {
-        "name": "Mutant #22",
+    "mutants": {
+      "Mutant #22": {
         "line": 44,
-        "description": [
-          "                if input_files is not None:"
-        ],
-        "failure": null
+        "description": "                if input_files is not None:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1525,16 +1981,20 @@
       "check_name": "Number of conditions (if, if-else, and switch) in a Function",
       "description": "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
     },
-    "mutants": [
-      {
-        "name": "Mutant #25",
+    "mutants": {
+      "Mutant #25": {
         "line": 51,
-        "description": [
-          "                if output_dirs is not None:"
-        ],
-        "failure": null
+        "description": "                if output_dirs is not None:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1550,16 +2010,20 @@
       "check_name": "Number of conditions (if, if-else, and switch) in a Function",
       "description": "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
     },
-    "mutants": [
-      {
-        "name": "Mutant #27",
+    "mutants": {
+      "Mutant #27": {
         "line": 56,
-        "description": [
-          "                if output_files is not None:"
-        ],
-        "failure": null
+        "description": "                if output_files is not None:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1575,40 +2039,35 @@
       "check_name": "Number of conditions (if, if-else, and switch) in a Function",
       "description": "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
     },
-    "mutants": [
-      {
-        "name": "Mutant #31",
+    "mutants": {
+      "Mutant #31": {
         "line": 65,
-        "description": [
-          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
-        ],
-        "failure": null
+        "description": "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+        "failure": {}
       },
-      {
-        "name": "Mutant #32",
+      "Mutant #32": {
         "line": 65,
-        "description": [
-          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
-        ],
-        "failure": null
+        "description": "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+        "failure": {}
       },
-      {
-        "name": "Mutant #33",
+      "Mutant #33": {
         "line": 65,
-        "description": [
-          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
-        ],
-        "failure": null
+        "description": "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+        "failure": {}
       },
-      {
-        "name": "Mutant #34",
+      "Mutant #34": {
         "line": 65,
-        "description": [
-          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
-        ],
-        "failure": null
+        "description": "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1624,16 +2083,20 @@
       "check_name": "Number of conditions (if, if-else, and switch) in a Function",
       "description": "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
     },
-    "mutants": [
-      {
-        "name": "Mutant #40",
+    "mutants": {
+      "Mutant #40": {
         "line": 76,
-        "description": [
-          "                    if output_files is not None:"
-        ],
-        "failure": null
+        "description": "                    if output_files is not None:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1649,16 +2112,20 @@
       "check_name": "The number of nested conditions (e.g., if{if{}}) in a Function",
       "description": "Ensure there is at least one nested condition (e.g., if{if{}}) in a function."
     },
-    "mutants": [
-      {
-        "name": "Mutant #38",
+    "mutants": {
+      "Mutant #38": {
         "line": 71,
-        "description": [
-          "                    if output_dirs is not None:"
-        ],
-        "failure": null
+        "description": "                    if output_dirs is not None:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -1674,16 +2141,20 @@
       "check_name": "The number of nested conditions (e.g., if{if{}}) in a Function",
       "description": "Ensure there is at least one nested condition (e.g., if{if{}}) in a function."
     },
-    "mutants": [
-      {
-        "name": "Mutant #40",
+    "mutants": {
+      "Mutant #40": {
         "line": 76,
-        "description": [
-          "                    if output_files is not None:"
-        ],
-        "failure": null
+        "description": "                    if output_files is not None:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1699,7 +2170,14 @@
       "check_name": "number-of-assertions",
       "description": "Ensure the presence of assertions within function bodies of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1715,7 +2193,14 @@
       "check_name": "number-of-assertions",
       "description": "Ensure the presence of assertions within function bodies of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1731,7 +2216,14 @@
       "check_name": "number-of-assertions",
       "description": "Ensure the presence of assertions within function bodies of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1747,7 +2239,14 @@
       "check_name": "number-of-assertions",
       "description": "Ensure the presence of assertions within function bodies of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1763,7 +2262,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1779,7 +2285,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1795,7 +2308,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1811,7 +2331,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1827,7 +2354,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1843,7 +2377,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1859,7 +2400,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1875,7 +2423,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1891,7 +2446,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1907,7 +2469,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1923,7 +2492,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1939,7 +2515,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1955,7 +2538,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1971,7 +2561,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -1987,7 +2584,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2003,7 +2607,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2019,7 +2630,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2035,7 +2653,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2051,7 +2676,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2067,7 +2699,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2083,7 +2722,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2099,7 +2745,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -2115,7 +2768,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -2131,7 +2791,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -2147,7 +2814,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -2163,7 +2837,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -2179,7 +2860,14 @@
       "check_name": "count-test-method-lines",
       "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2195,7 +2883,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2211,7 +2906,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2227,7 +2929,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2243,7 +2952,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2259,7 +2975,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2275,7 +2998,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2291,7 +3021,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2307,7 +3044,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2323,7 +3067,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2339,7 +3090,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2355,7 +3113,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2371,7 +3136,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2387,7 +3159,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2403,7 +3182,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2419,7 +3205,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2435,7 +3228,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2451,7 +3251,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2467,7 +3274,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2483,7 +3297,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2499,7 +3320,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2515,7 +3343,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2531,7 +3366,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2547,7 +3389,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
@@ -2563,7 +3412,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -2579,7 +3435,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -2595,7 +3458,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -2611,7 +3481,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -2627,7 +3504,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -2643,7 +3527,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2659,7 +3550,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2675,16 +3573,20 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": [
-      {
-        "name": "Mutant #1",
+    "mutants": {
+      "Mutant #1": {
         "line": 11,
-        "description": [
-          "        self._hasher = hashlib.md5()"
-        ],
-        "failure": null
+        "description": "        self._hasher = hashlib.md5()",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2700,7 +3602,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2716,16 +3625,20 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": [
-      {
-        "name": "Mutant #3",
+    "mutants": {
+      "Mutant #3": {
         "line": 20,
-        "description": [
-          "        files_to_check = []"
-        ],
-        "failure": null
+        "description": "        files_to_check = []",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2741,7 +3654,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2757,16 +3677,20 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": [
-      {
-        "name": "Mutant #5",
+    "mutants": {
+      "Mutant #5": {
         "line": 25,
-        "description": [
-          "        files_to_check = sorted(files_to_check)"
-        ],
-        "failure": null
+        "description": "        files_to_check = sorted(files_to_check)",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2782,7 +3706,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2798,7 +3729,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2814,7 +3752,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2830,7 +3775,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2846,7 +3798,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2862,7 +3821,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2878,7 +3844,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2894,7 +3867,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
@@ -2910,7 +3890,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -2926,7 +3913,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -2942,7 +3936,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -2958,7 +3959,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -2974,7 +3982,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -2990,30 +4005,29 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": [
-      {
-        "name": "Mutant #14",
+    "mutants": {
+      "Mutant #14": {
         "line": 36,
-        "description": [
-          "            os.makedirs(f\"{cache_dir}\", exist_ok=True)"
-        ],
-        "failure": [
-          {
-            "inner": "--- lazytracker/tracked.py\n+++ lazytracker/tracked.py\n@@ -33,7 +33,7 @@\n         def wrapper(*args, **kwargs):\n             kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n \n-            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n+            os.makedirs(f\"XX{cache_dir}XX\", exist_ok=True)\n             with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                 input_tracker = LazyTracker()\n                 input_tracker.add_picklables([function], recursive=True)\n",
-            "type": "failure",
-            "message": "bad_survived"
-          }
-        ]
+        "description": "            os.makedirs(f\"{cache_dir}\", exist_ok=True)",
+        "failure": {
+          "inner": "--- lazytracker/tracked.py\n+++ lazytracker/tracked.py\n@@ -33,7 +33,7 @@\n         def wrapper(*args, **kwargs):\n             kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n \n-            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n+            os.makedirs(f\"XX{cache_dir}XX\", exist_ok=True)\n             with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                 input_tracker = LazyTracker()\n                 input_tracker.add_picklables([function], recursive=True)\n",
+          "type": "failure",
+          "message": "bad_survived"
+        }
       },
-      {
-        "name": "Mutant #15",
+      "Mutant #15": {
         "line": 36,
-        "description": [
-          "            os.makedirs(f\"{cache_dir}\", exist_ok=True)"
-        ],
-        "failure": null
+        "description": "            os.makedirs(f\"{cache_dir}\", exist_ok=True)",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -3029,24 +4043,25 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": [
-      {
-        "name": "Mutant #16",
+    "mutants": {
+      "Mutant #16": {
         "line": 37,
-        "description": [
-          "            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:"
-        ],
-        "failure": null
+        "description": "            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:",
+        "failure": {}
       },
-      {
-        "name": "Mutant #17",
+      "Mutant #17": {
         "line": 37,
-        "description": [
-          "            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:"
-        ],
-        "failure": null
+        "description": "            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:",
+        "failure": {}
       }
-    ]
+    },
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -3062,7 +4077,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
@@ -3078,7 +4100,14 @@
       "check_name": "count-method-lines",
       "description": "Count the lines within methods in functions of type 'str'."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -3094,7 +4123,14 @@
       "check_name": "test-methods-invoking-method",
       "description": "Identify test methods invoking specific methods."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -3110,7 +4146,14 @@
       "check_name": "test-methods-invoking-method",
       "description": "Identify test methods invoking specific methods."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -3126,7 +4169,14 @@
       "check_name": "test-methods-invoking-method",
       "description": "Identify test methods invoking specific methods."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -3142,7 +4192,14 @@
       "check_name": "test-methods-invoking-method",
       "description": "Identify test methods invoking specific methods."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   },
   {
     "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
@@ -3158,6 +4215,13 @@
       "check_name": "test-methods-invoking-method",
       "description": "Identify test methods invoking specific methods."
     },
-    "mutants": []
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+    }
   }
 ]

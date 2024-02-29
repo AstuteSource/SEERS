@@ -5,6 +5,15 @@ import json
 def restructure_json(chasten_data, mutmut_data):
     structured_data = []
 
+    # Extract the summary from mutmut_data
+    mutmut_summary = {
+        "disabled": mutmut_data.get("disabled", 0),
+        "errors": mutmut_data.get("errors", 0),
+        "failures": mutmut_data.get("failures", 0),
+        "tests": mutmut_data.get("tests", 0),
+        "time": mutmut_data.get("time", 0)
+    }
+
     # Process Chasten results
     for source in chasten_data['sources']:
         source_file = source['filename']
@@ -24,22 +33,22 @@ def restructure_json(chasten_data, mutmut_data):
                 'description': check.get('description'),
             }
             # Find corresponding mutmut mutants
-            mutants = []
+            mutants = {}
             for testcase in mutmut_data['testsuite'][0]['testcase']:
                 if testcase['file'].endswith(source_file.split('/')[-1]) and testcase['line'] == pattern['lineno']:
-                    mutant = {
-                        'name': testcase['name'],
+                    mutant_name = testcase['name']
+                    mutants[mutant_name] = {
                         'line': testcase['line'],
-                        'description': testcase['system-out'],
+                        'description': testcase['system-out'][0] if testcase['system-out'] else "",
                         # Include failure information if present
-                        'failure': testcase.get('failure')
+                        'failure': testcase.get('failure', [{}])[0]
                     }
-                    mutants.append(mutant)
 
             structured_data.append({
                 'file': source_file,
                 'pattern': pattern,
-                'mutants': mutants,
+                'mutants':mutants if mutants else None,  # Set to "NULL" if no mutants
+                'mutmut_summary': mutmut_summary # Add the summary to each entry
             })
 
     return structured_data
