@@ -19,11 +19,12 @@ def train_and_evaluate_model(data):
 
     # Extract features and define 'mutation_score'
     # Features are the inputs variable for the model, 'mutation_score" is the label we want to predict
-    features = frame.drop(columns=['mutants']) # Drop column as it's not a feature
+    features = frame.drop(columns=['mutants']) # Drop column as it's not a feature.
     frame['mutation_score'] = frame['mutants'].apply(define_mutation_score) # Define `mutation_score` from function above
     labels = frame['mutation_score']
 
     # Split the data into training and testing sets, assess the model's performance on unseen data
+    # So dividing our dataset into two subsets (`X_train`, `Y_train`) and (`X_test`,`Y_test`)
     X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
 
     # Initialize AutoML
