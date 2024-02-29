@@ -1,6 +1,11 @@
 import pandas as pd
+from sapientml.sapientml import SapientML
+# `f1_score` from scikit-learn to evaluate the model's performance
+from sklearn.metrics import f1_score
+# `train_test_split` is used to split the data into training and testing sets
+from sklearn.model_selection import train_test_split
 
-# Read the JSON file into a DataFrame
+# Convert JSON to CSV file type using pandas
 json_file_path = "testFile.json"
 df = pd.read_json(json_file_path)
 #Display the DF
