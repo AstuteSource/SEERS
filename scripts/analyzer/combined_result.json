@@ -1,0 +1,3507 @@
+[
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 8,
+      "coloffset": 0,
+      "linematch": "class LazyTracker:",
+      "context": "import dill\nfrom pathlib import Path\n\n\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//ClassDef",
+      "check_id": "C001",
+      "check_name": "class-definition",
+      "description": "Ensure the presence of class definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": null,
+    "function_start_line": null
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 5,
+      "coloffset": 0,
+      "linematch": "def test_cached():",
+      "context": "from tempfile import TemporaryDirectory\nfrom lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 14,
+      "coloffset": 8,
+      "linematch": "def test_function(input_dir: str, output_dir: str, parameter: int):",
+      "context": "            cache_dir=cache_dir,\n            input_dirs=[\"input_dir\"],\n            output_dirs=[\"output_dir\"]\n        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 6,
+      "coloffset": 0,
+      "linematch": "def test_hparams():",
+      "context": "import shutil\nfrom tempfile import TemporaryDirectory, tempdir\nfrom lazytracker import LazyTracker\n\ndef test_hparams():\n    hparams_1 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 1",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 35,
+      "coloffset": 0,
+      "linematch": "def test_picable_function():",
+      "context": "\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 53,
+      "coloffset": 0,
+      "linematch": "def test_files():",
+      "context": "\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n\n        with open(f'{tmpdir}/b.txt', 'w') as f:",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "test_files",
+    "function_start_line": 53
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 76,
+      "coloffset": 0,
+      "linematch": "def test_directories():",
+      "context": "\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()\n\ndef test_directories():\n    with TemporaryDirectory() as tmpdir:\n        os.makedirs(f\"{tmpdir}/1\", exist_ok=True)\n\n        with open(f'{tmpdir}/1/a.txt', 'w') as f:\n            f.write(\"test file 1\")",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "test_directories",
+    "function_start_line": 76
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 36,
+      "coloffset": 4,
+      "linematch": "def func_1(x):",
+      "context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 38,
+      "coloffset": 4,
+      "linematch": "def func_2(x):",
+      "context": "\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 14,
+      "coloffset": 0,
+      "linematch": "def cached(",
+      "context": "shelve.Pickler = Pickler\nshelve.Unpickler = Unpickler\n\n\ndef cached(\n    cache_dir: str = \".lazytracker\",\n    input_files: Optional[List[str]] = None,\n    input_dirs: Optional[List[str]] = None,\n    output_dirs: Optional[List[str]] = None,\n    output_files: Optional[List[str]] = None,",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 31,
+      "coloffset": 4,
+      "linematch": "def inner_func(function: Callable):",
+      "context": "        output_dirs (Optional[List[str]], optional): name of function parameters, that are paths to otuput files. Defaults to None.\n        output_files (Optional[List[str]], optional): name of function parameters, that are paths to directories with output files. Defaults to None.\n    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 33,
+      "coloffset": 8,
+      "linematch": "def wrapper(*args, **kwargs):",
+      "context": "    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 9,
+      "coloffset": 4,
+      "linematch": "def __init__(self):",
+      "context": "from pathlib import Path\n\n\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "__init__",
+    "function_start_line": 9
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 13,
+      "coloffset": 4,
+      "linematch": "def add_directories(self, directories: List[str], chunk_num_blocks=128):",
+      "context": "    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)\n\n        Args:\n            directories (List[str]): List of directories to take files from\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #2",
+        "line": 13,
+        "description": [
+          "    def add_directories(self, directories: List[str], chunk_num_blocks=128):"
+        ],
+        "failure": [
+          {
+            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -10,7 +10,7 @@\n         \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n         self._hasher = hashlib.md5()\n \n-    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n+    def add_directories(self, directories: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of all files inside directory (including files in subdirectories)\n \n         Args:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "function_name": "add_directories",
+    "function_start_line": 13
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 29,
+      "coloffset": 4,
+      "linematch": "def add_files(self, filepaths: List[str], chunk_num_blocks=128):",
+      "context": "        files_to_check = sorted(files_to_check)\n\n        self.add_files(files_to_check, chunk_num_blocks)\n\n    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of files\n\n        Args:\n            filepaths (List[str]): List of paths to files\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #6",
+        "line": 29,
+        "description": [
+          "    def add_files(self, filepaths: List[str], chunk_num_blocks=128):"
+        ],
+        "failure": [
+          {
+            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -26,7 +26,7 @@\n \n         self.add_files(files_to_check, chunk_num_blocks)\n \n-    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n+    def add_files(self, filepaths: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of files\n \n         Args:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "function_name": "add_files",
+    "function_start_line": 29
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 44,
+      "coloffset": 4,
+      "linematch": "def add_hparams(self, hparams: dict):",
+      "context": "                        self._hasher.update(chunk)\n            else:\n                self._hasher.update(dill.dumps(None))\n\n    def add_hparams(self, hparams: dict):\n        \"\"\"Add hash of python dictionary. Utility function for storing pickable\n\n        Args:\n            hparams (dict): A dictionary to be included\n        \"\"\"",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "add_hparams",
+    "function_start_line": 44
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 52,
+      "coloffset": 4,
+      "linematch": "def add_picklables(self, objects: List[Any], recursive: bool=False):",
+      "context": "            hparams (dict): A dictionary to be included\n        \"\"\"\n        self.add_picklables([hparams])\n\n    def add_picklables(self, objects: List[Any], recursive: bool=False):\n        \"\"\"Include hash of any picklable python objects (pickable by dill)\n\n        Args:\n            objects (List[Any]): List of python objects to hash\n            recursive (bool): Wheter to track dependencies of object. Eg.: if function calls another function, if ",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #9",
+        "line": 52,
+        "description": [
+          "    def add_picklables(self, objects: List[Any], recursive: bool=False):"
+        ],
+        "failure": [
+          {
+            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -49,7 +49,7 @@\n         \"\"\"\n         self.add_picklables([hparams])\n \n-    def add_picklables(self, objects: List[Any], recursive: bool=False):\n+    def add_picklables(self, objects: List[Any], recursive: bool=True):\n         \"\"\"Include hash of any picklable python objects (pickable by dill)\n \n         Args:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "function_name": "add_picklables",
+    "function_start_line": 52
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 63,
+      "coloffset": 4,
+      "linematch": "def hash(self) -> str:",
+      "context": "        \"\"\"\n        for obj in objects:\n            self._hasher.update(dill.dumps(obj, recurse=recursive))\n\n    def hash(self) -> str:\n        \"\"\"Compute hash\n\n        Returns:\n            str: Computed checksum of all things tracked\n        \"\"\"",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "hash",
+    "function_start_line": 63
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 36,
+      "coloffset": 4,
+      "linematch": "def func_1(x):",
+      "context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+      "check_id": "F002",
+      "check_name": "dummy-test-non-test-function-definition",
+      "description": "Ensure the presence of non-test function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 38,
+      "coloffset": 4,
+      "linematch": "def func_2(x):",
+      "context": "\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+      "check_id": "F002",
+      "check_name": "dummy-test-non-test-function-definition",
+      "description": "Ensure the presence of non-test function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 14,
+      "coloffset": 0,
+      "linematch": "def cached(",
+      "context": "shelve.Pickler = Pickler\nshelve.Unpickler = Unpickler\n\n\ndef cached(\n    cache_dir: str = \".lazytracker\",\n    input_files: Optional[List[str]] = None,\n    input_dirs: Optional[List[str]] = None,\n    output_dirs: Optional[List[str]] = None,\n    output_files: Optional[List[str]] = None,",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+      "check_id": "F002",
+      "check_name": "dummy-test-non-test-function-definition",
+      "description": "Ensure the presence of non-test function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 31,
+      "coloffset": 4,
+      "linematch": "def inner_func(function: Callable):",
+      "context": "        output_dirs (Optional[List[str]], optional): name of function parameters, that are paths to otuput files. Defaults to None.\n        output_files (Optional[List[str]], optional): name of function parameters, that are paths to directories with output files. Defaults to None.\n    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+      "check_id": "F002",
+      "check_name": "dummy-test-non-test-function-definition",
+      "description": "Ensure the presence of non-test function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 33,
+      "coloffset": 8,
+      "linematch": "def wrapper(*args, **kwargs):",
+      "context": "    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+      "check_id": "F002",
+      "check_name": "dummy-test-non-test-function-definition",
+      "description": "Ensure the presence of non-test function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 9,
+      "coloffset": 4,
+      "linematch": "def __init__(self):",
+      "context": "from pathlib import Path\n\n\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+      "check_id": "F002",
+      "check_name": "dummy-test-non-test-function-definition",
+      "description": "Ensure the presence of non-test function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "__init__",
+    "function_start_line": 9
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 13,
+      "coloffset": 4,
+      "linematch": "def add_directories(self, directories: List[str], chunk_num_blocks=128):",
+      "context": "    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)\n\n        Args:\n            directories (List[str]): List of directories to take files from\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+      "check_id": "F002",
+      "check_name": "dummy-test-non-test-function-definition",
+      "description": "Ensure the presence of non-test function definitions in the codebase."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #2",
+        "line": 13,
+        "description": [
+          "    def add_directories(self, directories: List[str], chunk_num_blocks=128):"
+        ],
+        "failure": [
+          {
+            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -10,7 +10,7 @@\n         \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n         self._hasher = hashlib.md5()\n \n-    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n+    def add_directories(self, directories: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of all files inside directory (including files in subdirectories)\n \n         Args:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "function_name": "add_directories",
+    "function_start_line": 13
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 29,
+      "coloffset": 4,
+      "linematch": "def add_files(self, filepaths: List[str], chunk_num_blocks=128):",
+      "context": "        files_to_check = sorted(files_to_check)\n\n        self.add_files(files_to_check, chunk_num_blocks)\n\n    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of files\n\n        Args:\n            filepaths (List[str]): List of paths to files\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+      "check_id": "F002",
+      "check_name": "dummy-test-non-test-function-definition",
+      "description": "Ensure the presence of non-test function definitions in the codebase."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #6",
+        "line": 29,
+        "description": [
+          "    def add_files(self, filepaths: List[str], chunk_num_blocks=128):"
+        ],
+        "failure": [
+          {
+            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -26,7 +26,7 @@\n \n         self.add_files(files_to_check, chunk_num_blocks)\n \n-    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n+    def add_files(self, filepaths: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of files\n \n         Args:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "function_name": "add_files",
+    "function_start_line": 29
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 44,
+      "coloffset": 4,
+      "linematch": "def add_hparams(self, hparams: dict):",
+      "context": "                        self._hasher.update(chunk)\n            else:\n                self._hasher.update(dill.dumps(None))\n\n    def add_hparams(self, hparams: dict):\n        \"\"\"Add hash of python dictionary. Utility function for storing pickable\n\n        Args:\n            hparams (dict): A dictionary to be included\n        \"\"\"",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+      "check_id": "F002",
+      "check_name": "dummy-test-non-test-function-definition",
+      "description": "Ensure the presence of non-test function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "add_hparams",
+    "function_start_line": 44
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 52,
+      "coloffset": 4,
+      "linematch": "def add_picklables(self, objects: List[Any], recursive: bool=False):",
+      "context": "            hparams (dict): A dictionary to be included\n        \"\"\"\n        self.add_picklables([hparams])\n\n    def add_picklables(self, objects: List[Any], recursive: bool=False):\n        \"\"\"Include hash of any picklable python objects (pickable by dill)\n\n        Args:\n            objects (List[Any]): List of python objects to hash\n            recursive (bool): Wheter to track dependencies of object. Eg.: if function calls another function, if ",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+      "check_id": "F002",
+      "check_name": "dummy-test-non-test-function-definition",
+      "description": "Ensure the presence of non-test function definitions in the codebase."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #9",
+        "line": 52,
+        "description": [
+          "    def add_picklables(self, objects: List[Any], recursive: bool=False):"
+        ],
+        "failure": [
+          {
+            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -49,7 +49,7 @@\n         \"\"\"\n         self.add_picklables([hparams])\n \n-    def add_picklables(self, objects: List[Any], recursive: bool=False):\n+    def add_picklables(self, objects: List[Any], recursive: bool=True):\n         \"\"\"Include hash of any picklable python objects (pickable by dill)\n \n         Args:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "function_name": "add_picklables",
+    "function_start_line": 52
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 63,
+      "coloffset": 4,
+      "linematch": "def hash(self) -> str:",
+      "context": "        \"\"\"\n        for obj in objects:\n            self._hasher.update(dill.dumps(obj, recurse=recursive))\n\n    def hash(self) -> str:\n        \"\"\"Compute hash\n\n        Returns:\n            str: Computed checksum of all things tracked\n        \"\"\"",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef[not(contains(@name, \"test_\"))]",
+      "check_id": "F002",
+      "check_name": "dummy-test-non-test-function-definition",
+      "description": "Ensure the presence of non-test function definitions in the codebase."
+    },
+    "mutants": [],
+    "function_name": "hash",
+    "function_start_line": 63
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 41,
+      "coloffset": 16,
+      "linematch": "if input_dirs is not None:",
+      "context": "            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()\n                input_tracker.add_picklables([function], recursive=True)\n                input_tracker.add_hparams(kwargs)\n                if input_dirs is not None:\n                    input_dirs_values = [kwargs[input_dir] for input_dir in input_dirs]\n                    input_tracker.add_directories(input_dirs_values)\n                if input_files is not None:\n                    input_files_values = [\n                        kwargs[input_file] for input_file in input_files",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef/body//If",
+      "check_id": "CL001",
+      "check_name": "dummy-test-single-nested-if",
+      "description": "Ensure the presence of single nested 'if' statements within function bodies."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #20",
+        "line": 41,
+        "description": [
+          "                if input_dirs is not None:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 44,
+      "coloffset": 16,
+      "linematch": "if input_files is not None:",
+      "context": "                input_tracker.add_hparams(kwargs)\n                if input_dirs is not None:\n                    input_dirs_values = [kwargs[input_dir] for input_dir in input_dirs]\n                    input_tracker.add_directories(input_dirs_values)\n                if input_files is not None:\n                    input_files_values = [\n                        kwargs[input_file] for input_file in input_files\n                    ]\n                    input_tracker.add_files(input_files_values)\n",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef/body//If",
+      "check_id": "CL001",
+      "check_name": "dummy-test-single-nested-if",
+      "description": "Ensure the presence of single nested 'if' statements within function bodies."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #22",
+        "line": 44,
+        "description": [
+          "                if input_files is not None:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 51,
+      "coloffset": 16,
+      "linematch": "if output_dirs is not None:",
+      "context": "                    ]\n                    input_tracker.add_files(input_files_values)\n\n                test_output_tracker = LazyTracker()\n                if output_dirs is not None:\n                    output_dirs_values = [\n                        kwargs[output_dir] for output_dir in output_dirs\n                    ]\n                    test_output_tracker.add_directories(output_dirs_values)\n                if output_files is not None:",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef/body//If",
+      "check_id": "CL001",
+      "check_name": "dummy-test-single-nested-if",
+      "description": "Ensure the presence of single nested 'if' statements within function bodies."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #25",
+        "line": 51,
+        "description": [
+          "                if output_dirs is not None:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 56,
+      "coloffset": 16,
+      "linematch": "if output_files is not None:",
+      "context": "                    output_dirs_values = [\n                        kwargs[output_dir] for output_dir in output_dirs\n                    ]\n                    test_output_tracker.add_directories(output_dirs_values)\n                if output_files is not None:\n                    output_files_values = [\n                        kwargs[output_file] for output_file in output_files\n                    ]\n                    test_output_tracker.add_files(output_files_values)\n",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef/body//If",
+      "check_id": "CL001",
+      "check_name": "dummy-test-single-nested-if",
+      "description": "Ensure the presence of single nested 'if' statements within function bodies."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #27",
+        "line": 56,
+        "description": [
+          "                if output_files is not None:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 65,
+      "coloffset": 16,
+      "linematch": "if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+      "context": "\n                input_hash = input_tracker.hash()\n                output_hash = test_output_tracker.hash()\n\n                if input_hash in db and db[input_hash][\"hash\"] == output_hash:\n                    return db[input_hash][\"return_value\"]\n                else:\n                    return_value = function(**kwargs)\n\n                    output_tracker = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef/body//If",
+      "check_id": "CL001",
+      "check_name": "dummy-test-single-nested-if",
+      "description": "Ensure the presence of single nested 'if' statements within function bodies."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #31",
+        "line": 65,
+        "description": [
+          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+        ],
+        "failure": null
+      },
+      {
+        "name": "Mutant #32",
+        "line": 65,
+        "description": [
+          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+        ],
+        "failure": null
+      },
+      {
+        "name": "Mutant #33",
+        "line": 65,
+        "description": [
+          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+        ],
+        "failure": null
+      },
+      {
+        "name": "Mutant #34",
+        "line": 65,
+        "description": [
+          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 71,
+      "coloffset": 20,
+      "linematch": "if output_dirs is not None:",
+      "context": "                else:\n                    return_value = function(**kwargs)\n\n                    output_tracker = LazyTracker()\n                    if output_dirs is not None:\n                        output_dirs_values = [\n                            kwargs[output_dir] for output_dir in output_dirs\n                        ]\n                        output_tracker.add_directories(output_dirs_values)\n                    if output_files is not None:",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef/body//If",
+      "check_id": "CL001",
+      "check_name": "dummy-test-single-nested-if",
+      "description": "Ensure the presence of single nested 'if' statements within function bodies."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #38",
+        "line": 71,
+        "description": [
+          "                    if output_dirs is not None:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 76,
+      "coloffset": 20,
+      "linematch": "if output_files is not None:",
+      "context": "                        output_dirs_values = [\n                            kwargs[output_dir] for output_dir in output_dirs\n                        ]\n                        output_tracker.add_directories(output_dirs_values)\n                    if output_files is not None:\n                        output_files_values = [\n                            kwargs[output_file] for output_file in output_files\n                        ]\n                        output_tracker.add_files(output_files_values)\n",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef/body//If",
+      "check_id": "CL001",
+      "check_name": "dummy-test-single-nested-if",
+      "description": "Ensure the presence of single nested 'if' statements within function bodies."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #40",
+        "line": 76,
+        "description": [
+          "                    if output_files is not None:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 37,
+      "coloffset": 12,
+      "linematch": "if os.path.exists(p):",
+      "context": "            filepaths (List[str]): List of paths to files\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.\n        \"\"\"\n        for p in filepaths:\n            if os.path.exists(p):\n                with open(p, \"rb\") as f:\n                    while chunk := f.read(chunk_num_blocks * self._hasher.block_size):\n                        self._hasher.update(chunk)\n            else:\n                self._hasher.update(dill.dumps(None))",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef/body//If",
+      "check_id": "CL001",
+      "check_name": "dummy-test-single-nested-if",
+      "description": "Ensure the presence of single nested 'if' statements within function bodies."
+    },
+    "mutants": [],
+    "function_name": "add_files",
+    "function_start_line": 29
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 73,
+      "coloffset": 23,
+      "linematch": "assert updated == True",
+      "context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 73,
+      "coloffset": 23,
+      "linematch": "assert updated == True",
+      "context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 73,
+      "coloffset": 23,
+      "linematch": "assert updated == True",
+      "context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 73,
+      "coloffset": 23,
+      "linematch": "assert updated == True",
+      "context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 73,
+      "coloffset": 23,
+      "linematch": "assert updated == True",
+      "context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 73,
+      "coloffset": 23,
+      "linematch": "assert updated == True",
+      "context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 73,
+      "coloffset": 23,
+      "linematch": "assert updated == True",
+      "context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 73,
+      "coloffset": 23,
+      "linematch": "assert updated == True",
+      "context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 73,
+      "coloffset": 23,
+      "linematch": "assert updated == True",
+      "context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 73,
+      "coloffset": 23,
+      "linematch": "assert updated == True",
+      "context": "                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 104,
+      "coloffset": 15,
+      "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+      "context": "\n        tracker_3 = LazyTracker()\n        tracker_3.add_directories([f\"{tmpdir}/3\"])\n\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_directories",
+    "function_start_line": 76
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 104,
+      "coloffset": 15,
+      "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+      "context": "\n        tracker_3 = LazyTracker()\n        tracker_3.add_directories([f\"{tmpdir}/3\"])\n\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_directories",
+    "function_start_line": 76
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 104,
+      "coloffset": 15,
+      "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+      "context": "\n        tracker_3 = LazyTracker()\n        tracker_3.add_directories([f\"{tmpdir}/3\"])\n\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_directories",
+    "function_start_line": 76
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 104,
+      "coloffset": 15,
+      "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+      "context": "\n        tracker_3 = LazyTracker()\n        tracker_3.add_directories([f\"{tmpdir}/3\"])\n\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [],
+    "function_name": "test_directories",
+    "function_start_line": 76
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 65,
+      "coloffset": 40,
+      "linematch": "if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+      "context": "\n                input_hash = input_tracker.hash()\n                output_hash = test_output_tracker.hash()\n\n                if input_hash in db and db[input_hash][\"hash\"] == output_hash:\n                    return db[input_hash][\"return_value\"]\n                else:\n                    return_value = function(**kwargs)\n\n                    output_tracker = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Compare/ops/Is | //Compare/ops/Eq",
+      "check_id": "BOOL001",
+      "check_name": "boolean-comparison",
+      "description": "Using = or == operators to compare boolean values"
+    },
+    "mutants": [
+      {
+        "name": "Mutant #31",
+        "line": 65,
+        "description": [
+          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+        ],
+        "failure": null
+      },
+      {
+        "name": "Mutant #32",
+        "line": 65,
+        "description": [
+          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+        ],
+        "failure": null
+      },
+      {
+        "name": "Mutant #33",
+        "line": 65,
+        "description": [
+          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+        ],
+        "failure": null
+      },
+      {
+        "name": "Mutant #34",
+        "line": 65,
+        "description": [
+          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 5,
+      "coloffset": 0,
+      "linematch": "def test_cached():",
+      "context": "from tempfile import TemporaryDirectory\nfrom lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 14,
+      "coloffset": 8,
+      "linematch": "def test_function(input_dir: str, output_dir: str, parameter: int):",
+      "context": "            cache_dir=cache_dir,\n            input_dirs=[\"input_dir\"],\n            output_dirs=[\"output_dir\"]\n        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 6,
+      "coloffset": 0,
+      "linematch": "def test_hparams():",
+      "context": "import shutil\nfrom tempfile import TemporaryDirectory, tempdir\nfrom lazytracker import LazyTracker\n\ndef test_hparams():\n    hparams_1 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 1",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 35,
+      "coloffset": 0,
+      "linematch": "def test_picable_function():",
+      "context": "\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 36,
+      "coloffset": 4,
+      "linematch": "def func_1(x):",
+      "context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 38,
+      "coloffset": 4,
+      "linematch": "def func_2(x):",
+      "context": "\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 53,
+      "coloffset": 0,
+      "linematch": "def test_files():",
+      "context": "\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n\n        with open(f'{tmpdir}/b.txt', 'w') as f:",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "test_files",
+    "function_start_line": 53
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 76,
+      "coloffset": 0,
+      "linematch": "def test_directories():",
+      "context": "\n        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()\n\ndef test_directories():\n    with TemporaryDirectory() as tmpdir:\n        os.makedirs(f\"{tmpdir}/1\", exist_ok=True)\n\n        with open(f'{tmpdir}/1/a.txt', 'w') as f:\n            f.write(\"test file 1\")",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "test_directories",
+    "function_start_line": 76
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 14,
+      "coloffset": 0,
+      "linematch": "def cached(",
+      "context": "shelve.Pickler = Pickler\nshelve.Unpickler = Unpickler\n\n\ndef cached(\n    cache_dir: str = \".lazytracker\",\n    input_files: Optional[List[str]] = None,\n    input_dirs: Optional[List[str]] = None,\n    output_dirs: Optional[List[str]] = None,\n    output_files: Optional[List[str]] = None,",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 31,
+      "coloffset": 4,
+      "linematch": "def inner_func(function: Callable):",
+      "context": "        output_dirs (Optional[List[str]], optional): name of function parameters, that are paths to otuput files. Defaults to None.\n        output_files (Optional[List[str]], optional): name of function parameters, that are paths to directories with output files. Defaults to None.\n    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 33,
+      "coloffset": 8,
+      "linematch": "def wrapper(*args, **kwargs):",
+      "context": "    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 9,
+      "coloffset": 4,
+      "linematch": "def __init__(self):",
+      "context": "from pathlib import Path\n\n\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "__init__",
+    "function_start_line": 9
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 13,
+      "coloffset": 4,
+      "linematch": "def add_directories(self, directories: List[str], chunk_num_blocks=128):",
+      "context": "    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)\n\n        Args:\n            directories (List[str]): List of directories to take files from\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [
+      {
+        "name": "Mutant #2",
+        "line": 13,
+        "description": [
+          "    def add_directories(self, directories: List[str], chunk_num_blocks=128):"
+        ],
+        "failure": [
+          {
+            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -10,7 +10,7 @@\n         \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n         self._hasher = hashlib.md5()\n \n-    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n+    def add_directories(self, directories: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of all files inside directory (including files in subdirectories)\n \n         Args:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "function_name": "add_directories",
+    "function_start_line": 13
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 29,
+      "coloffset": 4,
+      "linematch": "def add_files(self, filepaths: List[str], chunk_num_blocks=128):",
+      "context": "        files_to_check = sorted(files_to_check)\n\n        self.add_files(files_to_check, chunk_num_blocks)\n\n    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of files\n\n        Args:\n            filepaths (List[str]): List of paths to files\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [
+      {
+        "name": "Mutant #6",
+        "line": 29,
+        "description": [
+          "    def add_files(self, filepaths: List[str], chunk_num_blocks=128):"
+        ],
+        "failure": [
+          {
+            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -26,7 +26,7 @@\n \n         self.add_files(files_to_check, chunk_num_blocks)\n \n-    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n+    def add_files(self, filepaths: List[str], chunk_num_blocks=129):\n         \"\"\"Include hash of files\n \n         Args:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "function_name": "add_files",
+    "function_start_line": 29
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 44,
+      "coloffset": 4,
+      "linematch": "def add_hparams(self, hparams: dict):",
+      "context": "                        self._hasher.update(chunk)\n            else:\n                self._hasher.update(dill.dumps(None))\n\n    def add_hparams(self, hparams: dict):\n        \"\"\"Add hash of python dictionary. Utility function for storing pickable\n\n        Args:\n            hparams (dict): A dictionary to be included\n        \"\"\"",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "add_hparams",
+    "function_start_line": 44
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 52,
+      "coloffset": 4,
+      "linematch": "def add_picklables(self, objects: List[Any], recursive: bool=False):",
+      "context": "            hparams (dict): A dictionary to be included\n        \"\"\"\n        self.add_picklables([hparams])\n\n    def add_picklables(self, objects: List[Any], recursive: bool=False):\n        \"\"\"Include hash of any picklable python objects (pickable by dill)\n\n        Args:\n            objects (List[Any]): List of python objects to hash\n            recursive (bool): Wheter to track dependencies of object. Eg.: if function calls another function, if ",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [
+      {
+        "name": "Mutant #9",
+        "line": 52,
+        "description": [
+          "    def add_picklables(self, objects: List[Any], recursive: bool=False):"
+        ],
+        "failure": [
+          {
+            "inner": "--- lazytracker/lazytracker.py\n+++ lazytracker/lazytracker.py\n@@ -49,7 +49,7 @@\n         \"\"\"\n         self.add_picklables([hparams])\n \n-    def add_picklables(self, objects: List[Any], recursive: bool=False):\n+    def add_picklables(self, objects: List[Any], recursive: bool=True):\n         \"\"\"Include hash of any picklable python objects (pickable by dill)\n \n         Args:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "function_name": "add_picklables",
+    "function_start_line": 52
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 63,
+      "coloffset": 4,
+      "linematch": "def hash(self) -> str:",
+      "context": "        \"\"\"\n        for obj in objects:\n            self._hasher.update(dill.dumps(obj, recurse=recursive))\n\n    def hash(self) -> str:\n        \"\"\"Compute hash\n\n        Returns:\n            str: Computed checksum of all things tracked\n        \"\"\"",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[not(args/arg/annotation) or not(returns)]",
+      "check_id": "ANNOT001",
+      "check_name": "missing-annotations",
+      "description": "A function does not explicitly annotate arguments/parameters or the expected output"
+    },
+    "mutants": [],
+    "function_name": "hash",
+    "function_start_line": 63
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 14,
+      "coloffset": 0,
+      "linematch": "def cached(",
+      "context": "shelve.Pickler = Pickler\nshelve.Unpickler = Unpickler\n\n\ndef cached(\n    cache_dir: str = \".lazytracker\",\n    input_files: Optional[List[str]] = None,\n    input_dirs: Optional[List[str]] = None,\n    output_dirs: Optional[List[str]] = None,\n    output_files: Optional[List[str]] = None,",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[body//comprehension/target/Name]",
+      "check_id": "FLV001",
+      "check_name": "Function uses loop variable",
+      "description": "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 31,
+      "coloffset": 4,
+      "linematch": "def inner_func(function: Callable):",
+      "context": "        output_dirs (Optional[List[str]], optional): name of function parameters, that are paths to otuput files. Defaults to None.\n        output_files (Optional[List[str]], optional): name of function parameters, that are paths to directories with output files. Defaults to None.\n    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[body//comprehension/target/Name]",
+      "check_id": "FLV001",
+      "check_name": "Function uses loop variable",
+      "description": "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 33,
+      "coloffset": 8,
+      "linematch": "def wrapper(*args, **kwargs):",
+      "context": "    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[body//comprehension/target/Name]",
+      "check_id": "FLV001",
+      "check_name": "Function uses loop variable",
+      "description": "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 5,
+      "coloffset": 0,
+      "linematch": "def test_cached():",
+      "context": "from tempfile import TemporaryDirectory\nfrom lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef//FunctionDef/ancestor::*",
+      "check_id": "F001",
+      "check_name": "Nested Depth (Set value)",
+      "description": "Ensure the depth of nesting within functions does not exceed the set value."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 6,
+      "coloffset": 4,
+      "linematch": "with TemporaryDirectory() as cache_dir:",
+      "context": "from lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,\n            input_dirs=[\"input_dir\"],",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef//FunctionDef/ancestor::*",
+      "check_id": "F001",
+      "check_name": "Nested Depth (Set value)",
+      "description": "Ensure the depth of nesting within functions does not exceed the set value."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 35,
+      "coloffset": 0,
+      "linematch": "def test_picable_function():",
+      "context": "\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef//FunctionDef/ancestor::*",
+      "check_id": "F001",
+      "check_name": "Nested Depth (Set value)",
+      "description": "Ensure the depth of nesting within functions does not exceed the set value."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 14,
+      "coloffset": 0,
+      "linematch": "def cached(",
+      "context": "shelve.Pickler = Pickler\nshelve.Unpickler = Unpickler\n\n\ndef cached(\n    cache_dir: str = \".lazytracker\",\n    input_files: Optional[List[str]] = None,\n    input_dirs: Optional[List[str]] = None,\n    output_dirs: Optional[List[str]] = None,\n    output_files: Optional[List[str]] = None,",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef//FunctionDef/ancestor::*",
+      "check_id": "F001",
+      "check_name": "Nested Depth (Set value)",
+      "description": "Ensure the depth of nesting within functions does not exceed the set value."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 31,
+      "coloffset": 4,
+      "linematch": "def inner_func(function: Callable):",
+      "context": "        output_dirs (Optional[List[str]], optional): name of function parameters, that are paths to otuput files. Defaults to None.\n        output_files (Optional[List[str]], optional): name of function parameters, that are paths to directories with output files. Defaults to None.\n    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef//FunctionDef/ancestor::*",
+      "check_id": "F001",
+      "check_name": "Nested Depth (Set value)",
+      "description": "Ensure the depth of nesting within functions does not exceed the set value."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 44,
+      "coloffset": 16,
+      "linematch": "if input_files is not None:",
+      "context": "                input_tracker.add_hparams(kwargs)\n                if input_dirs is not None:\n                    input_dirs_values = [kwargs[input_dir] for input_dir in input_dirs]\n                    input_tracker.add_directories(input_dirs_values)\n                if input_files is not None:\n                    input_files_values = [\n                        kwargs[input_file] for input_file in input_files\n                    ]\n                    input_tracker.add_files(input_files_values)\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef//If/following-sibling::If | //FunctionDef//If/following-sibling::Elif | //FunctionDef//If/following-sibling::Else",
+      "check_id": "F002",
+      "check_name": "Number of conditions (if, if-else, and switch) in a Function",
+      "description": "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #22",
+        "line": 44,
+        "description": [
+          "                if input_files is not None:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 51,
+      "coloffset": 16,
+      "linematch": "if output_dirs is not None:",
+      "context": "                    ]\n                    input_tracker.add_files(input_files_values)\n\n                test_output_tracker = LazyTracker()\n                if output_dirs is not None:\n                    output_dirs_values = [\n                        kwargs[output_dir] for output_dir in output_dirs\n                    ]\n                    test_output_tracker.add_directories(output_dirs_values)\n                if output_files is not None:",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef//If/following-sibling::If | //FunctionDef//If/following-sibling::Elif | //FunctionDef//If/following-sibling::Else",
+      "check_id": "F002",
+      "check_name": "Number of conditions (if, if-else, and switch) in a Function",
+      "description": "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #25",
+        "line": 51,
+        "description": [
+          "                if output_dirs is not None:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 56,
+      "coloffset": 16,
+      "linematch": "if output_files is not None:",
+      "context": "                    output_dirs_values = [\n                        kwargs[output_dir] for output_dir in output_dirs\n                    ]\n                    test_output_tracker.add_directories(output_dirs_values)\n                if output_files is not None:\n                    output_files_values = [\n                        kwargs[output_file] for output_file in output_files\n                    ]\n                    test_output_tracker.add_files(output_files_values)\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef//If/following-sibling::If | //FunctionDef//If/following-sibling::Elif | //FunctionDef//If/following-sibling::Else",
+      "check_id": "F002",
+      "check_name": "Number of conditions (if, if-else, and switch) in a Function",
+      "description": "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #27",
+        "line": 56,
+        "description": [
+          "                if output_files is not None:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 65,
+      "coloffset": 16,
+      "linematch": "if input_hash in db and db[input_hash][\"hash\"] == output_hash:",
+      "context": "\n                input_hash = input_tracker.hash()\n                output_hash = test_output_tracker.hash()\n\n                if input_hash in db and db[input_hash][\"hash\"] == output_hash:\n                    return db[input_hash][\"return_value\"]\n                else:\n                    return_value = function(**kwargs)\n\n                    output_tracker = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef//If/following-sibling::If | //FunctionDef//If/following-sibling::Elif | //FunctionDef//If/following-sibling::Else",
+      "check_id": "F002",
+      "check_name": "Number of conditions (if, if-else, and switch) in a Function",
+      "description": "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #31",
+        "line": 65,
+        "description": [
+          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+        ],
+        "failure": null
+      },
+      {
+        "name": "Mutant #32",
+        "line": 65,
+        "description": [
+          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+        ],
+        "failure": null
+      },
+      {
+        "name": "Mutant #33",
+        "line": 65,
+        "description": [
+          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+        ],
+        "failure": null
+      },
+      {
+        "name": "Mutant #34",
+        "line": 65,
+        "description": [
+          "                if input_hash in db and db[input_hash][\"hash\"] == output_hash:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 76,
+      "coloffset": 20,
+      "linematch": "if output_files is not None:",
+      "context": "                        output_dirs_values = [\n                            kwargs[output_dir] for output_dir in output_dirs\n                        ]\n                        output_tracker.add_directories(output_dirs_values)\n                    if output_files is not None:\n                        output_files_values = [\n                            kwargs[output_file] for output_file in output_files\n                        ]\n                        output_tracker.add_files(output_files_values)\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef//If/following-sibling::If | //FunctionDef//If/following-sibling::Elif | //FunctionDef//If/following-sibling::Else",
+      "check_id": "F002",
+      "check_name": "Number of conditions (if, if-else, and switch) in a Function",
+      "description": "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #40",
+        "line": 76,
+        "description": [
+          "                    if output_files is not None:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 71,
+      "coloffset": 20,
+      "linematch": "if output_dirs is not None:",
+      "context": "                else:\n                    return_value = function(**kwargs)\n\n                    output_tracker = LazyTracker()\n                    if output_dirs is not None:\n                        output_dirs_values = [\n                            kwargs[output_dir] for output_dir in output_dirs\n                        ]\n                        output_tracker.add_directories(output_dirs_values)\n                    if output_files is not None:",
+      "min": 1,
+      "max": 1,
+      "pattern": "//FunctionDef//If/descendant::If",
+      "check_id": "CL001",
+      "check_name": "The number of nested conditions (e.g., if{if{}}) in a Function",
+      "description": "Ensure there is at least one nested condition (e.g., if{if{}}) in a function."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #38",
+        "line": 71,
+        "description": [
+          "                    if output_dirs is not None:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 76,
+      "coloffset": 20,
+      "linematch": "if output_files is not None:",
+      "context": "                        output_dirs_values = [\n                            kwargs[output_dir] for output_dir in output_dirs\n                        ]\n                        output_tracker.add_directories(output_dirs_values)\n                    if output_files is not None:\n                        output_files_values = [\n                            kwargs[output_file] for output_file in output_files\n                        ]\n                        output_tracker.add_files(output_files_values)\n",
+      "min": 1,
+      "max": 1,
+      "pattern": "//FunctionDef//If/descendant::If",
+      "check_id": "CL001",
+      "check_name": "The number of nested conditions (e.g., if{if{}}) in a Function",
+      "description": "Ensure there is at least one nested condition (e.g., if{if{}}) in a function."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #40",
+        "line": 76,
+        "description": [
+          "                    if output_files is not None:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 32,
+      "coloffset": 4,
+      "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+      "context": "\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/Assert",
+      "check_id": "NOA001",
+      "check_name": "number-of-assertions",
+      "description": "Ensure the presence of assertions within function bodies of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 33,
+      "coloffset": 4,
+      "linematch": "assert tracker_1.hash() != tracker_3.hash()",
+      "context": "    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/Assert",
+      "check_id": "NOA001",
+      "check_name": "number-of-assertions",
+      "description": "Ensure the presence of assertions within function bodies of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 50,
+      "coloffset": 4,
+      "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+      "context": "\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/Assert",
+      "check_id": "NOA001",
+      "check_name": "number-of-assertions",
+      "description": "Ensure the presence of assertions within function bodies of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 51,
+      "coloffset": 4,
+      "linematch": "assert tracker_1.hash() != tracker_3.hash()",
+      "context": "    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/Assert",
+      "check_id": "NOA001",
+      "check_name": "number-of-assertions",
+      "description": "Ensure the presence of assertions within function bodies of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 6,
+      "coloffset": 4,
+      "linematch": "with TemporaryDirectory() as cache_dir:",
+      "context": "from lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,\n            input_dirs=[\"input_dir\"],",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 15,
+      "coloffset": 12,
+      "linematch": "nonlocal updated",
+      "context": "            input_dirs=[\"input_dir\"],\n            output_dirs=[\"output_dir\"]\n        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 17,
+      "coloffset": 12,
+      "linematch": "with open(f\"{output_dir}/test.txt\", 'w') as f:",
+      "context": "        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True\n            return parameter\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 20,
+      "coloffset": 12,
+      "linematch": "updated = True",
+      "context": "\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True\n            return parameter\n\n        with TemporaryDirectory() as input_dir:\n            with open(f\"{input_dir}/test.txt\", 'w') as f:\n                f.write(\"test_file\")",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 21,
+      "coloffset": 12,
+      "linematch": "return parameter",
+      "context": "            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True\n            return parameter\n\n        with TemporaryDirectory() as input_dir:\n            with open(f\"{input_dir}/test.txt\", 'w') as f:\n                f.write(\"test_file\")\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 7,
+      "coloffset": 4,
+      "linematch": "hparams_1 = {",
+      "context": "from tempfile import TemporaryDirectory, tempdir\nfrom lazytracker import LazyTracker\n\ndef test_hparams():\n    hparams_1 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 1\n        }",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 15,
+      "coloffset": 4,
+      "linematch": "hparams_2 = {",
+      "context": "            'd': 1\n        }\n    }\n\n    hparams_2 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 2\n        }",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 23,
+      "coloffset": 4,
+      "linematch": "tracker_1 = LazyTracker()",
+      "context": "            'd': 2\n        }\n    }\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 24,
+      "coloffset": 4,
+      "linematch": "tracker_1.add_hparams(hparams_1)",
+      "context": "        }\n    }\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 26,
+      "coloffset": 4,
+      "linematch": "tracker_2 = LazyTracker()",
+      "context": "\n    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 27,
+      "coloffset": 4,
+      "linematch": "tracker_2.add_hparams(hparams_1)",
+      "context": "    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 29,
+      "coloffset": 4,
+      "linematch": "tracker_3 = LazyTracker()",
+      "context": "\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 30,
+      "coloffset": 4,
+      "linematch": "tracker_3.add_hparams(hparams_2)",
+      "context": "    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 32,
+      "coloffset": 4,
+      "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+      "context": "\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 33,
+      "coloffset": 4,
+      "linematch": "assert tracker_1.hash() != tracker_3.hash()",
+      "context": "    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 36,
+      "coloffset": 4,
+      "linematch": "def func_1(x):",
+      "context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 38,
+      "coloffset": 4,
+      "linematch": "def func_2(x):",
+      "context": "\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 41,
+      "coloffset": 4,
+      "linematch": "tracker_1 = LazyTracker()",
+      "context": "        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 42,
+      "coloffset": 4,
+      "linematch": "tracker_1.add_picklables([func_1])",
+      "context": "    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 44,
+      "coloffset": 4,
+      "linematch": "tracker_2 = LazyTracker()",
+      "context": "\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 45,
+      "coloffset": 4,
+      "linematch": "tracker_2.add_picklables([func_1])",
+      "context": "    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 47,
+      "coloffset": 4,
+      "linematch": "tracker_3 = LazyTracker()",
+      "context": "\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 48,
+      "coloffset": 4,
+      "linematch": "tracker_3.add_hparams([func_2])",
+      "context": "    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 50,
+      "coloffset": 4,
+      "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+      "context": "\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 51,
+      "coloffset": 4,
+      "linematch": "assert tracker_1.hash() != tracker_3.hash()",
+      "context": "    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 54,
+      "coloffset": 4,
+      "linematch": "with TemporaryDirectory() as tmpdir:",
+      "context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n\n        with open(f'{tmpdir}/b.txt', 'w') as f:\n            f.write(\"test file 1\")",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_files",
+    "function_start_line": 53
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 77,
+      "coloffset": 4,
+      "linematch": "with TemporaryDirectory() as tmpdir:",
+      "context": "        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()\n\ndef test_directories():\n    with TemporaryDirectory() as tmpdir:\n        os.makedirs(f\"{tmpdir}/1\", exist_ok=True)\n\n        with open(f'{tmpdir}/1/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*",
+      "check_id": "LOF001",
+      "check_name": "count-test-method-lines",
+      "description": "Count the lines within test methods in functions of type 'str' that start with 'test_'."
+    },
+    "mutants": [],
+    "function_name": "test_directories",
+    "function_start_line": 76
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 6,
+      "coloffset": 4,
+      "linematch": "with TemporaryDirectory() as cache_dir:",
+      "context": "from lazytracker import cached\n\n\ndef test_cached():\n    with TemporaryDirectory() as cache_dir:\n        updated = False\n\n        @cached(\n            cache_dir=cache_dir,\n            input_dirs=[\"input_dir\"],",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 15,
+      "coloffset": 12,
+      "linematch": "nonlocal updated",
+      "context": "            input_dirs=[\"input_dir\"],\n            output_dirs=[\"output_dir\"]\n        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 17,
+      "coloffset": 12,
+      "linematch": "with open(f\"{output_dir}/test.txt\", 'w') as f:",
+      "context": "        )\n        def test_function(input_dir: str, output_dir: str, parameter: int):\n            nonlocal updated\n\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True\n            return parameter\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 20,
+      "coloffset": 12,
+      "linematch": "updated = True",
+      "context": "\n            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True\n            return parameter\n\n        with TemporaryDirectory() as input_dir:\n            with open(f\"{input_dir}/test.txt\", 'w') as f:\n                f.write(\"test_file\")",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 21,
+      "coloffset": 12,
+      "linematch": "return parameter",
+      "context": "            with open(f\"{output_dir}/test.txt\", 'w') as f:\n                f.write(str(parameter))\n\n            updated = True\n            return parameter\n\n        with TemporaryDirectory() as input_dir:\n            with open(f\"{input_dir}/test.txt\", 'w') as f:\n                f.write(\"test_file\")\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 7,
+      "coloffset": 4,
+      "linematch": "hparams_1 = {",
+      "context": "from tempfile import TemporaryDirectory, tempdir\nfrom lazytracker import LazyTracker\n\ndef test_hparams():\n    hparams_1 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 1\n        }",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 15,
+      "coloffset": 4,
+      "linematch": "hparams_2 = {",
+      "context": "            'd': 1\n        }\n    }\n\n    hparams_2 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 2\n        }",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 23,
+      "coloffset": 4,
+      "linematch": "tracker_1 = LazyTracker()",
+      "context": "            'd': 2\n        }\n    }\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 24,
+      "coloffset": 4,
+      "linematch": "tracker_1.add_hparams(hparams_1)",
+      "context": "        }\n    }\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 26,
+      "coloffset": 4,
+      "linematch": "tracker_2 = LazyTracker()",
+      "context": "\n    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 27,
+      "coloffset": 4,
+      "linematch": "tracker_2.add_hparams(hparams_1)",
+      "context": "    tracker_1 = LazyTracker()\n    tracker_1.add_hparams(hparams_1)\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 29,
+      "coloffset": 4,
+      "linematch": "tracker_3 = LazyTracker()",
+      "context": "\n    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 30,
+      "coloffset": 4,
+      "linematch": "tracker_3.add_hparams(hparams_2)",
+      "context": "    tracker_2 = LazyTracker()\n    tracker_2.add_hparams(hparams_1)\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 32,
+      "coloffset": 4,
+      "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+      "context": "\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 33,
+      "coloffset": 4,
+      "linematch": "assert tracker_1.hash() != tracker_3.hash()",
+      "context": "    tracker_3 = LazyTracker()\n    tracker_3.add_hparams(hparams_2)\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_hparams",
+    "function_start_line": 6
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 36,
+      "coloffset": 4,
+      "linematch": "def func_1(x):",
+      "context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 37,
+      "coloffset": 8,
+      "linematch": "return x+1",
+      "context": "    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 38,
+      "coloffset": 4,
+      "linematch": "def func_2(x):",
+      "context": "\ndef test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 39,
+      "coloffset": 8,
+      "linematch": "return x+2",
+      "context": "def test_picable_function():\n    def func_1(x):\n        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 41,
+      "coloffset": 4,
+      "linematch": "tracker_1 = LazyTracker()",
+      "context": "        return x+1\n    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 42,
+      "coloffset": 4,
+      "linematch": "tracker_1.add_picklables([func_1])",
+      "context": "    def func_2(x):\n        return x+2\n\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 44,
+      "coloffset": 4,
+      "linematch": "tracker_2 = LazyTracker()",
+      "context": "\n    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 45,
+      "coloffset": 4,
+      "linematch": "tracker_2.add_picklables([func_1])",
+      "context": "    tracker_1 = LazyTracker()\n    tracker_1.add_picklables([func_1])\n\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 47,
+      "coloffset": 4,
+      "linematch": "tracker_3 = LazyTracker()",
+      "context": "\n    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 48,
+      "coloffset": 4,
+      "linematch": "tracker_3.add_hparams([func_2])",
+      "context": "    tracker_2 = LazyTracker()\n    tracker_2.add_picklables([func_1])\n\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 50,
+      "coloffset": 4,
+      "linematch": "assert tracker_1.hash() == tracker_2.hash()",
+      "context": "\n    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 51,
+      "coloffset": 4,
+      "linematch": "assert tracker_1.hash() != tracker_3.hash()",
+      "context": "    tracker_3 = LazyTracker()\n    tracker_3.add_hparams([func_2])\n\n    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_picable_function",
+    "function_start_line": 35
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 54,
+      "coloffset": 4,
+      "linematch": "with TemporaryDirectory() as tmpdir:",
+      "context": "    assert tracker_1.hash() == tracker_2.hash()\n    assert tracker_1.hash() != tracker_3.hash()\n\ndef test_files():\n    with TemporaryDirectory() as tmpdir:\n        with open(f'{tmpdir}/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n\n        with open(f'{tmpdir}/b.txt', 'w') as f:\n            f.write(\"test file 1\")",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_files",
+    "function_start_line": 53
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 77,
+      "coloffset": 4,
+      "linematch": "with TemporaryDirectory() as tmpdir:",
+      "context": "        assert tracker_1.hash() == tracker_2.hash()\n        assert tracker_1.hash() != tracker_3.hash()\n\ndef test_directories():\n    with TemporaryDirectory() as tmpdir:\n        os.makedirs(f\"{tmpdir}/1\", exist_ok=True)\n\n        with open(f'{tmpdir}/1/a.txt', 'w') as f:\n            f.write(\"test file 1\")\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "test_directories",
+    "function_start_line": 76
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 21,
+      "coloffset": 4,
+      "linematch": "\"\"\"Function decorator for caching execution",
+      "context": "    input_dirs: Optional[List[str]] = None,\n    output_dirs: Optional[List[str]] = None,\n    output_files: Optional[List[str]] = None,\n):\n    \"\"\"Function decorator for caching execution\n\n    Args:\n        cache_dir (str, optional): Directory where the lazytracker cache information will be stored. Defaults to \".lazytracker\".\n        input_files (Optional[List[str]], optional): name of function parameters, that are paths to input files. Defaults to None.\n        input_dirs (Optional[List[str]], optional): name of function parameters, that are paths to directories with input files. Defaults to None.",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 31,
+      "coloffset": 4,
+      "linematch": "def inner_func(function: Callable):",
+      "context": "        output_dirs (Optional[List[str]], optional): name of function parameters, that are paths to otuput files. Defaults to None.\n        output_files (Optional[List[str]], optional): name of function parameters, that are paths to directories with output files. Defaults to None.\n    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 33,
+      "coloffset": 8,
+      "linematch": "def wrapper(*args, **kwargs):",
+      "context": "    \"\"\"\n\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 34,
+      "coloffset": 12,
+      "linematch": "kwargs.update(dict(zip(function.__code__.co_varnames, args)))",
+      "context": "\n    def inner_func(function: Callable):\n        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()\n                input_tracker.add_picklables([function], recursive=True)",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 36,
+      "coloffset": 12,
+      "linematch": "os.makedirs(f\"{cache_dir}\", exist_ok=True)",
+      "context": "        @wraps(function)\n        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()\n                input_tracker.add_picklables([function], recursive=True)\n                input_tracker.add_hparams(kwargs)\n                if input_dirs is not None:",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #14",
+        "line": 36,
+        "description": [
+          "            os.makedirs(f\"{cache_dir}\", exist_ok=True)"
+        ],
+        "failure": [
+          {
+            "inner": "--- lazytracker/tracked.py\n+++ lazytracker/tracked.py\n@@ -33,7 +33,7 @@\n         def wrapper(*args, **kwargs):\n             kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n \n-            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n+            os.makedirs(f\"XX{cache_dir}XX\", exist_ok=True)\n             with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                 input_tracker = LazyTracker()\n                 input_tracker.add_picklables([function], recursive=True)\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #15",
+        "line": 36,
+        "description": [
+          "            os.makedirs(f\"{cache_dir}\", exist_ok=True)"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 37,
+      "coloffset": 12,
+      "linematch": "with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:",
+      "context": "        def wrapper(*args, **kwargs):\n            kwargs.update(dict(zip(function.__code__.co_varnames, args)))\n\n            os.makedirs(f\"{cache_dir}\", exist_ok=True)\n            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:\n                input_tracker = LazyTracker()\n                input_tracker.add_picklables([function], recursive=True)\n                input_tracker.add_hparams(kwargs)\n                if input_dirs is not None:\n                    input_dirs_values = [kwargs[input_dir] for input_dir in input_dirs]",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #16",
+        "line": 37,
+        "description": [
+          "            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:"
+        ],
+        "failure": null
+      },
+      {
+        "name": "Mutant #17",
+        "line": 37,
+        "description": [
+          "            with shelve.open(f\"{cache_dir}/tracked_functions\", \"c\") as db:"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 89,
+      "coloffset": 8,
+      "linematch": "return wrapper",
+      "context": "                    }\n\n                    return return_value\n\n        return wrapper\n\n    return inner_func",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "pattern": {
+      "lineno": 91,
+      "coloffset": 4,
+      "linematch": "return inner_func",
+      "context": "                    return return_value\n\n        return wrapper\n\n    return inner_func",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "cached",
+    "function_start_line": 14
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 10,
+      "coloffset": 8,
+      "linematch": "\"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"",
+      "context": "\n\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "__init__",
+    "function_start_line": 9
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 11,
+      "coloffset": 8,
+      "linematch": "self._hasher = hashlib.md5()",
+      "context": "\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)\n\n        Args:",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #1",
+        "line": 11,
+        "description": [
+          "        self._hasher = hashlib.md5()"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "__init__",
+    "function_start_line": 9
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 14,
+      "coloffset": 8,
+      "linematch": "\"\"\"Include hash of all files inside directory (including files in subdirectories)",
+      "context": "        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of all files inside directory (including files in subdirectories)\n\n        Args:\n            directories (List[str]): List of directories to take files from\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.\n        \"\"\"",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "add_directories",
+    "function_start_line": 13
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 20,
+      "coloffset": 8,
+      "linematch": "files_to_check = []",
+      "context": "        Args:\n            directories (List[str]): List of directories to take files from\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.\n        \"\"\"\n        files_to_check = []\n\n        for directory in directories:\n            files_to_check.extend(list(Path(directory).rglob(\"*\")))\n\n        files_to_check = sorted(files_to_check)",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #3",
+        "line": 20,
+        "description": [
+          "        files_to_check = []"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "add_directories",
+    "function_start_line": 13
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 22,
+      "coloffset": 8,
+      "linematch": "for directory in directories:",
+      "context": "            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.\n        \"\"\"\n        files_to_check = []\n\n        for directory in directories:\n            files_to_check.extend(list(Path(directory).rglob(\"*\")))\n\n        files_to_check = sorted(files_to_check)\n\n        self.add_files(files_to_check, chunk_num_blocks)",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "add_directories",
+    "function_start_line": 13
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 25,
+      "coloffset": 8,
+      "linematch": "files_to_check = sorted(files_to_check)",
+      "context": "\n        for directory in directories:\n            files_to_check.extend(list(Path(directory).rglob(\"*\")))\n\n        files_to_check = sorted(files_to_check)\n\n        self.add_files(files_to_check, chunk_num_blocks)\n\n    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of files",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [
+      {
+        "name": "Mutant #5",
+        "line": 25,
+        "description": [
+          "        files_to_check = sorted(files_to_check)"
+        ],
+        "failure": null
+      }
+    ],
+    "function_name": "add_directories",
+    "function_start_line": 13
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 27,
+      "coloffset": 8,
+      "linematch": "self.add_files(files_to_check, chunk_num_blocks)",
+      "context": "            files_to_check.extend(list(Path(directory).rglob(\"*\")))\n\n        files_to_check = sorted(files_to_check)\n\n        self.add_files(files_to_check, chunk_num_blocks)\n\n    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of files\n\n        Args:",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "add_directories",
+    "function_start_line": 13
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 30,
+      "coloffset": 8,
+      "linematch": "\"\"\"Include hash of files",
+      "context": "\n        self.add_files(files_to_check, chunk_num_blocks)\n\n    def add_files(self, filepaths: List[str], chunk_num_blocks=128):\n        \"\"\"Include hash of files\n\n        Args:\n            filepaths (List[str]): List of paths to files\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.\n        \"\"\"",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "add_files",
+    "function_start_line": 29
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 36,
+      "coloffset": 8,
+      "linematch": "for p in filepaths:",
+      "context": "        Args:\n            filepaths (List[str]): List of paths to files\n            chunk_num_blocks (int, optional): How many chunks to read at once. Defaults to 128.\n        \"\"\"\n        for p in filepaths:\n            if os.path.exists(p):\n                with open(p, \"rb\") as f:\n                    while chunk := f.read(chunk_num_blocks * self._hasher.block_size):\n                        self._hasher.update(chunk)\n            else:",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "add_files",
+    "function_start_line": 29
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 45,
+      "coloffset": 8,
+      "linematch": "\"\"\"Add hash of python dictionary. Utility function for storing pickable",
+      "context": "            else:\n                self._hasher.update(dill.dumps(None))\n\n    def add_hparams(self, hparams: dict):\n        \"\"\"Add hash of python dictionary. Utility function for storing pickable\n\n        Args:\n            hparams (dict): A dictionary to be included\n        \"\"\"\n        self.add_picklables([hparams])",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "add_hparams",
+    "function_start_line": 44
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 50,
+      "coloffset": 8,
+      "linematch": "self.add_picklables([hparams])",
+      "context": "\n        Args:\n            hparams (dict): A dictionary to be included\n        \"\"\"\n        self.add_picklables([hparams])\n\n    def add_picklables(self, objects: List[Any], recursive: bool=False):\n        \"\"\"Include hash of any picklable python objects (pickable by dill)\n\n        Args:",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "add_hparams",
+    "function_start_line": 44
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 53,
+      "coloffset": 8,
+      "linematch": "\"\"\"Include hash of any picklable python objects (pickable by dill)",
+      "context": "        \"\"\"\n        self.add_picklables([hparams])\n\n    def add_picklables(self, objects: List[Any], recursive: bool=False):\n        \"\"\"Include hash of any picklable python objects (pickable by dill)\n\n        Args:\n            objects (List[Any]): List of python objects to hash\n            recursive (bool): Wheter to track dependencies of object. Eg.: if function calls another function, if \n                recursive is set to true the changes in inner function are also tracked",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "add_picklables",
+    "function_start_line": 52
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 60,
+      "coloffset": 8,
+      "linematch": "for obj in objects:",
+      "context": "            objects (List[Any]): List of python objects to hash\n            recursive (bool): Wheter to track dependencies of object. Eg.: if function calls another function, if \n                recursive is set to true the changes in inner function are also tracked\n        \"\"\"\n        for obj in objects:\n            self._hasher.update(dill.dumps(obj, recurse=recursive))\n\n    def hash(self) -> str:\n        \"\"\"Compute hash\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "add_picklables",
+    "function_start_line": 52
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 64,
+      "coloffset": 8,
+      "linematch": "\"\"\"Compute hash",
+      "context": "        for obj in objects:\n            self._hasher.update(dill.dumps(obj, recurse=recursive))\n\n    def hash(self) -> str:\n        \"\"\"Compute hash\n\n        Returns:\n            str: Computed checksum of all things tracked\n        \"\"\"\n",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "hash",
+    "function_start_line": 63
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 70,
+      "coloffset": 8,
+      "linematch": "return self._hasher.hexdigest()",
+      "context": "        Returns:\n            str: Computed checksum of all things tracked\n        \"\"\"\n\n        return self._hasher.hexdigest()",
+      "min": 1,
+      "max": 10,
+      "pattern": "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return",
+      "check_id": "CML001",
+      "check_name": "count-method-lines",
+      "description": "Count the lines within methods in functions of type 'str'."
+    },
+    "mutants": [],
+    "function_name": "hash",
+    "function_start_line": 63
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 28,
+      "coloffset": 16,
+      "linematch": "assert test_function(",
+      "context": "            with open(f\"{input_dir}/test.txt\", 'w') as f:\n                f.write(\"test_file\")\n\n            with TemporaryDirectory() as output_dir:\n                assert test_function(\n                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=3\n                ) == 3\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Assert[count(.//Call[func/Name/@id='test_function']) > 0]",
+      "check_id": "TMIM001",
+      "check_name": "test-methods-invoking-method",
+      "description": "Identify test methods invoking specific methods."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 37,
+      "coloffset": 16,
+      "linematch": "assert test_function(",
+      "context": "                assert updated == True\n\n                # Don't change antything\n                updated = False\n                assert test_function(\n                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=3\n                ) == 3\n                assert updated == False",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Assert[count(.//Call[func/Name/@id='test_function']) > 0]",
+      "check_id": "TMIM001",
+      "check_name": "test-methods-invoking-method",
+      "description": "Identify test methods invoking specific methods."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 45,
+      "coloffset": 16,
+      "linematch": "assert test_function(",
+      "context": "                ) == 3\n                assert updated == False\n\n                # Change parameter\n                assert test_function(\n                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Assert[count(.//Call[func/Name/@id='test_function']) > 0]",
+      "check_id": "TMIM001",
+      "check_name": "test-methods-invoking-method",
+      "description": "Identify test methods invoking specific methods."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 57,
+      "coloffset": 16,
+      "linematch": "assert test_function(",
+      "context": "                updated = False\n                with open(f\"{input_dir}/test.txt\", 'w') as f:\n                    f.write(\"changed_test_file\")\n\n                assert test_function(\n                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Assert[count(.//Call[func/Name/@id='test_function']) > 0]",
+      "check_id": "TMIM001",
+      "check_name": "test-methods-invoking-method",
+      "description": "Identify test methods invoking specific methods."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  },
+  {
+    "file": "/home/student/juniorsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "pattern": {
+      "lineno": 68,
+      "coloffset": 16,
+      "linematch": "assert test_function(",
+      "context": "                # Corrupt output\n                with open(f\"{output_dir}/test.txt\", 'w') as f:\n                    f.write(\"corrupted output\")\n\n                assert test_function(\n                    input_dir=input_dir, \n                    output_dir=output_dir, \n                    parameter=5\n                ) == 5\n                assert updated == True",
+      "min": 1,
+      "max": 10,
+      "pattern": "//Assert[count(.//Call[func/Name/@id='test_function']) > 0]",
+      "check_id": "TMIM001",
+      "check_name": "test-methods-invoking-method",
+      "description": "Identify test methods invoking specific methods."
+    },
+    "mutants": [],
+    "function_name": "test_cached",
+    "function_start_line": 5
+  }
+]
