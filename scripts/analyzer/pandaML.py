@@ -12,7 +12,6 @@ def pandaJSON(data):
 def main():
 	frame = pandaJSON("combined_result.json")
 	print(frame)
-	frame.to_excel("out.xlsx")
 
 
 if __name__ == '__main__':
