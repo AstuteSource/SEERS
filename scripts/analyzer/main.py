@@ -67,8 +67,12 @@ def execute_mutmut(search_path):
         junit = subprocess.run(
             ["mutmut", "junitxml"], capture_output=True, text=True, check=True
         )
-        with open("mutation.xml", "w") as f:
-            f.write(junit.stdout)
+        try:
+            with open("mutation.xml", "x") as f:
+                f.write(junit.stdout)
+        except FileExistsError:
+            with open("mutation.xml", "w") as f:
+                f.write(junit.stdout)
         result = subprocess.run(
             ["npx", "junit2json", "mutation.xml"],
             capture_output=True,

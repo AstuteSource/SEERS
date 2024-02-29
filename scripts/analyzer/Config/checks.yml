@@ -1,3 +1,5 @@
+"""Create checks for config."""
+
 checks:
   - name: "class-definition"
     code: "CDF"
