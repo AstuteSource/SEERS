@@ -15,3 +15,26 @@ csv_file_path = 'testFile.csv'
 df.to_csv(csv_file_path, index = False)
 print(f"Successfully convert {json_file_path} to {csv_file_path}. Begin training the model...")
 
+#read csv file
+df = pd.read_csv(csv_file_path)
+
+df = df.rename(columns={
+    'file': 'file_path',
+    'pattern_lineno': 'pattern_line_number',
+    'pattern_coloffset': 'pattern_column_offset',
+    'pattern_linematch': 'pattern_line_match',
+    'pattern_context': 'pattern_context',
+    'pattern_min': 'pattern_min',
+    'pattern_max': 'pattern_max',
+    'pattern_pattern': 'pattern_xpath_pattern',
+    'check_id': 'check_identifier',
+    'check_name': 'check_name',
+    'mutant_name': 'mutant_name',
+    'mutant_line': 'mutant_line_number',
+    'mutant_description': 'mutant_description',
+    'mutant_failure': 'mutant_failure'
+})
+df['has_mutant'] = df['mutants'].apply(lambda x: 1 if x else 0)
+
+
+
