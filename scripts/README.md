@@ -13,4 +13,6 @@ Then, return to the `analyzer` folder and run `poetry install`.
 
 Once this is complete, the user can run `poetry run analyzer`, with optional parameters
 for which path will be searched for a project, where the files will be saved, and where
-the desired config files are.
+the desired config files are. These are all `Path` objects, which can be passed in in a
+manner resembling this command: 
+`poetry run analyzer --search-path demo --save-directory subject-data --chasten-config-path Config`
