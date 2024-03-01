@@ -20,9 +20,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": null,
-    "function_start_line": null
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -45,9 +43,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": null,
-    "function_start_line": null
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/multiplier.py",
@@ -70,9 +66,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "make_multiplier_of",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/multiplier.py",
@@ -95,9 +89,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "make_multiplier_of",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -139,9 +131,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_incrementer",
-    "function_start_line": 6
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -174,9 +164,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_multiplier",
-    "function_start_line": 11
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -199,9 +187,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_returner",
-    "function_start_line": 16
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/incrementer.py",
@@ -224,9 +210,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "increment_by",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/incrementer.py",
@@ -249,9 +233,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "increment_by",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/returner.py",
@@ -284,9 +266,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "return_msg",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/returner.py",
@@ -309,9 +289,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "return_msg",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/extras/match_text.py",
@@ -334,9 +312,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "read_all_lines",
-    "function_start_line": 5
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/extras/match_text.py",
@@ -359,9 +335,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "grouped",
-    "function_start_line": 13
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/snippets/__init__.py",
@@ -384,9 +358,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_pokemons",
-    "function_start_line": 10
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/snippets/__init__.py",
@@ -409,9 +381,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_quotes",
-    "function_start_line": 14
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -434,9 +404,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "get_session",
-    "function_start_line": 10
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -459,9 +427,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "download_site",
-    "function_start_line": 16
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -484,9 +450,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "download_all_sites",
-    "function_start_line": 21
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/rabit.py",
@@ -519,9 +483,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__init__",
-    "function_start_line": 5
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/rabit.py",
@@ -544,9 +506,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "hide",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -579,9 +539,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__init__",
-    "function_start_line": 2
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -604,9 +562,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__str__",
-    "function_start_line": 6
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -629,9 +585,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "run",
-    "function_start_line": 9
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -654,9 +608,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "stop",
-    "function_start_line": 13
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -679,9 +631,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_incrementer",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -704,9 +654,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_multiplier",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -729,9 +677,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_print",
-    "function_start_line": 12
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_playground.py",
@@ -754,9 +700,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_version",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_playground.py",
@@ -779,9 +723,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_authors",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -804,9 +746,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_pokemon",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -829,9 +769,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_pokemons",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -854,9 +792,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_quotes",
-    "function_start_line": 12
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/multiplier.py",
@@ -879,9 +815,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "make_multiplier_of",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/multiplier.py",
@@ -904,9 +838,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "make_multiplier_of",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -948,9 +880,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_incrementer",
-    "function_start_line": 6
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -983,9 +913,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_multiplier",
-    "function_start_line": 11
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -1008,9 +936,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_returner",
-    "function_start_line": 16
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/incrementer.py",
@@ -1033,9 +959,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "increment_by",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/incrementer.py",
@@ -1058,9 +982,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "increment_by",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/returner.py",
@@ -1093,9 +1015,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "return_msg",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/returner.py",
@@ -1118,9 +1038,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "return_msg",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/extras/match_text.py",
@@ -1143,9 +1061,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "read_all_lines",
-    "function_start_line": 5
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/extras/match_text.py",
@@ -1168,9 +1084,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "grouped",
-    "function_start_line": 13
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/snippets/__init__.py",
@@ -1193,9 +1107,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_pokemons",
-    "function_start_line": 10
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/snippets/__init__.py",
@@ -1218,9 +1130,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_quotes",
-    "function_start_line": 14
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -1243,9 +1153,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "get_session",
-    "function_start_line": 10
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -1268,9 +1176,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "download_site",
-    "function_start_line": 16
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -1293,9 +1199,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "download_all_sites",
-    "function_start_line": 21
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/rabit.py",
@@ -1328,9 +1232,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__init__",
-    "function_start_line": 5
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/rabit.py",
@@ -1353,9 +1255,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "hide",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -1388,9 +1288,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__init__",
-    "function_start_line": 2
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -1413,9 +1311,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__str__",
-    "function_start_line": 6
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -1438,9 +1334,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "run",
-    "function_start_line": 9
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -1463,9 +1357,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "stop",
-    "function_start_line": 13
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -1507,9 +1399,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "get_session",
-    "function_start_line": 10
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/multiplier.py",
@@ -1551,9 +1441,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": null,
-    "function_start_line": null
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/incrementer.py",
@@ -1595,9 +1483,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": null,
-    "function_start_line": null
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/returner.py",
@@ -1639,9 +1525,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": null,
-    "function_start_line": null
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/snippets/random_pokemon.py",
@@ -1683,9 +1567,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": null,
-    "function_start_line": null
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/snippets/random_quotes.py",
@@ -1727,9 +1609,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": null,
-    "function_start_line": null
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -1771,9 +1651,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": null,
-    "function_start_line": null
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/rabit.py",
@@ -1815,9 +1693,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": null,
-    "function_start_line": null
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -1859,9 +1735,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": null,
-    "function_start_line": null
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -1904,9 +1778,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_print",
-    "function_start_line": 12
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -1949,9 +1821,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_print",
-    "function_start_line": 12
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -1994,9 +1864,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_print",
-    "function_start_line": 12
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/multiplier.py",
@@ -2019,9 +1887,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "make_multiplier_of",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/multiplier.py",
@@ -2044,9 +1910,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "make_multiplier_of",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -2088,9 +1952,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_incrementer",
-    "function_start_line": 6
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -2123,9 +1985,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_multiplier",
-    "function_start_line": 11
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -2148,9 +2008,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_returner",
-    "function_start_line": 16
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/incrementer.py",
@@ -2173,9 +2031,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "increment_by",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/incrementer.py",
@@ -2198,9 +2054,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "increment_by",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/returner.py",
@@ -2233,9 +2087,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "return_msg",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/returner.py",
@@ -2258,9 +2110,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "return_msg",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/extras/match_text.py",
@@ -2283,9 +2133,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "read_all_lines",
-    "function_start_line": 5
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/extras/match_text.py",
@@ -2308,9 +2156,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "grouped",
-    "function_start_line": 13
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/snippets/__init__.py",
@@ -2333,9 +2179,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_pokemons",
-    "function_start_line": 10
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/snippets/__init__.py",
@@ -2358,9 +2202,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_quotes",
-    "function_start_line": 14
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -2383,9 +2225,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "get_session",
-    "function_start_line": 10
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -2408,9 +2248,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "download_site",
-    "function_start_line": 16
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -2433,9 +2271,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "download_all_sites",
-    "function_start_line": 21
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/rabit.py",
@@ -2468,9 +2304,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__init__",
-    "function_start_line": 5
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/rabit.py",
@@ -2493,9 +2327,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "hide",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -2528,9 +2360,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__init__",
-    "function_start_line": 2
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -2553,9 +2383,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__str__",
-    "function_start_line": 6
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -2578,9 +2406,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "run",
-    "function_start_line": 9
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -2603,9 +2429,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "stop",
-    "function_start_line": 13
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -2628,9 +2452,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_incrementer",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -2653,9 +2475,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_multiplier",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -2678,9 +2498,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_print",
-    "function_start_line": 12
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_playground.py",
@@ -2703,9 +2521,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_version",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_playground.py",
@@ -2728,9 +2544,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_authors",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -2753,9 +2567,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_pokemon",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -2778,9 +2590,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_pokemons",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -2803,9 +2613,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_quotes",
-    "function_start_line": 12
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/multiplier.py",
@@ -2828,9 +2636,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "make_multiplier_of",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/incrementer.py",
@@ -2853,9 +2659,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "increment_by",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/returner.py",
@@ -2888,9 +2692,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "return_msg",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -2938,9 +2740,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_incrementer",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -2988,9 +2788,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_multiplier",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -3033,9 +2831,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_print",
-    "function_start_line": 12
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_playground.py",
@@ -3068,9 +2864,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_version",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_playground.py",
@@ -3103,9 +2897,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_authors",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -3138,9 +2930,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_pokemon",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -3173,9 +2963,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_pokemons",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -3208,9 +2996,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_quotes",
-    "function_start_line": 12
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -3258,9 +3044,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_incrementer",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -3308,9 +3092,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_multiplier",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -3353,9 +3135,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_print",
-    "function_start_line": 12
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_playground.py",
@@ -3388,9 +3168,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_version",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_playground.py",
@@ -3423,9 +3201,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_authors",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -3458,9 +3234,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_pokemon",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -3493,9 +3267,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_pokemons",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -3528,9 +3300,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_quotes",
-    "function_start_line": 12
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/multiplier.py",
@@ -3553,9 +3323,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "make_multiplier_of",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/multiplier.py",
@@ -3584,9 +3352,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "make_multiplier_of",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/multiplier.py",
@@ -3609,9 +3375,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "make_multiplier_of",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -3671,9 +3435,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_incrementer",
-    "function_start_line": 6
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -3724,9 +3486,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_incrementer",
-    "function_start_line": 6
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -3768,9 +3528,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_multiplier",
-    "function_start_line": 11
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -3803,9 +3561,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_multiplier",
-    "function_start_line": 11
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -3838,9 +3594,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_returner",
-    "function_start_line": 16
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -3873,9 +3627,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_returner",
-    "function_start_line": 16
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/__init__.py",
@@ -3898,9 +3650,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_returner",
-    "function_start_line": 16
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/incrementer.py",
@@ -3923,9 +3673,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "increment_by",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/incrementer.py",
@@ -3954,9 +3702,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "increment_by",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/incrementer.py",
@@ -3979,9 +3725,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "increment_by",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/returner.py",
@@ -4004,9 +3748,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "return_msg",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/returner.py",
@@ -4029,9 +3771,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "return_msg",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/closures/returner.py",
@@ -4054,9 +3794,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "return_msg",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/extras/match_text.py",
@@ -4079,9 +3817,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "read_all_lines",
-    "function_start_line": 5
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/extras/match_text.py",
@@ -4123,9 +3859,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "read_all_lines",
-    "function_start_line": 5
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/extras/match_text.py",
@@ -4158,9 +3892,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "grouped",
-    "function_start_line": 13
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/snippets/__init__.py",
@@ -4193,9 +3925,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_pokemons",
-    "function_start_line": 10
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/snippets/__init__.py",
@@ -4218,9 +3948,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "use_quotes",
-    "function_start_line": 14
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -4262,9 +3990,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "get_session",
-    "function_start_line": 10
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -4287,9 +4013,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "get_session",
-    "function_start_line": 10
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -4322,9 +4046,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "download_site",
-    "function_start_line": 16
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -4347,9 +4069,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "download_site",
-    "function_start_line": 16
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/async/threads.py",
@@ -4382,9 +4102,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "download_all_sites",
-    "function_start_line": 21
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/rabit.py",
@@ -4407,9 +4125,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__init__",
-    "function_start_line": 5
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/rabit.py",
@@ -4442,9 +4158,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "hide",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -4477,9 +4191,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__init__",
-    "function_start_line": 2
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -4512,9 +4224,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__init__",
-    "function_start_line": 2
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -4547,9 +4257,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "__str__",
-    "function_start_line": 6
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -4582,9 +4290,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "run",
-    "function_start_line": 9
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -4617,9 +4323,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "run",
-    "function_start_line": 9
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -4661,9 +4365,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "stop",
-    "function_start_line": 13
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/ultiplayground/oop/animal.py",
@@ -4696,9 +4398,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "stop",
-    "function_start_line": 13
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -4746,9 +4446,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_incrementer",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -4796,9 +4494,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_multiplier",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_closures.py",
@@ -4841,9 +4537,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_print",
-    "function_start_line": 12
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_playground.py",
@@ -4876,9 +4570,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_version",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_playground.py",
@@ -4911,9 +4603,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_authors",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -4946,9 +4636,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_pokemon",
-    "function_start_line": 4
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -4981,9 +4669,7 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_pokemons",
-    "function_start_line": 8
+    }
   },
   {
     "file": "/home/caleb/Allegheny/CMP580/SEERS/scripts/analyzer/demo/python-playground/tests/test_snippets.py",
@@ -5016,8 +4702,6 @@
       "failures": 182,
       "tests": 207,
       "time": 0
-    },
-    "function_name": "test_quotes",
-    "function_start_line": 12
+    }
   }
 ]
