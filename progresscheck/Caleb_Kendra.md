@@ -31,7 +31,3 @@
  - changed the execute_mutmut program to give formatted JSON results back
  - changed the path locations so they they hopefully work on more OS's without hard-coding
 - This allowed for `mutmut` and `chasten` to be run in order to create a unified JSON with `lazytracker`'s information
-
-# Week 4
-
-## Log

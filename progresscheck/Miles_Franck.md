@@ -1,4 +1,4 @@
-## Week 1 Feb 5 2024 - Feb 9 2024
+## Week 1
 
 Programs I've been able to run chasten on.
 
@@ -16,24 +16,7 @@ Programs I've been able to run chasten on.
   https://github.com/kieran-ryan/pyprojectsort
 
 
-Results
-I was not able to run mutmut on any of these projects. I was only able to run it on lazytracker
-
-## Week 2 Feb 12 - Feb 16 2024
-
-Look for antipatterns and figure out how to write a script to run chasten
-
-
-## Week 3 Feb 19 - Feb 23 2024
-
-Find patterns and add them to the config file.
-
-
-## Week 4 Feb 26 - Feb 1 2024
-
-
-Create new script to parse the json to find what function each pattern is in 
-
+- MutMut results
 
 
 
