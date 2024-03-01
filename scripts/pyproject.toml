@@ -14,6 +14,7 @@ typer = {extras = ["all"], version = "^0.9.0"}
 pytest = "^8.0.1"
 lazytracker = {path = "./analyzer/demo/lazytracker"}
 sapientml = "^0.4.12.post0"
+pandas = "^2.2.1"
 
 [build-system]
 requires = ["poetry-core"]
