@@ -556,6 +556,7 @@ def test_picable_function():
     def func_2(x):
         return x+2
 
+    tracker_1 = LazyTracker()
     tracker_1.add_picklables([func_1])
 ",1,10,//FunctionDef[not(args/arg/annotation) or not(returns)],ANNOT001,missing-annotations,A function does not explicitly annotate arguments/parameters or the expected output,0,0,10,44,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 /Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py,,test_files,53.0,53,0,def test_files():,"

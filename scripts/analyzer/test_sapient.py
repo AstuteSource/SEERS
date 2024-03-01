@@ -1,7 +1,7 @@
 import pandas as pd
 import json
-from sapientml.sapientml import SapientML
-from sapientml.sapientml.util.logging import setup_logger
+from sapientml import SapientML
+from sapientml.util.logging import setup_logger
 from sklearn.metrics import f1_score
 from sklearn.metrics import r2_score
 from sklearn.model_selection import train_test_split
