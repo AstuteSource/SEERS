@@ -2,7 +2,7 @@
 name = "analyzer"
 version = "0.0.0"
 description = "Chasten and Mutation Analysis"
-authors = ["Jaclyn Pham", "Daniel Bekele", "Mordred Boulais"]
+authors = ["Jaclyn Pham", "Daniel Bekele", "Mordred Boulais", "Alish Chhetri","Miles Franck"]
 
 [tool.poetry.scripts]
 analyzer = "analyzer.main:cli"
