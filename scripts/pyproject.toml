@@ -8,11 +8,12 @@ authors = ["Jaclyn Pham", "Daniel Bekele", "Mordred Boulais"]
 analyzer = "analyzer.main:cli"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.13"
 rich = "^13.4.2"
 typer = {extras = ["all"], version = "^0.9.0"}
 pytest = "^8.0.1"
 lazytracker = {path = "./analyzer/demo/lazytracker"}
+sapientml = "^0.4.12.post0"
 
 [build-system]
 requires = ["poetry-core"]

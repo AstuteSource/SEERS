@@ -1,6 +1,6 @@
 import pandas as pd
 import json
-from automl.sapientml.sapientml.main import SapientML
+from sapientml.sapientml import SapientML
 from sklearn.model_selection import train_test_split
 
 def load_data(data):
