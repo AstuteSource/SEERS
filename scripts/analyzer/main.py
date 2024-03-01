@@ -39,9 +39,6 @@ def check_installation(package) -> bool:
 def execute_chasten(search_path, save_directory, chasten_config_path):
     """Execute the chasten analyze command for lazytracker."""
     # Resource: https://github.com/AstuteSource/chasten/tree/chastenversion
-def execute_chasten(search_path, save_directory, chasten_config_path):
-    """Execute the chasten analyze command for lazytracker."""
-    # Resource: https://github.com/AstuteSource/chasten/tree/chastenversion
 
     chasten_command = [
         "chasten",
