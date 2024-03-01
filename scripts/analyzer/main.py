@@ -99,7 +99,7 @@ def save_results(chasten_result, mutmut_result, save_file):
 def analyzer(
     search_path: Path = os.getcwd() + "/demo/lazytracker",
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
-    chasten_config_path: str = os.getcwd() + "/config",
+    chasten_config_path: str = os.getcwd() + "/Config",
 ):
     """Runs chasten and mutmut, consolidates the data into a json."""
     console = Console()
