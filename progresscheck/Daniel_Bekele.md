@@ -41,3 +41,16 @@
         - The output of the chasten command is appended to the same mutated_code.txt file, following the output from mut.py.
         - The main() function calls both of these functions in sequence, ensuring that mut.py is run first and its output is saved,
         followed by the execution of chasten with its output appended to the same file.
+
+##### Wednesday Febuary 28, 2024
+        - I have been trying to restructure the json that is created by running analyzer, if you look in the seers repo for a jsonRestrut branch you
+        should find a python script that does the following
+        - The script provided operates by parsing two sets of JSON data—one from the chasten tool and the other from mutmut. It then restructures
+        this data into a new format that aligns related information from both tools by their location within the codebase.
+        - I wrote another program that was able to take in the old json file to include what function each pattern is in and the line where the
+        fucntion starts. This json file is what is produced from the orginal script I wrote. This step involes using the python ast library to find
+        the nodes each line exist in to identify what the function it is inclosed in. 
+        -  I have been working on the Json_restruct.py to meet the new requirement for the ML team. Caleb Kendra mentioned to me that the json
+        structure was faulty, the first thing was mutants were stored in a list but that was causing issues while the ML team was trying to get it
+        to a panda data frame. I changed it to a dict to fix this. Next thing was the mutation score was not being included in the reconstructed
+        json from the original json. Lastly was making sure that when there was no mutant in a given pattern to return a null value.
