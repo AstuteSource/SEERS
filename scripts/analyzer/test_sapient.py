@@ -6,32 +6,41 @@ from sklearn.metrics import f1_score
 from sklearn.metrics import r2_score
 from sklearn.model_selection import train_test_split
 
-# Convert JSON to CSV file type using pandas
-def json_to_csv(json_file_path, csv_file_path='output.csv'):
-    # Load JSON data and normalize
+def load_data(json_file_path):
     with open(json_file_path) as file:
         json_data = json.load(file)
-    df = pd.json_normalize(json_data)
-    # Display the DataFrame
-    print(df.head())
-    # Convert DataFrame to CSV and save
-    df.to_csv(csv_file_path, index=False)
-    print(f"Successfully converted {json_file_path} to {csv_file_path}. Begin training the model...")
-    return csv_file_path
+    
+    # Flatten Json to dataframe
+    rows = []
+    for item in json_data:
+        row = {
+            'file': item['file'],
+            'lineno': item['pattern']['lineno'],
+            'coloffset': item['pattern']['coloffset'],
+            'linematch': item['pattern']['linematch'],
+            'min': item['pattern']['min'],
+            'max': item['pattern']['max'],
+            'tests': item['mutmut_summary']['tests'],
+            'failures': item['mutmut_summary']['failures'],
+            'errors': item['mutmut_summary']['errors']
+        }
+        rows.append(row)
+    
+    data = pd.DataFrame(rows)
+    print("DataFrame:")
+    print(data.head())
+    print(data.columns)
+    return data
 
-def train_and_evaluate_model(csv_file_path):
-    # Load data
-    train_data = pd.read_csv(csv_file_path)
-
+def train_and_evaluate_model(data):
     # Split data into training and testing sets
-    train_data, test_data = train_test_split(train_data)
+    train_data, test_data = train_test_split(data)
 
     # Extract true labels for evaluation
-    y_true = test_data["mutmut_result"].reset_index(drop=True)
-    test_data.drop(["mutmut_result"], axis=1, inplace=True)
+    y_true = test_data["failures"].reset_index()
 
     # Initialize SapientML model
-    cls = SapientML(["mutmut_result"])
+    cls = SapientML(["failures"])
     
     # Setup logging
     setup_logger().handlers.clear()  # to prevent duplication of logging
@@ -41,7 +50,7 @@ def train_and_evaluate_model(csv_file_path):
 
     # Make predictions on test data
     y_pred = cls.predict(test_data)
-    y_pred = y_pred["mutmut_result"].rename("mutation_pred")
+    y_pred = y_pred["failures"].rename("failure_pred")
 
     # Concatenate true and predicted values
     result_df = pd.concat([y_pred, y_true], axis=1)
@@ -56,8 +65,8 @@ def train_and_evaluate_model(csv_file_path):
 
 def main():
     json_file_path = "output_with_functions.json"
-    csv_file_path = json_to_csv(json_file_path)
-    train_and_evaluate_model(csv_file_path)
+    data = load_data(json_file_path)
+    train_and_evaluate_model(data)
 
 if __name__ == '__main__':
     main()
