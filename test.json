@@ -1,0 +1,48 @@
+[
+  {
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "pattern": {
+      "lineno": 8,
+      "coloffset": 0,
+      "linematch": "class LazyTracker:",
+      "context": "import dill\nfrom pathlib import Path\n\n\nclass LazyTracker:\n    def __init__(self):\n        \"\"\"LazyTracked enables you to compute combined hash of things like files, directories, python objects etc.\"\"\"\n        self._hasher = hashlib.md5()\n\n    def add_directories(self, directories: List[str], chunk_num_blocks=128):",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//ClassDef",
+      "check_id": "C001",
+      "check_name": "class-definition",
+      "description": "Ensure the presence of class definitions in the codebase."
+    },
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 1,
+      "errors": 4,
+      "failures": 10,
+      "tests": 42,
+      "time": 4
+    }
+  },
+  {
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "pattern": {
+      "lineno": 6,
+      "coloffset": 0,
+      "linematch": "def test_hparams():",
+      "context": "import shutil\nfrom tempfile import TemporaryDirectory, tempdir\nfrom lazytracker import LazyTracker\n\ndef test_hparams():\n    hparams_1 = {\n        'a': 1,\n        'b': 2,\n        'c': {\n            'd': 1",
+      "min": 1,
+      "max": 10,
+      "pattern": ".//FunctionDef",
+      "check_id": "F001",
+      "check_name": "all-function-definition",
+      "description": "Ensure the presence of function definitions in the codebase."
+    },
+    "mutants": null,
+    "mutmut_summary": {
+      "disabled": 0,
+      "errors": 0,
+      "failures": 10,
+      "tests": 44,
+      "time": 0
+      }
+    }
+  ]
