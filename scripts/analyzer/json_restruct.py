@@ -2,6 +2,7 @@
 
 import json
 
+
 def restructure_json(chasten_data, mutmut_data):
     structured_data = []
 
@@ -11,61 +12,72 @@ def restructure_json(chasten_data, mutmut_data):
         "errors": mutmut_data.get("errors", 0),
         "failures": mutmut_data.get("failures", 0),
         "tests": mutmut_data.get("tests", 0),
-        "time": mutmut_data.get("time", 0)
+        "time": mutmut_data.get("time", 0),
     }
 
     # Process Chasten results
-    for source in chasten_data['sources']:
-        source_file = source['filename']
-        check = source['check']  # Assuming there is only one check per source
-        for match in check['matches']:
+    for source in chasten_data["sources"]:
+        source_file = source["filename"]
+        check = source["check"]  # Assuming there is only one check per source
+        for match in check["matches"]:
             pattern = {
-                'lineno': match['lineno'],
-                'coloffset': match['coloffset'],
-                'linematch': match['linematch'],
-                'context': match['linematch_context'],
+                "lineno": match["lineno"],
+                "coloffset": match["coloffset"],
+                "linematch": match["linematch"],
+                "context": match["linematch_context"],
                 # Include additional fields
-                'min': check.get('min'),
-                'max': check.get('max'),
-                'pattern': check.get('pattern'),
-                'check_id': check.get('id'),
-                'check_name': check.get('name'),
-                'description': check.get('description'),
+                "min": check.get("min"),
+                "max": check.get("max"),
+                "pattern": check.get("pattern"),
+                "check_id": check.get("id"),
+                "check_name": check.get("name"),
+                "description": check.get("description"),
             }
             # Find corresponding mutmut mutants
             mutants = {}
-            for testcase in mutmut_data['testsuite'][0]['testcase']:
-                if testcase['file'].endswith(source_file.split('/')[-1]) and testcase['line'] == pattern['lineno']:
-                    mutant_name = testcase['name']
+            for testcase in mutmut_data["testsuite"][0]["testcase"]:
+                if (
+                    testcase["file"].endswith(source_file.split("/")[-1])
+                    and testcase["line"] == pattern["lineno"]
+                ):
+                    mutant_name = testcase["name"]
                     mutants[mutant_name] = {
-                        'line': testcase['line'],
-                        'description': testcase['system-out'][0] if testcase['system-out'] else "",
+                        "line": testcase["line"],
+                        "description": testcase["system-out"][0]
+                        if testcase["system-out"]
+                        else "",
                         # Include failure information if present
-                        'failure': testcase.get('failure', [{}])[0]
+                        "failure": testcase.get("failure", [{}])[0],
                     }
 
-            structured_data.append({
-                'file': source_file,
-                'pattern': pattern,
-                'mutants':mutants if mutants else None,  # Set to "NULL" if no mutants
-                'mutmut_summary': mutmut_summary # Add the summary to each entry
-            })
+            structured_data.append(
+                {
+                    "file": source_file,
+                    "pattern": pattern,
+                    "mutants": mutants
+                    if mutants
+                    else None,  # Set to "NULL" if no mutants
+                    "mutmut_summary": mutmut_summary,  # Add the summary to each entry
+                }
+            )
 
     return structured_data
 
+
 def json_restruct():
-    with open('combined_result.json') as f:
+    with open("combined_result.json") as f:
         # load in data
         data = json.load(f)
 
-    chasten_result = data['chasten_result']
-    mutmut_result = data['mutmut_result']
+    chasten_result = data["chasten_result"]
+    mutmut_result = data["mutmut_result"]
 
     structured_result = restructure_json(chasten_result, mutmut_result)
 
-    with open('combined_result.json', 'w') as f:
+    with open("combined_result.json", "w") as f:
         # rewrite results json
         json.dump(structured_result, f, indent=2)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     json_restruct()

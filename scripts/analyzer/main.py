@@ -15,6 +15,7 @@ from add_function_json import add_function_to_json
 
 cli = typer.Typer()
 
+
 def install_package(package):
     """Install the specified Python package using pip."""
     subprocess.run(["pipx", "install", package])
@@ -61,7 +62,6 @@ def execute_chasten(search_path, save_directory, chasten_config_path):
         file = json.load(f)
     os.remove(json_name)
     return file
-
 
 
 def execute_mutmut(search_path):
@@ -126,4 +126,6 @@ def analyzer(
         console.print("Result is stored in file named combined_result.json")
         json_restruct()
         console.print("Cleaned json results.")
-        add_function_to_json("combined_result.json", search_path, "combined_result.json")
+        add_function_to_json(
+            "combined_result.json", search_path, "combined_result.json"
+        )

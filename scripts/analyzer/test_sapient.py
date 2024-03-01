@@ -6,31 +6,33 @@ from sklearn.metrics import f1_score
 from sklearn.metrics import r2_score
 from sklearn.model_selection import train_test_split
 
+
 def load_data(json_file_path):
     with open(json_file_path) as file:
         json_data = json.load(file)
-    
+
     # Flatten Json to dataframe
     rows = []
     for item in json_data:
         row = {
-            'file': item['file'],
-            'lineno': item['pattern']['lineno'],
-            'coloffset': item['pattern']['coloffset'],
-            'linematch': item['pattern']['linematch'],
-            'min': item['pattern']['min'],
-            'max': item['pattern']['max'],
-            'tests': item['mutmut_summary']['tests'],
-            'failures': item['mutmut_summary']['failures'],
-            'errors': item['mutmut_summary']['errors']
+            "file": item["file"],
+            "lineno": item["pattern"]["lineno"],
+            "coloffset": item["pattern"]["coloffset"],
+            "linematch": item["pattern"]["linematch"],
+            "min": item["pattern"]["min"],
+            "max": item["pattern"]["max"],
+            "tests": item["mutmut_summary"]["tests"],
+            "failures": item["mutmut_summary"]["failures"],
+            "errors": item["mutmut_summary"]["errors"],
         }
         rows.append(row)
-    
+
     data = pd.DataFrame(rows)
     print("DataFrame:")
     print(data.head())
     print(data.columns)
     return data
+
 
 def train_and_evaluate_model(data):
     # Split data into training and testing sets
@@ -41,10 +43,10 @@ def train_and_evaluate_model(data):
 
     # Initialize SapientML model
     cls = SapientML(["failures"])
-    
+
     # Setup logging
     setup_logger().handlers.clear()  # to prevent duplication of logging
-    
+
     # Fit the model on training data
     cls.fit(train_data)
 
@@ -68,5 +70,6 @@ def main():
     data = load_data(json_file_path)
     train_and_evaluate_model(data)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
