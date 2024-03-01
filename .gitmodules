@@ -1,3 +1,6 @@
 [submodule "scripts/analyzer/demo/lazytracker"]
 	path = scripts/analyzer/demo/lazytracker
 	url = git@github.com:AstuteSource/lazytracker.git
+[submodule "scripts/analyzer/demo/chasten"]
+	path = scripts/analyzer/demo/chasten
+	url = git@github.com:AstuteSource/chasten.git
