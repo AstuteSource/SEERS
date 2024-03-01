@@ -31,3 +31,17 @@
  - changed the execute_mutmut program to give formatted JSON results back
  - changed the path locations so they they hopefully work on more OS's without hard-coding
 - This allowed for `mutmut` and `chasten` to be run in order to create a unified JSON with `lazytracker`'s information
+
+# Week 4
+
+## Log
+
+- This week I worked on mostly turning the JSON into a Pandas data frame
+ - This will allow us to feed a pandas data frame into a Machine Learning algorithm
+ - This means that this step is very import to have clean data so it is easy to use moving on.
+- I also added submodules for different projects such as `python-playground`
+ - This allowed for the testing and creation of mutation score and antipattern tracking for a new program 
+
+# Week 5
+
+# Week 6
