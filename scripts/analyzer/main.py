@@ -44,7 +44,7 @@ def execute_chasten(search_path, save_directory, save_file_path, chasten_config_
     chasten_command = [
         "chasten",
         "analyze",
-        "lazytracker",
+        "ultiplayground",
         "--config",
         chasten_config_path,
         "--search-path",
@@ -63,8 +63,8 @@ def execute_chasten(search_path, save_directory, save_file_path, chasten_config_
 
 def execute_mutmut(search_path):
     """Execute the mutmut run command."""
-    with chdir(os.getcwd() + "/demo/lazytracker"):
-        subprocess.run(["mutmut", "run"])
+    with chdir(os.getcwd() + "/demo/python-playground"):
+        subprocess.run(["mutmut", "run", "--paths-to-mutate", "ultiplayground/,tests/"])
         junit = subprocess.run(
             ["mutmut", "junitxml"], capture_output=True, text=True, check=True
         )
@@ -90,7 +90,7 @@ def save_results(chasten_result, mutmut_result, save_file):
 
 @cli.command()
 def analyzer(
-    search_path: Path = os.getcwd() + "/demo/lazytracker",
+    search_path: Path = os.getcwd() + "/demo/python-playground",
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
     chasten_config_path: str = os.getcwd() + "/Config",
 ):
