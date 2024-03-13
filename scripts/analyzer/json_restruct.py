@@ -70,7 +70,7 @@ def json_restruct():
 
     structured_result = restructure_json(chasten_result, mutmut_result)
 
-    with open('combined_result.json', 'w') as f:
+    with open('restructured_result.json', 'w') as f:
         # rewrite results json
         json.dump(structured_result, f, indent=2)
 
