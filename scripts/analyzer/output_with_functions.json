@@ -1,6 +1,6 @@
 [
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 8,
       "coloffset": 0,
@@ -23,10 +23,10 @@
       "score": 0.18518518518518517
     },
     "function_name": null,
-    "function_start_line": null
+    "function_scope": null
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 6,
       "coloffset": 0,
@@ -49,10 +49,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 35,
       "coloffset": 0,
@@ -75,10 +75,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 53,
       "coloffset": 0,
@@ -101,10 +101,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_files",
-    "function_start_line": 53
+    "function_scope": "53-74"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 76,
       "coloffset": 0,
@@ -127,10 +127,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_directories",
-    "function_start_line": 76
+    "function_scope": "76-105"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 4,
@@ -153,10 +153,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 38,
       "coloffset": 4,
@@ -179,10 +179,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 5,
       "coloffset": 0,
@@ -205,10 +205,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 8,
@@ -231,10 +231,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 9,
       "coloffset": 4,
@@ -257,10 +257,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "__init__",
-    "function_start_line": 9
+    "function_scope": "9-11"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 13,
       "coloffset": 4,
@@ -293,10 +293,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_directories",
-    "function_start_line": 13
+    "function_scope": "13-27"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 29,
       "coloffset": 4,
@@ -329,10 +329,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_files",
-    "function_start_line": 29
+    "function_scope": "29-42"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 4,
@@ -355,10 +355,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_hparams",
-    "function_start_line": 44
+    "function_scope": "44-50"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 52,
       "coloffset": 4,
@@ -391,10 +391,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_picklables",
-    "function_start_line": 52
+    "function_scope": "52-61"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 63,
       "coloffset": 4,
@@ -417,10 +417,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "hash",
-    "function_start_line": 63
+    "function_scope": "63-70"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 0,
@@ -443,10 +443,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 31,
       "coloffset": 4,
@@ -469,10 +469,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 8,
@@ -495,10 +495,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 4,
@@ -521,10 +521,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 38,
       "coloffset": 4,
@@ -547,10 +547,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 9,
       "coloffset": 4,
@@ -573,10 +573,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "__init__",
-    "function_start_line": 9
+    "function_scope": "9-11"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 13,
       "coloffset": 4,
@@ -609,10 +609,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_directories",
-    "function_start_line": 13
+    "function_scope": "13-27"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 29,
       "coloffset": 4,
@@ -645,10 +645,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_files",
-    "function_start_line": 29
+    "function_scope": "29-42"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 4,
@@ -671,10 +671,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_hparams",
-    "function_start_line": 44
+    "function_scope": "44-50"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 52,
       "coloffset": 4,
@@ -707,10 +707,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_picklables",
-    "function_start_line": 52
+    "function_scope": "52-61"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 63,
       "coloffset": 4,
@@ -733,10 +733,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "hash",
-    "function_start_line": 63
+    "function_scope": "63-70"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 0,
@@ -759,10 +759,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 31,
       "coloffset": 4,
@@ -785,10 +785,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 8,
@@ -811,10 +811,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 37,
       "coloffset": 12,
@@ -837,10 +837,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_files",
-    "function_start_line": 29
+    "function_scope": "29-42"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 41,
       "coloffset": 16,
@@ -869,10 +869,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 16,
@@ -901,10 +901,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 51,
       "coloffset": 16,
@@ -933,10 +933,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 56,
       "coloffset": 16,
@@ -965,10 +965,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 65,
       "coloffset": 16,
@@ -1012,10 +1012,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 71,
       "coloffset": 20,
@@ -1044,10 +1044,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 76,
       "coloffset": 20,
@@ -1076,10 +1076,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 104,
       "coloffset": 15,
@@ -1102,10 +1102,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_directories",
-    "function_start_line": 76
+    "function_scope": "76-105"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 104,
       "coloffset": 15,
@@ -1128,10 +1128,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_directories",
-    "function_start_line": 76
+    "function_scope": "76-105"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 104,
       "coloffset": 15,
@@ -1154,10 +1154,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_directories",
-    "function_start_line": 76
+    "function_scope": "76-105"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 104,
       "coloffset": 15,
@@ -1180,10 +1180,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_directories",
-    "function_start_line": 76
+    "function_scope": "76-105"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -1206,10 +1206,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -1232,10 +1232,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -1258,10 +1258,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -1284,10 +1284,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -1310,10 +1310,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -1336,10 +1336,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -1362,10 +1362,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -1388,10 +1388,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -1414,10 +1414,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 73,
       "coloffset": 23,
@@ -1440,10 +1440,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 65,
       "coloffset": 40,
@@ -1487,10 +1487,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 6,
       "coloffset": 0,
@@ -1513,10 +1513,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 35,
       "coloffset": 0,
@@ -1539,10 +1539,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 4,
@@ -1565,10 +1565,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 38,
       "coloffset": 4,
@@ -1591,10 +1591,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 53,
       "coloffset": 0,
@@ -1617,10 +1617,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_files",
-    "function_start_line": 53
+    "function_scope": "53-74"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 76,
       "coloffset": 0,
@@ -1643,10 +1643,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_directories",
-    "function_start_line": 76
+    "function_scope": "76-105"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 5,
       "coloffset": 0,
@@ -1669,10 +1669,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 8,
@@ -1695,10 +1695,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 9,
       "coloffset": 4,
@@ -1721,10 +1721,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "__init__",
-    "function_start_line": 9
+    "function_scope": "9-11"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 13,
       "coloffset": 4,
@@ -1757,10 +1757,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_directories",
-    "function_start_line": 13
+    "function_scope": "13-27"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 29,
       "coloffset": 4,
@@ -1793,10 +1793,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_files",
-    "function_start_line": 29
+    "function_scope": "29-42"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 4,
@@ -1819,10 +1819,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_hparams",
-    "function_start_line": 44
+    "function_scope": "44-50"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 52,
       "coloffset": 4,
@@ -1855,10 +1855,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_picklables",
-    "function_start_line": 52
+    "function_scope": "52-61"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 63,
       "coloffset": 4,
@@ -1881,10 +1881,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "hash",
-    "function_start_line": 63
+    "function_scope": "63-70"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 0,
@@ -1907,10 +1907,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 31,
       "coloffset": 4,
@@ -1933,10 +1933,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 8,
@@ -1959,10 +1959,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 0,
@@ -1985,10 +1985,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 31,
       "coloffset": 4,
@@ -2011,10 +2011,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 8,
@@ -2037,10 +2037,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 35,
       "coloffset": 0,
@@ -2063,10 +2063,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 5,
       "coloffset": 0,
@@ -2089,10 +2089,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 6,
       "coloffset": 4,
@@ -2115,10 +2115,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 0,
@@ -2141,10 +2141,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 31,
       "coloffset": 4,
@@ -2167,10 +2167,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 16,
@@ -2199,10 +2199,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 51,
       "coloffset": 16,
@@ -2231,10 +2231,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 56,
       "coloffset": 16,
@@ -2263,10 +2263,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 65,
       "coloffset": 16,
@@ -2310,10 +2310,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 76,
       "coloffset": 20,
@@ -2342,10 +2342,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 71,
       "coloffset": 20,
@@ -2374,10 +2374,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 76,
       "coloffset": 20,
@@ -2406,10 +2406,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 32,
       "coloffset": 4,
@@ -2432,10 +2432,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 4,
@@ -2458,10 +2458,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 50,
       "coloffset": 4,
@@ -2484,10 +2484,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 51,
       "coloffset": 4,
@@ -2510,10 +2510,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 7,
       "coloffset": 4,
@@ -2536,10 +2536,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 15,
       "coloffset": 4,
@@ -2562,10 +2562,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 23,
       "coloffset": 4,
@@ -2588,10 +2588,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 24,
       "coloffset": 4,
@@ -2614,10 +2614,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 26,
       "coloffset": 4,
@@ -2640,10 +2640,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 27,
       "coloffset": 4,
@@ -2666,10 +2666,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 29,
       "coloffset": 4,
@@ -2692,10 +2692,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 30,
       "coloffset": 4,
@@ -2718,10 +2718,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 32,
       "coloffset": 4,
@@ -2744,10 +2744,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 4,
@@ -2770,10 +2770,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 4,
@@ -2796,10 +2796,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 38,
       "coloffset": 4,
@@ -2822,10 +2822,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 41,
       "coloffset": 4,
@@ -2848,10 +2848,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 42,
       "coloffset": 4,
@@ -2874,10 +2874,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 4,
@@ -2900,10 +2900,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 45,
       "coloffset": 4,
@@ -2926,10 +2926,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 47,
       "coloffset": 4,
@@ -2952,10 +2952,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 48,
       "coloffset": 4,
@@ -2978,10 +2978,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 50,
       "coloffset": 4,
@@ -3004,10 +3004,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 51,
       "coloffset": 4,
@@ -3030,10 +3030,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 54,
       "coloffset": 4,
@@ -3056,10 +3056,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_files",
-    "function_start_line": 53
+    "function_scope": "53-74"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 77,
       "coloffset": 4,
@@ -3082,10 +3082,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_directories",
-    "function_start_line": 76
+    "function_scope": "76-105"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 6,
       "coloffset": 4,
@@ -3108,10 +3108,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 15,
       "coloffset": 12,
@@ -3134,10 +3134,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 17,
       "coloffset": 12,
@@ -3160,10 +3160,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 20,
       "coloffset": 12,
@@ -3186,10 +3186,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 21,
       "coloffset": 12,
@@ -3212,10 +3212,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 7,
       "coloffset": 4,
@@ -3238,10 +3238,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 15,
       "coloffset": 4,
@@ -3264,10 +3264,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 23,
       "coloffset": 4,
@@ -3290,10 +3290,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 24,
       "coloffset": 4,
@@ -3316,10 +3316,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 26,
       "coloffset": 4,
@@ -3342,10 +3342,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 27,
       "coloffset": 4,
@@ -3368,10 +3368,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 29,
       "coloffset": 4,
@@ -3394,10 +3394,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 30,
       "coloffset": 4,
@@ -3420,10 +3420,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 32,
       "coloffset": 4,
@@ -3446,10 +3446,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 4,
@@ -3472,10 +3472,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_hparams",
-    "function_start_line": 6
+    "function_scope": "6-33"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 4,
@@ -3498,10 +3498,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 37,
       "coloffset": 8,
@@ -3524,10 +3524,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 38,
       "coloffset": 4,
@@ -3550,10 +3550,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 39,
       "coloffset": 8,
@@ -3576,10 +3576,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 41,
       "coloffset": 4,
@@ -3602,10 +3602,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 42,
       "coloffset": 4,
@@ -3628,10 +3628,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 44,
       "coloffset": 4,
@@ -3654,10 +3654,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 45,
       "coloffset": 4,
@@ -3680,10 +3680,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 47,
       "coloffset": 4,
@@ -3706,10 +3706,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 48,
       "coloffset": 4,
@@ -3732,10 +3732,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 50,
       "coloffset": 4,
@@ -3758,10 +3758,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 51,
       "coloffset": 4,
@@ -3784,10 +3784,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_picable_function",
-    "function_start_line": 35
+    "function_scope": "35-51"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 54,
       "coloffset": 4,
@@ -3810,10 +3810,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_files",
-    "function_start_line": 53
+    "function_scope": "53-74"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_lazytracker.py",
     "pattern": {
       "lineno": 77,
       "coloffset": 4,
@@ -3836,10 +3836,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_directories",
-    "function_start_line": 76
+    "function_scope": "76-105"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 6,
       "coloffset": 4,
@@ -3862,10 +3862,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 15,
       "coloffset": 12,
@@ -3888,10 +3888,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 17,
       "coloffset": 12,
@@ -3914,10 +3914,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 20,
       "coloffset": 12,
@@ -3940,10 +3940,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 21,
       "coloffset": 12,
@@ -3966,10 +3966,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 10,
       "coloffset": 8,
@@ -3992,10 +3992,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "__init__",
-    "function_start_line": 9
+    "function_scope": "9-11"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 11,
       "coloffset": 8,
@@ -4024,10 +4024,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "__init__",
-    "function_start_line": 9
+    "function_scope": "9-11"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 14,
       "coloffset": 8,
@@ -4050,10 +4050,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_directories",
-    "function_start_line": 13
+    "function_scope": "13-27"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 20,
       "coloffset": 8,
@@ -4082,10 +4082,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_directories",
-    "function_start_line": 13
+    "function_scope": "13-27"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 22,
       "coloffset": 8,
@@ -4108,10 +4108,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_directories",
-    "function_start_line": 13
+    "function_scope": "13-27"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 25,
       "coloffset": 8,
@@ -4140,10 +4140,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_directories",
-    "function_start_line": 13
+    "function_scope": "13-27"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 27,
       "coloffset": 8,
@@ -4166,10 +4166,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_directories",
-    "function_start_line": 13
+    "function_scope": "13-27"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 30,
       "coloffset": 8,
@@ -4192,10 +4192,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_files",
-    "function_start_line": 29
+    "function_scope": "29-42"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 8,
@@ -4218,10 +4218,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_files",
-    "function_start_line": 29
+    "function_scope": "29-42"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 45,
       "coloffset": 8,
@@ -4244,10 +4244,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_hparams",
-    "function_start_line": 44
+    "function_scope": "44-50"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 50,
       "coloffset": 8,
@@ -4270,10 +4270,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_hparams",
-    "function_start_line": 44
+    "function_scope": "44-50"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 53,
       "coloffset": 8,
@@ -4296,10 +4296,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_picklables",
-    "function_start_line": 52
+    "function_scope": "52-61"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 60,
       "coloffset": 8,
@@ -4322,10 +4322,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "add_picklables",
-    "function_start_line": 52
+    "function_scope": "52-61"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 64,
       "coloffset": 8,
@@ -4348,10 +4348,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "hash",
-    "function_start_line": 63
+    "function_scope": "63-70"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/lazytracker.py",
     "pattern": {
       "lineno": 70,
       "coloffset": 8,
@@ -4374,10 +4374,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "hash",
-    "function_start_line": 63
+    "function_scope": "63-70"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 21,
       "coloffset": 4,
@@ -4400,10 +4400,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 31,
       "coloffset": 4,
@@ -4426,10 +4426,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 33,
       "coloffset": 8,
@@ -4452,10 +4452,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 34,
       "coloffset": 12,
@@ -4478,10 +4478,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 36,
       "coloffset": 12,
@@ -4519,10 +4519,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 37,
       "coloffset": 12,
@@ -4556,10 +4556,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 89,
       "coloffset": 8,
@@ -4582,10 +4582,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/lazytracker/tracked.py",
     "pattern": {
       "lineno": 91,
       "coloffset": 4,
@@ -4608,10 +4608,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "cached",
-    "function_start_line": 14
+    "function_scope": "14-91"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 28,
       "coloffset": 16,
@@ -4634,10 +4634,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 37,
       "coloffset": 16,
@@ -4660,10 +4660,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 45,
       "coloffset": 16,
@@ -4686,10 +4686,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 57,
       "coloffset": 16,
@@ -4712,10 +4712,10 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   },
   {
-    "file": "/Users/jaclynpham/AstuteSource/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
+    "file": "/Users/danielbekele/jsem/SEERS/scripts/analyzer/demo/lazytracker/tests/test_tracked.py",
     "pattern": {
       "lineno": 68,
       "coloffset": 16,
@@ -4738,6 +4738,6 @@
       "score": 0.18518518518518517
     },
     "function_name": "test_cached",
-    "function_start_line": 5
+    "function_scope": "5-73"
   }
 ]
