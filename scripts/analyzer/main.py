@@ -125,9 +125,6 @@ def analyzer(
         save_results(chasten_result, mutmut_result, "combined_result.json")
         console.print("\n\nCode analysis and mutation complete!")
         console.print("Result is stored in file named combined_result.json")
-        json_restruct()
-        console.print("Cleaned json results.")
-        add_function_to_json("restructured_result.json", search_path, "output_with_functions.json")
         console.print(":broom: Final sweeping, saved to new_output_with_functions.json")
         save_output(restructure_and_add_function_info(load_json_data('combined_result.json'), search_path), 'new_output_with_functions.json')
 
