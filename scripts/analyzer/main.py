@@ -126,4 +126,5 @@ def analyzer(
         console.print("Result is stored in file named combined_result.json")
         json_restruct()
         console.print("Cleaned json results.")
-        add_function_to_json("combined_result.json", search_path, "combined_result.json")
+        add_function_to_json("restructured_result.json", search_path, "output_with_functions.json")
+

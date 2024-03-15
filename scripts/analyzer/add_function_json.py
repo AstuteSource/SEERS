@@ -40,11 +40,12 @@ def match_patterns_to_functions(json_data, functions):
             end = int(details['end'])  # Ensure end is an integer, handle None case
             if start <= lineno <= (end or lineno):
                 entry['function_name'] = function
-                entry['function_start_line'] = start  # Add the function's start line
+                entry['function_scope'] = f"{start}-{end}"  # Add the function's start line
                 break
         if 'function_name' not in entry:
             entry['function_name'] = None  # or 'global scope' if you prefer
-            entry['function_start_line'] = None
+            entry['function_scope'] = None
+
 
 def process_directory(directory, json_data):
     for entry in json_data:
@@ -66,7 +67,7 @@ def add_function_to_json(json_file, source_directory, output_file):
     save_output(data, output_file)
 
 if __name__ == '__main__':
-    json_input_file = 'restructured_result.json'  # Path to your JSON input
+    json_input_file = 'combined_result.json'  # Path to your JSON input
     source_code_directory = 'demo/lazytracker'    # Path to your source code directory
     json_output_file = 'output_with_functions.json'  # Path to your JSON output
     add_function_to_json(json_input_file, source_code_directory, json_output_file)
