@@ -28,9 +28,9 @@ def parse_source_code(file_path):
     return visitor.function_data
 
 def calculate_mutation_score(mutants):
-    killed = sum(1 for m in mutants if m.get('failure'))
+    failures = sum(1 for m in mutants if m.get('failure'))
     total = len(mutants)
-    return killed / total if total > 0 else 0
+    return failures / total if total > 0 else 0
 
 def restructure_and_add_function_info(combined_data, source_directory):
     structured_data = []
