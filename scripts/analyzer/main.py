@@ -63,33 +63,32 @@ def execute_chasten(search_path, save_directory, chasten_config_path):
     return file
 
 
+def calculate_score(chasten_result, custom_scores):
+    total_score = 0
+    total_checks_detected = 0
 
-def execute_mutmut(search_path):
-    """Execute the mutmut run command."""
-    with chdir(search_path):
-        subprocess.run(["mutmut", "run"])
-        junit = subprocess.run(
-            ["mutmut", "junitxml"], capture_output=True, text=True, check=True
-        )
-        try:
-            with open("mutation.xml", "x") as f:
-                f.write(junit.stdout)
-        except FileExistsError:
-            with open("mutation.xml", "w") as f:
-                f.write(junit.stdout)
-        result = subprocess.run(
-            ["npx", "junit2json", "mutation.xml"],
-            capture_output=True,
-            text=True,
-            check=True,
-        )
-        os.remove("mutation.xml")
-    return json.loads(result.stdout)
+    for source in chasten_result['sources']:
+        check = source['check']
+        check_id = check['id']
+        matches = check['matches']
+        total_matches = len(matches)
+        
+        # Lookup custom score for the check ID
+        check_score = custom_scores.get(check_id, 10)  # Default score is 10 if not specified
+        
+        check_score *= total_matches
+        total_score += check_score
+        total_checks_detected += 1
 
+    if total_checks_detected == 0:
+        return 0  # Avoid division by zero
 
-def save_results(chasten_result, mutmut_result, save_file):
+    average_score = total_score / total_checks_detected
+    return average_score
+
+def save_results(chasten_result, save_file):
     """Save chasten and mutmut results in a JSON file"""
-    result = {"chasten_result": chasten_result, "mutmut_result": mutmut_result}
+    result = {"chasten_result": chasten_result}
     with open(save_file, "w") as f:
         json.dump(result, f, indent=2)
         # Need a custom pretty-print, so I learned from this resource: https://stackoverflow.com/questions/63949556/how-to-custom-indent-json-dump
@@ -105,25 +104,55 @@ def analyzer(
     console = Console()
     # Step 1: Check and install chasten and mutmut if not installed
     # Save in the script's directory default
+    custom_weights = {
+        "C001": 10,
+        "F001": 10,
+        "F002": 10,
+        "CL001": 10,
+        "CL002": 10,
+        "IMP001": 10,
+        "RET001": 10,
+        "NONE001": 10,
+        "EXC001": 10,
+        "BOOL001": 10,
+        "ANNOT001": 10,
+        "KFUN001": 10,
+        "MVKL001": 10,
+        "AT001": 10,
+        "LVITOI001": 10,
+        "FLV001": 10,
+        "ND001": 10,
+        "F002": 10,
+        "IFIF001": 10,
+        "IFOR001": 10,
+        "VFF001": 10,
+        "FF001": 10,
+        "NOA001": 10,
+        "LOF001": 10,
+        "CML001": 10,
+        "TMIM001": 10,
+        "DUCM001": 10,
+        "IF001": 10,
+        "F406": 10,
+        "F632": 10,
+        "F701": 10
+    }
+
 
     if not check_installation("chasten"):
         install_package("chasten")
-
-    if not check_installation("mutmut"):
-        install_package("mutmut")
 
         # Step 2: Execute chasten and save the result
         chasten_result = execute_chasten(
             search_path, save_directory, chasten_config_path
         )
 
-        # Step 3: Run mutmut and save its result
-        mutmut_result = execute_mutmut(search_path)
+        # Calculate the score
+        score = calculate_score(chasten_result, custom_weights)
+        console.print(f"Predicted Score: {score}")
 
+        # Step 3: Run mutmut and save its result
         # Step 4: Save results in a file
-        save_results(chasten_result, mutmut_result, "combined_result.json")
-        console.print("\n\nCode analysis and mutation complete!")
-        console.print("Result is stored in file named combined_result.json")
-        json_restruct()
-        console.print("Cleaned json results.")
-        add_function_to_json("combined_result.json", search_path, "combined_result.json")
+        save_results(chasten_result, "alish_result.json")
+        console.print("\n\nCode analysis and mutation prediction complete!")
+        console.print("Result is stored in file named alish_result.json")
