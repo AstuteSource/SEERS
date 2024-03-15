@@ -127,3 +127,4 @@ def analyzer(
         json_restruct()
         console.print("Cleaned json results.")
         add_function_to_json("restructured_result.json", search_path, "output_with_functions.json")
+

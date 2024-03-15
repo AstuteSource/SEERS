@@ -5,12 +5,10 @@ from add_function_json import match_patterns_to_functions, parse_source_code, pr
 
 def restructure_json(chasten_data, mutmut_data):
     structured_data = []
-
     # Calculate the mutation score, handling division by zero if there are no tests and failures
     total_mutants = mutmut_data.get("tests", 0) + mutmut_data.get("failures", 0)
     score = mutmut_data.get("failures", 0) / total_mutants if total_mutants > 0 else 0
 
-   
     # Extract the summary from mutmut_data
     mutmut_summary = {
         "disabled": mutmut_data.get("disabled", 0),
@@ -60,7 +58,6 @@ def restructure_json(chasten_data, mutmut_data):
 
     return structured_data
 
-
 def json_restruct():
     with open('combined_result.json') as f:
         # load in data
@@ -70,6 +67,7 @@ def json_restruct():
     mutmut_result = data['mutmut_result']
 
     structured_result = restructure_json(chasten_result, mutmut_result)
+
 
     with open('restructured_result.json', 'w') as f:
         # rewrite results json

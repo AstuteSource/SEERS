@@ -8,6 +8,8 @@ The goal of this directory is to create a script that can run the checks and col
 The `analyzer` folder currently contains our project. 
 
 In order to run it, put desired projects to test on in the `demo` folder.
+This can be done by navigating into the `demo` folder in a terminal and
+running `git clone` for desired project repositories.
 
 Then, return to the `analyzer` folder and run `poetry install`.
 
