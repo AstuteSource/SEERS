@@ -126,3 +126,24 @@ This week's goals are:
 3. Poetry dependency management, troubleshooting in `pyproject.toml` and `poetry.lock`, add `.gitignore` file to tackle with npm
    
 # Week 4 (Feb 26 2024 - Mar 1 2024)
+## Weekly Goals
+
+This week's goals are:
+- Drafting an automl script using `sapientml` to start training data
+
+### Progress Notes
+- Drafting an automl script using `sapientml` to start training data
+- The script is not yet working because there is not yet correlation between patterns and mutants
+- Clean up the code in the `cleanup` branch, will merge after code base is ready
+
+# Week 5 (March 11 2024 - Mar 15 2024)
+## Weekly Goals
+
+This week's goals are:
+- Spotting bugs during spring break: The mutants are correlated on a line-based, not function-based -> missing mutants on json file
+
+### Progress Notes
+- Working with Danny to narrow the scope of bugs
+- Separating json files for troubleshooting
+- Json file now returns the scope of functions and correlates mutants on the scope of function
+
