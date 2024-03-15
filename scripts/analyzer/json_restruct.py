@@ -1,6 +1,7 @@
 """Tidy Json data from both Chasten and Mutmut and store in a new file."""
 
 import json
+from add_function_json import match_patterns_to_functions, parse_source_code, process_directory
 
 def restructure_json(chasten_data, mutmut_data):
     structured_data = []

@@ -66,7 +66,7 @@ def add_function_to_json(json_file, source_directory, output_file):
     save_output(data, output_file)
 
 if __name__ == '__main__':
-    json_input_file = 'restructured_result.json'  # Path to your JSON input
+    json_input_file = 'combined_result.json'  # Path to your JSON input
     source_code_directory = 'demo/lazytracker'    # Path to your source code directory
     json_output_file = 'output_with_functions.json'  # Path to your JSON output
     add_function_to_json(json_input_file, source_code_directory, json_output_file)
