@@ -12,6 +12,7 @@ from rich.console import Console
 from pathlib import Path
 from json_restruct import json_restruct
 from add_function_json import add_function_to_json
+from combined import save_output, restructure_and_add_function_info, load_json_data
 
 cli = typer.Typer()
 
@@ -127,4 +128,6 @@ def analyzer(
         json_restruct()
         console.print("Cleaned json results.")
         add_function_to_json("restructured_result.json", search_path, "output_with_functions.json")
+        console.print(":broom: Final sweeping, saved to new_output_with_functions.json")
+        save_output(restructure_and_add_function_info(load_json_data('combined_result.json'), search_path), 'new_output_with_functions.json')
 
