@@ -40,6 +40,8 @@ Feb 21.
 - pyproject.toml file completed.
 Awaiting mutation team and antipattern team contributions.
 
-# Week 3 (Feb 19 2024 - Feb 23 2024)
+# Week 3 (Feb 19 2024 - Feb 23 2024) - Week 4 (Feb 26 2024 - Mar 1 2024)
 
-# Week 4 (Feb 26 2024 - Mar 1 2024)
+Clean up scripts and make everything runnable from main.
+
+Begin documentation. Testing json consolidation.
