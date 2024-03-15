@@ -27,6 +27,14 @@ def parse_source_code(file_path):
     visitor.visit(node)
     return visitor.function_data
 
+def calculate_mutation_score(mutants, total_mutants_in_function):
+    failures = sum(1 for mutant in mutants if mutant['failure'])
+    return failures / total_mutants_in_function if total_mutants_in_function > 0 else 0
+
+def count_mutants_in_function(mutants, function_scope):
+    total_mutants = sum(1 for mutant in mutants if function_scope in mutant['function_scope'])
+    return total_mutants
+
 def restructure_and_add_function_info(combined_data, source_directory):
     structured_data = []
 
@@ -71,12 +79,19 @@ def restructure_and_add_function_info(combined_data, source_directory):
                             'failure': testcase.get('failure', [])
                         })
 
+            # Count total mutants in function scope
+            total_mutants_in_function = count_mutants_in_function(mutants, function_scope)
+
+            # Calculate mutation score
+            mutation_score = calculate_mutation_score(mutants, total_mutants_in_function)
+            
             structured_data.append({
                 'file': source_file,
                 'pattern': pattern,
                 'function_name': function_name,
                 'function_scope': function_scope,
                 'mutants': mutants,
+                'mutation_score': mutation_score 
             })
 
     return structured_data
