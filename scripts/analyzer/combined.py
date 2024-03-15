@@ -27,6 +27,11 @@ def parse_source_code(file_path):
     visitor.visit(node)
     return visitor.function_data
 
+def calculate_mutation_score(mutants):
+    killed = sum(1 for m in mutants if m.get('failure'))
+    total = len(mutants)
+    return killed / total if total > 0 else 0
+
 def restructure_and_add_function_info(combined_data, source_directory):
     structured_data = []
 
@@ -70,6 +75,8 @@ def restructure_and_add_function_info(combined_data, source_directory):
                             'description': testcase.get('system-out', []),
                             'failure': testcase.get('failure', [])
                         })
+            # Calculate mutation score for the current function's scope
+            mutation_score = calculate_mutation_score(mutants)
 
             structured_data.append({
                 'file': source_file,
@@ -77,6 +84,7 @@ def restructure_and_add_function_info(combined_data, source_directory):
                 'function_name': function_name,
                 'function_scope': function_scope,
                 'mutants': mutants,
+                'mutation_score': mutation_score,
             })
 
     return structured_data
@@ -88,7 +96,7 @@ def save_output(data, output_file):
 if __name__ == '__main__':
     json_input_file = 'combined_result.json'
     source_code_directory = 'demo/lazytracker'
-    json_output_file = 'output_with_functions.json'
+    json_output_file = 'new_output_with_functions.json'
 
     combined_data = load_json_data(json_input_file)
     structured_data = restructure_and_add_function_info(combined_data, source_code_directory)
