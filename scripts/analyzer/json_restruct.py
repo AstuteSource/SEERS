@@ -1,10 +1,14 @@
 """Tidy Json data from both Chasten and Mutmut and store in a new file."""
 
 import json
+from add_function_json import match_patterns_to_functions, parse_source_code, process_directory
 
 
 def restructure_json(chasten_data, mutmut_data):
     structured_data = []
+    # Calculate the mutation score, handling division by zero if there are no tests and failures
+    total_mutants = mutmut_data.get("tests", 0) + mutmut_data.get("failures", 0)
+    score = mutmut_data.get("failures", 0) / total_mutants if total_mutants > 0 else 0
 
     # Extract the summary from mutmut_data
     mutmut_summary = {
@@ -13,6 +17,10 @@ def restructure_json(chasten_data, mutmut_data):
         "failures": mutmut_data.get("failures", 0),
         "tests": mutmut_data.get("tests", 0),
         "time": mutmut_data.get("time", 0),
+<<<<<<< HEAD
+=======
+        "score": score  # Add the calculated score
+>>>>>>> 9b8123598ab3a654ddf0a729707bb395915cb86f
     }
 
     # Process Chasten results
@@ -74,7 +82,12 @@ def json_restruct():
 
     structured_result = restructure_json(chasten_result, mutmut_result)
 
+<<<<<<< HEAD
     with open("combined_result.json", "w") as f:
+=======
+
+    with open('restructured_result.json', 'w') as f:
+>>>>>>> 9b8123598ab3a654ddf0a729707bb395915cb86f
         # rewrite results json
         json.dump(structured_result, f, indent=2)
 
