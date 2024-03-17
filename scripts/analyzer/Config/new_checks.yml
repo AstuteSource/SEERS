@@ -145,7 +145,7 @@ checks:
       max: 10
   - name: "Number of conditions (if, if-else, and switch) in a Function"
     code: "#Cond"
-    id: "F002"
+    id: "FC002"
     description: "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
     pattern: '//FunctionDef//If/following-sibling::If | //FunctionDef//If/following-sibling::Elif | //FunctionDef//If/following-sibling::Else'
     count:
