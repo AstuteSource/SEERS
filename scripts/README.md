@@ -3,6 +3,10 @@
 
 # 🧬 Comma
 
+[![Language](https://img.shields.io/badge/language-Python-blue.svg)](https://www.python.org/)
+[![Chat](https://img.shields.io/badge/chat-on%20Discord-brightgreen)](https://discord.com/channels/877320365825749002/1204147098363232338)
+
+
 ## 🎉 Introduction
 
 **Comma** is a custom tool developed as part of the Junior Seminar Research group project [SEERS](https://github.com/AstuteSource/SEERS/tree/main), focusing on the topic of empirically studying the relationship between code quality anti-patterns and mutation scores for Python projects.
