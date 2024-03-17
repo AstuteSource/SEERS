@@ -47,3 +47,10 @@
 **Spring Break**
 
 # Week 6
+
+- This week I finished up the exemplar project writing and documentation to be able to:
+ - Run the tool
+ - Describe literature
+ - Show goals
+ - Write conclusions
+- This allowed me to finalize the work on the project and demonstrate whats has been done.
