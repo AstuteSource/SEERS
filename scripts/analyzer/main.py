@@ -74,17 +74,18 @@ def calculate_score(chasten_result, custom_scores):
         total_matches = len(matches)
         
         # Lookup custom score for the check ID
-        check_score = custom_scores.get(check_id, 10)  # Default score is 10 if not specified
+        check_score = custom_scores.get(check_id, 0)  # Default score is 0 if not specified
         
-        check_score *= total_matches
         total_score += check_score
-        total_checks_detected += 1
+        if total_matches > 0:
+            total_checks_detected += 1
 
     if total_checks_detected == 0:
         return 0  # Avoid division by zero
 
     average_score = total_score / total_checks_detected
     return average_score
+
 
 def save_results(chasten_result, save_file):
     """Save chasten and mutmut results in a JSON file"""
@@ -105,37 +106,37 @@ def analyzer(
     # Step 1: Check and install chasten and mutmut if not installed
     # Save in the script's directory default
     custom_weights = {
-        "C001": 10,
-        "F001": 10,
-        "F002": 10,
-        "CL001": 10,
-        "CL002": 10,
-        "IMP001": 10,
-        "RET001": 10,
-        "NONE001": 10,
-        "EXC001": 10,
-        "BOOL001": 10,
-        "ANNOT001": 10,
-        "KFUN001": 10,
-        "MVKL001": 10,
-        "AT001": 10,
-        "LVITOI001": 10,
-        "FLV001": 10,
-        "ND001": 10,
-        "FC002": 10,
-        "IFIF001": 10,
-        "IFOR001": 10,
-        "VFF001": 10,
-        "FF001": 10,
-        "NOA001": 10,
-        "LOF001": 10,
-        "CML001": 10,
-        "TMIM001": 10,
-        "DUCM001": 10,
-        "IF001": 10,
-        "F406": 10,
-        "F632": 10,
-        "F701": 10
+        "C001": 0,
+        "F001": 0.33049242424242414,
+        "F002": 0.29820936639118445,
+        "CL001": 0.22424242424242422,
+        "CL002": 0,
+        "IMP001": 0,
+        "RET001": 0,
+        "NONE001": 0,
+        "EXC001": 0,
+        "BOOL001": 0.21212121212121213,
+        "ANNOT001": 0.36994949494949486,
+        "KFUN001": 0,
+        "MVKL001": 0,
+        "AT001": 0,
+        "LVITOI001": 0,
+        "FLV001": 0.21212121212121213,
+        "ND001": 0,
+        "FC002": 0,
+        "IFIF001": 0,
+        "IFOR001": 0,
+        "VFF001": 0,
+        "FF001": 0,
+        "NOA001": 0,
+        "LOF001": 0,
+        "CML001": 0.33021390374331544,
+        "TMIM001": 0,
+        "DUCM001": 0,
+        "IF001": 0,
+        "F406": 0,
+        "F632": 0,
+        "F701": 0
     }
 
 
