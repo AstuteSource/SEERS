@@ -1,4 +1,6 @@
-
+<img src="https://github.com/AstuteSource/SEERS/blob/cleanup/.github/images/comma-logo.svg" alt="Comma Logo"
+    title = "Comma Logo" />
+    
 # Scripts
 
 This directory serves as the public workspace for creating scripts.
