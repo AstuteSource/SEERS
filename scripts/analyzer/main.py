@@ -1,3 +1,4 @@
+
 """Program to execute and store Chasten and Mutmut analysis for lazytracker"""
 
 import typer
@@ -10,8 +11,6 @@ from glob import glob
 from contextlib import chdir
 from rich.console import Console
 from pathlib import Path
-from json_restruct import json_restruct
-from add_function_json import add_function_to_json
 from combined import save_output, restructure_and_add_function_info, load_json_data
 
 cli = typer.Typer()
@@ -127,4 +126,3 @@ def analyzer(
         console.print("Result is stored in file named combined_result.json")
         console.print(":broom: Final sweeping, saved to new_output_with_functions.json")
         save_output(restructure_and_add_function_info(load_json_data('combined_result.json'), search_path), 'new_output_with_functions.json')
-
