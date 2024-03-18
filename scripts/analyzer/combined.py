@@ -30,7 +30,7 @@ def parse_source_code(file_path):
 def calculate_mutation_score(mutants):
     failures = sum(1 for m in mutants if m.get('failure'))
     total = len(mutants)
-    return (total-failures) / total if total > 0 else 0
+    return ((total-failures) / total if total > 0 else 0)*100
 
 def restructure_and_add_function_info(combined_data, source_directory):
     structured_data = []
