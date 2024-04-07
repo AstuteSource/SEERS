@@ -28,9 +28,12 @@ def parse_source_code(file_path):
     return visitor.function_data
 
 def calculate_mutation_score(mutants):
-    failures = sum(1 for m in mutants if m.get('failure'))
-    total = len(mutants)
-    return ((total-failures) / total if total > 0 else 0)*100
+    if len(mutants) == 0:
+        return None
+    else:
+        failures = sum(1 for m in mutants if m.get('failure'))
+        total = len(mutants)
+        return ((total-failures) / total if total > 0 else 0)*100
 
 def restructure_and_add_function_info(combined_data, source_directory):
     structured_data = []
@@ -42,7 +45,9 @@ def restructure_and_add_function_info(combined_data, source_directory):
         check = source['check']  # 'check' is a dictionary
 
         for match in check['matches']:
-            pattern = {
+            pattern = check.get('pattern')
+            check_id =  check.get('id'),
+            pattern_details = {
                 # ... pattern details as before ...
                 'lineno': match['lineno'],
                 'coloffset': match['coloffset'],
@@ -50,8 +55,6 @@ def restructure_and_add_function_info(combined_data, source_directory):
                 'context': match['linematch_context'],
                 'min': check.get('min'),
                 'max': check.get('max'),
-                'pattern': check.get('pattern'),
-                'check_id': check.get('id'),
                 'check_name': check.get('name'),
                 'description': check.get('description'),
             }
@@ -81,6 +84,8 @@ def restructure_and_add_function_info(combined_data, source_directory):
             structured_data.append({
                 'file': source_file,
                 'pattern': pattern,
+                'check_id': check_id,
+                'pattern_detailes': pattern_details,
                 'function_name': function_name,
                 'function_scope': function_scope,
                 'mutants': mutants,
