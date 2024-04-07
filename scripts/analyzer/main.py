@@ -11,7 +11,7 @@ from glob import glob
 from contextlib import chdir
 from rich.console import Console
 from pathlib import Path
-from combined import save_output, restructure_and_add_function_info, load_json_data
+from analyzer.combined import save_output, restructure_and_add_function_info, load_json_data
 
 cli = typer.Typer()
 
