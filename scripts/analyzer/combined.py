@@ -148,18 +148,17 @@ def calculate_mutation_score(mutants):
 
 def restructure_and_add_function_info(combined_data, source_directory):
     structured_data = {}
-    functions_data = {}
+    functions_data = {}  # This will map function names to their data
 
-    # Process Chasten results
+    # Process Chasten results to associate patterns with functions
     for source in combined_data['chasten_result']['sources']:
         source_file = source['filename']
         functions = parse_source_code(os.path.join(source_directory, source_file))
-        check = source['check']  # 'check' is a dictionary
+        check = source['check']
 
         for match in check['matches']:
             lineno = match['lineno']
             pattern_details = {
-                # ... pattern details as before ...
                 'lineno': match['lineno'],
                 'coloffset': match['coloffset'],
                 'linematch': match['linematch'],
@@ -168,22 +167,19 @@ def restructure_and_add_function_info(combined_data, source_directory):
                 'max': check.get('max'),
                 'check_name': check.get('name'),
                 'description': check.get('description'),
-                'pattern': check.get('pattern')
             }
-            # function_name, function_scope = None, None
             for func_name, details in functions.items():
                 if details['start'] <= lineno <= details['end']:
                     if func_name not in functions_data:
                         functions_data[func_name] = {
                             "function_name": func_name,
                             "function_scope": f"{details['start']}-{details['end']}",
-                            "pattern_details": [pattern_details],
+                            "patterns": [],
                             "mutants": []
                         }
                     functions_data[func_name]['patterns'].append(pattern_details)
                     break
-            
-            # Associate mutants with functions
+    # Associate mutants with functions
     for testcase in combined_data['mutmut_result']['testsuite'][0]['testcase']:
         mutant_file = testcase['file']
         mutant_line = testcase['line']
@@ -203,6 +199,19 @@ def restructure_and_add_function_info(combined_data, source_directory):
         structured_data[func_name] = func_data
 
     return list(structured_data.values())
+
+def save_output(data, output_file):
+    with open(output_file, 'w') as f:
+        json.dump(data, f, indent=2)
+
+if __name__ == '__main__':
+    json_input_file = 'combined_result.json'
+    source_code_directory = 'demo/lazytracker'
+    json_output_file = 'new_output_with_functions.json'
+
+    combined_data = load_json_data(json_input_file)
+    structured_data = restructure_and_add_function_info(combined_data, source_code_directory)
+    save_output(structured_data, json_output_file)
 
 
             # Find corresponding mutmut mutants
@@ -232,16 +241,3 @@ def restructure_and_add_function_info(combined_data, source_directory):
     #         })
 
     # return structured_data
-
-def save_output(data, output_file):
-    with open(output_file, 'w') as f:
-        json.dump(data, f, indent=2)
-
-if __name__ == '__main__':
-    json_input_file = 'combined_result.json'
-    source_code_directory = 'demo/lazytracker'
-    json_output_file = 'restructed_again.json'
-
-    combined_data = load_json_data(json_input_file)
-    structured_data = restructure_and_add_function_info(combined_data, source_code_directory)
-    save_output(structured_data, json_output_file)
