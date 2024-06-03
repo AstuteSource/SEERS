@@ -1,0 +1,6 @@
+# chasten configuration
+# automatically created
+chasten:
+  # point to a checks file
+  checks-file:
+    - checks.yml

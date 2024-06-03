@@ -15,11 +15,6 @@ from analyzer.combined import save_output, restructure_and_add_function_info, lo
 
 cli = typer.Typer()
 
-def install_package(package):
-    """Install the specified Python package using pip."""
-    subprocess.run(["pipx", "install", package])
-
-
 def check_installation(package) -> bool:
     """Check if the specified Python package is installed."""
     try:
@@ -103,15 +98,8 @@ def analyzer(
 ):
     """Runs chasten and mutmut, consolidates the data into a json."""
     console = Console()
-    # Step 1: Check and install chasten and mutmut if not installed
-    # Save in the script's directory default
-
-    if not check_installation("chasten"):
-        install_package("chasten")
-
-    if not check_installation("mutmut"):
-        install_package("mutmut")
-
+    # Step 1: Check if dir exists
+    if os.path.isdir(search_path)and os.path.isdir(save_directory) and os.path.isdir(chasten_config_path):
         # Step 2: Execute chasten and save the result
         chasten_result = execute_chasten(
             search_path, save_directory, chasten_config_path
@@ -126,3 +114,5 @@ def analyzer(
         console.print("Result is stored in file named combined_result.json")
         console.print(":broom: Final sweeping, saved to new_output_with_functions.json")
         save_output(restructure_and_add_function_info(load_json_data('combined_result.json'), search_path), 'new_output_with_functions.json')
+    else:
+        console.print("One or more directories do not exist. Please check the paths.")
