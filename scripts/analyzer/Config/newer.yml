@@ -1,0 +1,91 @@
+checks:
+  - name: "multiple-returns-in-function"
+    code: "MRET"
+    id: "MRET001"
+    description: "Detect functions with multiple return statements."
+    pattern: './/FunctionDef[count(body//Return) > 2]'
+    count:
+      min: 1
+      max: 10
+
+  - name: "complex-expressions"
+    code: "COMPLEX"
+    id: "COMPLEX001"
+    description: "Detect complex expressions with multiple operators."
+    pattern: './/BinOp[count(descendant::BinOp) > 2]'
+    count:
+      min: 1
+      max: 10
+
+  - name: "unused-variables"
+    code: "UNUSED"
+    id: "UNUSED001"
+    description: "Detect variables that are defined but not used."
+    pattern: './/Assign/targets/Name[not(following-sibling::*)]'
+    count:
+      min: 1
+      max: 10
+
+  - name: "long-method-chains"
+    code: "CHAIN"
+    id: "CHAIN001"
+    description: "Detect long chains of method calls."
+    pattern: './/Call[count(ancestor::Call) > 2]'
+    count:
+      min: 1
+      max: 10
+
+# maybe count all lambda, 
+  - name: "long-lambda-functions" 
+    code: "LLAMBDA"
+    id: "LLAMBDA001"
+    description: "Detect long lambda functions."
+    pattern: './/Lambda[count(body//*) > 5]'
+    count:
+      min: 1
+      max: 10
+
+  - name: "redundant-conditionals"
+    code: "REDUNDANT"
+    id: "REDUNDANT001"
+    description: "Detect redundant conditional statements."
+    pattern: './/If[test//BoolOp[count(values) = 1]]'
+    count:
+      min: 1
+      max: 10
+
+  - name: "nested-ternary-operators"
+    code: "TERNARY"
+    id: "TERNARY001"
+    description: "Detect nested ternary operators."
+    pattern: './/IfExp[count(descendant::IfExp) > 1]'
+    count:
+      min: 1
+      max: 10
+
+  - name: "duplicate-code"
+    code: "DUPLICATE"
+    id: "DUPLICATE001"
+    description: "Detect duplicate code blocks."
+    pattern: './/FunctionDef[count(ancestor::FunctionDef//body//*[self::Assign or self::If]) > 1]'
+    count:
+      min: 1
+      max: 10
+
+  - name: "hard-coded-paths"
+    code: "PATH"
+    id: "PATH001"
+    description: "Detect hard-coded file paths in the code."
+    pattern: './/Str[contains(@value, "/") or contains(@value, "\\\\")]'
+    count:
+      min: 1
+      max: 10
+
+  - name: "magic-strings"
+    code: "MAGICSTR"
+    id: "MAGICSTR001"
+    description: "Detect magic strings used in the code."
+    pattern: './/Str[count(ancestor::Assign) > 0 and not(ancestor::FunctionDef//args//arg)]'
+    count:
+      min: 1
+      max: 10
