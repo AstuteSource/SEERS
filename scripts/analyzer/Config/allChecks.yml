@@ -230,4 +230,95 @@ checks:
     description: "Detect variables that are defined but not used."
     pattern: '//FunctionDef[starts-with(@name, "test_")]//Assert[count(.//Call[func/Name]) > 0]'
 
-  
+
+#jss paper
+  - name: "method-too-long"
+    code: "MTL"
+    id: "F026"
+    description: "Methods with too many lines of code can be hard to understand and maintain."
+    pattern: './/FunctionDef[count(./body/*) > 50]'
+
+  - name: "high-cyclomatic-complexity"
+    code: "HCC"
+    id: "F027"
+    description: "Methods with high cyclomatic complexity are hard to test and understand."
+    pattern: './/FunctionDef[count(.//If | .//For | .//While | .//And | .//Or) > 10]'
+
+  - name: "long-parameter-list"
+    code: "LPL"
+    id: "F028"
+    description: "Functions with long parameter lists are hard to understand and use."
+    pattern: './/FunctionDef[count(./args/args) > 5]'
+
+  - name: "long-method-chaining"
+    code: "LMC"
+    id: "F029"
+    description: "Long method chaining can reduce code readability and maintainability."
+    pattern: './/Call[count(./func/Attribute) > 3]'
+
+  - name: "deeply-nested-control-structures"
+    code: "DNCS"
+    id: "F030"
+    description: "Deeply nested control structures make the code hard to read and understand."
+    pattern: './/FunctionDef[count(.//If | .//For | .//While | .//Try) > 3]'
+
+  - name: "god-function"
+    code: "GF"
+    id: "F031"
+    description: "Functions that try to do too much are hard to understand and maintain."
+    pattern: './/FunctionDef[count(./body/*) > 100]'
+
+  - name: "empty-catch-block"
+    code: "ECB"
+    id: "F032"
+    description: "Catch blocks that are empty can hide errors and make debugging difficult."
+    pattern: './/ExceptHandler[not(./body/*)]'
+
+  - name: "magic-numbers"
+    code: "MN"
+    id: "F033"
+    description: "Using hardcoded values in the code can reduce readability and make maintenance harder."
+    pattern: './/Num'
+
+  - name: "inconsistent-naming-convention"
+    code: "INC"
+    id: "F034"
+    description: "Inconsistent naming conventions can reduce code readability and maintainability."
+    pattern: './/FunctionDef[not(re:test(@name, "^[a-z_][a-z0-9_]*$"))]'
+
+  - name: "use-of-global-variables"
+    code: "UGV"
+    id: "F035"
+    description: "Use of global variables can lead to code that is hard to debug and maintain."
+    pattern: './/Global'
+
+#Detecting Code Smells in Python Programs paper 
+  - name: "large-class"
+    code: "LC"
+    id: "P001"
+    description: "A class that is too large."
+    pattern: './/ClassDef[count(./body/*) > 50]'
+
+  - name: "long-parameter-list"
+    code: "LPL"
+    id: "P002"
+    description: "A method or function with too many parameters."
+    pattern: './/FunctionDef[count(./args/args) > 5]'
+
+  - name: "long-method"
+    code: "LM"
+    id: "P003"
+    description: "A method or function that is too long."
+    pattern: './/FunctionDef[count(./body/*) > 50]'
+
+  - name: "long-message-chain"
+    code: "LMC"
+    id: "P004"
+    description: "An expression accessing an object through a long chain of attributes or methods using the dot operator."
+    pattern: './/Call[count(./func/Attribute) > 3]'
+
+  - name: "long-scope-chaining"
+    code: "LSC"
+    id: "P005"
+    description: "A multiply-nested method or function."
+    pattern: './/FunctionDef[count(.//If | .//For | .//While | .//Try) > 3]'
