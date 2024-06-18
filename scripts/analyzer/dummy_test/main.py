@@ -1,128 +1,390 @@
+""" Config Checks Project. """
 
-"""Program to execute and store Chasten and Mutmut analysis for lazytracker"""
+def calculate_area(shape,dimensions):
+    """This function calculates the area of a shape based on its dimensions.
 
-import typer
-import subprocess
+    Contains Patterns:
+        - Double Nested If (DNI)
+        - Magic Number (MN)
+        - No exception type (EXC)
+        - Missing type annotation (ANNOT)
+        - Unused Variables (UNUSED)
+    """
+    if shape == "rectangle":
+        area = dimensions[0] * dimensions[1]
+        return area
+    else:
+        if shape == "circle":
+            radius = dimensions[0]
+            return 3.14 * dimensions[0] ** 2
+        else:
+            raise ValueError("Unsupported shape")
 
-# Resource: https://docs.python.org/3/library/subprocess.html
-import json
-import os
-from glob import glob
-from contextlib import chdir
-from rich.console import Console
-from pathlib import Path
-from analyzer.combined import save_output, restructure_and_add_function_info, load_json_data
+class User:
+    """This class represents a user with a name and email address.
 
-cli = typer.Typer()
+    Contains Patterns:
+        - Explicit Return in __init__(RET)
+    """
+    def __init__(self,name,email):
+        self.name = name
+        self.email = email
+        return
 
-def install_package(package):
-    """Install the specified Python package using pip."""
-    subprocess.run(["pipx", "install", package])
+def check_none(value):
+    """This function checks if a value is None.
 
+    Contains Pattern:
+        - none comparision (NONE)
+    """
+    if value != None:
+        print("Value is not None")
 
-def check_installation(package) -> bool:
-    """Check if the specified Python package is installed."""
+def handle_file(filename):
+    """
+    This function attempts to read a file but does not handle specific exception
+
+    Contains Patterns:
+        - No Exception type (EXC)
+    """
     try:
-        subprocess.run(
-            [package, "--version"],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            check=True,
-        )
-        # I learned to use a PIPE with the subprocess module here: https://stackoverflow.com/questions/13332268/how-to-use-subprocess-command-with-pipes
-    except subprocess.CalledProcessError or FileNotFoundError:
-        #  The package isn't installed, then return false: https://stackoverflow.com/questions/32942207/python-subprocess-calledprocesserror-command-returned-non-zero-exit-s
-        return False
+        with open(filename) as f:
+            data = f.read()
+    except:
+        print("Error reading file")
+
+def is_valid(value):
+    """
+    This function checks if a value is true.
+
+    Contains Patterns:
+        - Boolean Comparison (BOOL)
+    """
+    if value is True:
+        return "true value"
+    else:
+        return "false value"
+
+def get_user_data():
+    """
+    This function retrieves a user's name from a dictionary using the keys() function
+
+    Contains Patterns:
+        - Key Function (KFUN)
+        - Single Nested If (SNI)
+        - Multi-value key literal (MVKL)
+    """
+    user_data = {"name": "Alice", "name":"Bob"}
+    if "name" in user_data.keys():
+        return user_data["name"]
+    else:
+        return None
+
+# Multi-value key literal (MVKL)- outside function scope
+user_data = {"name": "Alice", "name":"Bob"}
+
+def validate_data(data):
+    """ Asserts on tuple.
+        Contains Patterns:
+        - Assertion (AT)
+    """
+    assert isinstance(data,tuple), "Data must be a tuple"
+
+def modify_list(data):
+    """
+    This function modifies a list by overiding its elements.
+
+    Contains Patterns:
+    - Loop variable iterates and overrides iterator (LVITOI)
+    """
+    for item in data:
+        item = "Modified"
+    return data
+
+def calculate_sum(numbers):
+    """
+    This function calculate the sum of a integer list
+
+    Contains Patterns:
+        - Function using loop variable (FLV)"""
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
+def nested_function_1():
+    """ Function with nested depth (ND)"""
+    def nested_function_2():
+        def nested_function_3():
+            pass
+    nested_function_2()
+
+def handle_request(method, data):
+    """Function with multiple conditions (COND) and count method lines (CML)"""
+    if method == "GET":
+        return "Processing GET request"
+    elif method == "POST":
+        if data is not None:
+            return "Processing POST request with data"
+        else:
+            return "Processing POST request without data"
+    else:
+        return "Unsupported method"
+
+def filter_data(data, condition):
+    """Function with nested condition-loop if{for{}} (IFOR) and (VFF) for{if{}}"""
+    filtered_data = []
+    if condition:
+        for item in data:
+            if item is not None:
+                filtered_data.append(item)
+    return filtered_data
+
+def classify_number(number):
+    """
+    This function classifies a number as positive, negative, or zero.
+
+    Contains Patterns:
+    - Nested condition (IFIF)
+    """
+    if number > 0:
+        if number > 100:
+            return "Large positive number"
+        else:
+            return "Positive number"
+    else:
+        if number < 0:
+            return "Negative number"
+        else:
+            return "Zero"
+
+def calculate_factorial(n, start=1):
+    """
+    This function calculates the factorial of a number n, optionally starting from a specific value.
+
+    Contains Pattern: Nested Loop-Conditions (FF) for{for{}}
+    """
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers")
+    factorial = 1
+    for i in range(start, n + 1):
+        for j in range(2, i + 1):  # Nested loop
+            factorial *= j
+    return factorial
+
+def validate_user_input(name, email):
+    """
+    This function validates user input for name and email. (Simple example)
+
+    Contains Pattern: Number of Assertions (NOA)
+    """
+    assert name.isalpha(), "Name must only contain letters"
+    assert "@" in email, "Email must contain an '@' symbol"
     return True
 
+def write_to_file(filename, data):
+    """
+    This function writes data to a file without using a context manager.
 
-def execute_chasten(search_path, save_directory, chasten_config_path):
-    """Execute the chasten analyze command for lazytracker."""
-    # Resource: https://github.com/AstuteSource/chasten/tree/chastenversion
+    Contains Pattern: Not Using Context Manager (DUCM)
+    """
+    f = open(filename, "w")
+    f.write(data)
+    f.close()
 
-    chasten_command = [
-        "chasten",
-        "analyze",
-        "lazytracker",
-        "--config",
-        chasten_config_path,
-        "--search-path",
-        str(search_path),
-        "--save-directory",
-        str(save_directory),
-        "--save",
-    ]
-    subprocess.run(chasten_command)
-    json_files = glob("*.json")
-    if not json_files:
-        raise FileNotFoundError("No JSON files generated by chasten command")
-    json_name = max(json_files, key=os.path.getctime)
-    with open(json_name) as f:
-        file = json.load(f)
-    os.remove(json_name)
-    return file
+def calculate_grade(score):
+    """
+    This function calculates a letter grade based on a score. (Simple example)
 
+    Contains Pattern: Multiple Returns in Function (MRET)
+    """
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    else:
+        if score >= 70:
+            return "C"
+        else:
+            return "F"
 
+def calculate_discount(price, discount_rate, loyalty_points):
+    """
+    This function calculates a discounted price with complex logic.
 
-def execute_mutmut(search_path):
-    """Execute the mutmut run command."""
-    with chdir(search_path):
-        subprocess.run(["mutmut", "run"])
-        junit = subprocess.run(
-            ["mutmut", "junitxml"], capture_output=True, text=True, check=True
-        )
+    Contains Pattern: Complex Expressions (COMPLEX)
+    """
+    discount = price * discount_rate
+    if loyalty_points > 100:
+        discount += price * 0.05
+    final_price = price - discount - (discount * 0.1)
+    return final_price
+
+# JSS paper
+
+def overly_complex_function(data, threshold1=10, threshold2=5, discount_rate=0.1, loyalty_points=0, min_order_value=100, global_variable=1):
+    """
+    This function demonstrates a combination of code smells for demonstration purposes.
+
+    Contains Patterns:
+        - High Cyclomatic Complexity (HCC): Uses multiple nested conditionals.
+        - Long Parameter List (LPL): Has 7 parameters.
+        - Deeply Nested Control Structures (DNCS): Uses nested ifs and fors.
+        - Magic Numbers: Uses hardcoded values (thresholds, discount rate).
+    """
+    filtered_data = []
+
+    for item in data:
+        if item['value1'] > threshold1 and item['value2'] < threshold2:
+            if item['price'] > min_order_value:
+                discount = item['price'] * discount_rate
+                if loyalty_points > 100:
+                    discount += item['price'] * 0.05 
+                item['discounted_price'] = item['price'] - discount
+                filtered_data.append(item)
+            else:
+                print(f"Order value for item {item['id']} is below minimum ({min_order_value})")
+        else:
+            print(f"Item {item['id']} does not meet the value thresholds")
+        pass
+
+    # Deeply nested control structures (can be further nested for DNCS)
+    if len(filtered_data) > 0:
+        for item in filtered_data:
+            if item['discounted_price'] < 0:
+                item['discounted_price'] = 0
+        global_variable += 1
+    else:
+        print("No items met the filtering criteria.")
+
+    return filtered_data
+
+class Person:
+    """A complex class
+    Contains Patterns:
+        - God Object (GO): Has many responsibilities.
+        - Large Class (LC)
+        - Long method chaining (LMC)
+        - Include empty catch block (ECB)
+        - Long Scope Chaining (LSC)
+        - Number of Conditions in Function (COND)
+    """
+    def __init__(self, name="", age= 0, ssn=None, email="", address = ""):
+        self.name = name
+        self.age = age
+        self.ssn = ssn
+        self.email = email
+        self.address = address
+    def setName(self, name):
+        if not name:
+            raise ValueError("Name cannot be empty")
+        # Simulate unnecessary validation logic (for LM)
+        for char in name:
+            if not char.isalpha() and not char.isspace():
+                raise ValueError("Name can only contain letters and spaces")
+        self.name = name
+        return self
+    def setAge(self, age):
+        if age < 0:
+            raise ValueError("Age cannot be negative")
         try:
-            with open("mutation.xml", "x") as f:
-                f.write(junit.stdout)
-        except FileExistsError:
-            with open("mutation.xml", "w") as f:
-                f.write(junit.stdout)
-        result = subprocess.run(
-            ["npx", "junit2json", "mutation.xml"],
-            capture_output=True,
-            text=True,
-            check=True,
-        )
-        os.remove("mutation.xml")
-    return json.loads(result.stdout)
+            self.age = int(age)  # Potential for type conversion errors
+        except ValueError:
+            pass  # Empty catch block (ECB)
+    def setSSN(self, ssn):
+        self.ssn = ssn
+        return self
+    def setEmail(self,email):
+        self.email = email
+        return self
+    def setAddress(self,address):
+        self.address = address
+        return self
+    def create_person():
+        p = Person()
+        p.setName("John").setAge(30).setSSN("123-45-678").setEmail("johndoe@gmail.com").setAddress("123Street")
+    def validate_ssn(self):
+        if not self.ssn:
+            return False
+        if len(self.ssn) != 11:
+            return False
+        parts = self.ssn.split("-")
+        if len(parts) != 3:
+            return False
+        try:
+            int(parts[0])
+            int(parts[1])
+            int(parts[2])
+        except ValueError:
+            return False
+        return True
+    def odd_even(self,age):
+        if age >= 0:
+            if age == 0:
+                return "even"
+            elif age == 1:
+                return "odd"
+            elif age == 2:
+                return "even"
+            elif age == 3:
+                return "odd"
+            elif age == 4:
+                return "even"
+            elif age == 5:
+                return "odd"
+            elif age == 6:
+                return "even"
+            elif age == 7:
+                return "odd"
+            elif age == 8:
+                return "even"
+            elif age == 9:
+                return "odd"
+            elif age == 10:
+                return "even"
+            elif age == 11:
+                return "odd"
+            elif age == 12:
+                return "even"
+            elif age == 13:
+                return "odd"
+            elif age == 14:
+                return "even"
+            elif age == 15:
+                return "odd"
+            elif age == 16:
+                return "even"
+            elif age == 17:
+                return "odd"
+            elif age == 18:
+                return "even"
+            elif age == 19:
+                return "odd"
+            elif age == 20:
+                return "even"
+            elif age == 21:
+                return "odd"
+            elif age == 22:
+                return "even"
+            elif age == 23:
+                return "odd"
+            elif age == 24:
+                return "even"
+            elif age == 25:
+                return "odd"
+        else:
+            return "Invalid age"
 
 
-def save_results(chasten_result, mutmut_result, save_file):
-    """Save chasten and mutmut results in a JSON file"""
-    result = {"chasten_result": chasten_result, "mutmut_result": mutmut_result}
-    with open(save_file, "w") as f:
-        json.dump(result, f, indent=2)
-        # Need a custom pretty-print, so I learned from this resource: https://stackoverflow.com/questions/63949556/how-to-custom-indent-json-dump
+global_var = 0  # This is a global variable (avoid in practice)
 
+def calculate_something(data):
+    """
+    This function demonstrates the use of a global variable.
 
-@cli.command()
-def analyzer(
-    search_path: Path = os.getcwd() + "/demo/sorting_algorithm/listsorting",
-    save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
-    chasten_config_path: str = os.getcwd() + "/Config",
-):
-    """Runs chasten and mutmut, consolidates the data into a json."""
-    console = Console()
-    # Step 1: Check and install chasten and mutmut if not installed
-    # Save in the script's directory default
-
-    if not check_installation("chasten"):
-        install_package("chasten")
-
-    if not check_installation("mutmut"):
-        install_package("mutmut")
-
-        # Step 2: Execute chasten and save the result
-        chasten_result = execute_chasten(
-            search_path, save_directory, chasten_config_path
-        )
-
-        # Step 3: Run mutmut and save its result
-        mutmut_result = execute_mutmut(search_path)
-
-        # Step 4: Save results in a file
-        save_results(chasten_result, mutmut_result, "combined_result.json")
-        console.print("\n\nCode analysis and mutation complete!")
-        console.print("Result is stored in file named combined_result.json")
-        console.print(":broom: Final sweeping, saved to new_output.json")
-        save_output(restructure_and_add_function_info(load_json_data('combined_result.json'), search_path), 'new_output.json')
+    Contains Pattern (and code smell):
+        - Use of Global Variables (UGV): Uses a global variable 'global_var'.
+    """
+    result = data['field1'] * data['field2'] * 2
+    global_var += 1  # Modifying global variable
+    return result + global_var
