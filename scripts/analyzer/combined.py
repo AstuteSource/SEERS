@@ -41,6 +41,15 @@ def restructure_and_add_function_info(combined_data, source_directory):
     function_map = {}
     ast_cache = {}
 
+    # # Debugging prints
+    # print("Combined Data:", json.dumps(combined_data, indent=2))
+
+    # # Ensure 'chasten_result' and 'sources' exist
+    # if 'chasten_result' not in combined_data:
+    #     raise KeyError("'chasten_result' key not found in combined_data")
+    # if 'sources' not in combined_data['chasten_result']:
+    #     raise KeyError("'sources' key not found in chasten_result")
+
     # Process each source file
     for source in combined_data['chasten_result']['sources']:
         source_file = source['filename']

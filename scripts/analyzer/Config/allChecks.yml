@@ -229,8 +229,7 @@ checks:
     id: "UNUSED001"
     description: "Detect variables that are defined but not used."
     pattern: '//FunctionDef[starts-with(@name, "test_")]//Assert[count(.//Call[func/Name]) > 0]'
-
-
+    
 #jss paper
   - name: "method-too-long"
     code: "MTL"
@@ -280,11 +279,11 @@ checks:
     description: "Using hardcoded values in the code can reduce readability and make maintenance harder."
     pattern: './/Num'
 
-  - name: "inconsistent-naming-convention"
-    code: "INC"
-    id: "F034"
-    description: "Inconsistent naming conventions can reduce code readability and maintainability."
-    pattern: './/FunctionDef[not(re:test(@name, "^[a-z_][a-z0-9_]*$"))]'
+  # - name: "inconsistent-naming-convention"
+  #   code: "INC"
+  #   id: "F034"
+  #   description: "Inconsistent naming conventions can reduce code readability and maintainability."
+  #   pattern: './/FunctionDef[not(re:test(@name, "^[a-z_][a-z0-9_]*$"))]'
 
   - name: "use-of-global-variables"
     code: "UGV"
