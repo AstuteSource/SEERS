@@ -255,5 +255,20 @@ checks:
     count:
       min: 1
       max: 10
-  
+   - name: "key-function"
+    code: "KFUN"
+    id: "KF001"
+    description: "The use of .keys() function"
+    pattern: './/FunctionDef//Call/func/Attribute[@attr="keys"]'
+    count:
+      min: 1
+      max: 10
+  - name: "multi-value-key-literal"
+    code: "MVKL"
+    id: "MVKL001"
+    description: "Looks to see if a key has been repeated"
+    pattern: './/FunctionDef/body/Assign/value/Dict/keys/Name[preceding-sibling::Name/@id = @id]'
+    count:
+      min: 1
+      max: 10  
   
