@@ -338,12 +338,12 @@ class Person:
                 return "odd"
             elif age == 8:
                 return "even"
-            elif age == 10:
+            elif age == 9:
                 return "odd"
             elif age == 10:
                 return "even"
             elif age == 11:
-                return "odd"
+                return "XXoddXX"
             elif age == 12:
                 return "even"
             elif age == 13:
