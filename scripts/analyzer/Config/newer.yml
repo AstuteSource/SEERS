@@ -5,7 +5,7 @@ checks:
     description: "Detect functions with multiple return statements."
     pattern: './/FunctionDef[count(body//Return) > 2]'
     count:
-      min: 0
+      min: 1
       max: 500
 
   - name: "complex-expressions"
@@ -14,7 +14,7 @@ checks:
     description: "Detect complex expressions with multiple operators."
     pattern: './/BinOp[count(descendant::BinOp) > 2]'
     count:
-      min: 0
+      min: 1
       max: 500
 
   - name: "unused-variables"
@@ -23,7 +23,7 @@ checks:
     description: "Detect variables that are defined but not used."
     pattern: './/Assign/targets/Name[not(following-sibling::*)]'
     count:
-      min: 0
+      min: 1
       max: 500
 
   - name: "long-method-chains"
@@ -32,7 +32,7 @@ checks:
     description: "Detect long chains of method calls."
     pattern: './/Call[count(ancestor::Call) > 2]'
     count:
-      min: 0
+      min: 1
       max: 500
 
 # maybe count all lambda, 
@@ -42,7 +42,7 @@ checks:
     description: "Detect long lambda functions."
     pattern: './/Lambda[count(body//*) > 5]'
     count:
-      min: 0
+      min: 1
       max: 500
 
   - name: "redundant-conditionals"
@@ -51,7 +51,7 @@ checks:
     description: "Detect redundant conditional statements."
     pattern: './/If[test//BoolOp[count(values) = 1]]'
     count:
-      min: 0
+      min: 1
       max: 500
 
   - name: "nested-ternary-operators"
@@ -60,7 +60,7 @@ checks:
     description: "Detect nested ternary operators."
     pattern: './/IfExp[count(descendant::IfExp) > 1]'
     count:
-      min: 0
+      min: 1
       max: 500
 
   - name: "duplicate-code"
@@ -69,7 +69,7 @@ checks:
     description: "Detect duplicate code blocks."
     pattern: './/FunctionDef[count(ancestor::FunctionDef//body//*[self::Assign or self::If]) > 1]'
     count:
-      min: 0
+      min: 1
       max: 500
 
   - name: "hard-coded-paths"
@@ -78,7 +78,7 @@ checks:
     description: "Detect hard-coded file paths in the code."
     pattern: './/Str[contains(@value, "/") or contains(@value, "\\\\")]'
     count:
-      min: 0
+      min: 1
       max: 500
 
   - name: "magic-strings"
@@ -87,7 +87,7 @@ checks:
     description: "Detect magic strings used in the code."
     pattern: './/Str[count(ancestor::Assign) > 0 and not(ancestor::FunctionDef//args//arg)]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "single-nested-if"
     code: "SNI"
@@ -95,7 +95,7 @@ checks:
     description: "Ensure the presence of single nested 'if' statements within function bodies."
     pattern: './/FunctionDef/body//If'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "double-nested-if"
     code: "DNI"
@@ -103,7 +103,7 @@ checks:
     description: "Ensure the presence of double nested 'if' statements within function bodies."
     pattern: './/FunctionDef/body//If[ancestor::If and not(parent::orelse)]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "explicit-return-in-init"
     code: "RET"
@@ -111,7 +111,7 @@ checks:
     description: "Using an explicit return statement in the __init__ function"
     pattern: './/FunctionDef[@name="__init__"]/body/Return'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "none-comparison"
     code: "NONE"
@@ -119,7 +119,7 @@ checks:
     description: "Using != None to check for non-None values"
     pattern: './/FunctionDef//Compare/left[@id="input_dirs"]/following-sibling::Compare/ops/NotEq | .//FunctionDef//Compare/comparators[@id="input_dirs"]/following-sibling::Compare/ops/NotEq'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "no-exception-type"
     code: "EXC"
@@ -127,7 +127,7 @@ checks:
     description: "No exception type(s)"
     pattern: './/FunctionDef//Try/ExceptHandler[not(ExceptHandler/type)]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "boolean-comparison"
     code: "BOOL"
@@ -135,7 +135,7 @@ checks:
     description: "Using = or == operators to compare boolean values"
     pattern: './/FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "missing-annotations"
     code: "ANNOT"
@@ -143,7 +143,7 @@ checks:
     description: "A function does not explicitly annotate arguments/parameters or the expected output"
     pattern: './/FunctionDef[not(args/arg/annotation) or not(returns)]'
     count:
-      min: 0
+      min: 1
       max: 500
 
   - name: "assert-tuple"
@@ -152,7 +152,7 @@ checks:
     description: "Looks to see if assert is used on a tuple"
     pattern: './/FunctionDef[./body/Assert/test/Tuple]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "loop-variable-iterates-overrides-iterator"
     code: "LVITOI"
@@ -160,7 +160,7 @@ checks:
     description: "If the iterator has the same name as the things it's iterating through"
     pattern: './/FunctionDef/body/For[target/Name/@id = iter/Name/@id]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "function-uses-loop-variable"
     code: "FLV"
@@ -168,7 +168,7 @@ checks:
     description: "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
     pattern: './/FunctionDef[body//comprehension/target/Name]'
     count:
-      min: 0
+      min: 1
       max: 500
     - name: "nested-conditions"
     code: "IFIF"
@@ -176,7 +176,7 @@ checks:
     description: "Ensure there is at least one nested condition (e.g., if{if{}}) in a function."
     pattern: './/FunctionDef//If/descendant::If'
     count:
-      min: 0
+      min: 1
       max: 1
   
   

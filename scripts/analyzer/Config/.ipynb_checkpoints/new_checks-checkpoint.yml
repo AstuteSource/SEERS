@@ -5,7 +5,7 @@ checks:
     description: "Ensure the presence of class definitions in the codebase."
     pattern: './/ClassDef'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "all-function-definition"
     code: "AFD"
@@ -13,7 +13,7 @@ checks:
     description: "Ensure the presence of function definitions in the codebase."
     pattern: './/FunctionDef'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "dummy-test-non-test-function-definition"
     code: "NTF"
@@ -21,7 +21,7 @@ checks:
     description: "Ensure the presence of non-test function definitions in the codebase."
     pattern: './/FunctionDef[not(contains(@name, "test_"))]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "dummy-test-single-nested-if"
     code: "SNI"
@@ -29,7 +29,7 @@ checks:
     description: "Ensure the presence of single nested 'if' statements within function bodies."
     pattern: './/FunctionDef/body//If'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "dummy-test-double-nested-if"
     code: "DNI"
@@ -37,7 +37,7 @@ checks:
     description: "Ensure the presence of double nested 'if' statements within function bodies."
     pattern: './/FunctionDef/body//If[ancestor::If and not(parent::orelse)]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "import-from-star"
     code: "IMP"
@@ -45,7 +45,7 @@ checks:
     description: "An import statement in the pattern of from MODULE Import *"
     pattern: '//ImportFrom/keyword[@name="from"]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "explicit-return-in-init"
     code: "RET"
@@ -53,7 +53,7 @@ checks:
     description: "Using an explicit return statement in the __init__ function"
     pattern: '//FunctionDef[@name="init"]/body/Return'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "none-comparison"
     code: "NONE"
@@ -61,7 +61,7 @@ checks:
     description: "Using != None to check for non-None values"
     pattern: '//Compare/left[@id="input_dirs"]/following-sibling::Compare/ops/NotEq | //Compare/comparators[@id="input_dirs"]/following-sibling::Compare/ops/NotEq'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "no-exception-type"
     code: "EXC"
@@ -69,7 +69,7 @@ checks:
     description: "No exception type(s)"
     pattern: './/Try/ExceptHandler[not(ExceptHandler/type)]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "boolean-comparison"
     code: "BOOL"
@@ -77,7 +77,7 @@ checks:
     description: "Using = or == operators to compare boolean values"
     pattern: '//Compare/ops/Is | //Compare/ops/Eq'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "no-exception-type"
     code: "EXC"
@@ -85,7 +85,7 @@ checks:
     description: "A function that uses try and except does not define the exception type"
     pattern: '//Try/ExceptHandler[not(ExceptHandler/type)]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "missing-annotations"
     code: "ANNOT"
@@ -93,7 +93,7 @@ checks:
     description: "A function does not explicitly annotate arguments/parameters or the expected output"
     pattern: '//FunctionDef[not(args/arg/annotation) or not(returns)]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "Key function"
     code: "KFUN"
@@ -101,7 +101,7 @@ checks:
     description: "The use of .keys() function"
     pattern: '//FunctionDef//Call/func/Attribute[@attr="keys"]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "Multi Value Key Literal"
     code: "MVKL"
@@ -109,7 +109,7 @@ checks:
     description: "Looks to see if a key has been repeated"
     pattern: '//FunctionDef[@name="tp"]/body/Assign/value/Dict/keys/Name[preceding-sibling::Name/@id = @id]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "Assert Tuple"
     code: "AT"
@@ -117,7 +117,7 @@ checks:
     description: "Looks to see if assert is used on a tuple"
     pattern: "//FunctionDef[./body/Assert/test/Tuple]"
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "Loop variable iterates overrides iterator"
     code: "LVITOI"
@@ -125,7 +125,7 @@ checks:
     description: "if the iterator has the same name as the things it's iterating through"
     pattern: "//FunctionDef/body/For[target/Name/@id = iter/Name/@id]"
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "Function uses loop variable"
     code: "FLV"
@@ -133,7 +133,7 @@ checks:
     description: "The loop variable is not bound in the function definition, so it will always have the value it had in the last iteration"
     pattern: "//FunctionDef[body//comprehension/target/Name]"
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "Nested Depth (Set value)"
     code: "ND"
@@ -141,7 +141,7 @@ checks:
     description: "Ensure the depth of nesting within functions does not exceed the set value."
     pattern: '//FunctionDef//FunctionDef/ancestor::*'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "Number of conditions (if, if-else, and switch) in a Function"
     code: "#Cond"
@@ -149,7 +149,7 @@ checks:
     description: "Ensure the number of conditions (if, if-else, and switch) in a function is within acceptable limits."
     pattern: '//FunctionDef//If/following-sibling::If | //FunctionDef//If/following-sibling::Elif | //FunctionDef//If/following-sibling::Else'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "The number of nested conditions (e.g., if{if{}}) in a Function"
     code: "IFIF"
@@ -157,7 +157,7 @@ checks:
     description: "Ensure there is at least one nested condition (e.g., if{if{}}) in a function."
     pattern: '//FunctionDef//If/descendant::If'
     count:
-      min: 0
+      min: 1
       max: 1
   - name: "The number of nested condition-loops (e.g., if{for{}}) in a Function"
     code: "IFOR"
@@ -165,7 +165,7 @@ checks:
     description: "Ensure the presence of nested condition-loops (e.g., if{for{}}) in a function."
     pattern: '//FunctionDef//if//For'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "The number of nested loop-conditions (e.g., for{if{}}) in a Function"
     code: "VFF"
@@ -173,7 +173,7 @@ checks:
     description: "Ensure the presence of nested loop-conditions (e.g., for{if{}}) in a function."
     pattern: '//FunctionDef[//(If/following-sibling::For | For/following-sibling::If)]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "The number of nested loop-conditions (e.g., for{for{}}) in a Function"
     code: "FF"
@@ -181,7 +181,7 @@ checks:
     description: "Ensure the presence of nested loop-conditions (e.g., for{for{}}) in a function."
     pattern: '//FunctionDef//For[.//For]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name : "number-of-assertions"
     code: "NOA"
@@ -189,7 +189,7 @@ checks:
     description: "Ensure the presence of assertions within function bodies of type 'str'."
     pattern : "//FunctionDef[@type='str']/body/Assert"
     count: 
-      min: 0
+      min: 1
       max: 500
   - name : "count-test-method-lines"
     code: "LOF"
@@ -197,7 +197,7 @@ checks:
     description: "Count the lines within test methods in functions of type 'str' that start with 'test_'."
     pattern : "//FunctionDef[@type='str' and starts-with(@name, 'test_')]/body/*"
     count: 
-      min: 0
+      min: 1
       max: 500
   - name: "count-method-lines"
     code: "CML"
@@ -205,7 +205,7 @@ checks:
     description: "Count the lines within methods in functions of type 'str'."
     pattern: "//FunctionDef[@type='str']/body/* | //FunctionDef[@type='str']/body/Return"
     count: 
-      min: 0
+      min: 1
       max: 500
   - name : "test-methods-invoking-method"
     code: "TMIM"
@@ -213,7 +213,7 @@ checks:
     description: "Identify test methods invoking specific methods."
     pattern : "//Assert[count(.//Call[func/Name/@id='test_function']) > 0]"
     count: 
-      min: 0
+      min: 1
       max: 500
   - name: " notusingcontextmanager"
     code: "DUCM"
@@ -221,7 +221,7 @@ checks:
     description: "Whether file handling is done without using the context manager (with statement) "
     pattern: "//*[starts-with(., 'with open')]"
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "importfuture"
     code: "IF"
@@ -229,7 +229,7 @@ checks:
     description:  "Importing undefined or unsupported members from the _future module is a SyntaxError. "
     pattern: "//ImportFrom[@module='__future']/alias[not(starts-with(@name, 'division') or starts-with(@name, 'absolute_import') or starts-with(@name, 'print_function') or starts-with(@name, 'unicode_literals'))]"
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "undefined-local-with-nested-import-star-usage"
     code: "F1"
@@ -237,7 +237,7 @@ checks:
     description: "from {name} import * only allowed at module level"
     pattern: "//FunctionDef//ImportFrom[starts-with(@module, 'import') and @names=('*')]"
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "Use_of ==_to_compare_constant  "
     code: "F2"
@@ -245,7 +245,7 @@ checks:
     description: "Use == to compare constant literals "
     pattern: "//function[@name='your_function_name']/*[your_xpath_condition]"
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "break_outside_loop"
     code: "F3"
@@ -253,7 +253,7 @@ checks:
     description: "break outside loop"
     pattern:  "//FunctionDef[BreakStmt[count(ancestor::For|ancestor::While|ancestor::If) = 0]]"
     count:
-      min: 0
+      min: 1
       max: 500
   
   

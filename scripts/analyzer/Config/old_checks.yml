@@ -5,33 +5,33 @@ checks:
     id: "C001"
     pattern: './/ClassDef'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "all-function-definition"
     code: "AFD"
     id: "F001"
     pattern: './/FunctionDef'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "non-test-function-definition"
     code: "NTF"
     id: "F002"
     pattern: './/FunctionDef[not(contains(@name, "test_"))]'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "single-nested-if"
     code: "SNI"
     id: "CL001"
     pattern: './/FunctionDef/body//If'
     count:
-      min: 0
+      min: 1
       max: 500
   - name: "double-nested-if"
     code: "DNI"
     id: "CL002"
     pattern: './/FunctionDef/body//If[ancestor::If and not(parent::orelse)]'
     count:
-      min: 0
+      min: 1
       max: 500
