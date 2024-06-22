@@ -31,15 +31,17 @@ class User:
         self.email = email
         return
 
+# TODO: Not passing pattern check id: 'NONE001', name: 'none-comparison'
 def check_none(value):
     """This function checks if a value is None.
 
     Contains Pattern:
         - none comparision (NONE)
     """
-    if value != None:
-        print("Value is not None")
+    if "input_dirs" is not None:
+        pass
 
+# TODO: Not passing check id: 'EXC001', name: 'no-exception-type', pattern: './/FunctionDef//Try/ExceptHandler[not(ExceptHandler/type)]'
 def handle_file(filename):
     """
     This function attempts to read a file but does not handle specific exception
@@ -50,8 +52,8 @@ def handle_file(filename):
     try:
         with open(filename) as f:
             data = f.read()
-    except:
-        print("Error reading file")
+    except IOError as e:
+        print(f"Error reading file: {e}")
 
 def is_valid(value):
     """
@@ -65,6 +67,7 @@ def is_valid(value):
     else:
         return "false value"
 
+# TODO: not passing check id: 'MVKL001', name: 'multi-value-key-literal', pattern: './/FunctionDef/body/Assign/value/Dict/keys/Name[preceding-sibling::Name/@id= @id]
 def get_user_data():
     """
     This function retrieves a user's name from a dictionary using the keys() function
@@ -80,9 +83,11 @@ def get_user_data():
     else:
         return None
 
+
 # Multi-value key literal (MVKL)- outside function scope
 user_data = {"name": "Alice", "name":"Bob"}
 
+# TODO: not passing check id: 'AT001', name: 'assert-tuple', pattern: './/FunctionDef[./body/Assert/test/Tuple]'
 def validate_data(data):
     """ Asserts on tuple.
         Contains Patterns:
@@ -90,6 +95,7 @@ def validate_data(data):
     """
     assert isinstance(data,tuple), "Data must be a tuple"
 
+# TODO: not passing check id: 'LVITOI001', name: 'loop-variable-iterates-overrides-iterator', pattern: './/FunctionDef/body/For[target/Name/@id = iter/Name/@id]'
 def modify_list(data):
     """
     This function modifies a list by overiding its elements.
@@ -101,6 +107,7 @@ def modify_list(data):
         item = "Modified"
     return data
 
+# TODO: id: 'FLV001', name: 'function-uses-loop-variable', pattern: './/FunctionDef[body//comprehension/target/Name]'
 def calculate_sum(numbers):
     """
     This function calculate the sum of a integer list
@@ -131,6 +138,7 @@ def handle_request(method, data):
     else:
         return "Unsupported method"
 
+# TODO: not passing check id: 'CL002', name: 'nested-condition-loops', pattern: './/FunctionDef//if//For'
 def filter_data(data, condition):
     """Function with nested condition-loop if{for{}} (IFOR) and (VFF) for{if{}}"""
     filtered_data = []
@@ -182,15 +190,15 @@ def validate_user_input(name, email):
     assert "@" in email, "Email must contain an '@' symbol"
     return True
 
+# TODO: not passing check id: 'DUCM001', name: 'not-using-context-manager', pattern: './/FunctionDef//*[starts-with(., "with open")]'
 def write_to_file(filename, data):
     """
     This function writes data to a file without using a context manager.
 
     Contains Pattern: Not Using Context Manager (DUCM)
     """
-    f = open(filename, "w")
-    f.write(data)
-    f.close()
+    with open(filename, "w") as f:
+        f.write(data)
 
 def calculate_grade(score):
     """
@@ -208,6 +216,7 @@ def calculate_grade(score):
         else:
             return "F"
 
+# TODO: id: 'COMPLEX001', name: 'complex-expressions', pattern: './/FunctionDef//BinOp[count(descendant::BinOp) > 2]
 def calculate_discount(price, discount_rate, loyalty_points):
     """
     This function calculates a discounted price with complex logic.
@@ -215,9 +224,9 @@ def calculate_discount(price, discount_rate, loyalty_points):
     Contains Pattern: Complex Expressions (COMPLEX)
     """
     discount = price * discount_rate
-    if loyalty_points > 100:
-        discount += price * 0.05
     final_price = price - discount - (discount * 0.1)
+    if loyalty_points > 100:
+        final_price -= price * 0.05
     return final_price
 
 # JSS paper
