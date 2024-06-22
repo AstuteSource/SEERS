@@ -92,7 +92,7 @@ def save_results(chasten_result, mutmut_result, save_file):
 
 @cli.command()
 def analyzer(
-    search_path: Path = os.getcwd() + "/demo/sorting_algorithm/listsorting",
+    search_path: Path = os.getcwd() + "/dummy_test",
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
     chasten_config_path: str = os.getcwd() + "/Config",
 ):
