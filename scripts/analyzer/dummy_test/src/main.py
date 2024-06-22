@@ -343,7 +343,7 @@ class Person:
             elif age == 10:
                 return "even"
             elif age == 11:
-                return "XXoddXX"
+                return "odd"
             elif age == 12:
                 return "even"
             elif age == 13:
