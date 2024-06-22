@@ -385,7 +385,7 @@ class Person:
             return "Invalid age"
 
 
-global_var = 0  # This is a global variable (avoid in practice)
+global_var = 0  # This is a global variable
 
 def calculate_something(data):
     """
