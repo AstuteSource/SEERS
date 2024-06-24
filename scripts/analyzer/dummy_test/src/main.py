@@ -38,8 +38,9 @@ def check_none(value):
     Contains Pattern:
         - none comparision (NONE)
     """
-    if "input_dirs" is not None:
-        pass
+    if value is not None:
+        return False
+    return True
 
 # TODO: Not passing check id: 'EXC001', name: 'no-exception-type', pattern: './/FunctionDef//Try/ExceptHandler[not(ExceptHandler/type)]'
 def handle_file(filename):
@@ -68,7 +69,7 @@ def is_valid(value):
         return "false value"
 
 # TODO: not passing check id: 'MVKL001', name: 'multi-value-key-literal', pattern: './/FunctionDef/body/Assign/value/Dict/keys/Name[preceding-sibling::Name/@id= @id]
-def get_user_data():
+def get_user_data(user_data):
     """
     This function retrieves a user's name from a dictionary using the keys() function
 
@@ -77,7 +78,6 @@ def get_user_data():
         - Single Nested If (SNI)
         - Multi-value key literal (MVKL)
     """
-    user_data = {"name": "Alice", "name":"Bob"}
     if "name" in user_data.keys():
         return user_data["name"]
     else:
@@ -103,9 +103,11 @@ def modify_list(data):
     Contains Patterns:
     - Loop variable iterates and overrides iterator (LVITOI)
     """
+    modified_data = []
     for item in data:
         item = "Modified"
-    return data
+        modified_data.append(item)
+    return modified_data
 
 # TODO: id: 'FLV001', name: 'function-uses-loop-variable', pattern: './/FunctionDef[body//comprehension/target/Name]'
 def calculate_sum(numbers):
@@ -176,7 +178,7 @@ def calculate_factorial(n, start=1):
         raise ValueError("Factorial is not defined for negative numbers")
     factorial = 1
     for i in range(start, n + 1):
-        for j in range(2, i + 1):  # Nested loop
+        for j in range(2, i + 1):
             factorial *= j
     return factorial
 
@@ -312,6 +314,7 @@ class Person:
     def create_person():
         p = Person()
         p.setName("John").setAge(30).setSSN("123-45-678").setEmail("johndoe@gmail.com").setAddress("123Street")
+        return p
     def validate_ssn(self):
         if not self.ssn:
             return False
