@@ -1,4 +1,5 @@
 """ Config Checks Project. """
+from typing import Tuple
 
 def calculate_area(shape,dimensions):
     """This function calculates the area of a shape based on its dimensions.
@@ -93,7 +94,7 @@ def validate_data(data):
         Contains Patterns:
         - Assertion (AT)
     """
-    assert isinstance(data,tuple), "Data must be a tuple"
+    assert type(data) == tuple, "Data must be a tuple"
 
 # TODO: not passing check id: 'LVITOI001', name: 'loop-variable-iterates-overrides-iterator', pattern: './/FunctionDef/body/For[target/Name/@id = iter/Name/@id]'
 def modify_list(data):
