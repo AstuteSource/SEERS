@@ -97,7 +97,7 @@ def save_results(chasten_result, mutmut_result, save_file):
 
 @cli.command()
 def analyzer(
-    search_path: Path = os.getcwd() + "/demo/code-opener-cli",
+    search_path: Path = os.getcwd() + "/demo/python-poetry-setup",
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
     chasten_config_path: str = os.getcwd() + "/Config",
 ):
@@ -124,5 +124,5 @@ def analyzer(
         save_results(chasten_result, mutmut_result, "combined_result.json")
         console.print("\n\nCode analysis and mutation complete!")
         console.print("Result is stored in file named combined_result.json")
-        console.print(":broom: Final sweeping, saved to code_output.json")
-        save_output(restructure_and_add_function_info(load_json_data('combined_result.json'), search_path), 'code_output.json')
+        console.print(":broom: Final sweeping, saved to pythonPoetry_output.json")
+        save_output(restructure_and_add_function_info(load_json_data('combined_result.json'), search_path), 'pythonPoetry_output.json')

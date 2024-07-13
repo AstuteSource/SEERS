@@ -1,0 +1,102 @@
+[
+  {
+    "function_name": "test_1",
+    "function_scope": "1-2",
+    "patterns": [
+      {
+        "lineno": 1,
+        "coloffset": 0,
+        "linematch": "def test_1():",
+        "context": "def test_1():\n    assert True",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 2,
+        "coloffset": 4,
+        "linematch": "assert True",
+        "context": "def test_1():\n    assert True",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 2,
+        "coloffset": 4,
+        "linematch": "assert True",
+        "context": "def test_1():\n    assert True",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 2,
+        "coloffset": 4,
+        "linematch": "assert True",
+        "context": "def test_1():\n    assert True",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #1",
+        "line": 2,
+        "description": [
+          "    print(\"Hello world!\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- application/__init__.py\n+++ application/__init__.py\n@@ -1,3 +1,3 @@\n def main():\n-    print(\"Hello world!\")\n+    print(\"XXHello world!XX\")\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "main",
+    "function_scope": "1-2",
+    "patterns": [
+      {
+        "lineno": 1,
+        "coloffset": 0,
+        "linematch": "def main():",
+        "context": "def main():\n    print(\"Hello world!\")",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 2,
+        "coloffset": 4,
+        "linematch": "print(\"Hello world!\")",
+        "context": "def main():\n    print(\"Hello world!\")",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #1",
+        "line": 2,
+        "description": [
+          "    print(\"Hello world!\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- application/__init__.py\n+++ application/__init__.py\n@@ -1,3 +1,3 @@\n def main():\n-    print(\"Hello world!\")\n+    print(\"XXHello world!XX\")\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  }
+]
