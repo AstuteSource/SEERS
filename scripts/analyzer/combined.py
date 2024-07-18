@@ -116,8 +116,8 @@ def save_output(data, output_file):
 # testing github push
 if __name__ == '__main__':
     json_input_file = 'combined_result.json'
-    source_code_directory = 'demo/pudb'
-    json_output_file = 'pudb_output.json'
+    source_code_directory = 'demo/chasten'
+    json_output_file = 'chasten_output.json'
 
     combined_data = load_json_data(json_input_file)
     structured_data = restructure_and_add_function_info(combined_data, source_code_directory)

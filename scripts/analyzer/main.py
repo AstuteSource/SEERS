@@ -97,7 +97,7 @@ def save_results(chasten_result, mutmut_result, save_file):
 
 @cli.command()
 def analyzer(
-    search_path: Path = os.getcwd() + "/demo/pudb",
+    search_path: Path = os.getcwd() + "/demo/chasten",
     save_directory: Path = os.path.abspath(os.path.dirname(__file__)),
     chasten_config_path: str = os.getcwd() + "/Config",
 ):
@@ -124,5 +124,5 @@ def analyzer(
         save_results(chasten_result, mutmut_result, "combined_result.json")
         console.print("\n\nCode analysis and mutation complete!")
         console.print("Result is stored in file named combined_result.json")
-        console.print(":broom: Final sweeping, saved to pudb_output.json")
-        save_output(restructure_and_add_function_info(load_json_data('combined_result.json'), search_path), 'pudb_output.json')
+        console.print(":broom: Final sweeping, saved to chasten_output.json")
+        save_output(restructure_and_add_function_info(load_json_data('combined_result.json'), search_path), 'chasten_output.json')
