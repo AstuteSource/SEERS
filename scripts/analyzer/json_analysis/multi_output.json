@@ -1,0 +1,1758 @@
+[
+  {
+    "function_name": "__getattr__",
+    "function_scope": "13-16",
+    "patterns": [
+      {
+        "lineno": 14,
+        "coloffset": 8,
+        "linematch": "if name not in self._counters.keys():",
+        "context": "    def __init__(self):\n        self._counters = {}\n\n    def __getattr__(self, name: str) -> int:\n        if name not in self._counters.keys():\n            self._counters[name] = 0\n        return self._counters[name]\n\n    def __setattr__(self, name: str, value: int) -> None:\n        if name[0] == \"_\":",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 13,
+        "coloffset": 4,
+        "linematch": "def __getattr__(self, name: str) -> int:",
+        "context": "class MultiCounter:\n    def __init__(self):\n        self._counters = {}\n\n    def __getattr__(self, name: str) -> int:\n        if name not in self._counters.keys():\n            self._counters[name] = 0\n        return self._counters[name]\n\n    def __setattr__(self, name: str, value: int) -> None:",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 23,
+        "linematch": "if name not in self._counters.keys():",
+        "context": "    def __init__(self):\n        self._counters = {}\n\n    def __getattr__(self, name: str) -> int:\n        if name not in self._counters.keys():\n            self._counters[name] = 0\n        return self._counters[name]\n\n    def __setattr__(self, name: str, value: int) -> None:\n        if name[0] == \"_\":",
+        "pattern": ".//FunctionDef//Call/func/Attribute[@attr=\"keys\"]",
+        "check_id": "KF001",
+        "check_name": "key-function"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 8,
+        "linematch": "if name not in self._counters.keys():",
+        "context": "    def __init__(self):\n        self._counters = {}\n\n    def __getattr__(self, name: str) -> int:\n        if name not in self._counters.keys():\n            self._counters[name] = 0\n        return self._counters[name]\n\n    def __setattr__(self, name: str, value: int) -> None:\n        if name[0] == \"_\":",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 16,
+        "coloffset": 8,
+        "linematch": "return self._counters[name]",
+        "context": "\n    def __getattr__(self, name: str) -> int:\n        if name not in self._counters.keys():\n            self._counters[name] = 0\n        return self._counters[name]\n\n    def __setattr__(self, name: str, value: int) -> None:\n        if name[0] == \"_\":\n            super().__setattr__(name, value)\n        else:",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "__setattr__",
+    "function_scope": "18-22",
+    "patterns": [
+      {
+        "lineno": 19,
+        "coloffset": 8,
+        "linematch": "if name[0] == \"_\":",
+        "context": "            self._counters[name] = 0\n        return self._counters[name]\n\n    def __setattr__(self, name: str, value: int) -> None:\n        if name[0] == \"_\":\n            super().__setattr__(name, value)\n        else:\n            self._counters[name] = value\n\n    def get_counters(self) -> Dict[str, int]:",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 19,
+        "coloffset": 11,
+        "linematch": "if name[0] == \"_\":",
+        "context": "            self._counters[name] = 0\n        return self._counters[name]\n\n    def __setattr__(self, name: str, value: int) -> None:\n        if name[0] == \"_\":\n            super().__setattr__(name, value)\n        else:\n            self._counters[name] = value\n\n    def get_counters(self) -> Dict[str, int]:",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 18,
+        "coloffset": 4,
+        "linematch": "def __setattr__(self, name: str, value: int) -> None:",
+        "context": "        if name not in self._counters.keys():\n            self._counters[name] = 0\n        return self._counters[name]\n\n    def __setattr__(self, name: str, value: int) -> None:\n        if name[0] == \"_\":\n            super().__setattr__(name, value)\n        else:\n            self._counters[name] = value\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 19,
+        "coloffset": 8,
+        "linematch": "if name[0] == \"_\":",
+        "context": "            self._counters[name] = 0\n        return self._counters[name]\n\n    def __setattr__(self, name: str, value: int) -> None:\n        if name[0] == \"_\":\n            super().__setattr__(name, value)\n        else:\n            self._counters[name] = value\n\n    def get_counters(self) -> Dict[str, int]:",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #11",
+        "line": 22,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 0}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #12",
+        "line": 22,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 0}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #13",
+        "line": 22,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 0}"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 100.0
+  },
+  {
+    "function_name": "test_can_multiply_counter",
+    "function_scope": "67-72",
+    "patterns": [
+      {
+        "lineno": 72,
+        "coloffset": 11,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 11,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 11,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 11,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 11,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 11,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 11,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 11,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 11,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 11,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 11,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 67,
+        "coloffset": 0,
+        "linematch": "def test_can_multiply_counter(mc):",
+        "context": "    mc.cookies -= 1\n    assert mc.cookies == -1\n\n\ndef test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 71,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 3",
+        "context": "def test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 4,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 68,
+        "coloffset": 4,
+        "linematch": "mc.cookies = 1",
+        "context": "    assert mc.cookies == -1\n\n\ndef test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 69,
+        "coloffset": 4,
+        "linematch": "mc.pies = 3",
+        "context": "\n\ndef test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 70,
+        "coloffset": 4,
+        "linematch": "mc.cookies *= 3",
+        "context": "\ndef test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 71,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 3",
+        "context": "def test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 4,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 68,
+        "coloffset": 4,
+        "linematch": "mc.cookies = 1",
+        "context": "    assert mc.cookies == -1\n\n\ndef test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 69,
+        "coloffset": 4,
+        "linematch": "mc.pies = 3",
+        "context": "\n\ndef test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 70,
+        "coloffset": 4,
+        "linematch": "mc.cookies *= 3",
+        "context": "\ndef test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 71,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 3",
+        "context": "def test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 72,
+        "coloffset": 4,
+        "linematch": "assert mc.pies == 3",
+        "context": "    mc.cookies = 1\n    mc.pies = 3\n    mc.cookies *= 3\n    assert mc.cookies == 3\n    assert mc.pies == 3",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #67",
+        "line": 68,
+        "description": [
+          "    mc.cookies = 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #68",
+        "line": 68,
+        "description": [
+          "    mc.cookies = 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #69",
+        "line": 69,
+        "description": [
+          "    mc.pies = 3"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #70",
+        "line": 69,
+        "description": [
+          "    mc.pies = 3"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #71",
+        "line": 70,
+        "description": [
+          "    mc.cookies *= 3"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_multicounter.py\n+++ tests/test_multicounter.py\n@@ -67,7 +67,7 @@\n def test_can_multiply_counter(mc):\n     mc.cookies = 1\n     mc.pies = 3\n-    mc.cookies *= 3\n+    mc.cookies = 3\n     assert mc.cookies == 3\n     assert mc.pies == 3\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #72",
+        "line": 70,
+        "description": [
+          "    mc.cookies *= 3"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #73",
+        "line": 70,
+        "description": [
+          "    mc.cookies *= 3"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #74",
+        "line": 71,
+        "description": [
+          "    assert mc.cookies == 3"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #75",
+        "line": 71,
+        "description": [
+          "    assert mc.cookies == 3"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #76",
+        "line": 72,
+        "description": [
+          "    assert mc.pies == 3"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #77",
+        "line": 72,
+        "description": [
+          "    assert mc.pies == 3"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 90.9090909090909
+  },
+  {
+    "function_name": "__init__",
+    "function_scope": "10-11",
+    "patterns": [
+      {
+        "lineno": 10,
+        "coloffset": 4,
+        "linematch": "def __init__(self):",
+        "context": "from typing import Dict\n\n\nclass MultiCounter:\n    def __init__(self):\n        self._counters = {}\n\n    def __getattr__(self, name: str) -> int:\n        if name not in self._counters.keys():\n            self._counters[name] = 0",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 11,
+        "coloffset": 8,
+        "linematch": "self._counters = {}",
+        "context": "\n\nclass MultiCounter:\n    def __init__(self):\n        self._counters = {}\n\n    def __getattr__(self, name: str) -> int:\n        if name not in self._counters.keys():\n            self._counters[name] = 0\n        return self._counters[name]",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #9",
+        "line": 11,
+        "description": [
+          "@pytest.fixture"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 100.0
+  },
+  {
+    "function_name": "get_counters",
+    "function_scope": "24-25",
+    "patterns": [
+      {
+        "lineno": 24,
+        "coloffset": 4,
+        "linematch": "def get_counters(self) -> Dict[str, int]:",
+        "context": "            super().__setattr__(name, value)\n        else:\n            self._counters[name] = value\n\n    def get_counters(self) -> Dict[str, int]:\n        return self._counters\n\n    def __str__(self) -> str:\n        return str(self._counters)",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 25,
+        "coloffset": 8,
+        "linematch": "return self._counters",
+        "context": "        else:\n            self._counters[name] = value\n\n    def get_counters(self) -> Dict[str, int]:\n        return self._counters\n\n    def __str__(self) -> str:\n        return str(self._counters)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "__str__",
+    "function_scope": "27-28",
+    "patterns": [
+      {
+        "lineno": 27,
+        "coloffset": 4,
+        "linematch": "def __str__(self) -> str:",
+        "context": "\n    def get_counters(self) -> Dict[str, int]:\n        return self._counters\n\n    def __str__(self) -> str:\n        return str(self._counters)",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 28,
+        "coloffset": 8,
+        "linematch": "return str(self._counters)",
+        "context": "    def get_counters(self) -> Dict[str, int]:\n        return self._counters\n\n    def __str__(self) -> str:\n        return str(self._counters)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #16",
+        "line": 27,
+        "description": [
+          "    assert mc.cookies == 42"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #17",
+        "line": 27,
+        "description": [
+          "    assert mc.cookies == 42"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 100.0
+  },
+  {
+    "function_name": "mc",
+    "function_scope": "12-13",
+    "patterns": [
+      {
+        "lineno": 12,
+        "coloffset": 0,
+        "linematch": "def mc():",
+        "context": "from multicounter import MultiCounter\n\n\n@pytest.fixture\ndef mc():\n    return MultiCounter()\n\n\ndef test_new_multicounter_has_no_counters(mc):\n    assert mc.get_counters() == {}",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 13,
+        "coloffset": 4,
+        "linematch": "return MultiCounter()",
+        "context": "\n\n@pytest.fixture\ndef mc():\n    return MultiCounter()\n\n\ndef test_new_multicounter_has_no_counters(mc):\n    assert mc.get_counters() == {}\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "test_new_multicounter_has_no_counters",
+    "function_scope": "16-17",
+    "patterns": [
+      {
+        "lineno": 16,
+        "coloffset": 0,
+        "linematch": "def test_new_multicounter_has_no_counters(mc):",
+        "context": "def mc():\n    return MultiCounter()\n\n\ndef test_new_multicounter_has_no_counters(mc):\n    assert mc.get_counters() == {}\n\n\ndef test_can_initialize_new_counter(mc):\n    mc.cookies",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 17,
+        "coloffset": 4,
+        "linematch": "assert mc.get_counters() == {}",
+        "context": "    return MultiCounter()\n\n\ndef test_new_multicounter_has_no_counters(mc):\n    assert mc.get_counters() == {}\n\n\ndef test_can_initialize_new_counter(mc):\n    mc.cookies\n    assert mc.get_counters() == {\"cookies\": 0}",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 17,
+        "coloffset": 4,
+        "linematch": "assert mc.get_counters() == {}",
+        "context": "    return MultiCounter()\n\n\ndef test_new_multicounter_has_no_counters(mc):\n    assert mc.get_counters() == {}\n\n\ndef test_can_initialize_new_counter(mc):\n    mc.cookies\n    assert mc.get_counters() == {\"cookies\": 0}",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 17,
+        "coloffset": 4,
+        "linematch": "assert mc.get_counters() == {}",
+        "context": "    return MultiCounter()\n\n\ndef test_new_multicounter_has_no_counters(mc):\n    assert mc.get_counters() == {}\n\n\ndef test_can_initialize_new_counter(mc):\n    mc.cookies\n    assert mc.get_counters() == {\"cookies\": 0}",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #10",
+        "line": 17,
+        "description": [
+          "    assert mc.get_counters() == {}"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 100.0
+  },
+  {
+    "function_name": "test_can_initialize_new_counter",
+    "function_scope": "20-22",
+    "patterns": [
+      {
+        "lineno": 20,
+        "coloffset": 0,
+        "linematch": "def test_can_initialize_new_counter(mc):",
+        "context": "def test_new_multicounter_has_no_counters(mc):\n    assert mc.get_counters() == {}\n\n\ndef test_can_initialize_new_counter(mc):\n    mc.cookies\n    assert mc.get_counters() == {\"cookies\": 0}\n\n\ndef test_can_initialize_new_counter_to_specific_value(mc):",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 22,
+        "coloffset": 4,
+        "linematch": "assert mc.get_counters() == {\"cookies\": 0}",
+        "context": "\n\ndef test_can_initialize_new_counter(mc):\n    mc.cookies\n    assert mc.get_counters() == {\"cookies\": 0}\n\n\ndef test_can_initialize_new_counter_to_specific_value(mc):\n    mc.cookies = 42\n    assert mc.cookies == 42",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 21,
+        "coloffset": 4,
+        "linematch": "mc.cookies",
+        "context": "    assert mc.get_counters() == {}\n\n\ndef test_can_initialize_new_counter(mc):\n    mc.cookies\n    assert mc.get_counters() == {\"cookies\": 0}\n\n\ndef test_can_initialize_new_counter_to_specific_value(mc):\n    mc.cookies = 42",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 22,
+        "coloffset": 4,
+        "linematch": "assert mc.get_counters() == {\"cookies\": 0}",
+        "context": "\n\ndef test_can_initialize_new_counter(mc):\n    mc.cookies\n    assert mc.get_counters() == {\"cookies\": 0}\n\n\ndef test_can_initialize_new_counter_to_specific_value(mc):\n    mc.cookies = 42\n    assert mc.cookies == 42",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 21,
+        "coloffset": 4,
+        "linematch": "mc.cookies",
+        "context": "    assert mc.get_counters() == {}\n\n\ndef test_can_initialize_new_counter(mc):\n    mc.cookies\n    assert mc.get_counters() == {\"cookies\": 0}\n\n\ndef test_can_initialize_new_counter_to_specific_value(mc):\n    mc.cookies = 42",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 22,
+        "coloffset": 4,
+        "linematch": "assert mc.get_counters() == {\"cookies\": 0}",
+        "context": "\n\ndef test_can_initialize_new_counter(mc):\n    mc.cookies\n    assert mc.get_counters() == {\"cookies\": 0}\n\n\ndef test_can_initialize_new_counter_to_specific_value(mc):\n    mc.cookies = 42\n    assert mc.cookies == 42",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #11",
+        "line": 22,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 0}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #12",
+        "line": 22,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 0}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #13",
+        "line": 22,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 0}"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 100.0
+  },
+  {
+    "function_name": "test_can_initialize_new_counter_to_specific_value",
+    "function_scope": "25-27",
+    "patterns": [
+      {
+        "lineno": 25,
+        "coloffset": 0,
+        "linematch": "def test_can_initialize_new_counter_to_specific_value(mc):",
+        "context": "    mc.cookies\n    assert mc.get_counters() == {\"cookies\": 0}\n\n\ndef test_can_initialize_new_counter_to_specific_value(mc):\n    mc.cookies = 42\n    assert mc.cookies == 42\n\n\ndef test_can_initialize_multiple_counters(mc):",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 27,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 42",
+        "context": "\n\ndef test_can_initialize_new_counter_to_specific_value(mc):\n    mc.cookies = 42\n    assert mc.cookies == 42\n\n\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42\n    mc.pies = 3",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 26,
+        "coloffset": 4,
+        "linematch": "mc.cookies = 42",
+        "context": "    assert mc.get_counters() == {\"cookies\": 0}\n\n\ndef test_can_initialize_new_counter_to_specific_value(mc):\n    mc.cookies = 42\n    assert mc.cookies == 42\n\n\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 27,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 42",
+        "context": "\n\ndef test_can_initialize_new_counter_to_specific_value(mc):\n    mc.cookies = 42\n    assert mc.cookies == 42\n\n\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42\n    mc.pies = 3",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 26,
+        "coloffset": 4,
+        "linematch": "mc.cookies = 42",
+        "context": "    assert mc.get_counters() == {\"cookies\": 0}\n\n\ndef test_can_initialize_new_counter_to_specific_value(mc):\n    mc.cookies = 42\n    assert mc.cookies == 42\n\n\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 27,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 42",
+        "context": "\n\ndef test_can_initialize_new_counter_to_specific_value(mc):\n    mc.cookies = 42\n    assert mc.cookies == 42\n\n\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42\n    mc.pies = 3",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #14",
+        "line": 26,
+        "description": [
+          "    mc.cookies = 42"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #15",
+        "line": 26,
+        "description": [
+          "    mc.cookies = 42"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #16",
+        "line": 27,
+        "description": [
+          "    assert mc.cookies == 42"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #17",
+        "line": 27,
+        "description": [
+          "    assert mc.cookies == 42"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 100.0
+  },
+  {
+    "function_name": "test_can_initialize_multiple_counters",
+    "function_scope": "30-33",
+    "patterns": [
+      {
+        "lineno": 30,
+        "coloffset": 0,
+        "linematch": "def test_can_initialize_multiple_counters(mc):",
+        "context": "    mc.cookies = 42\n    assert mc.cookies == 42\n\n\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}\n\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 33,
+        "coloffset": 4,
+        "linematch": "assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}",
+        "context": "\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}\n\n\ndef test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 31,
+        "coloffset": 4,
+        "linematch": "mc.cookies = 42",
+        "context": "    assert mc.cookies == 42\n\n\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}\n\n\ndef test_can_increment_counter(mc):",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 32,
+        "coloffset": 4,
+        "linematch": "mc.pies = 3",
+        "context": "\n\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}\n\n\ndef test_can_increment_counter(mc):\n    mc.cookies = 0",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 33,
+        "coloffset": 4,
+        "linematch": "assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}",
+        "context": "\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}\n\n\ndef test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 31,
+        "coloffset": 4,
+        "linematch": "mc.cookies = 42",
+        "context": "    assert mc.cookies == 42\n\n\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}\n\n\ndef test_can_increment_counter(mc):",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 32,
+        "coloffset": 4,
+        "linematch": "mc.pies = 3",
+        "context": "\n\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}\n\n\ndef test_can_increment_counter(mc):\n    mc.cookies = 0",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 33,
+        "coloffset": 4,
+        "linematch": "assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}",
+        "context": "\ndef test_can_initialize_multiple_counters(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}\n\n\ndef test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #18",
+        "line": 31,
+        "description": [
+          "    mc.cookies = 42"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #19",
+        "line": 31,
+        "description": [
+          "    mc.cookies = 42"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #20",
+        "line": 32,
+        "description": [
+          "    mc.pies = 3"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #21",
+        "line": 32,
+        "description": [
+          "    mc.pies = 3"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #22",
+        "line": 33,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #23",
+        "line": 33,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #24",
+        "line": 33,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #25",
+        "line": 33,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #26",
+        "line": 33,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 100.0
+  },
+  {
+    "function_name": "test_can_increment_counter",
+    "function_scope": "36-40",
+    "patterns": [
+      {
+        "lineno": 36,
+        "coloffset": 0,
+        "linematch": "def test_can_increment_counter(mc):",
+        "context": "    mc.pies = 3\n    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}\n\n\ndef test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0\n    mc.cookies += 1\n    assert mc.cookies == 1\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 38,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 0",
+        "context": "\n\ndef test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_can_increment_new_counter(mc):",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 40,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 1",
+        "context": "def test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_can_increment_new_counter(mc):\n    mc.cookies += 1\n    assert mc.cookies == 1",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 37,
+        "coloffset": 4,
+        "linematch": "mc.cookies = 0",
+        "context": "    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}\n\n\ndef test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 38,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 0",
+        "context": "\n\ndef test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_can_increment_new_counter(mc):",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 39,
+        "coloffset": 4,
+        "linematch": "mc.cookies += 1",
+        "context": "\ndef test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_can_increment_new_counter(mc):\n    mc.cookies += 1",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 40,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 1",
+        "context": "def test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_can_increment_new_counter(mc):\n    mc.cookies += 1\n    assert mc.cookies == 1",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 37,
+        "coloffset": 4,
+        "linematch": "mc.cookies = 0",
+        "context": "    assert mc.get_counters() == {\"cookies\": 42, \"pies\": 3}\n\n\ndef test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 38,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 0",
+        "context": "\n\ndef test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_can_increment_new_counter(mc):",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 39,
+        "coloffset": 4,
+        "linematch": "mc.cookies += 1",
+        "context": "\ndef test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_can_increment_new_counter(mc):\n    mc.cookies += 1",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 40,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 1",
+        "context": "def test_can_increment_counter(mc):\n    mc.cookies = 0\n    assert mc.cookies == 0\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_can_increment_new_counter(mc):\n    mc.cookies += 1\n    assert mc.cookies == 1",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #27",
+        "line": 37,
+        "description": [
+          "    mc.cookies = 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #28",
+        "line": 37,
+        "description": [
+          "    mc.cookies = 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #29",
+        "line": 38,
+        "description": [
+          "    assert mc.cookies == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #30",
+        "line": 38,
+        "description": [
+          "    assert mc.cookies == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #31",
+        "line": 39,
+        "description": [
+          "    mc.cookies += 1"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_multicounter.py\n+++ tests/test_multicounter.py\n@@ -36,7 +36,7 @@\n def test_can_increment_counter(mc):\n     mc.cookies = 0\n     assert mc.cookies == 0\n-    mc.cookies += 1\n+    mc.cookies = 1\n     assert mc.cookies == 1\n \n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #32",
+        "line": 39,
+        "description": [
+          "    mc.cookies += 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #33",
+        "line": 39,
+        "description": [
+          "    mc.cookies += 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #34",
+        "line": 40,
+        "description": [
+          "    assert mc.cookies == 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #35",
+        "line": 40,
+        "description": [
+          "    assert mc.cookies == 1"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 88.88888888888889
+  },
+  {
+    "function_name": "test_can_increment_new_counter",
+    "function_scope": "43-45",
+    "patterns": [
+      {
+        "lineno": 43,
+        "coloffset": 0,
+        "linematch": "def test_can_increment_new_counter(mc):",
+        "context": "    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_can_increment_new_counter(mc):\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 45,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 1",
+        "context": "\n\ndef test_can_increment_new_counter(mc):\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 44,
+        "coloffset": 4,
+        "linematch": "mc.cookies += 1",
+        "context": "    assert mc.cookies == 1\n\n\ndef test_can_increment_new_counter(mc):\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 45,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 1",
+        "context": "\n\ndef test_can_increment_new_counter(mc):\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 44,
+        "coloffset": 4,
+        "linematch": "mc.cookies += 1",
+        "context": "    assert mc.cookies == 1\n\n\ndef test_can_increment_new_counter(mc):\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 45,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == 1",
+        "context": "\n\ndef test_can_increment_new_counter(mc):\n    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #36",
+        "line": 44,
+        "description": [
+          "    mc.cookies += 1"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_multicounter.py\n+++ tests/test_multicounter.py\n@@ -41,7 +41,7 @@\n \n \n def test_can_increment_new_counter(mc):\n-    mc.cookies += 1\n+    mc.cookies = 1\n     assert mc.cookies == 1\n \n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #37",
+        "line": 44,
+        "description": [
+          "    mc.cookies += 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #38",
+        "line": 44,
+        "description": [
+          "    mc.cookies += 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #39",
+        "line": 45,
+        "description": [
+          "    assert mc.cookies == 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #40",
+        "line": 45,
+        "description": [
+          "    assert mc.cookies == 1"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 80.0
+  },
+  {
+    "function_name": "test_incrementing_one_counter_does_not_increment_other_counters",
+    "function_scope": "48-52",
+    "patterns": [
+      {
+        "lineno": 48,
+        "coloffset": 0,
+        "linematch": "def test_incrementing_one_counter_does_not_increment_other_counters(mc):",
+        "context": "    mc.cookies += 1\n    assert mc.cookies == 1\n\n\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0\n    mc.cookies += 1\n    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 52,
+        "coloffset": 4,
+        "linematch": "assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}",
+        "context": "def test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0\n    mc.cookies += 1\n    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n\n\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 49,
+        "coloffset": 4,
+        "linematch": "mc.cookies = 0",
+        "context": "    assert mc.cookies == 1\n\n\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0\n    mc.cookies += 1\n    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n\n",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 50,
+        "coloffset": 4,
+        "linematch": "mc.pies = 0",
+        "context": "\n\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0\n    mc.cookies += 1\n    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n\n\ndef test_can_stringify_multicounter(mc):",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 51,
+        "coloffset": 4,
+        "linematch": "mc.cookies += 1",
+        "context": "\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0\n    mc.cookies += 1\n    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n\n\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 52,
+        "coloffset": 4,
+        "linematch": "assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}",
+        "context": "def test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0\n    mc.cookies += 1\n    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n\n\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 49,
+        "coloffset": 4,
+        "linematch": "mc.cookies = 0",
+        "context": "    assert mc.cookies == 1\n\n\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0\n    mc.cookies += 1\n    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 50,
+        "coloffset": 4,
+        "linematch": "mc.pies = 0",
+        "context": "\n\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0\n    mc.cookies += 1\n    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n\n\ndef test_can_stringify_multicounter(mc):",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 51,
+        "coloffset": 4,
+        "linematch": "mc.cookies += 1",
+        "context": "\ndef test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0\n    mc.cookies += 1\n    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n\n\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 52,
+        "coloffset": 4,
+        "linematch": "assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}",
+        "context": "def test_incrementing_one_counter_does_not_increment_other_counters(mc):\n    mc.cookies = 0\n    mc.pies = 0\n    mc.cookies += 1\n    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n\n\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #41",
+        "line": 49,
+        "description": [
+          "    mc.cookies = 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #42",
+        "line": 49,
+        "description": [
+          "    mc.cookies = 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #43",
+        "line": 50,
+        "description": [
+          "    mc.pies = 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #44",
+        "line": 50,
+        "description": [
+          "    mc.pies = 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #45",
+        "line": 51,
+        "description": [
+          "    mc.cookies += 1"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_multicounter.py\n+++ tests/test_multicounter.py\n@@ -48,7 +48,7 @@\n def test_incrementing_one_counter_does_not_increment_other_counters(mc):\n     mc.cookies = 0\n     mc.pies = 0\n-    mc.cookies += 1\n+    mc.cookies = 1\n     assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n \n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #46",
+        "line": 51,
+        "description": [
+          "    mc.cookies += 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #47",
+        "line": 51,
+        "description": [
+          "    mc.cookies += 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #48",
+        "line": 52,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #49",
+        "line": 52,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #50",
+        "line": 52,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #51",
+        "line": 52,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #52",
+        "line": 52,
+        "description": [
+          "    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 91.66666666666666
+  },
+  {
+    "function_name": "test_can_stringify_multicounter",
+    "function_scope": "55-59",
+    "patterns": [
+      {
+        "lineno": 55,
+        "coloffset": 0,
+        "linematch": "def test_can_stringify_multicounter(mc):",
+        "context": "    mc.cookies += 1\n    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n\n\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 58,
+        "coloffset": 4,
+        "linematch": "assert \"'cookies': 42\" in str(mc)",
+        "context": "\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 59,
+        "coloffset": 4,
+        "linematch": "assert \"'pies': 3\" in str(mc)",
+        "context": "def test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1\n    assert mc.cookies == -1",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 56,
+        "coloffset": 4,
+        "linematch": "mc.cookies = 42",
+        "context": "    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n\n\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 57,
+        "coloffset": 4,
+        "linematch": "mc.pies = 3",
+        "context": "\n\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 58,
+        "coloffset": 4,
+        "linematch": "assert \"'cookies': 42\" in str(mc)",
+        "context": "\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 59,
+        "coloffset": 4,
+        "linematch": "assert \"'pies': 3\" in str(mc)",
+        "context": "def test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1\n    assert mc.cookies == -1",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 56,
+        "coloffset": 4,
+        "linematch": "mc.cookies = 42",
+        "context": "    assert mc.get_counters() == {\"cookies\": 1, \"pies\": 0}\n\n\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 57,
+        "coloffset": 4,
+        "linematch": "mc.pies = 3",
+        "context": "\n\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 58,
+        "coloffset": 4,
+        "linematch": "assert \"'cookies': 42\" in str(mc)",
+        "context": "\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 59,
+        "coloffset": 4,
+        "linematch": "assert \"'pies': 3\" in str(mc)",
+        "context": "def test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1\n    assert mc.cookies == -1",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 58,
+        "coloffset": 4,
+        "linematch": "assert \"'cookies': 42\" in str(mc)",
+        "context": "\ndef test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1",
+        "pattern": "//FunctionDef[starts-with(@name, \"test_\")]//Assert[count(.//Call[func/Name]) > 0]",
+        "check_id": "UNUSED001",
+        "check_name": "unused-variables"
+      },
+      {
+        "lineno": 59,
+        "coloffset": 4,
+        "linematch": "assert \"'pies': 3\" in str(mc)",
+        "context": "def test_can_stringify_multicounter(mc):\n    mc.cookies = 42\n    mc.pies = 3\n    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1\n    assert mc.cookies == -1",
+        "pattern": "//FunctionDef[starts-with(@name, \"test_\")]//Assert[count(.//Call[func/Name]) > 0]",
+        "check_id": "UNUSED001",
+        "check_name": "unused-variables"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #53",
+        "line": 56,
+        "description": [
+          "    mc.cookies = 42"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #54",
+        "line": 56,
+        "description": [
+          "    mc.cookies = 42"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #55",
+        "line": 57,
+        "description": [
+          "    mc.pies = 3"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #56",
+        "line": 57,
+        "description": [
+          "    mc.pies = 3"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #57",
+        "line": 58,
+        "description": [
+          "    assert \"'cookies': 42\" in str(mc)"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #58",
+        "line": 58,
+        "description": [
+          "    assert \"'cookies': 42\" in str(mc)"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #59",
+        "line": 59,
+        "description": [
+          "    assert \"'pies': 3\" in str(mc)"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #60",
+        "line": 59,
+        "description": [
+          "    assert \"'pies': 3\" in str(mc)"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 100.0
+  },
+  {
+    "function_name": "test_can_count_backwards",
+    "function_scope": "62-64",
+    "patterns": [
+      {
+        "lineno": 62,
+        "coloffset": 0,
+        "linematch": "def test_can_count_backwards(mc):",
+        "context": "    assert \"'cookies': 42\" in str(mc)\n    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1\n    assert mc.cookies == -1\n\n\ndef test_can_multiply_counter(mc):",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 64,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == -1",
+        "context": "\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1\n    assert mc.cookies == -1\n\n\ndef test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 63,
+        "coloffset": 4,
+        "linematch": "mc.cookies -= 1",
+        "context": "    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1\n    assert mc.cookies == -1\n\n\ndef test_can_multiply_counter(mc):\n    mc.cookies = 1",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 64,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == -1",
+        "context": "\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1\n    assert mc.cookies == -1\n\n\ndef test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 63,
+        "coloffset": 4,
+        "linematch": "mc.cookies -= 1",
+        "context": "    assert \"'pies': 3\" in str(mc)\n\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1\n    assert mc.cookies == -1\n\n\ndef test_can_multiply_counter(mc):\n    mc.cookies = 1",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 64,
+        "coloffset": 4,
+        "linematch": "assert mc.cookies == -1",
+        "context": "\n\ndef test_can_count_backwards(mc):\n    mc.cookies -= 1\n    assert mc.cookies == -1\n\n\ndef test_can_multiply_counter(mc):\n    mc.cookies = 1\n    mc.pies = 3",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #61",
+        "line": 63,
+        "description": [
+          "    mc.cookies -= 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #62",
+        "line": 63,
+        "description": [
+          "    mc.cookies -= 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #63",
+        "line": 63,
+        "description": [
+          "    mc.cookies -= 1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #64",
+        "line": 64,
+        "description": [
+          "    assert mc.cookies == -1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #65",
+        "line": 64,
+        "description": [
+          "    assert mc.cookies == -1"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #66",
+        "line": 64,
+        "description": [
+          "    assert mc.cookies == -1"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 100.0
+  }
+]

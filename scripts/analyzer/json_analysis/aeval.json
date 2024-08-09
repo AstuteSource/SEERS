@@ -1,0 +1,1060 @@
+[
+  {
+    "function_name": "_build_thunk",
+    "function_scope": "114-143",
+    "patterns": [
+      {
+        "lineno": 121,
+        "coloffset": 4,
+        "linematch": "if global_names:",
+        "context": "    # be aware of it.\n    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))\n\n    global_names = exposed_names_with_store(node)\n    if global_names:\n        node.body.insert(0, ast.Global(list(global_names)))\n\n    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n        node.body[-1] = ast.Return(value=node.body[-1].value)\n",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 124,
+        "coloffset": 4,
+        "linematch": "if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):",
+        "context": "    global_names = exposed_names_with_store(node)\n    if global_names:\n        node.body.insert(0, ast.Global(list(global_names)))\n\n    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n        node.body[-1] = ast.Return(value=node.body[-1].value)\n\n    node = RewriteExposedAnnotatedNames().visit(node)\n\n    mod = ast.parse('')",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 114,
+        "coloffset": 0,
+        "linematch": "def _build_thunk(node: ast.Module, fn_cls: Type, globals: Dict, locals: Dict):",
+        "context": "    posonlyargs=[],\n)\n\n\ndef _build_thunk(node: ast.Module, fn_cls: Type, globals: Dict, locals: Dict):\n    # Temporarily polluting the `locals` scope with the thunk function is not\n    # ideal, but choosing an illegal name means that only very sneaky code will\n    # be aware of it.\n    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 124,
+        "coloffset": 4,
+        "linematch": "if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):",
+        "context": "    global_names = exposed_names_with_store(node)\n    if global_names:\n        node.body.insert(0, ast.Global(list(global_names)))\n\n    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n        node.body[-1] = ast.Return(value=node.body[-1].value)\n\n    node = RewriteExposedAnnotatedNames().visit(node)\n\n    mod = ast.parse('')",
+        "pattern": ".//FunctionDef//If/following-sibling::If | .//FunctionDef//If/following-sibling::Elif | .//FunctionDef//If/following-sibling::Else",
+        "check_id": "F002",
+        "check_name": "number-of-conditions-in-function"
+      },
+      {
+        "lineno": 118,
+        "coloffset": 4,
+        "linematch": "thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))",
+        "context": "def _build_thunk(node: ast.Module, fn_cls: Type, globals: Dict, locals: Dict):\n    # Temporarily polluting the `locals` scope with the thunk function is not\n    # ideal, but choosing an illegal name means that only very sneaky code will\n    # be aware of it.\n    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))\n\n    global_names = exposed_names_with_store(node)\n    if global_names:\n        node.body.insert(0, ast.Global(list(global_names)))\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 120,
+        "coloffset": 4,
+        "linematch": "global_names = exposed_names_with_store(node)",
+        "context": "    # ideal, but choosing an illegal name means that only very sneaky code will\n    # be aware of it.\n    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))\n\n    global_names = exposed_names_with_store(node)\n    if global_names:\n        node.body.insert(0, ast.Global(list(global_names)))\n\n    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n        node.body[-1] = ast.Return(value=node.body[-1].value)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 121,
+        "coloffset": 4,
+        "linematch": "if global_names:",
+        "context": "    # be aware of it.\n    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))\n\n    global_names = exposed_names_with_store(node)\n    if global_names:\n        node.body.insert(0, ast.Global(list(global_names)))\n\n    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n        node.body[-1] = ast.Return(value=node.body[-1].value)\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 124,
+        "coloffset": 4,
+        "linematch": "if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):",
+        "context": "    global_names = exposed_names_with_store(node)\n    if global_names:\n        node.body.insert(0, ast.Global(list(global_names)))\n\n    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n        node.body[-1] = ast.Return(value=node.body[-1].value)\n\n    node = RewriteExposedAnnotatedNames().visit(node)\n\n    mod = ast.parse('')",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 127,
+        "coloffset": 4,
+        "linematch": "node = RewriteExposedAnnotatedNames().visit(node)",
+        "context": "\n    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n        node.body[-1] = ast.Return(value=node.body[-1].value)\n\n    node = RewriteExposedAnnotatedNames().visit(node)\n\n    mod = ast.parse('')\n    mod.body=[\n        fn_cls(\n            name=thunkname,",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 129,
+        "coloffset": 4,
+        "linematch": "mod = ast.parse('')",
+        "context": "        node.body[-1] = ast.Return(value=node.body[-1].value)\n\n    node = RewriteExposedAnnotatedNames().visit(node)\n\n    mod = ast.parse('')\n    mod.body=[\n        fn_cls(\n            name=thunkname,\n            args=_EMPTY_ARGS,\n            body=node.body,",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 130,
+        "coloffset": 4,
+        "linematch": "mod.body=[",
+        "context": "\n    node = RewriteExposedAnnotatedNames().visit(node)\n\n    mod = ast.parse('')\n    mod.body=[\n        fn_cls(\n            name=thunkname,\n            args=_EMPTY_ARGS,\n            body=node.body,\n            decorator_list=[],",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 138,
+        "coloffset": 4,
+        "linematch": "ast.fix_missing_locations(mod)",
+        "context": "            body=node.body,\n            decorator_list=[],\n            returns=None,\n        )]\n    ast.fix_missing_locations(mod)\n    exec(compile(mod, '<string>', 'exec'), globals, locals)\n    thunk = locals[thunkname]\n    thunk.__name__ = 'aeval_thunk'\n    del locals[thunkname]\n    return thunk",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 139,
+        "coloffset": 4,
+        "linematch": "exec(compile(mod, '<string>', 'exec'), globals, locals)",
+        "context": "            decorator_list=[],\n            returns=None,\n        )]\n    ast.fix_missing_locations(mod)\n    exec(compile(mod, '<string>', 'exec'), globals, locals)\n    thunk = locals[thunkname]\n    thunk.__name__ = 'aeval_thunk'\n    del locals[thunkname]\n    return thunk",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 140,
+        "coloffset": 4,
+        "linematch": "thunk = locals[thunkname]",
+        "context": "            returns=None,\n        )]\n    ast.fix_missing_locations(mod)\n    exec(compile(mod, '<string>', 'exec'), globals, locals)\n    thunk = locals[thunkname]\n    thunk.__name__ = 'aeval_thunk'\n    del locals[thunkname]\n    return thunk",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 141,
+        "coloffset": 4,
+        "linematch": "thunk.__name__ = 'aeval_thunk'",
+        "context": "        )]\n    ast.fix_missing_locations(mod)\n    exec(compile(mod, '<string>', 'exec'), globals, locals)\n    thunk = locals[thunkname]\n    thunk.__name__ = 'aeval_thunk'\n    del locals[thunkname]\n    return thunk",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 142,
+        "coloffset": 4,
+        "linematch": "del locals[thunkname]",
+        "context": "    ast.fix_missing_locations(mod)\n    exec(compile(mod, '<string>', 'exec'), globals, locals)\n    thunk = locals[thunkname]\n    thunk.__name__ = 'aeval_thunk'\n    del locals[thunkname]\n    return thunk",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 143,
+        "coloffset": 4,
+        "linematch": "return thunk",
+        "context": "    exec(compile(mod, '<string>', 'exec'), globals, locals)\n    thunk = locals[thunkname]\n    thunk.__name__ = 'aeval_thunk'\n    del locals[thunkname]\n    return thunk",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #33",
+        "line": 118,
+        "description": [
+          "    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -115,7 +115,7 @@\n     # Temporarily polluting the `locals` scope with the thunk function is not\n     # ideal, but choosing an illegal name means that only very sneaky code will\n     # be aware of it.\n-    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))\n+    thunkname = 'XX-aeval-XX' + ''.join(random.sample(string.hexdigits, 8))\n \n     global_names = exposed_names_with_store(node)\n     if global_names:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #34",
+        "line": 118,
+        "description": [
+          "    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -115,7 +115,7 @@\n     # Temporarily polluting the `locals` scope with the thunk function is not\n     # ideal, but choosing an illegal name means that only very sneaky code will\n     # be aware of it.\n-    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))\n+    thunkname = '-aeval-' - ''.join(random.sample(string.hexdigits, 8))\n \n     global_names = exposed_names_with_store(node)\n     if global_names:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #35",
+        "line": 118,
+        "description": [
+          "    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -115,7 +115,7 @@\n     # Temporarily polluting the `locals` scope with the thunk function is not\n     # ideal, but choosing an illegal name means that only very sneaky code will\n     # be aware of it.\n-    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))\n+    thunkname = '-aeval-' + 'XXXX'.join(random.sample(string.hexdigits, 8))\n \n     global_names = exposed_names_with_store(node)\n     if global_names:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #36",
+        "line": 118,
+        "description": [
+          "    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -115,7 +115,7 @@\n     # Temporarily polluting the `locals` scope with the thunk function is not\n     # ideal, but choosing an illegal name means that only very sneaky code will\n     # be aware of it.\n-    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))\n+    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 9))\n \n     global_names = exposed_names_with_store(node)\n     if global_names:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #37",
+        "line": 118,
+        "description": [
+          "    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -115,7 +115,7 @@\n     # Temporarily polluting the `locals` scope with the thunk function is not\n     # ideal, but choosing an illegal name means that only very sneaky code will\n     # be aware of it.\n-    thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))\n+    thunkname = None\n \n     global_names = exposed_names_with_store(node)\n     if global_names:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #38",
+        "line": 120,
+        "description": [
+          "    global_names = exposed_names_with_store(node)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -117,7 +117,7 @@\n     # be aware of it.\n     thunkname = '-aeval-' + ''.join(random.sample(string.hexdigits, 8))\n \n-    global_names = exposed_names_with_store(node)\n+    global_names = None\n     if global_names:\n         node.body.insert(0, ast.Global(list(global_names)))\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #39",
+        "line": 122,
+        "description": [
+          "        node.body.insert(0, ast.Global(list(global_names)))"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -119,7 +119,7 @@\n \n     global_names = exposed_names_with_store(node)\n     if global_names:\n-        node.body.insert(0, ast.Global(list(global_names)))\n+        node.body.insert(1, ast.Global(list(global_names)))\n \n     if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n         node.body[-1] = ast.Return(value=node.body[-1].value)\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #40",
+        "line": 124,
+        "description": [
+          "    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -121,7 +121,7 @@\n     if global_names:\n         node.body.insert(0, ast.Global(list(global_names)))\n \n-    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n+    if len(node.body) >= 0 and isinstance(node.body[-1], ast.Expr):\n         node.body[-1] = ast.Return(value=node.body[-1].value)\n \n     node = RewriteExposedAnnotatedNames().visit(node)\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #41",
+        "line": 124,
+        "description": [
+          "    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -121,7 +121,7 @@\n     if global_names:\n         node.body.insert(0, ast.Global(list(global_names)))\n \n-    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n+    if len(node.body) > 1 and isinstance(node.body[-1], ast.Expr):\n         node.body[-1] = ast.Return(value=node.body[-1].value)\n \n     node = RewriteExposedAnnotatedNames().visit(node)\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #42",
+        "line": 124,
+        "description": [
+          "    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -121,7 +121,7 @@\n     if global_names:\n         node.body.insert(0, ast.Global(list(global_names)))\n \n-    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n+    if len(node.body) > 0 and isinstance(node.body[+1], ast.Expr):\n         node.body[-1] = ast.Return(value=node.body[-1].value)\n \n     node = RewriteExposedAnnotatedNames().visit(node)\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #43",
+        "line": 124,
+        "description": [
+          "    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -121,7 +121,7 @@\n     if global_names:\n         node.body.insert(0, ast.Global(list(global_names)))\n \n-    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n+    if len(node.body) > 0 and isinstance(node.body[-2], ast.Expr):\n         node.body[-1] = ast.Return(value=node.body[-1].value)\n \n     node = RewriteExposedAnnotatedNames().visit(node)\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #44",
+        "line": 124,
+        "description": [
+          "    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -121,7 +121,7 @@\n     if global_names:\n         node.body.insert(0, ast.Global(list(global_names)))\n \n-    if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n+    if len(node.body) > 0 or isinstance(node.body[-1], ast.Expr):\n         node.body[-1] = ast.Return(value=node.body[-1].value)\n \n     node = RewriteExposedAnnotatedNames().visit(node)\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #45",
+        "line": 125,
+        "description": [
+          "        node.body[-1] = ast.Return(value=node.body[-1].value)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -122,7 +122,7 @@\n         node.body.insert(0, ast.Global(list(global_names)))\n \n     if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n-        node.body[-1] = ast.Return(value=node.body[-1].value)\n+        node.body[+1] = ast.Return(value=node.body[-1].value)\n \n     node = RewriteExposedAnnotatedNames().visit(node)\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #46",
+        "line": 125,
+        "description": [
+          "        node.body[-1] = ast.Return(value=node.body[-1].value)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -122,7 +122,7 @@\n         node.body.insert(0, ast.Global(list(global_names)))\n \n     if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n-        node.body[-1] = ast.Return(value=node.body[-1].value)\n+        node.body[-2] = ast.Return(value=node.body[-1].value)\n \n     node = RewriteExposedAnnotatedNames().visit(node)\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #47",
+        "line": 125,
+        "description": [
+          "        node.body[-1] = ast.Return(value=node.body[-1].value)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -122,7 +122,7 @@\n         node.body.insert(0, ast.Global(list(global_names)))\n \n     if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n-        node.body[-1] = ast.Return(value=node.body[-1].value)\n+        node.body[-1] = ast.Return(value=node.body[+1].value)\n \n     node = RewriteExposedAnnotatedNames().visit(node)\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #48",
+        "line": 125,
+        "description": [
+          "        node.body[-1] = ast.Return(value=node.body[-1].value)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -122,7 +122,7 @@\n         node.body.insert(0, ast.Global(list(global_names)))\n \n     if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n-        node.body[-1] = ast.Return(value=node.body[-1].value)\n+        node.body[-1] = ast.Return(value=node.body[-2].value)\n \n     node = RewriteExposedAnnotatedNames().visit(node)\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #49",
+        "line": 125,
+        "description": [
+          "        node.body[-1] = ast.Return(value=node.body[-1].value)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -122,7 +122,7 @@\n         node.body.insert(0, ast.Global(list(global_names)))\n \n     if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n-        node.body[-1] = ast.Return(value=node.body[-1].value)\n+        node.body[-1] = None\n \n     node = RewriteExposedAnnotatedNames().visit(node)\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #50",
+        "line": 127,
+        "description": [
+          "    node = RewriteExposedAnnotatedNames().visit(node)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -124,7 +124,7 @@\n     if len(node.body) > 0 and isinstance(node.body[-1], ast.Expr):\n         node.body[-1] = ast.Return(value=node.body[-1].value)\n \n-    node = RewriteExposedAnnotatedNames().visit(node)\n+    node = None\n \n     mod = ast.parse('')\n     mod.body=[\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #51",
+        "line": 129,
+        "description": [
+          "    mod = ast.parse('')"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -126,7 +126,7 @@\n \n     node = RewriteExposedAnnotatedNames().visit(node)\n \n-    mod = ast.parse('')\n+    mod = ast.parse('XXXX')\n     mod.body=[\n         fn_cls(\n             name=thunkname,\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #52",
+        "line": 129,
+        "description": [
+          "    mod = ast.parse('')"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -126,7 +126,7 @@\n \n     node = RewriteExposedAnnotatedNames().visit(node)\n \n-    mod = ast.parse('')\n+    mod = None\n     mod.body=[\n         fn_cls(\n             name=thunkname,\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #53",
+        "line": 137,
+        "description": [
+          "        )]"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -127,14 +127,7 @@\n     node = RewriteExposedAnnotatedNames().visit(node)\n \n     mod = ast.parse('')\n-    mod.body=[\n-        fn_cls(\n-            name=thunkname,\n-            args=_EMPTY_ARGS,\n-            body=node.body,\n-            decorator_list=[],\n-            returns=None,\n-        )]\n+    mod.body= None\n     ast.fix_missing_locations(mod)\n     exec(compile(mod, '<string>', 'exec'), globals, locals)\n     thunk = locals[thunkname]\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #54",
+        "line": 139,
+        "description": [
+          "    exec(compile(mod, '<string>', 'exec'), globals, locals)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -136,7 +136,7 @@\n             returns=None,\n         )]\n     ast.fix_missing_locations(mod)\n-    exec(compile(mod, '<string>', 'exec'), globals, locals)\n+    exec(compile(mod, 'XX<string>XX', 'exec'), globals, locals)\n     thunk = locals[thunkname]\n     thunk.__name__ = 'aeval_thunk'\n     del locals[thunkname]\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #55",
+        "line": 139,
+        "description": [
+          "    exec(compile(mod, '<string>', 'exec'), globals, locals)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -136,7 +136,7 @@\n             returns=None,\n         )]\n     ast.fix_missing_locations(mod)\n-    exec(compile(mod, '<string>', 'exec'), globals, locals)\n+    exec(compile(mod, '<string>', 'XXexecXX'), globals, locals)\n     thunk = locals[thunkname]\n     thunk.__name__ = 'aeval_thunk'\n     del locals[thunkname]\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #56",
+        "line": 140,
+        "description": [
+          "    thunk = locals[thunkname]"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -137,7 +137,7 @@\n         )]\n     ast.fix_missing_locations(mod)\n     exec(compile(mod, '<string>', 'exec'), globals, locals)\n-    thunk = locals[thunkname]\n+    thunk = None\n     thunk.__name__ = 'aeval_thunk'\n     del locals[thunkname]\n     return thunk\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #57",
+        "line": 141,
+        "description": [
+          "    thunk.__name__ = 'aeval_thunk'"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -138,7 +138,7 @@\n     ast.fix_missing_locations(mod)\n     exec(compile(mod, '<string>', 'exec'), globals, locals)\n     thunk = locals[thunkname]\n-    thunk.__name__ = 'aeval_thunk'\n+    thunk.__name__ = 'XXaeval_thunkXX'\n     del locals[thunkname]\n     return thunk\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #58",
+        "line": 141,
+        "description": [
+          "    thunk.__name__ = 'aeval_thunk'"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -138,7 +138,7 @@\n     ast.fix_missing_locations(mod)\n     exec(compile(mod, '<string>', 'exec'), globals, locals)\n     thunk = locals[thunkname]\n-    thunk.__name__ = 'aeval_thunk'\n+    thunk.__name__ = None\n     del locals[thunkname]\n     return thunk\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "__add_import_name",
+    "function_scope": "36-41",
+    "patterns": [
+      {
+        "lineno": 38,
+        "coloffset": 12,
+        "linematch": "if name.asname:",
+        "context": "        self.names.add(node.name)\n\n    def __add_import_name(self, node: Union[ast.Import, ast.ImportFrom]):\n        for name in node.names:\n            if name.asname:\n                self.names.add(name.asname)\n            else:\n                self.names.add(name.name.split('.')[0])\n\n    def visit_Name(self, node: ast.Name) -> Any:",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 36,
+        "coloffset": 4,
+        "linematch": "def __add_import_name(self, node: Union[ast.Import, ast.ImportFrom]):",
+        "context": "\n    def __add_def_name(self, node: Union[ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef]):\n        self.names.add(node.name)\n\n    def __add_import_name(self, node: Union[ast.Import, ast.ImportFrom]):\n        for name in node.names:\n            if name.asname:\n                self.names.add(name.asname)\n            else:\n                self.names.add(name.name.split('.')[0])",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 37,
+        "coloffset": 8,
+        "linematch": "for name in node.names:",
+        "context": "    def __add_def_name(self, node: Union[ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef]):\n        self.names.add(node.name)\n\n    def __add_import_name(self, node: Union[ast.Import, ast.ImportFrom]):\n        for name in node.names:\n            if name.asname:\n                self.names.add(name.asname)\n            else:\n                self.names.add(name.name.split('.')[0])\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #11",
+        "line": 41,
+        "description": [
+          "                self.names.add(name.name.split('.')[0])"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -38,7 +38,7 @@\n             if name.asname:\n                 self.names.add(name.asname)\n             else:\n-                self.names.add(name.name.split('.')[0])\n+                self.names.add(name.name.split('XX.XX')[0])\n \n     def visit_Name(self, node: ast.Name) -> Any:\n         if isinstance(node.ctx, (ast.Store, ast.Del)):\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #12",
+        "line": 41,
+        "description": [
+          "                self.names.add(name.name.split('.')[0])"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -38,7 +38,7 @@\n             if name.asname:\n                 self.names.add(name.asname)\n             else:\n-                self.names.add(name.name.split('.')[0])\n+                self.names.add(name.name.split('.')[1])\n \n     def visit_Name(self, node: ast.Name) -> Any:\n         if isinstance(node.ctx, (ast.Store, ast.Del)):\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "visit_Name",
+    "function_scope": "43-45",
+    "patterns": [
+      {
+        "lineno": 44,
+        "coloffset": 8,
+        "linematch": "if isinstance(node.ctx, (ast.Store, ast.Del)):",
+        "context": "            else:\n                self.names.add(name.name.split('.')[0])\n\n    def visit_Name(self, node: ast.Name) -> Any:\n        if isinstance(node.ctx, (ast.Store, ast.Del)):\n            self.names.add(node.id)\n\n    def visit_AnnAssign(self, node: ast.AnnAssign) -> Any:\n        self.names.add(node.target.id)\n",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 43,
+        "coloffset": 4,
+        "linematch": "def visit_Name(self, node: ast.Name) -> Any:",
+        "context": "                self.names.add(name.asname)\n            else:\n                self.names.add(name.name.split('.')[0])\n\n    def visit_Name(self, node: ast.Name) -> Any:\n        if isinstance(node.ctx, (ast.Store, ast.Del)):\n            self.names.add(node.id)\n\n    def visit_AnnAssign(self, node: ast.AnnAssign) -> Any:\n        self.names.add(node.target.id)",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 44,
+        "coloffset": 8,
+        "linematch": "if isinstance(node.ctx, (ast.Store, ast.Del)):",
+        "context": "            else:\n                self.names.add(name.name.split('.')[0])\n\n    def visit_Name(self, node: ast.Name) -> Any:\n        if isinstance(node.ctx, (ast.Store, ast.Del)):\n            self.names.add(node.id)\n\n    def visit_AnnAssign(self, node: ast.AnnAssign) -> Any:\n        self.names.add(node.target.id)\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "visit_AnnAssign",
+    "function_scope": "63-69",
+    "patterns": [
+      {
+        "lineno": 64,
+        "coloffset": 8,
+        "linematch": "if node.value is None:",
+        "context": "    def __stop(self, node):\n        return node\n\n    def visit_AnnAssign(self, node: ast.AnnAssign) -> Any:\n        if node.value is None:\n            return None\n        return ast.Assign(\n            targets=[node.target],\n            value=node.value,\n        )",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 64,
+        "coloffset": 11,
+        "linematch": "if node.value is None:",
+        "context": "    def __stop(self, node):\n        return node\n\n    def visit_AnnAssign(self, node: ast.AnnAssign) -> Any:\n        if node.value is None:\n            return None\n        return ast.Assign(\n            targets=[node.target],\n            value=node.value,\n        )",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 63,
+        "coloffset": 4,
+        "linematch": "def visit_AnnAssign(self, node: ast.AnnAssign) -> Any:",
+        "context": "class RewriteExposedAnnotatedNames(ast.NodeTransformer):\n    def __stop(self, node):\n        return node\n\n    def visit_AnnAssign(self, node: ast.AnnAssign) -> Any:\n        if node.value is None:\n            return None\n        return ast.Assign(\n            targets=[node.target],\n            value=node.value,",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 64,
+        "coloffset": 8,
+        "linematch": "if node.value is None:",
+        "context": "    def __stop(self, node):\n        return node\n\n    def visit_AnnAssign(self, node: ast.AnnAssign) -> Any:\n        if node.value is None:\n            return None\n        return ast.Assign(\n            targets=[node.target],\n            value=node.value,\n        )",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 66,
+        "coloffset": 8,
+        "linematch": "return ast.Assign(",
+        "context": "\n    def visit_AnnAssign(self, node: ast.AnnAssign) -> Any:\n        if node.value is None:\n            return None\n        return ast.Assign(\n            targets=[node.target],\n            value=node.value,\n        )\n\n    visit_ClassDef = __stop",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #18",
+        "line": 64,
+        "description": [
+          "        if node.value is None:"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -61,7 +61,7 @@\n         return node\n \n     def visit_AnnAssign(self, node: ast.AnnAssign) -> Any:\n-        if node.value is None:\n+        if node.value is not None:\n             return None\n         return ast.Assign(\n             targets=[node.target],\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "test_version",
+    "function_scope": "10-11",
+    "patterns": [
+      {
+        "lineno": 10,
+        "coloffset": 0,
+        "linematch": "def test_version():",
+        "context": "\nfrom src import __version__\n\n\ndef test_version():\n    assert __version__ == '0.1.1'\n\n\n@pytest.mark.asyncio\nasync def test_simple_value():",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 11,
+        "coloffset": 4,
+        "linematch": "assert __version__ == '0.1.1'",
+        "context": "from src import __version__\n\n\ndef test_version():\n    assert __version__ == '0.1.1'\n\n\n@pytest.mark.asyncio\nasync def test_simple_value():\n    scope = dict(items=[])",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 11,
+        "coloffset": 4,
+        "linematch": "assert __version__ == '0.1.1'",
+        "context": "from src import __version__\n\n\ndef test_version():\n    assert __version__ == '0.1.1'\n\n\n@pytest.mark.asyncio\nasync def test_simple_value():\n    scope = dict(items=[])",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 11,
+        "coloffset": 4,
+        "linematch": "assert __version__ == '0.1.1'",
+        "context": "from src import __version__\n\n\ndef test_version():\n    assert __version__ == '0.1.1'\n\n\n@pytest.mark.asyncio\nasync def test_simple_value():\n    scope = dict(items=[])",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #1",
+        "line": 11,
+        "description": [
+          "        self.has_exposed_async = False"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -8,7 +8,7 @@\n     has_exposed_async: bool\n \n     def __init__(self):\n-        self.has_exposed_async = False\n+        self.has_exposed_async = True\n \n     def __stop(*_):\n         ...\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #2",
+        "line": 11,
+        "description": [
+          "        self.has_exposed_async = False"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -8,7 +8,7 @@\n     has_exposed_async: bool\n \n     def __init__(self):\n-        self.has_exposed_async = False\n+        self.has_exposed_async = None\n \n     def __stop(*_):\n         ...\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "foo",
+    "function_scope": "109-110",
+    "patterns": [
+      {
+        "lineno": 109,
+        "coloffset": 4,
+        "linematch": "def foo():",
+        "context": "async def test_await_in_for():\n    import contextlib\n\n    @contextlib.contextmanager\n    def foo():\n        yield 1\n\n    scope = dict(foo=foo)\n    await src(dedent('''\n    with foo() as f:",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 110,
+        "coloffset": 8,
+        "linematch": "yield 1",
+        "context": "    import contextlib\n\n    @contextlib.contextmanager\n    def foo():\n        yield 1\n\n    scope = dict(foo=foo)\n    await src(dedent('''\n    with foo() as f:\n        import asyncio",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "has_exposed_async",
+    "function_scope": "76-79",
+    "patterns": [
+      {
+        "lineno": 76,
+        "coloffset": 0,
+        "linematch": "def has_exposed_async(node: ast.AST) -> bool:",
+        "context": "    visit_FunctionDef = __stop\n    visit_AsyncFunctionDef = __stop\n\n\ndef has_exposed_async(node: ast.AST) -> bool:\n    visitor = DiscoverExposedAsync()\n    visitor.visit(node)\n    return visitor.has_exposed_async\n\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 77,
+        "coloffset": 4,
+        "linematch": "visitor = DiscoverExposedAsync()",
+        "context": "    visit_AsyncFunctionDef = __stop\n\n\ndef has_exposed_async(node: ast.AST) -> bool:\n    visitor = DiscoverExposedAsync()\n    visitor.visit(node)\n    return visitor.has_exposed_async\n\n\ndef exposed_names_with_store(node: ast.AST) -> Set[str]:",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 78,
+        "coloffset": 4,
+        "linematch": "visitor.visit(node)",
+        "context": "\n\ndef has_exposed_async(node: ast.AST) -> bool:\n    visitor = DiscoverExposedAsync()\n    visitor.visit(node)\n    return visitor.has_exposed_async\n\n\ndef exposed_names_with_store(node: ast.AST) -> Set[str]:\n    visitor = DiscoverExposedNameStores()",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 79,
+        "coloffset": 4,
+        "linematch": "return visitor.has_exposed_async",
+        "context": "\ndef has_exposed_async(node: ast.AST) -> bool:\n    visitor = DiscoverExposedAsync()\n    visitor.visit(node)\n    return visitor.has_exposed_async\n\n\ndef exposed_names_with_store(node: ast.AST) -> Set[str]:\n    visitor = DiscoverExposedNameStores()\n    visitor.visit(node)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #22",
+        "line": 77,
+        "description": [
+          "    visitor = DiscoverExposedAsync()"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -74,7 +74,7 @@\n \n \n def has_exposed_async(node: ast.AST) -> bool:\n-    visitor = DiscoverExposedAsync()\n+    visitor = None\n     visitor.visit(node)\n     return visitor.has_exposed_async\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "exposed_names_with_store",
+    "function_scope": "82-85",
+    "patterns": [
+      {
+        "lineno": 82,
+        "coloffset": 0,
+        "linematch": "def exposed_names_with_store(node: ast.AST) -> Set[str]:",
+        "context": "    visitor.visit(node)\n    return visitor.has_exposed_async\n\n\ndef exposed_names_with_store(node: ast.AST) -> Set[str]:\n    visitor = DiscoverExposedNameStores()\n    visitor.visit(node)\n    return visitor.names\n\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 83,
+        "coloffset": 4,
+        "linematch": "visitor = DiscoverExposedNameStores()",
+        "context": "    return visitor.has_exposed_async\n\n\ndef exposed_names_with_store(node: ast.AST) -> Set[str]:\n    visitor = DiscoverExposedNameStores()\n    visitor.visit(node)\n    return visitor.names\n\n\nasync def aeval(code, globals, locals):",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 84,
+        "coloffset": 4,
+        "linematch": "visitor.visit(node)",
+        "context": "\n\ndef exposed_names_with_store(node: ast.AST) -> Set[str]:\n    visitor = DiscoverExposedNameStores()\n    visitor.visit(node)\n    return visitor.names\n\n\nasync def aeval(code, globals, locals):\n    node = ast.parse(code)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 85,
+        "coloffset": 4,
+        "linematch": "return visitor.names",
+        "context": "\ndef exposed_names_with_store(node: ast.AST) -> Set[str]:\n    visitor = DiscoverExposedNameStores()\n    visitor.visit(node)\n    return visitor.names\n\n\nasync def aeval(code, globals, locals):\n    node = ast.parse(code)\n    if not node.body:",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #23",
+        "line": 83,
+        "description": [
+          "    visitor = DiscoverExposedNameStores()"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -80,7 +80,7 @@\n \n \n def exposed_names_with_store(node: ast.AST) -> Set[str]:\n-    visitor = DiscoverExposedNameStores()\n+    visitor = None\n     visitor.visit(node)\n     return visitor.names\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "__found",
+    "function_scope": "16-17",
+    "patterns": [
+      {
+        "lineno": 16,
+        "coloffset": 4,
+        "linematch": "def __found(self, _):",
+        "context": "\n    def __stop(*_):\n        ...\n\n    def __found(self, _):\n        self.has_exposed_async = True\n\n    visit_FunctionDef = __stop\n    visit_AsyncFunctionDef = __stop\n    visit_Await = __found",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 17,
+        "coloffset": 8,
+        "linematch": "self.has_exposed_async = True",
+        "context": "    def __stop(*_):\n        ...\n\n    def __found(self, _):\n        self.has_exposed_async = True\n\n    visit_FunctionDef = __stop\n    visit_AsyncFunctionDef = __stop\n    visit_Await = __found\n    visit_AsyncWith = __found",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #3",
+        "line": 17,
+        "description": [
+          "        self.has_exposed_async = True"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -14,7 +14,7 @@\n         ...\n \n     def __found(self, _):\n-        self.has_exposed_async = True\n+        self.has_exposed_async = False\n \n     visit_FunctionDef = __stop\n     visit_AsyncFunctionDef = __stop\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #4",
+        "line": 17,
+        "description": [
+          "        self.has_exposed_async = True"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -14,7 +14,7 @@\n         ...\n \n     def __found(self, _):\n-        self.has_exposed_async = True\n+        self.has_exposed_async = None\n \n     visit_FunctionDef = __stop\n     visit_AsyncFunctionDef = __stop\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "__init__",
+    "function_scope": "29-30",
+    "patterns": [
+      {
+        "lineno": 29,
+        "coloffset": 4,
+        "linematch": "def __init__(self):",
+        "context": "\nclass DiscoverExposedNameStores(ast.NodeVisitor):\n    names: Set[str]\n\n    def __init__(self):\n        self.names = set()\n\n\n    def __add_def_name(self, node: Union[ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef]):\n        self.names.add(node.name)",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 30,
+        "coloffset": 8,
+        "linematch": "self.names = set()",
+        "context": "class DiscoverExposedNameStores(ast.NodeVisitor):\n    names: Set[str]\n\n    def __init__(self):\n        self.names = set()\n\n\n    def __add_def_name(self, node: Union[ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef]):\n        self.names.add(node.name)\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #10",
+        "line": 30,
+        "description": [
+          "        self.names = set()"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/aeval.py\n+++ src/aeval.py\n@@ -27,7 +27,7 @@\n     names: Set[str]\n \n     def __init__(self):\n-        self.names = set()\n+        self.names = None\n \n \n     def __add_def_name(self, node: Union[ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef]):\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "__add_def_name",
+    "function_scope": "33-34",
+    "patterns": [
+      {
+        "lineno": 33,
+        "coloffset": 4,
+        "linematch": "def __add_def_name(self, node: Union[ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef]):",
+        "context": "    def __init__(self):\n        self.names = set()\n\n\n    def __add_def_name(self, node: Union[ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef]):\n        self.names.add(node.name)\n\n    def __add_import_name(self, node: Union[ast.Import, ast.ImportFrom]):\n        for name in node.names:\n            if name.asname:",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 34,
+        "coloffset": 8,
+        "linematch": "self.names.add(node.name)",
+        "context": "        self.names = set()\n\n\n    def __add_def_name(self, node: Union[ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef]):\n        self.names.add(node.name)\n\n    def __add_import_name(self, node: Union[ast.Import, ast.ImportFrom]):\n        for name in node.names:\n            if name.asname:\n                self.names.add(name.asname)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "__stop",
+    "function_scope": "60-61",
+    "patterns": [
+      {
+        "lineno": 60,
+        "coloffset": 4,
+        "linematch": "def __stop(self, node):",
+        "context": "    visit_AsyncFunctionDef = __add_def_name\n\n\nclass RewriteExposedAnnotatedNames(ast.NodeTransformer):\n    def __stop(self, node):\n        return node\n\n    def visit_AnnAssign(self, node: ast.AnnAssign) -> Any:\n        if node.value is None:\n            return None",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 61,
+        "coloffset": 8,
+        "linematch": "return node",
+        "context": "\n\nclass RewriteExposedAnnotatedNames(ast.NodeTransformer):\n    def __stop(self, node):\n        return node\n\n    def visit_AnnAssign(self, node: ast.AnnAssign) -> Any:\n        if node.value is None:\n            return None\n        return ast.Assign(",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  }
+]
