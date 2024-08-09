@@ -1,0 +1,556 @@
+[
+  {
+    "function_name": "test_generate_namespace_based_uuid",
+    "function_scope": "23-30",
+    "patterns": [
+      {
+        "lineno": 30,
+        "coloffset": 11,
+        "linematch": "assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "context": "    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)\n    assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 30,
+        "coloffset": 11,
+        "linematch": "assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "context": "    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)\n    assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 30,
+        "coloffset": 11,
+        "linematch": "assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "context": "    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)\n    assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 23,
+        "coloffset": 0,
+        "linematch": "def test_generate_namespace_based_uuid():",
+        "context": "    time_based_uuid = gu.generate_time_based_uuid()\n    assert uuid.UUID(time_based_uuid.hex).version == 1\n\n\ndef test_generate_namespace_based_uuid():\n    \"\"\"\n    Unit testing - generate namespace based uuid\n    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 30,
+        "coloffset": 4,
+        "linematch": "assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "context": "    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)\n    assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 24,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "    assert uuid.UUID(time_based_uuid.hex).version == 1\n\n\ndef test_generate_namespace_based_uuid():\n    \"\"\"\n    Unit testing - generate namespace based uuid\n    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 27,
+        "coloffset": 4,
+        "linematch": "namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")",
+        "context": "def test_generate_namespace_based_uuid():\n    \"\"\"\n    Unit testing - generate namespace based uuid\n    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)\n    assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 28,
+        "coloffset": 4,
+        "linematch": "name = \"example.com\"",
+        "context": "    \"\"\"\n    Unit testing - generate namespace based uuid\n    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)\n    assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 29,
+        "coloffset": 4,
+        "linematch": "namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)",
+        "context": "    Unit testing - generate namespace based uuid\n    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)\n    assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 30,
+        "coloffset": 4,
+        "linematch": "assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "context": "    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)\n    assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 24,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "    assert uuid.UUID(time_based_uuid.hex).version == 1\n\n\ndef test_generate_namespace_based_uuid():\n    \"\"\"\n    Unit testing - generate namespace based uuid\n    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 27,
+        "coloffset": 4,
+        "linematch": "namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")",
+        "context": "def test_generate_namespace_based_uuid():\n    \"\"\"\n    Unit testing - generate namespace based uuid\n    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)\n    assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 28,
+        "coloffset": 4,
+        "linematch": "name = \"example.com\"",
+        "context": "    \"\"\"\n    Unit testing - generate namespace based uuid\n    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)\n    assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 29,
+        "coloffset": 4,
+        "linematch": "namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)",
+        "context": "    Unit testing - generate namespace based uuid\n    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)\n    assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 30,
+        "coloffset": 4,
+        "linematch": "assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "context": "    \"\"\"\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n    namespace_based_uuid = gu.generate_namespace_based_uuid(namespace, name)\n    assert uuid.UUID(namespace_based_uuid.hex).version == 5",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "test_generate_random_uuid",
+    "function_scope": "7-12",
+    "patterns": [
+      {
+        "lineno": 7,
+        "coloffset": 0,
+        "linematch": "def test_generate_random_uuid():",
+        "context": "\nfrom src import generate_uuids as gu\n\n\ndef test_generate_random_uuid():\n    \"\"\"\n    Unit testing - generate random uuid\n    \"\"\"\n    random_uuid = gu.generate_random_uuid()\n    assert uuid.UUID(random_uuid.hex).version == 4",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 12,
+        "coloffset": 4,
+        "linematch": "assert uuid.UUID(random_uuid.hex).version == 4",
+        "context": "    \"\"\"\n    Unit testing - generate random uuid\n    \"\"\"\n    random_uuid = gu.generate_random_uuid()\n    assert uuid.UUID(random_uuid.hex).version == 4\n\n\ndef test_generate_time_based_uuid():\n    \"\"\"\n    Unit testing - generate time based uuid",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 8,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "from src import generate_uuids as gu\n\n\ndef test_generate_random_uuid():\n    \"\"\"\n    Unit testing - generate random uuid\n    \"\"\"\n    random_uuid = gu.generate_random_uuid()\n    assert uuid.UUID(random_uuid.hex).version == 4\n",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 11,
+        "coloffset": 4,
+        "linematch": "random_uuid = gu.generate_random_uuid()",
+        "context": "def test_generate_random_uuid():\n    \"\"\"\n    Unit testing - generate random uuid\n    \"\"\"\n    random_uuid = gu.generate_random_uuid()\n    assert uuid.UUID(random_uuid.hex).version == 4\n\n\ndef test_generate_time_based_uuid():\n    \"\"\"",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 12,
+        "coloffset": 4,
+        "linematch": "assert uuid.UUID(random_uuid.hex).version == 4",
+        "context": "    \"\"\"\n    Unit testing - generate random uuid\n    \"\"\"\n    random_uuid = gu.generate_random_uuid()\n    assert uuid.UUID(random_uuid.hex).version == 4\n\n\ndef test_generate_time_based_uuid():\n    \"\"\"\n    Unit testing - generate time based uuid",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 8,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "from src import generate_uuids as gu\n\n\ndef test_generate_random_uuid():\n    \"\"\"\n    Unit testing - generate random uuid\n    \"\"\"\n    random_uuid = gu.generate_random_uuid()\n    assert uuid.UUID(random_uuid.hex).version == 4\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 11,
+        "coloffset": 4,
+        "linematch": "random_uuid = gu.generate_random_uuid()",
+        "context": "def test_generate_random_uuid():\n    \"\"\"\n    Unit testing - generate random uuid\n    \"\"\"\n    random_uuid = gu.generate_random_uuid()\n    assert uuid.UUID(random_uuid.hex).version == 4\n\n\ndef test_generate_time_based_uuid():\n    \"\"\"",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 12,
+        "coloffset": 4,
+        "linematch": "assert uuid.UUID(random_uuid.hex).version == 4",
+        "context": "    \"\"\"\n    Unit testing - generate random uuid\n    \"\"\"\n    random_uuid = gu.generate_random_uuid()\n    assert uuid.UUID(random_uuid.hex).version == 4\n\n\ndef test_generate_time_based_uuid():\n    \"\"\"\n    Unit testing - generate time based uuid",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "test_generate_time_based_uuid",
+    "function_scope": "15-20",
+    "patterns": [
+      {
+        "lineno": 15,
+        "coloffset": 0,
+        "linematch": "def test_generate_time_based_uuid():",
+        "context": "    random_uuid = gu.generate_random_uuid()\n    assert uuid.UUID(random_uuid.hex).version == 4\n\n\ndef test_generate_time_based_uuid():\n    \"\"\"\n    Unit testing - generate time based uuid\n    \"\"\"\n    time_based_uuid = gu.generate_time_based_uuid()\n    assert uuid.UUID(time_based_uuid.hex).version == 1",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 20,
+        "coloffset": 4,
+        "linematch": "assert uuid.UUID(time_based_uuid.hex).version == 1",
+        "context": "    \"\"\"\n    Unit testing - generate time based uuid\n    \"\"\"\n    time_based_uuid = gu.generate_time_based_uuid()\n    assert uuid.UUID(time_based_uuid.hex).version == 1\n\n\ndef test_generate_namespace_based_uuid():\n    \"\"\"\n    Unit testing - generate namespace based uuid",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 16,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "    assert uuid.UUID(random_uuid.hex).version == 4\n\n\ndef test_generate_time_based_uuid():\n    \"\"\"\n    Unit testing - generate time based uuid\n    \"\"\"\n    time_based_uuid = gu.generate_time_based_uuid()\n    assert uuid.UUID(time_based_uuid.hex).version == 1\n",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 19,
+        "coloffset": 4,
+        "linematch": "time_based_uuid = gu.generate_time_based_uuid()",
+        "context": "def test_generate_time_based_uuid():\n    \"\"\"\n    Unit testing - generate time based uuid\n    \"\"\"\n    time_based_uuid = gu.generate_time_based_uuid()\n    assert uuid.UUID(time_based_uuid.hex).version == 1\n\n\ndef test_generate_namespace_based_uuid():\n    \"\"\"",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 20,
+        "coloffset": 4,
+        "linematch": "assert uuid.UUID(time_based_uuid.hex).version == 1",
+        "context": "    \"\"\"\n    Unit testing - generate time based uuid\n    \"\"\"\n    time_based_uuid = gu.generate_time_based_uuid()\n    assert uuid.UUID(time_based_uuid.hex).version == 1\n\n\ndef test_generate_namespace_based_uuid():\n    \"\"\"\n    Unit testing - generate namespace based uuid",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 16,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "    assert uuid.UUID(random_uuid.hex).version == 4\n\n\ndef test_generate_time_based_uuid():\n    \"\"\"\n    Unit testing - generate time based uuid\n    \"\"\"\n    time_based_uuid = gu.generate_time_based_uuid()\n    assert uuid.UUID(time_based_uuid.hex).version == 1\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 19,
+        "coloffset": 4,
+        "linematch": "time_based_uuid = gu.generate_time_based_uuid()",
+        "context": "def test_generate_time_based_uuid():\n    \"\"\"\n    Unit testing - generate time based uuid\n    \"\"\"\n    time_based_uuid = gu.generate_time_based_uuid()\n    assert uuid.UUID(time_based_uuid.hex).version == 1\n\n\ndef test_generate_namespace_based_uuid():\n    \"\"\"",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 20,
+        "coloffset": 4,
+        "linematch": "assert uuid.UUID(time_based_uuid.hex).version == 1",
+        "context": "    \"\"\"\n    Unit testing - generate time based uuid\n    \"\"\"\n    time_based_uuid = gu.generate_time_based_uuid()\n    assert uuid.UUID(time_based_uuid.hex).version == 1\n\n\ndef test_generate_namespace_based_uuid():\n    \"\"\"\n    Unit testing - generate namespace based uuid",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #1",
+        "line": 19,
+        "description": [
+          "    random_uuid = uuid.uuid4()"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #2",
+        "line": 20,
+        "description": [
+          "    print(\"Random UUID (version 4):\", random_uuid)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/generate_uuids.py\n+++ src/generate_uuids.py\n@@ -17,7 +17,7 @@\n     \"\"\"\n     # Generate a random UUID (version 4)\n     random_uuid = uuid.uuid4()\n-    print(\"Random UUID (version 4):\", random_uuid)\n+    print(\"XXRandom UUID (version 4):XX\", random_uuid)\n     return random_uuid\n \n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 50.0
+  },
+  {
+    "function_name": "generate_random_uuid",
+    "function_scope": "13-21",
+    "patterns": [
+      {
+        "lineno": 13,
+        "coloffset": 0,
+        "linematch": "def generate_random_uuid():",
+        "context": "\nimport uuid\n\n\ndef generate_random_uuid():\n    \"\"\"\n    Generate random uuid\n    @return: uuid\n    \"\"\"\n    # Generate a random UUID (version 4)",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "import uuid\n\n\ndef generate_random_uuid():\n    \"\"\"\n    Generate random uuid\n    @return: uuid\n    \"\"\"\n    # Generate a random UUID (version 4)\n    random_uuid = uuid.uuid4()",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 19,
+        "coloffset": 4,
+        "linematch": "random_uuid = uuid.uuid4()",
+        "context": "    Generate random uuid\n    @return: uuid\n    \"\"\"\n    # Generate a random UUID (version 4)\n    random_uuid = uuid.uuid4()\n    print(\"Random UUID (version 4):\", random_uuid)\n    return random_uuid\n\n\ndef generate_time_based_uuid():",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 20,
+        "coloffset": 4,
+        "linematch": "print(\"Random UUID (version 4):\", random_uuid)",
+        "context": "    @return: uuid\n    \"\"\"\n    # Generate a random UUID (version 4)\n    random_uuid = uuid.uuid4()\n    print(\"Random UUID (version 4):\", random_uuid)\n    return random_uuid\n\n\ndef generate_time_based_uuid():\n    \"\"\"",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 21,
+        "coloffset": 4,
+        "linematch": "return random_uuid",
+        "context": "    \"\"\"\n    # Generate a random UUID (version 4)\n    random_uuid = uuid.uuid4()\n    print(\"Random UUID (version 4):\", random_uuid)\n    return random_uuid\n\n\ndef generate_time_based_uuid():\n    \"\"\"\n    geterating time base uuid",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #1",
+        "line": 19,
+        "description": [
+          "    random_uuid = uuid.uuid4()"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #2",
+        "line": 20,
+        "description": [
+          "    print(\"Random UUID (version 4):\", random_uuid)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/generate_uuids.py\n+++ src/generate_uuids.py\n@@ -17,7 +17,7 @@\n     \"\"\"\n     # Generate a random UUID (version 4)\n     random_uuid = uuid.uuid4()\n-    print(\"Random UUID (version 4):\", random_uuid)\n+    print(\"XXRandom UUID (version 4):XX\", random_uuid)\n     return random_uuid\n \n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 50.0
+  },
+  {
+    "function_name": "generate_time_based_uuid",
+    "function_scope": "24-33",
+    "patterns": [
+      {
+        "lineno": 24,
+        "coloffset": 0,
+        "linematch": "def generate_time_based_uuid():",
+        "context": "    print(\"Random UUID (version 4):\", random_uuid)\n    return random_uuid\n\n\ndef generate_time_based_uuid():\n    \"\"\"\n    geterating time base uuid\n\n    @return: uuid\n    \"\"\"",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 25,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "    return random_uuid\n\n\ndef generate_time_based_uuid():\n    \"\"\"\n    geterating time base uuid\n\n    @return: uuid\n    \"\"\"\n    # Generate a UUID based on the host's MAC address and the current time (version 1)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 31,
+        "coloffset": 4,
+        "linematch": "time_based_uuid = uuid.uuid1()",
+        "context": "\n    @return: uuid\n    \"\"\"\n    # Generate a UUID based on the host's MAC address and the current time (version 1)\n    time_based_uuid = uuid.uuid1()\n    print(\"Time-based UUID (version 1):\", time_based_uuid)\n    return time_based_uuid\n\n\ndef generate_namespace_based_uuid(namespace, name):",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 32,
+        "coloffset": 4,
+        "linematch": "print(\"Time-based UUID (version 1):\", time_based_uuid)",
+        "context": "    @return: uuid\n    \"\"\"\n    # Generate a UUID based on the host's MAC address and the current time (version 1)\n    time_based_uuid = uuid.uuid1()\n    print(\"Time-based UUID (version 1):\", time_based_uuid)\n    return time_based_uuid\n\n\ndef generate_namespace_based_uuid(namespace, name):\n    \"\"\"",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 33,
+        "coloffset": 4,
+        "linematch": "return time_based_uuid",
+        "context": "    \"\"\"\n    # Generate a UUID based on the host's MAC address and the current time (version 1)\n    time_based_uuid = uuid.uuid1()\n    print(\"Time-based UUID (version 1):\", time_based_uuid)\n    return time_based_uuid\n\n\ndef generate_namespace_based_uuid(namespace, name):\n    \"\"\"\n    Generate a UUID based on a namespace and a name (version 5)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #3",
+        "line": 31,
+        "description": [
+          "    time_based_uuid = uuid.uuid1()"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #4",
+        "line": 32,
+        "description": [
+          "    print(\"Time-based UUID (version 1):\", time_based_uuid)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/generate_uuids.py\n+++ src/generate_uuids.py\n@@ -29,7 +29,7 @@\n     \"\"\"\n     # Generate a UUID based on the host's MAC address and the current time (version 1)\n     time_based_uuid = uuid.uuid1()\n-    print(\"Time-based UUID (version 1):\", time_based_uuid)\n+    print(\"XXTime-based UUID (version 1):XX\", time_based_uuid)\n     return time_based_uuid\n \n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 50.0
+  },
+  {
+    "function_name": "generate_namespace_based_uuid",
+    "function_scope": "36-49",
+    "patterns": [
+      {
+        "lineno": 36,
+        "coloffset": 0,
+        "linematch": "def generate_namespace_based_uuid(namespace, name):",
+        "context": "    print(\"Time-based UUID (version 1):\", time_based_uuid)\n    return time_based_uuid\n\n\ndef generate_namespace_based_uuid(namespace, name):\n    \"\"\"\n    Generate a UUID based on a namespace and a name (version 5)\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 37,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "    return time_based_uuid\n\n\ndef generate_namespace_based_uuid(namespace, name):\n    \"\"\"\n    Generate a UUID based on a namespace and a name (version 5)\n    namespace = uuid.UUID(\"6ba7b810-9dad-11d1-80b4-00c04fd430c8\")\n    name = \"example.com\"\n\n    @param namespace:str",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 47,
+        "coloffset": 4,
+        "linematch": "namespace_based_uuid = uuid.uuid5(namespace, name)",
+        "context": "    @name str\n\n    @return: uuid\n    \"\"\"\n    namespace_based_uuid = uuid.uuid5(namespace, name)\n    print(\"Namespace-based UUID (version 5):\", namespace_based_uuid)\n    return namespace_based_uuid",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 48,
+        "coloffset": 4,
+        "linematch": "print(\"Namespace-based UUID (version 5):\", namespace_based_uuid)",
+        "context": "\n    @return: uuid\n    \"\"\"\n    namespace_based_uuid = uuid.uuid5(namespace, name)\n    print(\"Namespace-based UUID (version 5):\", namespace_based_uuid)\n    return namespace_based_uuid",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 49,
+        "coloffset": 4,
+        "linematch": "return namespace_based_uuid",
+        "context": "    @return: uuid\n    \"\"\"\n    namespace_based_uuid = uuid.uuid5(namespace, name)\n    print(\"Namespace-based UUID (version 5):\", namespace_based_uuid)\n    return namespace_based_uuid",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #5",
+        "line": 47,
+        "description": [
+          "    namespace_based_uuid = uuid.uuid5(namespace, name)"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #6",
+        "line": 48,
+        "description": [
+          "    print(\"Namespace-based UUID (version 5):\", namespace_based_uuid)"
+        ],
+        "failure": [
+          {
+            "inner": "--- src/generate_uuids.py\n+++ src/generate_uuids.py\n@@ -45,6 +45,6 @@\n     @return: uuid\n     \"\"\"\n     namespace_based_uuid = uuid.uuid5(namespace, name)\n-    print(\"Namespace-based UUID (version 5):\", namespace_based_uuid)\n+    print(\"XXNamespace-based UUID (version 5):XX\", namespace_based_uuid)\n     return namespace_based_uuid\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 50.0
+  }
+]

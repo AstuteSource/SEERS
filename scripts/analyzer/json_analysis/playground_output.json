@@ -1,0 +1,1166 @@
+[
+  {
+    "function_name": "get_session",
+    "function_scope": "10-13",
+    "patterns": [
+      {
+        "lineno": 11,
+        "coloffset": 4,
+        "linematch": "if not hasattr(thread_local, \"session\"):",
+        "context": "thread_local = threading.local()\n\n\ndef get_session():\n    if not hasattr(thread_local, \"session\"):\n        thread_local.session = requests.Session()\n    return thread_local.session\n\n\ndef download_site(url):",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 10,
+        "coloffset": 0,
+        "linematch": "def get_session():",
+        "context": "\nthread_local = threading.local()\n\n\ndef get_session():\n    if not hasattr(thread_local, \"session\"):\n        thread_local.session = requests.Session()\n    return thread_local.session\n\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 11,
+        "coloffset": 4,
+        "linematch": "if not hasattr(thread_local, \"session\"):",
+        "context": "thread_local = threading.local()\n\n\ndef get_session():\n    if not hasattr(thread_local, \"session\"):\n        thread_local.session = requests.Session()\n    return thread_local.session\n\n\ndef download_site(url):",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 13,
+        "coloffset": 4,
+        "linematch": "return thread_local.session",
+        "context": "\ndef get_session():\n    if not hasattr(thread_local, \"session\"):\n        thread_local.session = requests.Session()\n    return thread_local.session\n\n\ndef download_site(url):\n    session = get_session()\n    session.get(url)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "test_print",
+    "function_scope": "12-13",
+    "patterns": [
+      {
+        "lineno": 13,
+        "coloffset": 11,
+        "linematch": "assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "context": "    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 13,
+        "coloffset": 11,
+        "linematch": "assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "context": "    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 13,
+        "coloffset": 11,
+        "linematch": "assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "context": "    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 12,
+        "coloffset": 0,
+        "linematch": "def test_print():",
+        "context": "def test_multiplier():\n    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 13,
+        "coloffset": 4,
+        "linematch": "assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "context": "    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 13,
+        "coloffset": 4,
+        "linematch": "assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "context": "    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 13,
+        "coloffset": 4,
+        "linematch": "assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "context": "    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 13,
+        "coloffset": 4,
+        "linematch": "assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "context": "    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": "//FunctionDef[starts-with(@name, \"test_\")]//Assert[count(.//Call[func/Name]) > 0]",
+        "check_id": "UNUSED001",
+        "check_name": "unused-variables"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "test_incrementer",
+    "function_scope": "4-5",
+    "patterns": [
+      {
+        "lineno": 4,
+        "coloffset": 0,
+        "linematch": "def test_incrementer():",
+        "context": "from ultiplayground.closures import increment_by_ten, multiply_five, say_cheese\n\n\ndef test_incrementer():\n    assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"\n\n\ndef test_multiplier():\n    assert multiply_five(10) == 50, \"Multiplier is invalid!\"",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"",
+        "context": "from ultiplayground.closures import increment_by_ten, multiply_five, say_cheese\n\n\ndef test_incrementer():\n    assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"\n\n\ndef test_multiplier():\n    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"",
+        "context": "from ultiplayground.closures import increment_by_ten, multiply_five, say_cheese\n\n\ndef test_incrementer():\n    assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"\n\n\ndef test_multiplier():\n    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"",
+        "context": "from ultiplayground.closures import increment_by_ten, multiply_five, say_cheese\n\n\ndef test_incrementer():\n    assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"\n\n\ndef test_multiplier():\n    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"",
+        "context": "from ultiplayground.closures import increment_by_ten, multiply_five, say_cheese\n\n\ndef test_incrementer():\n    assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"\n\n\ndef test_multiplier():\n    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n",
+        "pattern": "//FunctionDef[starts-with(@name, \"test_\")]//Assert[count(.//Call[func/Name]) > 0]",
+        "check_id": "UNUSED001",
+        "check_name": "unused-variables"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #203",
+        "line": 5,
+        "description": [
+          "    assert isinstance(__version__, str), \"The version value is invalid!\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_playground.py\n+++ tests/test_playground.py\n@@ -2,7 +2,7 @@\n \n \n def test_version():\n-    assert isinstance(__version__, str), \"The version value is invalid!\"\n+    assert isinstance(__version__, str), \"XXThe version value is invalid!XX\"\n \n \n def test_authors():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "test_multiplier",
+    "function_scope": "8-9",
+    "patterns": [
+      {
+        "lineno": 8,
+        "coloffset": 0,
+        "linematch": "def test_multiplier():",
+        "context": "def test_incrementer():\n    assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"\n\n\ndef test_multiplier():\n    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 9,
+        "coloffset": 4,
+        "linematch": "assert multiply_five(10) == 50, \"Multiplier is invalid!\"",
+        "context": "    assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"\n\n\ndef test_multiplier():\n    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 9,
+        "coloffset": 4,
+        "linematch": "assert multiply_five(10) == 50, \"Multiplier is invalid!\"",
+        "context": "    assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"\n\n\ndef test_multiplier():\n    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 9,
+        "coloffset": 4,
+        "linematch": "assert multiply_five(10) == 50, \"Multiplier is invalid!\"",
+        "context": "    assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"\n\n\ndef test_multiplier():\n    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 9,
+        "coloffset": 4,
+        "linematch": "assert multiply_five(10) == 50, \"Multiplier is invalid!\"",
+        "context": "    assert increment_by_ten(10) == 20, \"Incrementer is invalid!\"\n\n\ndef test_multiplier():\n    assert multiply_five(10) == 50, \"Multiplier is invalid!\"\n\n\ndef test_print():\n    assert say_cheese() == \"cheese\", \"Incorrect message!\"",
+        "pattern": "//FunctionDef[starts-with(@name, \"test_\")]//Assert[count(.//Call[func/Name]) > 0]",
+        "check_id": "UNUSED001",
+        "check_name": "unused-variables"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #204",
+        "line": 9,
+        "description": [
+          "    assert isinstance(__version__, str), \"The authors value is invalid!\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_playground.py\n+++ tests/test_playground.py\n@@ -6,5 +6,5 @@\n \n \n def test_authors():\n-    assert isinstance(__version__, str), \"The authors value is invalid!\"\n+    assert isinstance(__version__, str), \"XXThe authors value is invalid!XX\"\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "test_version",
+    "function_scope": "4-5",
+    "patterns": [
+      {
+        "lineno": 4,
+        "coloffset": 0,
+        "linematch": "def test_version():",
+        "context": "from ultiplayground import __authors__, __version__\n\n\ndef test_version():\n    assert isinstance(__version__, str), \"The version value is invalid!\"\n\n\ndef test_authors():\n    assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "assert isinstance(__version__, str), \"The version value is invalid!\"",
+        "context": "from ultiplayground import __authors__, __version__\n\n\ndef test_version():\n    assert isinstance(__version__, str), \"The version value is invalid!\"\n\n\ndef test_authors():\n    assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "assert isinstance(__version__, str), \"The version value is invalid!\"",
+        "context": "from ultiplayground import __authors__, __version__\n\n\ndef test_version():\n    assert isinstance(__version__, str), \"The version value is invalid!\"\n\n\ndef test_authors():\n    assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "assert isinstance(__version__, str), \"The version value is invalid!\"",
+        "context": "from ultiplayground import __authors__, __version__\n\n\ndef test_version():\n    assert isinstance(__version__, str), \"The version value is invalid!\"\n\n\ndef test_authors():\n    assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "assert isinstance(__version__, str), \"The version value is invalid!\"",
+        "context": "from ultiplayground import __authors__, __version__\n\n\ndef test_version():\n    assert isinstance(__version__, str), \"The version value is invalid!\"\n\n\ndef test_authors():\n    assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "pattern": "//FunctionDef[starts-with(@name, \"test_\")]//Assert[count(.//Call[func/Name]) > 0]",
+        "check_id": "UNUSED001",
+        "check_name": "unused-variables"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #203",
+        "line": 5,
+        "description": [
+          "    assert isinstance(__version__, str), \"The version value is invalid!\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_playground.py\n+++ tests/test_playground.py\n@@ -2,7 +2,7 @@\n \n \n def test_version():\n-    assert isinstance(__version__, str), \"The version value is invalid!\"\n+    assert isinstance(__version__, str), \"XXThe version value is invalid!XX\"\n \n \n def test_authors():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "test_authors",
+    "function_scope": "8-9",
+    "patterns": [
+      {
+        "lineno": 8,
+        "coloffset": 0,
+        "linematch": "def test_authors():",
+        "context": "def test_version():\n    assert isinstance(__version__, str), \"The version value is invalid!\"\n\n\ndef test_authors():\n    assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 9,
+        "coloffset": 4,
+        "linematch": "assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "context": "    assert isinstance(__version__, str), \"The version value is invalid!\"\n\n\ndef test_authors():\n    assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "pattern": ".//FunctionDef/body/Assert",
+        "check_id": "NOA001",
+        "check_name": "number-of-assertions"
+      },
+      {
+        "lineno": 9,
+        "coloffset": 4,
+        "linematch": "assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "context": "    assert isinstance(__version__, str), \"The version value is invalid!\"\n\n\ndef test_authors():\n    assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 9,
+        "coloffset": 4,
+        "linematch": "assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "context": "    assert isinstance(__version__, str), \"The version value is invalid!\"\n\n\ndef test_authors():\n    assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 9,
+        "coloffset": 4,
+        "linematch": "assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "context": "    assert isinstance(__version__, str), \"The version value is invalid!\"\n\n\ndef test_authors():\n    assert isinstance(__version__, str), \"The authors value is invalid!\"",
+        "pattern": "//FunctionDef[starts-with(@name, \"test_\")]//Assert[count(.//Call[func/Name]) > 0]",
+        "check_id": "UNUSED001",
+        "check_name": "unused-variables"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #204",
+        "line": 9,
+        "description": [
+          "    assert isinstance(__version__, str), \"The authors value is invalid!\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_playground.py\n+++ tests/test_playground.py\n@@ -6,5 +6,5 @@\n \n \n def test_authors():\n-    assert isinstance(__version__, str), \"The authors value is invalid!\"\n+    assert isinstance(__version__, str), \"XXThe authors value is invalid!XX\"\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "use_pokemons",
+    "function_scope": "10-11",
+    "patterns": [
+      {
+        "lineno": 10,
+        "coloffset": 0,
+        "linematch": "def use_pokemons():",
+        "context": "from .random_pokemon import POKEMON, POKEMONS_NAME\nfrom .random_quotes import QUOTES_DATA\n\n\ndef use_pokemons():\n    return POKEMON in POKEMONS_NAME\n\n\ndef use_quotes():\n    return isinstance(QUOTES_DATA, dict)",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 11,
+        "coloffset": 4,
+        "linematch": "return POKEMON in POKEMONS_NAME",
+        "context": "from .random_quotes import QUOTES_DATA\n\n\ndef use_pokemons():\n    return POKEMON in POKEMONS_NAME\n\n\ndef use_quotes():\n    return isinstance(QUOTES_DATA, dict)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "use_quotes",
+    "function_scope": "14-15",
+    "patterns": [
+      {
+        "lineno": 14,
+        "coloffset": 0,
+        "linematch": "def use_quotes():",
+        "context": "def use_pokemons():\n    return POKEMON in POKEMONS_NAME\n\n\ndef use_quotes():\n    return isinstance(QUOTES_DATA, dict)",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 15,
+        "coloffset": 4,
+        "linematch": "return isinstance(QUOTES_DATA, dict)",
+        "context": "    return POKEMON in POKEMONS_NAME\n\n\ndef use_quotes():\n    return isinstance(QUOTES_DATA, dict)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "download_site",
+    "function_scope": "16-18",
+    "patterns": [
+      {
+        "lineno": 16,
+        "coloffset": 0,
+        "linematch": "def download_site(url):",
+        "context": "        thread_local.session = requests.Session()\n    return thread_local.session\n\n\ndef download_site(url):\n    session = get_session()\n    session.get(url)\n\n\ndef download_all_sites(sites):",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 17,
+        "coloffset": 4,
+        "linematch": "session = get_session()",
+        "context": "    return thread_local.session\n\n\ndef download_site(url):\n    session = get_session()\n    session.get(url)\n\n\ndef download_all_sites(sites):\n    with ThreadPoolExecutor(max_workers=5) as executor:",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 18,
+        "coloffset": 4,
+        "linematch": "session.get(url)",
+        "context": "\n\ndef download_site(url):\n    session = get_session()\n    session.get(url)\n\n\ndef download_all_sites(sites):\n    with ThreadPoolExecutor(max_workers=5) as executor:\n        executor.map(download_site, sites)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "download_all_sites",
+    "function_scope": "21-23",
+    "patterns": [
+      {
+        "lineno": 21,
+        "coloffset": 0,
+        "linematch": "def download_all_sites(sites):",
+        "context": "    session = get_session()\n    session.get(url)\n\n\ndef download_all_sites(sites):\n    with ThreadPoolExecutor(max_workers=5) as executor:\n        executor.map(download_site, sites)\n\n\nif __name__ == \"__main__\":",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 22,
+        "coloffset": 4,
+        "linematch": "with ThreadPoolExecutor(max_workers=5) as executor:",
+        "context": "    session.get(url)\n\n\ndef download_all_sites(sites):\n    with ThreadPoolExecutor(max_workers=5) as executor:\n        executor.map(download_site, sites)\n\n\nif __name__ == \"__main__\":\n    sites = [",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "__init__",
+    "function_scope": "5-6",
+    "patterns": [
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "def __init__(self, name, speed=0) -> None:",
+        "context": "from .animal import GenericAnimal\n\n\nclass Rabbit(GenericAnimal):\n    def __init__(self, name, speed=0) -> None:\n        super().__init__(name, speed=speed)\n\n    def hide(self):\n        print(f\"{self.name} hides!\")\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 2,
+        "coloffset": 4,
+        "linematch": "def __init__(self, name, speed=0) -> None:",
+        "context": "class GenericAnimal:\n    def __init__(self, name, speed=0) -> None:\n        self.name = name\n        self.speed = speed\n\n    def __str__(self):\n        return f\"{self.name} is happy :)\"",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 6,
+        "coloffset": 8,
+        "linematch": "super().__init__(name, speed=speed)",
+        "context": "\n\nclass Rabbit(GenericAnimal):\n    def __init__(self, name, speed=0) -> None:\n        super().__init__(name, speed=speed)\n\n    def hide(self):\n        print(f\"{self.name} hides!\")\n\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 3,
+        "coloffset": 8,
+        "linematch": "self.name = name",
+        "context": "class GenericAnimal:\n    def __init__(self, name, speed=0) -> None:\n        self.name = name\n        self.speed = speed\n\n    def __str__(self):\n        return f\"{self.name} is happy :)\"\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 4,
+        "coloffset": 8,
+        "linematch": "self.speed = speed",
+        "context": "class GenericAnimal:\n    def __init__(self, name, speed=0) -> None:\n        self.name = name\n        self.speed = speed\n\n    def __str__(self):\n        return f\"{self.name} is happy :)\"\n\n    def run(self, speed):",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #203",
+        "line": 5,
+        "description": [
+          "    assert isinstance(__version__, str), \"The version value is invalid!\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_playground.py\n+++ tests/test_playground.py\n@@ -2,7 +2,7 @@\n \n \n def test_version():\n-    assert isinstance(__version__, str), \"The version value is invalid!\"\n+    assert isinstance(__version__, str), \"XXThe version value is invalid!XX\"\n \n \n def test_authors():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "hide",
+    "function_scope": "8-9",
+    "patterns": [
+      {
+        "lineno": 8,
+        "coloffset": 4,
+        "linematch": "def hide(self):",
+        "context": "class Rabbit(GenericAnimal):\n    def __init__(self, name, speed=0) -> None:\n        super().__init__(name, speed=speed)\n\n    def hide(self):\n        print(f\"{self.name} hides!\")\n\n\nif __name__ == \"__main__\":\n    my_rabbit = Rabbit(\"Alen\")",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 9,
+        "coloffset": 8,
+        "linematch": "print(f\"{self.name} hides!\")",
+        "context": "    def __init__(self, name, speed=0) -> None:\n        super().__init__(name, speed=speed)\n\n    def hide(self):\n        print(f\"{self.name} hides!\")\n\n\nif __name__ == \"__main__\":\n    my_rabbit = Rabbit(\"Alen\")\n    print(my_rabbit)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #204",
+        "line": 9,
+        "description": [
+          "    assert isinstance(__version__, str), \"The authors value is invalid!\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_playground.py\n+++ tests/test_playground.py\n@@ -6,5 +6,5 @@\n \n \n def test_authors():\n-    assert isinstance(__version__, str), \"The authors value is invalid!\"\n+    assert isinstance(__version__, str), \"XXThe authors value is invalid!XX\"\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "__str__",
+    "function_scope": "6-7",
+    "patterns": [
+      {
+        "lineno": 6,
+        "coloffset": 4,
+        "linematch": "def __str__(self):",
+        "context": "    def __init__(self, name, speed=0) -> None:\n        self.name = name\n        self.speed = speed\n\n    def __str__(self):\n        return f\"{self.name} is happy :)\"\n\n    def run(self, speed):\n        self.speed = speed\n        print(f\"{self.name} runs with speed {self.speed}.\")",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 7,
+        "coloffset": 8,
+        "linematch": "return f\"{self.name} is happy :)\"",
+        "context": "        self.name = name\n        self.speed = speed\n\n    def __str__(self):\n        return f\"{self.name} is happy :)\"\n\n    def run(self, speed):\n        self.speed = speed\n        print(f\"{self.name} runs with speed {self.speed}.\")\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "run",
+    "function_scope": "9-11",
+    "patterns": [
+      {
+        "lineno": 9,
+        "coloffset": 4,
+        "linematch": "def run(self, speed):",
+        "context": "\n    def __str__(self):\n        return f\"{self.name} is happy :)\"\n\n    def run(self, speed):\n        self.speed = speed\n        print(f\"{self.name} runs with speed {self.speed}.\")\n\n    def stop(self):\n        self.speed = 0",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 10,
+        "coloffset": 8,
+        "linematch": "self.speed = speed",
+        "context": "    def __str__(self):\n        return f\"{self.name} is happy :)\"\n\n    def run(self, speed):\n        self.speed = speed\n        print(f\"{self.name} runs with speed {self.speed}.\")\n\n    def stop(self):\n        self.speed = 0\n        print(f\"{self.name} stands still.\")",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 11,
+        "coloffset": 8,
+        "linematch": "print(f\"{self.name} runs with speed {self.speed}.\")",
+        "context": "        return f\"{self.name} is happy :)\"\n\n    def run(self, speed):\n        self.speed = speed\n        print(f\"{self.name} runs with speed {self.speed}.\")\n\n    def stop(self):\n        self.speed = 0\n        print(f\"{self.name} stands still.\")\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #204",
+        "line": 9,
+        "description": [
+          "    assert isinstance(__version__, str), \"The authors value is invalid!\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_playground.py\n+++ tests/test_playground.py\n@@ -6,5 +6,5 @@\n \n \n def test_authors():\n-    assert isinstance(__version__, str), \"The authors value is invalid!\"\n+    assert isinstance(__version__, str), \"XXThe authors value is invalid!XX\"\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "stop",
+    "function_scope": "13-15",
+    "patterns": [
+      {
+        "lineno": 13,
+        "coloffset": 4,
+        "linematch": "def stop(self):",
+        "context": "    def run(self, speed):\n        self.speed = speed\n        print(f\"{self.name} runs with speed {self.speed}.\")\n\n    def stop(self):\n        self.speed = 0\n        print(f\"{self.name} stands still.\")\n\n\nif __name__ == \"__main__\":",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 8,
+        "linematch": "self.speed = 0",
+        "context": "        self.speed = speed\n        print(f\"{self.name} runs with speed {self.speed}.\")\n\n    def stop(self):\n        self.speed = 0\n        print(f\"{self.name} stands still.\")\n\n\nif __name__ == \"__main__\":\n    my_generic_animal = GenericAnimal(\"A generic animal\")",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 15,
+        "coloffset": 8,
+        "linematch": "print(f\"{self.name} stands still.\")",
+        "context": "        print(f\"{self.name} runs with speed {self.speed}.\")\n\n    def stop(self):\n        self.speed = 0\n        print(f\"{self.name} stands still.\")\n\n\nif __name__ == \"__main__\":\n    my_generic_animal = GenericAnimal(\"A generic animal\")\n    print(my_generic_animal)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "increment_by",
+    "function_scope": "4-8",
+    "patterns": [
+      {
+        "lineno": 4,
+        "coloffset": 0,
+        "linematch": "def increment_by(num: int) -> Callable:",
+        "context": "from typing import Callable\n\n\ndef increment_by(num: int) -> Callable:\n    def incrementer(num_two: int) -> int:\n        return num_two + num\n\n    return incrementer\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "def incrementer(num_two: int) -> int:",
+        "context": "from typing import Callable\n\n\ndef increment_by(num: int) -> Callable:\n    def incrementer(num_two: int) -> int:\n        return num_two + num\n\n    return incrementer\n\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 4,
+        "coloffset": 0,
+        "linematch": "def increment_by(num: int) -> Callable:",
+        "context": "from typing import Callable\n\n\ndef increment_by(num: int) -> Callable:\n    def incrementer(num_two: int) -> int:\n        return num_two + num\n\n    return incrementer\n",
+        "pattern": ".//FunctionDef//FunctionDef/ancestor::*",
+        "check_id": "F001",
+        "check_name": "nested-depth"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "def incrementer(num_two: int) -> int:",
+        "context": "from typing import Callable\n\n\ndef increment_by(num: int) -> Callable:\n    def incrementer(num_two: int) -> int:\n        return num_two + num\n\n    return incrementer\n\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 6,
+        "coloffset": 8,
+        "linematch": "return num_two + num",
+        "context": "\n\ndef increment_by(num: int) -> Callable:\n    def incrementer(num_two: int) -> int:\n        return num_two + num\n\n    return incrementer\n\n\nincrement_by_ten = increment_by(10)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 8,
+        "coloffset": 4,
+        "linematch": "return incrementer",
+        "context": "def increment_by(num: int) -> Callable:\n    def incrementer(num_two: int) -> int:\n        return num_two + num\n\n    return incrementer\n\n\nincrement_by_ten = increment_by(10)\n\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #203",
+        "line": 5,
+        "description": [
+          "    assert isinstance(__version__, str), \"The version value is invalid!\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_playground.py\n+++ tests/test_playground.py\n@@ -2,7 +2,7 @@\n \n \n def test_version():\n-    assert isinstance(__version__, str), \"The version value is invalid!\"\n+    assert isinstance(__version__, str), \"XXThe version value is invalid!XX\"\n \n \n def test_authors():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "make_multiplier_of",
+    "function_scope": "4-8",
+    "patterns": [
+      {
+        "lineno": 4,
+        "coloffset": 0,
+        "linematch": "def make_multiplier_of(num_one: int) -> Callable:",
+        "context": "from typing import Callable\n\n\ndef make_multiplier_of(num_one: int) -> Callable:\n    def multiplier(num_two: int) -> int:\n        return num_two * num_one\n\n    return multiplier\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "def multiplier(num_two: int) -> int:",
+        "context": "from typing import Callable\n\n\ndef make_multiplier_of(num_one: int) -> Callable:\n    def multiplier(num_two: int) -> int:\n        return num_two * num_one\n\n    return multiplier\n\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 4,
+        "coloffset": 0,
+        "linematch": "def make_multiplier_of(num_one: int) -> Callable:",
+        "context": "from typing import Callable\n\n\ndef make_multiplier_of(num_one: int) -> Callable:\n    def multiplier(num_two: int) -> int:\n        return num_two * num_one\n\n    return multiplier\n",
+        "pattern": ".//FunctionDef//FunctionDef/ancestor::*",
+        "check_id": "F001",
+        "check_name": "nested-depth"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "def multiplier(num_two: int) -> int:",
+        "context": "from typing import Callable\n\n\ndef make_multiplier_of(num_one: int) -> Callable:\n    def multiplier(num_two: int) -> int:\n        return num_two * num_one\n\n    return multiplier\n\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 6,
+        "coloffset": 8,
+        "linematch": "return num_two * num_one",
+        "context": "\n\ndef make_multiplier_of(num_one: int) -> Callable:\n    def multiplier(num_two: int) -> int:\n        return num_two * num_one\n\n    return multiplier\n\n\nmultiply_three = make_multiplier_of(3)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 8,
+        "coloffset": 4,
+        "linematch": "return multiplier",
+        "context": "def make_multiplier_of(num_one: int) -> Callable:\n    def multiplier(num_two: int) -> int:\n        return num_two * num_one\n\n    return multiplier\n\n\nmultiply_three = make_multiplier_of(3)\n\nmultiply_five = make_multiplier_of(5)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #203",
+        "line": 5,
+        "description": [
+          "    assert isinstance(__version__, str), \"The version value is invalid!\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_playground.py\n+++ tests/test_playground.py\n@@ -2,7 +2,7 @@\n \n \n def test_version():\n-    assert isinstance(__version__, str), \"The version value is invalid!\"\n+    assert isinstance(__version__, str), \"XXThe version value is invalid!XX\"\n \n \n def test_authors():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "return_msg",
+    "function_scope": "4-8",
+    "patterns": [
+      {
+        "lineno": 4,
+        "coloffset": 0,
+        "linematch": "def return_msg(msg: str = \"Hello\") -> Callable:",
+        "context": "from typing import Callable\n\n\ndef return_msg(msg: str = \"Hello\") -> Callable:\n    def returner() -> str:\n        return msg\n\n    return returner\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "def returner() -> str:",
+        "context": "from typing import Callable\n\n\ndef return_msg(msg: str = \"Hello\") -> Callable:\n    def returner() -> str:\n        return msg\n\n    return returner\n\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 4,
+        "coloffset": 0,
+        "linematch": "def return_msg(msg: str = \"Hello\") -> Callable:",
+        "context": "from typing import Callable\n\n\ndef return_msg(msg: str = \"Hello\") -> Callable:\n    def returner() -> str:\n        return msg\n\n    return returner\n",
+        "pattern": ".//FunctionDef//FunctionDef/ancestor::*",
+        "check_id": "F001",
+        "check_name": "nested-depth"
+      },
+      {
+        "lineno": 5,
+        "coloffset": 4,
+        "linematch": "def returner() -> str:",
+        "context": "from typing import Callable\n\n\ndef return_msg(msg: str = \"Hello\") -> Callable:\n    def returner() -> str:\n        return msg\n\n    return returner\n\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 6,
+        "coloffset": 8,
+        "linematch": "return msg",
+        "context": "\n\ndef return_msg(msg: str = \"Hello\") -> Callable:\n    def returner() -> str:\n        return msg\n\n    return returner\n\n\nsay_cheese = return_msg(\"cheese\")",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 8,
+        "coloffset": 4,
+        "linematch": "return returner",
+        "context": "def return_msg(msg: str = \"Hello\") -> Callable:\n    def returner() -> str:\n        return msg\n\n    return returner\n\n\nsay_cheese = return_msg(\"cheese\")\n\nsay_hello = return_msg()",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #203",
+        "line": 5,
+        "description": [
+          "    assert isinstance(__version__, str), \"The version value is invalid!\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_playground.py\n+++ tests/test_playground.py\n@@ -2,7 +2,7 @@\n \n \n def test_version():\n-    assert isinstance(__version__, str), \"The version value is invalid!\"\n+    assert isinstance(__version__, str), \"XXThe version value is invalid!XX\"\n \n \n def test_authors():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "use_incrementer",
+    "function_scope": "6-8",
+    "patterns": [
+      {
+        "lineno": 6,
+        "coloffset": 0,
+        "linematch": "def use_incrementer() -> None:",
+        "context": "from .multiplier import multiply_five\nfrom .returner import say_cheese, say_hello\n\n\ndef use_incrementer() -> None:\n    ten = increment_by_ten(0)\n    print(ten)\n\n\ndef use_multiplier() -> None:",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 7,
+        "coloffset": 4,
+        "linematch": "ten = increment_by_ten(0)",
+        "context": "from .returner import say_cheese, say_hello\n\n\ndef use_incrementer() -> None:\n    ten = increment_by_ten(0)\n    print(ten)\n\n\ndef use_multiplier() -> None:\n    fifty = multiply_five(10)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 8,
+        "coloffset": 4,
+        "linematch": "print(ten)",
+        "context": "\n\ndef use_incrementer() -> None:\n    ten = increment_by_ten(0)\n    print(ten)\n\n\ndef use_multiplier() -> None:\n    fifty = multiply_five(10)\n    print(fifty)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "use_multiplier",
+    "function_scope": "11-13",
+    "patterns": [
+      {
+        "lineno": 11,
+        "coloffset": 0,
+        "linematch": "def use_multiplier() -> None:",
+        "context": "    ten = increment_by_ten(0)\n    print(ten)\n\n\ndef use_multiplier() -> None:\n    fifty = multiply_five(10)\n    print(fifty)\n\n\ndef use_returner() -> None:",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 12,
+        "coloffset": 4,
+        "linematch": "fifty = multiply_five(10)",
+        "context": "    print(ten)\n\n\ndef use_multiplier() -> None:\n    fifty = multiply_five(10)\n    print(fifty)\n\n\ndef use_returner() -> None:\n    cheese = say_cheese()",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 13,
+        "coloffset": 4,
+        "linematch": "print(fifty)",
+        "context": "\n\ndef use_multiplier() -> None:\n    fifty = multiply_five(10)\n    print(fifty)\n\n\ndef use_returner() -> None:\n    cheese = say_cheese()\n    hello = say_hello()",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "use_returner",
+    "function_scope": "16-19",
+    "patterns": [
+      {
+        "lineno": 16,
+        "coloffset": 0,
+        "linematch": "def use_returner() -> None:",
+        "context": "    fifty = multiply_five(10)\n    print(fifty)\n\n\ndef use_returner() -> None:\n    cheese = say_cheese()\n    hello = say_hello()\n    print(cheese, hello)",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 17,
+        "coloffset": 4,
+        "linematch": "cheese = say_cheese()",
+        "context": "    print(fifty)\n\n\ndef use_returner() -> None:\n    cheese = say_cheese()\n    hello = say_hello()\n    print(cheese, hello)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 18,
+        "coloffset": 4,
+        "linematch": "hello = say_hello()",
+        "context": "\n\ndef use_returner() -> None:\n    cheese = say_cheese()\n    hello = say_hello()\n    print(cheese, hello)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 19,
+        "coloffset": 4,
+        "linematch": "print(cheese, hello)",
+        "context": "\ndef use_returner() -> None:\n    cheese = say_cheese()\n    hello = say_hello()\n    print(cheese, hello)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  },
+  {
+    "function_name": "read_all_lines",
+    "function_scope": "5-10",
+    "patterns": [
+      {
+        "lineno": 5,
+        "coloffset": 0,
+        "linematch": "def read_all_lines(file_path: str):",
+        "context": "import json\nimport os\n\n\ndef read_all_lines(file_path: str):\n    \"\"\"\n    Parse a CSV file and return a list of dictionaries.\n    \"\"\"\n    with open(file_path, \"r\", encoding=\"UTF-8\") as file:\n        return file.read().splitlines()",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 6,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "import os\n\n\ndef read_all_lines(file_path: str):\n    \"\"\"\n    Parse a CSV file and return a list of dictionaries.\n    \"\"\"\n    with open(file_path, \"r\", encoding=\"UTF-8\") as file:\n        return file.read().splitlines()\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 9,
+        "coloffset": 4,
+        "linematch": "with open(file_path, \"r\", encoding=\"UTF-8\") as file:",
+        "context": "def read_all_lines(file_path: str):\n    \"\"\"\n    Parse a CSV file and return a list of dictionaries.\n    \"\"\"\n    with open(file_path, \"r\", encoding=\"UTF-8\") as file:\n        return file.read().splitlines()\n\n\ndef grouped(iterable, times: int):\n    return zip(*[iter(iterable)] * times)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #203",
+        "line": 5,
+        "description": [
+          "    assert isinstance(__version__, str), \"The version value is invalid!\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_playground.py\n+++ tests/test_playground.py\n@@ -2,7 +2,7 @@\n \n \n def test_version():\n-    assert isinstance(__version__, str), \"The version value is invalid!\"\n+    assert isinstance(__version__, str), \"XXThe version value is invalid!XX\"\n \n \n def test_authors():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #204",
+        "line": 9,
+        "description": [
+          "    assert isinstance(__version__, str), \"The authors value is invalid!\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_playground.py\n+++ tests/test_playground.py\n@@ -6,5 +6,5 @@\n \n \n def test_authors():\n-    assert isinstance(__version__, str), \"The authors value is invalid!\"\n+    assert isinstance(__version__, str), \"XXThe authors value is invalid!XX\"\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 0.0
+  },
+  {
+    "function_name": "grouped",
+    "function_scope": "13-14",
+    "patterns": [
+      {
+        "lineno": 13,
+        "coloffset": 0,
+        "linematch": "def grouped(iterable, times: int):",
+        "context": "    with open(file_path, \"r\", encoding=\"UTF-8\") as file:\n        return file.read().splitlines()\n\n\ndef grouped(iterable, times: int):\n    return zip(*[iter(iterable)] * times)\n\n\ndata = [\n    {\"shortname\": shortname.upper(), \"fullname\": fullname}",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 4,
+        "linematch": "return zip(*[iter(iterable)] * times)",
+        "context": "        return file.read().splitlines()\n\n\ndef grouped(iterable, times: int):\n    return zip(*[iter(iterable)] * times)\n\n\ndata = [\n    {\"shortname\": shortname.upper(), \"fullname\": fullname}\n    for shortname, fullname in grouped(read_all_lines(\"data/crypto_shortname\"), 2)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [],
+    "mutation_score": null
+  }
+]
