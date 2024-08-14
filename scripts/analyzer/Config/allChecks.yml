@@ -243,12 +243,6 @@ checks:
     description: "Methods with high cyclomatic complexity are hard to test and understand."
     pattern: './/FunctionDef[count(.//If | .//For | .//While | .//And | .//Or) > 10]'
 
-  - name: "long-parameter-list"
-    code: "LPL"
-    id: "F028"
-    description: "Functions with long parameter lists are hard to understand and use."
-    pattern: './/FunctionDef[count(./args/args) > 5]'
-
   - name: "long-method-chaining"
     code: "LMC"
     id: "F029"
@@ -303,21 +297,3 @@ checks:
     id: "P002"
     description: "A method or function with too many parameters."
     pattern: './/FunctionDef[count(./args/args) > 5]'
-
-  - name: "long-method"
-    code: "LM"
-    id: "P003"
-    description: "A method or function that is too long."
-    pattern: './/FunctionDef[count(./body/*) > 50]'
-
-  - name: "long-message-chain"
-    code: "LMC"
-    id: "P004"
-    description: "An expression accessing an object through a long chain of attributes or methods using the dot operator."
-    pattern: './/Call[count(./func/Attribute) > 3]'
-
-  - name: "long-scope-chaining"
-    code: "LSC"
-    id: "P005"
-    description: "A multiply-nested method or function."
-    pattern: './/FunctionDef[count(.//If | .//For | .//While | .//Try) > 3]'

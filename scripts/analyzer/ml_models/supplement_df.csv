@@ -27,7 +27,6 @@ complex-expressions,.//FunctionDef//BinOp[count(descendant::BinOp) > 2]
 unused-variables,"//FunctionDef[starts-with(@name, ""test_"")]//Assert[count(.//Call[func/Name]) > 0]"
 method-too-long,.//FunctionDef[count(./body/*) > 50]
 high-cyclomatic-complexity,.//FunctionDef[count(.//If | .//For | .//While | .//And | .//Or) > 10]
-long-parameter-list,.//FunctionDef[count(./args/args) > 5]
 long-method-chaining,.//Call[count(./func/Attribute) > 3]
 deeply-nested-control-structures,.//FunctionDef[count(.//If | .//For | .//While | .//Try) > 3]
 god-function,.//FunctionDef[count(./body/*) > 100]
@@ -35,6 +34,4 @@ empty-catch-block,.//ExceptHandler[not(./body/*)]
 magic-numbers,.//Num
 use-of-global-variables,.//Global
 large-class,.//ClassDef[count(./body/*) > 50]
-long-method,.//FunctionDef[count(./body/*) > 50]
-long-message-chain,.//Call[count(./func/Attribute) > 3]
-long-scope-chaining,.//FunctionDef[count(.//If | .//For | .//While | .//Try) > 3]
+long-parameter-list,.//FunctionDef[count(./args/args) > 5]
