@@ -1,0 +1,2128 @@
+[
+  {
+    "function_name": "poetry",
+    "function_scope": "14-82",
+    "patterns": [
+      {
+        "lineno": 27,
+        "coloffset": 8,
+        "linematch": "if not os.path.exists(requirement_file):",
+        "context": "    `pyproject.toml` file for Poetry. The resulting Poetry project file\n    includes the necessary dependencies and metadata.\n    \"\"\"\n    try:\n        if not os.path.exists(requirement_file):\n            typer.echo(\n                f\"Error: The specified requirements file '{requirement_file}' does not exist or no '{requirement_file}' found in current path\"  # noqa\n            )\n            raise typer.Abort()\n",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 34,
+        "coloffset": 8,
+        "linematch": "if not os.path.exists(\"./pyproject.toml\"):",
+        "context": "            )\n            raise typer.Abort()\n\n        # Initialize Poetry if it doesn't yet have a pyproject.toml file\n        if not os.path.exists(\"./pyproject.toml\"):\n            os.system(\"poetry init\")\n\n        with open(requirement_file, encoding=\"utf-8\") as fh:\n            requirements = fh.read()\n",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 66,
+        "coloffset": 16,
+        "linematch": "if len(line.split(\" \")) == 1:",
+        "context": "                    poetry_match = match\n                poetry_line = f\"{package}:{poetry_match}{version}\"\n                req_list.append(poetry_line)\n            except ValueError:\n                if len(line.split(\" \")) == 1:\n                    req_list.append(line)\n                else:\n                    typer.echo(\n                        f\"Skipping Dependency There seems to be a problem with the '{line}' dependency provided.\"  # noqa\n                    )",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 66,
+        "coloffset": 19,
+        "linematch": "if len(line.split(\" \")) == 1:",
+        "context": "                    poetry_match = match\n                poetry_line = f\"{package}:{poetry_match}{version}\"\n                req_list.append(poetry_line)\n            except ValueError:\n                if len(line.split(\" \")) == 1:\n                    req_list.append(line)\n                else:\n                    typer.echo(\n                        f\"Skipping Dependency There seems to be a problem with the '{line}' dependency provided.\"  # noqa\n                    )",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 0,
+        "linematch": "def poetry(",
+        "context": "app = typer.Typer()\n\n\n@app.command()\ndef poetry(\n    requirement_file: Annotated[\n        str, typer.Argument(help=\"Enter the requirements file name or path: \")\n    ] = \"requirements.txt\"\n):\n    \"\"\"",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 34,
+        "coloffset": 8,
+        "linematch": "if not os.path.exists(\"./pyproject.toml\"):",
+        "context": "            )\n            raise typer.Abort()\n\n        # Initialize Poetry if it doesn't yet have a pyproject.toml file\n        if not os.path.exists(\"./pyproject.toml\"):\n            os.system(\"poetry init\")\n\n        with open(requirement_file, encoding=\"utf-8\") as fh:\n            requirements = fh.read()\n",
+        "pattern": ".//FunctionDef//If/following-sibling::If | .//FunctionDef//If/following-sibling::Elif | .//FunctionDef//If/following-sibling::Else",
+        "check_id": "F002",
+        "check_name": "number-of-conditions-in-function"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 0,
+        "linematch": "def poetry(",
+        "context": "app = typer.Typer()\n\n\n@app.command()\ndef poetry(\n    requirement_file: Annotated[\n        str, typer.Argument(help=\"Enter the requirements file name or path: \")\n    ] = \"requirements.txt\"\n):\n    \"\"\"",
+        "pattern": ".//FunctionDef[//(If/following-sibling::For | For/following-sibling::If)]",
+        "check_id": "C002",
+        "check_name": "nested-loop-conditions"
+      },
+      {
+        "lineno": 19,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "    requirement_file: Annotated[\n        str, typer.Argument(help=\"Enter the requirements file name or path: \")\n    ] = \"requirements.txt\"\n):\n    \"\"\"\n    Switch From Using Pip to Poetry package manager on your project, Easily\n    This CLI app converts Pip requirements to Poetry projects.\n    It parses a Pip requirements file and generates the corresponding\n    `pyproject.toml` file for Poetry. The resulting Poetry project file\n    includes the necessary dependencies and metadata.",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 26,
+        "coloffset": 4,
+        "linematch": "try:",
+        "context": "    It parses a Pip requirements file and generates the corresponding\n    `pyproject.toml` file for Poetry. The resulting Poetry project file\n    includes the necessary dependencies and metadata.\n    \"\"\"\n    try:\n        if not os.path.exists(requirement_file):\n            typer.echo(\n                f\"Error: The specified requirements file '{requirement_file}' does not exist or no '{requirement_file}' found in current path\"  # noqa\n            )\n            raise typer.Abort()",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 0,
+        "linematch": "def poetry(",
+        "context": "app = typer.Typer()\n\n\n@app.command()\ndef poetry(\n    requirement_file: Annotated[\n        str, typer.Argument(help=\"Enter the requirements file name or path: \")\n    ] = \"requirements.txt\"\n):\n    \"\"\"",
+        "pattern": ".//FunctionDef[count(.//If | .//For | .//While | .//Try) > 3]",
+        "check_id": "F030",
+        "check_name": "deeply-nested-control-structures"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 0,
+        "linematch": "def poetry(",
+        "context": "app = typer.Typer()\n\n\n@app.command()\ndef poetry(\n    requirement_file: Annotated[\n        str, typer.Argument(help=\"Enter the requirements file name or path: \")\n    ] = \"requirements.txt\"\n):\n    \"\"\"",
+        "pattern": ".//FunctionDef[count(.//If | .//For | .//While | .//Try) > 3]",
+        "check_id": "P005",
+        "check_name": "long-scope-chaining"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #3",
+        "line": 17,
+        "description": [
+          "    ] = \"requirements.txt\""
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #4",
+        "line": 27,
+        "description": [
+          "        if not os.path.exists(requirement_file):"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #5",
+        "line": 29,
+        "description": [
+          "                f\"Error: The specified requirements file '{requirement_file}' does not exist or no '{requirement_file}' found in current path\"  # noqa"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -26,7 +26,7 @@\n     try:\n         if not os.path.exists(requirement_file):\n             typer.echo(\n-                f\"Error: The specified requirements file '{requirement_file}' does not exist or no '{requirement_file}' found in current path\"  # noqa\n+                f\"XXError: The specified requirements file '{requirement_file}' does not exist or no '{requirement_file}' found in current pathXX\"  # noqa\n             )\n             raise typer.Abort()\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #6",
+        "line": 34,
+        "description": [
+          "        if not os.path.exists(\"./pyproject.toml\"):"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #7",
+        "line": 34,
+        "description": [
+          "        if not os.path.exists(\"./pyproject.toml\"):"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -31,7 +31,7 @@\n             raise typer.Abort()\n \n         # Initialize Poetry if it doesn't yet have a pyproject.toml file\n-        if not os.path.exists(\"./pyproject.toml\"):\n+        if not os.path.exists(\"XX./pyproject.tomlXX\"):\n             os.system(\"poetry init\")\n \n         with open(requirement_file, encoding=\"utf-8\") as fh:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #8",
+        "line": 35,
+        "description": [
+          "            os.system(\"poetry init\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #9",
+        "line": 37,
+        "description": [
+          "        with open(requirement_file, encoding=\"utf-8\") as fh:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #10",
+        "line": 38,
+        "description": [
+          "            requirements = fh.read()"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #11",
+        "line": 41,
+        "description": [
+          "            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -38,7 +38,7 @@\n             requirements = fh.read()\n \n         no_comments = re.sub(\n-            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n+            \"XX^#.*$XX\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n             \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #12",
+        "line": 41,
+        "description": [
+          "            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -38,7 +38,7 @@\n             requirements = fh.read()\n \n         no_comments = re.sub(\n-            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n+            \"^#.*$\", \"XXXX\", requirements, 0, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n             \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #13",
+        "line": 41,
+        "description": [
+          "            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -38,7 +38,7 @@\n             requirements = fh.read()\n \n         no_comments = re.sub(\n-            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n+            \"^#.*$\", \"\", requirements, 1, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n             \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #14",
+        "line": 41,
+        "description": [
+          "            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -38,7 +38,7 @@\n             requirements = fh.read()\n \n         no_comments = re.sub(\n-            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n+            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE & re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n             \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #15",
+        "line": 42,
+        "description": [
+          "        )  # noqa"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #16",
+        "line": 44,
+        "description": [
+          "            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -41,7 +41,7 @@\n             \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n-            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n+            \"XX\\n+XX\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n         ).strip()\n \n         pip_poetry_map = {\">\": \"^\", \"=\": \"\"}\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #17",
+        "line": 44,
+        "description": [
+          "            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -41,7 +41,7 @@\n             \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n-            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n+            \"\\n+\", \"XX\\nXX\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n         ).strip()\n \n         pip_poetry_map = {\">\": \"^\", \"=\": \"\"}\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #18",
+        "line": 44,
+        "description": [
+          "            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -41,7 +41,7 @@\n             \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n-            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n+            \"\\n+\", \"\\n\", no_comments, 1, re.IGNORECASE | re.MULTILINE\n         ).strip()\n \n         pip_poetry_map = {\">\": \"^\", \"=\": \"\"}\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #19",
+        "line": 44,
+        "description": [
+          "            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -41,7 +41,7 @@\n             \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n-            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n+            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE & re.MULTILINE\n         ).strip()\n \n         pip_poetry_map = {\">\": \"^\", \"=\": \"\"}\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #20",
+        "line": 45,
+        "description": [
+          "        ).strip()"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #21",
+        "line": 47,
+        "description": [
+          "        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -44,7 +44,7 @@\n             \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n         ).strip()\n \n-        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}\n+        pip_poetry_map = {\"XX>XX\": \"^\", \"=\": \"\"}\n \n         req_list = list()\n         for line in bare_requirements.splitlines():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #22",
+        "line": 47,
+        "description": [
+          "        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -44,7 +44,7 @@\n             \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n         ).strip()\n \n-        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}\n+        pip_poetry_map = {\">\": \"XX^XX\", \"=\": \"\"}\n \n         req_list = list()\n         for line in bare_requirements.splitlines():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #23",
+        "line": 47,
+        "description": [
+          "        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #24",
+        "line": 47,
+        "description": [
+          "        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #25",
+        "line": 47,
+        "description": [
+          "        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #26",
+        "line": 49,
+        "description": [
+          "        req_list = list()"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #27",
+        "line": 53,
+        "description": [
+          "                    r\"^(.*?)\\s*([~>=<])=\\s*v?([0-9\\.\\*]+)\","
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #28",
+        "line": 54,
+        "description": [
+          "                    r\"\\1,\\2,\\3\","
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -51,7 +51,7 @@\n             try:\n                 package, match, version = re.sub(\n                     r\"^(.*?)\\s*([~>=<])=\\s*v?([0-9\\.\\*]+)\",\n-                    r\"\\1,\\2,\\3\",\n+                    r\"XX\\1,\\2,\\3XX\",\n                     line,\n                     0,\n                     re.IGNORECASE | re.MULTILINE,\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #29",
+        "line": 56,
+        "description": [
+          "                    0,"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -53,7 +53,7 @@\n                     r\"^(.*?)\\s*([~>=<])=\\s*v?([0-9\\.\\*]+)\",\n                     r\"\\1,\\2,\\3\",\n                     line,\n-                    0,\n+                    1,\n                     re.IGNORECASE | re.MULTILINE,\n                 ).split(\",\")\n                 try:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #30",
+        "line": 57,
+        "description": [
+          "                    re.IGNORECASE | re.MULTILINE,"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -54,7 +54,7 @@\n                     r\"\\1,\\2,\\3\",\n                     line,\n                     0,\n-                    re.IGNORECASE | re.MULTILINE,\n+                    re.IGNORECASE & re.MULTILINE,\n                 ).split(\",\")\n                 try:\n                     poetry_match = pip_poetry_map.get(match, match)\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #31",
+        "line": 58,
+        "description": [
+          "                ).split(\",\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #32",
+        "line": 58,
+        "description": [
+          "                ).split(\",\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #33",
+        "line": 60,
+        "description": [
+          "                    poetry_match = pip_poetry_map.get(match, match)"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #34",
+        "line": 62,
+        "description": [
+          "                    poetry_match = match"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -59,7 +59,7 @@\n                 try:\n                     poetry_match = pip_poetry_map.get(match, match)\n                 except KeyError:\n-                    poetry_match = match\n+                    poetry_match = None\n                 poetry_line = f\"{package}:{poetry_match}{version}\"\n                 req_list.append(poetry_line)\n             except ValueError:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #35",
+        "line": 63,
+        "description": [
+          "                poetry_line = f\"{package}:{poetry_match}{version}\""
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -60,7 +60,7 @@\n                     poetry_match = pip_poetry_map.get(match, match)\n                 except KeyError:\n                     poetry_match = match\n-                poetry_line = f\"{package}:{poetry_match}{version}\"\n+                poetry_line = f\"XX{package}:{poetry_match}{version}XX\"\n                 req_list.append(poetry_line)\n             except ValueError:\n                 if len(line.split(\" \")) == 1:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #36",
+        "line": 63,
+        "description": [
+          "                poetry_line = f\"{package}:{poetry_match}{version}\""
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #37",
+        "line": 66,
+        "description": [
+          "                if len(line.split(\" \")) == 1:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #38",
+        "line": 66,
+        "description": [
+          "                if len(line.split(\" \")) == 1:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #39",
+        "line": 66,
+        "description": [
+          "                if len(line.split(\" \")) == 1:"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -63,7 +63,7 @@\n                 poetry_line = f\"{package}:{poetry_match}{version}\"\n                 req_list.append(poetry_line)\n             except ValueError:\n-                if len(line.split(\" \")) == 1:\n+                if len(line.split(\" \")) == 2:\n                     req_list.append(line)\n                 else:\n                     typer.echo(\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #40",
+        "line": 70,
+        "description": [
+          "                        f\"Skipping Dependency There seems to be a problem with the '{line}' dependency provided.\"  # noqa"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -67,7 +67,7 @@\n                     req_list.append(line)\n                 else:\n                     typer.echo(\n-                        f\"Skipping Dependency There seems to be a problem with the '{line}' dependency provided.\"  # noqa\n+                        f\"XXSkipping Dependency There seems to be a problem with the '{line}' dependency provided.XX\"  # noqa\n                     )\n \n         for req in req_list:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #41",
+        "line": 75,
+        "description": [
+          "            os.system(f\"poetry add {req}\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -72,7 +72,7 @@\n \n         for req in req_list:\n             typer.echo(req)\n-            os.system(f\"poetry add {req}\")\n+            os.system(f\"XXpoetry add {req}XX\")\n \n         typer.echo(\"Done! \ud83c\udf89\")\n     except ValueError:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #42",
+        "line": 77,
+        "description": [
+          "        typer.echo(\"Done! \ud83c\udf89\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -74,7 +74,7 @@\n             typer.echo(req)\n             os.system(f\"poetry add {req}\")\n \n-        typer.echo(\"Done! \ud83c\udf89\")\n+        typer.echo(\"XXDone! \ud83c\udf89XX\")\n     except ValueError:\n         typer.echo(\n             f\"\u274c Error \ud83d\ude25: There seems to be a problem with the '{requirement_file}' provided.\"  # noqa\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #43",
+        "line": 80,
+        "description": [
+          "            f\"\u274c Error \ud83d\ude25: There seems to be a problem with the '{requirement_file}' provided.\"  # noqa"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -77,7 +77,7 @@\n         typer.echo(\"Done! \ud83c\udf89\")\n     except ValueError:\n         typer.echo(\n-            f\"\u274c Error \ud83d\ude25: There seems to be a problem with the '{requirement_file}' provided.\"  # noqa\n+            f\"XX\u274c Error \ud83d\ude25: There seems to be a problem with the '{requirement_file}' provided.XX\"  # noqa\n         )\n         raise typer.Abort()  # noqa\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #47",
+        "line": 16,
+        "description": [
+          "        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_poetryize.py\n+++ tests/test_poetryize.py\n@@ -13,7 +13,7 @@\n     \"\"\"\n     with runner.isolated_filesystem():\n         # Create a sample requirements.txt file\n-        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"\n+        requirements_file_content = \"XXrequests==2.25.1\\nflask==1.1.2XX\"\n         with open(\"requirements.txt\", \"w\") as requirements_file:\n             requirements_file.write(requirements_file_content)\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #48",
+        "line": 16,
+        "description": [
+          "        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\""
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #49",
+        "line": 17,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #50",
+        "line": 17,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #51",
+        "line": 21,
+        "description": [
+          "        result = runner.invoke(app, [\"requirements.txt\"])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #52",
+        "line": 21,
+        "description": [
+          "        result = runner.invoke(app, [\"requirements.txt\"])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #53",
+        "line": 24,
+        "description": [
+          "        assert result.exit_code == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #54",
+        "line": 24,
+        "description": [
+          "        assert result.exit_code == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #55",
+        "line": 27,
+        "description": [
+          "        assert \"requests:2.25.1\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #56",
+        "line": 27,
+        "description": [
+          "        assert \"requests:2.25.1\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #57",
+        "line": 28,
+        "description": [
+          "        assert \"flask:1.1.2\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #58",
+        "line": 28,
+        "description": [
+          "        assert \"flask:1.1.2\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #59",
+        "line": 31,
+        "description": [
+          "        assert os.path.exists(\"pyproject.toml\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #60",
+        "line": 40,
+        "description": [
+          "        result = runner.invoke(app, [\"nonexistent_file.txt\"])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #61",
+        "line": 40,
+        "description": [
+          "        result = runner.invoke(app, [\"nonexistent_file.txt\"])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #62",
+        "line": 43,
+        "description": [
+          "        assert result.exit_code != 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #63",
+        "line": 43,
+        "description": [
+          "        assert result.exit_code != 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #64",
+        "line": 47,
+        "description": [
+          "            \"Error: The specified requirements file 'nonexistent_file.txt' does not exist or no 'nonexistent_file.txt' found in current path\"  # noqa"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #65",
+        "line": 48,
+        "description": [
+          "            in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #66",
+        "line": 57,
+        "description": [
+          "        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_poetryize.py\n+++ tests/test_poetryize.py\n@@ -54,7 +54,7 @@\n     tests if the CLI command works with requirement file in path without specifying a requirements file # noqa\n     \"\"\"\n     with runner.isolated_filesystem():\n-        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"\n+        requirements_file_content = \"XXrequests==2.25.1\\nflask==1.1.2XX\"\n         with open(\"requirements.txt\", \"w\") as requirements_file:\n             requirements_file.write(requirements_file_content)\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #67",
+        "line": 57,
+        "description": [
+          "        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\""
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #68",
+        "line": 58,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #69",
+        "line": 58,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #70",
+        "line": 62,
+        "description": [
+          "        result = runner.invoke(app, [])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #71",
+        "line": 65,
+        "description": [
+          "        assert result.exit_code == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #72",
+        "line": 65,
+        "description": [
+          "        assert result.exit_code == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #73",
+        "line": 68,
+        "description": [
+          "        assert \"requests:2.25.1\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #74",
+        "line": 68,
+        "description": [
+          "        assert \"requests:2.25.1\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #75",
+        "line": 69,
+        "description": [
+          "        assert \"flask:1.1.2\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #76",
+        "line": 69,
+        "description": [
+          "        assert \"flask:1.1.2\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #77",
+        "line": 72,
+        "description": [
+          "        assert os.path.exists(\"pyproject.toml\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #78",
+        "line": 81,
+        "description": [
+          "        requirements_file_content = \"thoth is welcome\"  # noqa"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #79",
+        "line": 81,
+        "description": [
+          "        requirements_file_content = \"thoth is welcome\"  # noqa"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #80",
+        "line": 82,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #81",
+        "line": 82,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 68.42105263157895
+  },
+  {
+    "function_name": "test_poetryize_with_nospecific_packages_version",
+    "function_scope": "98-119",
+    "patterns": [
+      {
+        "lineno": 112,
+        "coloffset": 15,
+        "linematch": "assert result.exit_code == 0",
+        "context": "        # Run the CLI command\n        result = runner.invoke(app, [\"requirements.txt\"])\n\n        # Check if the command was successful\n        assert result.exit_code == 0\n\n        # Check if the stdout contains the expected lines\n        assert \"requests\" in result.stdout\n        assert \"flask\" in result.stdout\n",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 112,
+        "coloffset": 15,
+        "linematch": "assert result.exit_code == 0",
+        "context": "        # Run the CLI command\n        result = runner.invoke(app, [\"requirements.txt\"])\n\n        # Check if the command was successful\n        assert result.exit_code == 0\n\n        # Check if the stdout contains the expected lines\n        assert \"requests\" in result.stdout\n        assert \"flask\" in result.stdout\n",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 112,
+        "coloffset": 15,
+        "linematch": "assert result.exit_code == 0",
+        "context": "        # Run the CLI command\n        result = runner.invoke(app, [\"requirements.txt\"])\n\n        # Check if the command was successful\n        assert result.exit_code == 0\n\n        # Check if the stdout contains the expected lines\n        assert \"requests\" in result.stdout\n        assert \"flask\" in result.stdout\n",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 112,
+        "coloffset": 15,
+        "linematch": "assert result.exit_code == 0",
+        "context": "        # Run the CLI command\n        result = runner.invoke(app, [\"requirements.txt\"])\n\n        # Check if the command was successful\n        assert result.exit_code == 0\n\n        # Check if the stdout contains the expected lines\n        assert \"requests\" in result.stdout\n        assert \"flask\" in result.stdout\n",
+        "pattern": ".//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq",
+        "check_id": "BOOL001",
+        "check_name": "boolean-comparison"
+      },
+      {
+        "lineno": 98,
+        "coloffset": 0,
+        "linematch": "def test_poetryize_with_nospecific_packages_version():",
+        "context": "            in result.stdout\n        )\n\n\ndef test_poetryize_with_nospecific_packages_version():\n    \"\"\"\n    tests if the CLI command works with a valid requirements file that has no version specified for packages # noqa\n    \"\"\"\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 99,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "        )\n\n\ndef test_poetryize_with_nospecific_packages_version():\n    \"\"\"\n    tests if the CLI command works with a valid requirements file that has no version specified for packages # noqa\n    \"\"\"\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file\n        requirements_file_content = \"requests\\nflask\"",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 102,
+        "coloffset": 4,
+        "linematch": "with runner.isolated_filesystem():",
+        "context": "def test_poetryize_with_nospecific_packages_version():\n    \"\"\"\n    tests if the CLI command works with a valid requirements file that has no version specified for packages # noqa\n    \"\"\"\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file\n        requirements_file_content = \"requests\\nflask\"\n        with open(\"requirements.txt\", \"w\") as requirements_file:\n            requirements_file.write(requirements_file_content)\n",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 99,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "        )\n\n\ndef test_poetryize_with_nospecific_packages_version():\n    \"\"\"\n    tests if the CLI command works with a valid requirements file that has no version specified for packages # noqa\n    \"\"\"\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file\n        requirements_file_content = \"requests\\nflask\"",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 102,
+        "coloffset": 4,
+        "linematch": "with runner.isolated_filesystem():",
+        "context": "def test_poetryize_with_nospecific_packages_version():\n    \"\"\"\n    tests if the CLI command works with a valid requirements file that has no version specified for packages # noqa\n    \"\"\"\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file\n        requirements_file_content = \"requests\\nflask\"\n        with open(\"requirements.txt\", \"w\") as requirements_file:\n            requirements_file.write(requirements_file_content)\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #88",
+        "line": 104,
+        "description": [
+          "        requirements_file_content = \"requests\\nflask\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_poetryize.py\n+++ tests/test_poetryize.py\n@@ -101,7 +101,7 @@\n     \"\"\"\n     with runner.isolated_filesystem():\n         # Create a sample requirements.txt file\n-        requirements_file_content = \"requests\\nflask\"\n+        requirements_file_content = \"XXrequests\\nflaskXX\"\n         with open(\"requirements.txt\", \"w\") as requirements_file:\n             requirements_file.write(requirements_file_content)\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #89",
+        "line": 104,
+        "description": [
+          "        requirements_file_content = \"requests\\nflask\""
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #90",
+        "line": 105,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #91",
+        "line": 105,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #92",
+        "line": 109,
+        "description": [
+          "        result = runner.invoke(app, [\"requirements.txt\"])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #93",
+        "line": 109,
+        "description": [
+          "        result = runner.invoke(app, [\"requirements.txt\"])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #94",
+        "line": 112,
+        "description": [
+          "        assert result.exit_code == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #95",
+        "line": 112,
+        "description": [
+          "        assert result.exit_code == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #96",
+        "line": 115,
+        "description": [
+          "        assert \"requests\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #97",
+        "line": 115,
+        "description": [
+          "        assert \"requests\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #98",
+        "line": 116,
+        "description": [
+          "        assert \"flask\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #99",
+        "line": 116,
+        "description": [
+          "        assert \"flask\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #100",
+        "line": 119,
+        "description": [
+          "        assert os.path.exists(\"pyproject.toml\")"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 92.3076923076923
+  },
+  {
+    "function_name": "test_poetryize_with_valid_file",
+    "function_scope": "10-31",
+    "patterns": [
+      {
+        "lineno": 10,
+        "coloffset": 0,
+        "linematch": "def test_poetryize_with_valid_file():",
+        "context": "\nrunner = CliRunner()\n\n\ndef test_poetryize_with_valid_file():\n    \"\"\"\n    tests if the CLI command works with a valid requirements file\n    \"\"\"\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 11,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "runner = CliRunner()\n\n\ndef test_poetryize_with_valid_file():\n    \"\"\"\n    tests if the CLI command works with a valid requirements file\n    \"\"\"\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file\n        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 4,
+        "linematch": "with runner.isolated_filesystem():",
+        "context": "def test_poetryize_with_valid_file():\n    \"\"\"\n    tests if the CLI command works with a valid requirements file\n    \"\"\"\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file\n        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"\n        with open(\"requirements.txt\", \"w\") as requirements_file:\n            requirements_file.write(requirements_file_content)\n",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 11,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "runner = CliRunner()\n\n\ndef test_poetryize_with_valid_file():\n    \"\"\"\n    tests if the CLI command works with a valid requirements file\n    \"\"\"\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file\n        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 4,
+        "linematch": "with runner.isolated_filesystem():",
+        "context": "def test_poetryize_with_valid_file():\n    \"\"\"\n    tests if the CLI command works with a valid requirements file\n    \"\"\"\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file\n        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"\n        with open(\"requirements.txt\", \"w\") as requirements_file:\n            requirements_file.write(requirements_file_content)\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #1",
+        "line": 10,
+        "description": [
+          "app = typer.Typer()"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -7,7 +7,7 @@\n from typing import Annotated  # noqa: TYP001 isort: skip\n \n \n-app = typer.Typer()\n+app = None\n \n \n @app.command()\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #2",
+        "line": 13,
+        "description": [
+          "@app.command()"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #3",
+        "line": 17,
+        "description": [
+          "    ] = \"requirements.txt\""
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #4",
+        "line": 27,
+        "description": [
+          "        if not os.path.exists(requirement_file):"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #5",
+        "line": 29,
+        "description": [
+          "                f\"Error: The specified requirements file '{requirement_file}' does not exist or no '{requirement_file}' found in current path\"  # noqa"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -26,7 +26,7 @@\n     try:\n         if not os.path.exists(requirement_file):\n             typer.echo(\n-                f\"Error: The specified requirements file '{requirement_file}' does not exist or no '{requirement_file}' found in current path\"  # noqa\n+                f\"XXError: The specified requirements file '{requirement_file}' does not exist or no '{requirement_file}' found in current pathXX\"  # noqa\n             )\n             raise typer.Abort()\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #47",
+        "line": 16,
+        "description": [
+          "        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_poetryize.py\n+++ tests/test_poetryize.py\n@@ -13,7 +13,7 @@\n     \"\"\"\n     with runner.isolated_filesystem():\n         # Create a sample requirements.txt file\n-        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"\n+        requirements_file_content = \"XXrequests==2.25.1\\nflask==1.1.2XX\"\n         with open(\"requirements.txt\", \"w\") as requirements_file:\n             requirements_file.write(requirements_file_content)\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #48",
+        "line": 16,
+        "description": [
+          "        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\""
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #49",
+        "line": 17,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #50",
+        "line": 17,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #51",
+        "line": 21,
+        "description": [
+          "        result = runner.invoke(app, [\"requirements.txt\"])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #52",
+        "line": 21,
+        "description": [
+          "        result = runner.invoke(app, [\"requirements.txt\"])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #53",
+        "line": 24,
+        "description": [
+          "        assert result.exit_code == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #54",
+        "line": 24,
+        "description": [
+          "        assert result.exit_code == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #55",
+        "line": 27,
+        "description": [
+          "        assert \"requests:2.25.1\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #56",
+        "line": 27,
+        "description": [
+          "        assert \"requests:2.25.1\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #57",
+        "line": 28,
+        "description": [
+          "        assert \"flask:1.1.2\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #58",
+        "line": 28,
+        "description": [
+          "        assert \"flask:1.1.2\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #59",
+        "line": 31,
+        "description": [
+          "        assert os.path.exists(\"pyproject.toml\")"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 83.33333333333334
+  },
+  {
+    "function_name": "test_poetryize_with_nonexistent_file",
+    "function_scope": "34-49",
+    "patterns": [
+      {
+        "lineno": 34,
+        "coloffset": 0,
+        "linematch": "def test_poetryize_with_nonexistent_file():",
+        "context": "        # Check if the pyproject.toml file was created\n        assert os.path.exists(\"pyproject.toml\")\n\n\ndef test_poetryize_with_nonexistent_file():\n    \"\"\"\n    tests if the CLI command exits with an error when a non-existent file is specified\n    \"\"\"  # noqa\n    with runner.isolated_filesystem():\n        # Run the CLI command with a non-existent file",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 35,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "        assert os.path.exists(\"pyproject.toml\")\n\n\ndef test_poetryize_with_nonexistent_file():\n    \"\"\"\n    tests if the CLI command exits with an error when a non-existent file is specified\n    \"\"\"  # noqa\n    with runner.isolated_filesystem():\n        # Run the CLI command with a non-existent file\n        result = runner.invoke(app, [\"nonexistent_file.txt\"])",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 38,
+        "coloffset": 4,
+        "linematch": "with runner.isolated_filesystem():",
+        "context": "def test_poetryize_with_nonexistent_file():\n    \"\"\"\n    tests if the CLI command exits with an error when a non-existent file is specified\n    \"\"\"  # noqa\n    with runner.isolated_filesystem():\n        # Run the CLI command with a non-existent file\n        result = runner.invoke(app, [\"nonexistent_file.txt\"])\n\n        # Check if the command exits with an error\n        assert result.exit_code != 0",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 35,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "        assert os.path.exists(\"pyproject.toml\")\n\n\ndef test_poetryize_with_nonexistent_file():\n    \"\"\"\n    tests if the CLI command exits with an error when a non-existent file is specified\n    \"\"\"  # noqa\n    with runner.isolated_filesystem():\n        # Run the CLI command with a non-existent file\n        result = runner.invoke(app, [\"nonexistent_file.txt\"])",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 38,
+        "coloffset": 4,
+        "linematch": "with runner.isolated_filesystem():",
+        "context": "def test_poetryize_with_nonexistent_file():\n    \"\"\"\n    tests if the CLI command exits with an error when a non-existent file is specified\n    \"\"\"  # noqa\n    with runner.isolated_filesystem():\n        # Run the CLI command with a non-existent file\n        result = runner.invoke(app, [\"nonexistent_file.txt\"])\n\n        # Check if the command exits with an error\n        assert result.exit_code != 0",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #6",
+        "line": 34,
+        "description": [
+          "        if not os.path.exists(\"./pyproject.toml\"):"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #7",
+        "line": 34,
+        "description": [
+          "        if not os.path.exists(\"./pyproject.toml\"):"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -31,7 +31,7 @@\n             raise typer.Abort()\n \n         # Initialize Poetry if it doesn't yet have a pyproject.toml file\n-        if not os.path.exists(\"./pyproject.toml\"):\n+        if not os.path.exists(\"XX./pyproject.tomlXX\"):\n             os.system(\"poetry init\")\n \n         with open(requirement_file, encoding=\"utf-8\") as fh:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #8",
+        "line": 35,
+        "description": [
+          "            os.system(\"poetry init\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #9",
+        "line": 37,
+        "description": [
+          "        with open(requirement_file, encoding=\"utf-8\") as fh:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #10",
+        "line": 38,
+        "description": [
+          "            requirements = fh.read()"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #11",
+        "line": 41,
+        "description": [
+          "            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -38,7 +38,7 @@\n             requirements = fh.read()\n \n         no_comments = re.sub(\n-            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n+            \"XX^#.*$XX\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n             \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #12",
+        "line": 41,
+        "description": [
+          "            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -38,7 +38,7 @@\n             requirements = fh.read()\n \n         no_comments = re.sub(\n-            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n+            \"^#.*$\", \"XXXX\", requirements, 0, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n             \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #13",
+        "line": 41,
+        "description": [
+          "            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -38,7 +38,7 @@\n             requirements = fh.read()\n \n         no_comments = re.sub(\n-            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n+            \"^#.*$\", \"\", requirements, 1, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n             \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #14",
+        "line": 41,
+        "description": [
+          "            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -38,7 +38,7 @@\n             requirements = fh.read()\n \n         no_comments = re.sub(\n-            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n+            \"^#.*$\", \"\", requirements, 0, re.IGNORECASE & re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n             \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #15",
+        "line": 42,
+        "description": [
+          "        )  # noqa"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #16",
+        "line": 44,
+        "description": [
+          "            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -41,7 +41,7 @@\n             \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n-            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n+            \"XX\\n+XX\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n         ).strip()\n \n         pip_poetry_map = {\">\": \"^\", \"=\": \"\"}\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #17",
+        "line": 44,
+        "description": [
+          "            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -41,7 +41,7 @@\n             \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n-            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n+            \"\\n+\", \"XX\\nXX\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n         ).strip()\n \n         pip_poetry_map = {\">\": \"^\", \"=\": \"\"}\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #18",
+        "line": 44,
+        "description": [
+          "            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -41,7 +41,7 @@\n             \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n-            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n+            \"\\n+\", \"\\n\", no_comments, 1, re.IGNORECASE | re.MULTILINE\n         ).strip()\n \n         pip_poetry_map = {\">\": \"^\", \"=\": \"\"}\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #19",
+        "line": 44,
+        "description": [
+          "            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -41,7 +41,7 @@\n             \"^#.*$\", \"\", requirements, 0, re.IGNORECASE | re.MULTILINE\n         )  # noqa\n         bare_requirements = re.sub(\n-            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n+            \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE & re.MULTILINE\n         ).strip()\n \n         pip_poetry_map = {\">\": \"^\", \"=\": \"\"}\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #20",
+        "line": 45,
+        "description": [
+          "        ).strip()"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #21",
+        "line": 47,
+        "description": [
+          "        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -44,7 +44,7 @@\n             \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n         ).strip()\n \n-        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}\n+        pip_poetry_map = {\"XX>XX\": \"^\", \"=\": \"\"}\n \n         req_list = list()\n         for line in bare_requirements.splitlines():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #22",
+        "line": 47,
+        "description": [
+          "        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -44,7 +44,7 @@\n             \"\\n+\", \"\\n\", no_comments, 0, re.IGNORECASE | re.MULTILINE\n         ).strip()\n \n-        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}\n+        pip_poetry_map = {\">\": \"XX^XX\", \"=\": \"\"}\n \n         req_list = list()\n         for line in bare_requirements.splitlines():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #23",
+        "line": 47,
+        "description": [
+          "        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #24",
+        "line": 47,
+        "description": [
+          "        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #25",
+        "line": 47,
+        "description": [
+          "        pip_poetry_map = {\">\": \"^\", \"=\": \"\"}"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #26",
+        "line": 49,
+        "description": [
+          "        req_list = list()"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #60",
+        "line": 40,
+        "description": [
+          "        result = runner.invoke(app, [\"nonexistent_file.txt\"])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #61",
+        "line": 40,
+        "description": [
+          "        result = runner.invoke(app, [\"nonexistent_file.txt\"])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #62",
+        "line": 43,
+        "description": [
+          "        assert result.exit_code != 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #63",
+        "line": 43,
+        "description": [
+          "        assert result.exit_code != 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #64",
+        "line": 47,
+        "description": [
+          "            \"Error: The specified requirements file 'nonexistent_file.txt' does not exist or no 'nonexistent_file.txt' found in current path\"  # noqa"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #65",
+        "line": 48,
+        "description": [
+          "            in result.stdout"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 59.25925925925925
+  },
+  {
+    "function_name": "test_poetryize_without_requirements_file",
+    "function_scope": "52-72",
+    "patterns": [
+      {
+        "lineno": 52,
+        "coloffset": 0,
+        "linematch": "def test_poetryize_without_requirements_file():",
+        "context": "            in result.stdout\n        )\n\n\ndef test_poetryize_without_requirements_file():\n    \"\"\"\n    tests if the CLI command works with requirement file in path without specifying a requirements file # noqa\n    \"\"\"\n    with runner.isolated_filesystem():\n        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 53,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "        )\n\n\ndef test_poetryize_without_requirements_file():\n    \"\"\"\n    tests if the CLI command works with requirement file in path without specifying a requirements file # noqa\n    \"\"\"\n    with runner.isolated_filesystem():\n        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"\n        with open(\"requirements.txt\", \"w\") as requirements_file:",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 56,
+        "coloffset": 4,
+        "linematch": "with runner.isolated_filesystem():",
+        "context": "def test_poetryize_without_requirements_file():\n    \"\"\"\n    tests if the CLI command works with requirement file in path without specifying a requirements file # noqa\n    \"\"\"\n    with runner.isolated_filesystem():\n        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"\n        with open(\"requirements.txt\", \"w\") as requirements_file:\n            requirements_file.write(requirements_file_content)\n\n        # Run the CLI command without specifying a requirements file",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 53,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "        )\n\n\ndef test_poetryize_without_requirements_file():\n    \"\"\"\n    tests if the CLI command works with requirement file in path without specifying a requirements file # noqa\n    \"\"\"\n    with runner.isolated_filesystem():\n        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"\n        with open(\"requirements.txt\", \"w\") as requirements_file:",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 56,
+        "coloffset": 4,
+        "linematch": "with runner.isolated_filesystem():",
+        "context": "def test_poetryize_without_requirements_file():\n    \"\"\"\n    tests if the CLI command works with requirement file in path without specifying a requirements file # noqa\n    \"\"\"\n    with runner.isolated_filesystem():\n        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"\n        with open(\"requirements.txt\", \"w\") as requirements_file:\n            requirements_file.write(requirements_file_content)\n\n        # Run the CLI command without specifying a requirements file",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #27",
+        "line": 53,
+        "description": [
+          "                    r\"^(.*?)\\s*([~>=<])=\\s*v?([0-9\\.\\*]+)\","
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #28",
+        "line": 54,
+        "description": [
+          "                    r\"\\1,\\2,\\3\","
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -51,7 +51,7 @@\n             try:\n                 package, match, version = re.sub(\n                     r\"^(.*?)\\s*([~>=<])=\\s*v?([0-9\\.\\*]+)\",\n-                    r\"\\1,\\2,\\3\",\n+                    r\"XX\\1,\\2,\\3XX\",\n                     line,\n                     0,\n                     re.IGNORECASE | re.MULTILINE,\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #29",
+        "line": 56,
+        "description": [
+          "                    0,"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -53,7 +53,7 @@\n                     r\"^(.*?)\\s*([~>=<])=\\s*v?([0-9\\.\\*]+)\",\n                     r\"\\1,\\2,\\3\",\n                     line,\n-                    0,\n+                    1,\n                     re.IGNORECASE | re.MULTILINE,\n                 ).split(\",\")\n                 try:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #30",
+        "line": 57,
+        "description": [
+          "                    re.IGNORECASE | re.MULTILINE,"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -54,7 +54,7 @@\n                     r\"\\1,\\2,\\3\",\n                     line,\n                     0,\n-                    re.IGNORECASE | re.MULTILINE,\n+                    re.IGNORECASE & re.MULTILINE,\n                 ).split(\",\")\n                 try:\n                     poetry_match = pip_poetry_map.get(match, match)\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #31",
+        "line": 58,
+        "description": [
+          "                ).split(\",\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #32",
+        "line": 58,
+        "description": [
+          "                ).split(\",\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #33",
+        "line": 60,
+        "description": [
+          "                    poetry_match = pip_poetry_map.get(match, match)"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #34",
+        "line": 62,
+        "description": [
+          "                    poetry_match = match"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -59,7 +59,7 @@\n                 try:\n                     poetry_match = pip_poetry_map.get(match, match)\n                 except KeyError:\n-                    poetry_match = match\n+                    poetry_match = None\n                 poetry_line = f\"{package}:{poetry_match}{version}\"\n                 req_list.append(poetry_line)\n             except ValueError:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #35",
+        "line": 63,
+        "description": [
+          "                poetry_line = f\"{package}:{poetry_match}{version}\""
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -60,7 +60,7 @@\n                     poetry_match = pip_poetry_map.get(match, match)\n                 except KeyError:\n                     poetry_match = match\n-                poetry_line = f\"{package}:{poetry_match}{version}\"\n+                poetry_line = f\"XX{package}:{poetry_match}{version}XX\"\n                 req_list.append(poetry_line)\n             except ValueError:\n                 if len(line.split(\" \")) == 1:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #36",
+        "line": 63,
+        "description": [
+          "                poetry_line = f\"{package}:{poetry_match}{version}\""
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #37",
+        "line": 66,
+        "description": [
+          "                if len(line.split(\" \")) == 1:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #38",
+        "line": 66,
+        "description": [
+          "                if len(line.split(\" \")) == 1:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #39",
+        "line": 66,
+        "description": [
+          "                if len(line.split(\" \")) == 1:"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -63,7 +63,7 @@\n                 poetry_line = f\"{package}:{poetry_match}{version}\"\n                 req_list.append(poetry_line)\n             except ValueError:\n-                if len(line.split(\" \")) == 1:\n+                if len(line.split(\" \")) == 2:\n                     req_list.append(line)\n                 else:\n                     typer.echo(\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #40",
+        "line": 70,
+        "description": [
+          "                        f\"Skipping Dependency There seems to be a problem with the '{line}' dependency provided.\"  # noqa"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -67,7 +67,7 @@\n                     req_list.append(line)\n                 else:\n                     typer.echo(\n-                        f\"Skipping Dependency There seems to be a problem with the '{line}' dependency provided.\"  # noqa\n+                        f\"XXSkipping Dependency There seems to be a problem with the '{line}' dependency provided.XX\"  # noqa\n                     )\n \n         for req in req_list:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #66",
+        "line": 57,
+        "description": [
+          "        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\""
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_poetryize.py\n+++ tests/test_poetryize.py\n@@ -54,7 +54,7 @@\n     tests if the CLI command works with requirement file in path without specifying a requirements file # noqa\n     \"\"\"\n     with runner.isolated_filesystem():\n-        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\"\n+        requirements_file_content = \"XXrequests==2.25.1\\nflask==1.1.2XX\"\n         with open(\"requirements.txt\", \"w\") as requirements_file:\n             requirements_file.write(requirements_file_content)\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #67",
+        "line": 57,
+        "description": [
+          "        requirements_file_content = \"requests==2.25.1\\nflask==1.1.2\""
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #68",
+        "line": 58,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #69",
+        "line": 58,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #70",
+        "line": 62,
+        "description": [
+          "        result = runner.invoke(app, [])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #71",
+        "line": 65,
+        "description": [
+          "        assert result.exit_code == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #72",
+        "line": 65,
+        "description": [
+          "        assert result.exit_code == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #73",
+        "line": 68,
+        "description": [
+          "        assert \"requests:2.25.1\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #74",
+        "line": 68,
+        "description": [
+          "        assert \"requests:2.25.1\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #75",
+        "line": 69,
+        "description": [
+          "        assert \"flask:1.1.2\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #76",
+        "line": 69,
+        "description": [
+          "        assert \"flask:1.1.2\" in result.stdout"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #77",
+        "line": 72,
+        "description": [
+          "        assert os.path.exists(\"pyproject.toml\")"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 69.23076923076923
+  },
+  {
+    "function_name": "test_poetryize_with_invalid_dependency",
+    "function_scope": "75-95",
+    "patterns": [
+      {
+        "lineno": 75,
+        "coloffset": 0,
+        "linematch": "def test_poetryize_with_invalid_dependency():",
+        "context": "        # Check if the pyproject.toml file was created\n        assert os.path.exists(\"pyproject.toml\")\n\n\ndef test_poetryize_with_invalid_dependency():\n    \"\"\"\n    tests if the CLI command exits with an error when an invalid requirements file is specified\n    \"\"\"  # noqa\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 76,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "        assert os.path.exists(\"pyproject.toml\")\n\n\ndef test_poetryize_with_invalid_dependency():\n    \"\"\"\n    tests if the CLI command exits with an error when an invalid requirements file is specified\n    \"\"\"  # noqa\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file\n        requirements_file_content = \"thoth is welcome\"  # noqa",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 79,
+        "coloffset": 4,
+        "linematch": "with runner.isolated_filesystem():",
+        "context": "def test_poetryize_with_invalid_dependency():\n    \"\"\"\n    tests if the CLI command exits with an error when an invalid requirements file is specified\n    \"\"\"  # noqa\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file\n        requirements_file_content = \"thoth is welcome\"  # noqa\n        with open(\"requirements.txt\", \"w\") as requirements_file:\n            requirements_file.write(requirements_file_content)\n",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 76,
+        "coloffset": 4,
+        "linematch": "\"\"\"",
+        "context": "        assert os.path.exists(\"pyproject.toml\")\n\n\ndef test_poetryize_with_invalid_dependency():\n    \"\"\"\n    tests if the CLI command exits with an error when an invalid requirements file is specified\n    \"\"\"  # noqa\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file\n        requirements_file_content = \"thoth is welcome\"  # noqa",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 79,
+        "coloffset": 4,
+        "linematch": "with runner.isolated_filesystem():",
+        "context": "def test_poetryize_with_invalid_dependency():\n    \"\"\"\n    tests if the CLI command exits with an error when an invalid requirements file is specified\n    \"\"\"  # noqa\n    with runner.isolated_filesystem():\n        # Create a sample requirements.txt file\n        requirements_file_content = \"thoth is welcome\"  # noqa\n        with open(\"requirements.txt\", \"w\") as requirements_file:\n            requirements_file.write(requirements_file_content)\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #41",
+        "line": 75,
+        "description": [
+          "            os.system(f\"poetry add {req}\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -72,7 +72,7 @@\n \n         for req in req_list:\n             typer.echo(req)\n-            os.system(f\"poetry add {req}\")\n+            os.system(f\"XXpoetry add {req}XX\")\n \n         typer.echo(\"Done! \ud83c\udf89\")\n     except ValueError:\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #42",
+        "line": 77,
+        "description": [
+          "        typer.echo(\"Done! \ud83c\udf89\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -74,7 +74,7 @@\n             typer.echo(req)\n             os.system(f\"poetry add {req}\")\n \n-        typer.echo(\"Done! \ud83c\udf89\")\n+        typer.echo(\"XXDone! \ud83c\udf89XX\")\n     except ValueError:\n         typer.echo(\n             f\"\u274c Error \ud83d\ude25: There seems to be a problem with the '{requirement_file}' provided.\"  # noqa\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #43",
+        "line": 80,
+        "description": [
+          "            f\"\u274c Error \ud83d\ude25: There seems to be a problem with the '{requirement_file}' provided.\"  # noqa"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -77,7 +77,7 @@\n         typer.echo(\"Done! \ud83c\udf89\")\n     except ValueError:\n         typer.echo(\n-            f\"\u274c Error \ud83d\ude25: There seems to be a problem with the '{requirement_file}' provided.\"  # noqa\n+            f\"XX\u274c Error \ud83d\ude25: There seems to be a problem with the '{requirement_file}' provided.XX\"  # noqa\n         )\n         raise typer.Abort()  # noqa\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #44",
+        "line": 85,
+        "description": [
+          "if __name__ == \"__main__\":"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -82,6 +82,6 @@\n         raise typer.Abort()  # noqa\n \n \n-if __name__ == \"__main__\":\n+if __name__ != \"__main__\":\n     app()\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #45",
+        "line": 85,
+        "description": [
+          "if __name__ == \"__main__\":"
+        ],
+        "failure": [
+          {
+            "inner": "--- poetryize/poetryize.py\n+++ poetryize/poetryize.py\n@@ -82,6 +82,6 @@\n         raise typer.Abort()  # noqa\n \n \n-if __name__ == \"__main__\":\n+if __name__ == \"XX__main__XX\":\n     app()\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #78",
+        "line": 81,
+        "description": [
+          "        requirements_file_content = \"thoth is welcome\"  # noqa"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #79",
+        "line": 81,
+        "description": [
+          "        requirements_file_content = \"thoth is welcome\"  # noqa"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #80",
+        "line": 82,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #81",
+        "line": 82,
+        "description": [
+          "        with open(\"requirements.txt\", \"w\") as requirements_file:"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #82",
+        "line": 86,
+        "description": [
+          "        result = runner.invoke(app, [\"requirements.txt\"])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #83",
+        "line": 86,
+        "description": [
+          "        result = runner.invoke(app, [\"requirements.txt\"])"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #84",
+        "line": 89,
+        "description": [
+          "        assert result.exit_code == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #85",
+        "line": 89,
+        "description": [
+          "        assert result.exit_code == 0"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #86",
+        "line": 93,
+        "description": [
+          "            \"Skipping Dependency There seems to be a problem with the 'thoth is welcome' dependency provided.\"  # noqa"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #87",
+        "line": 94,
+        "description": [
+          "            in result.stdout"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 66.66666666666666
+  }
+]

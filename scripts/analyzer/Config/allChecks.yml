@@ -6,7 +6,7 @@ checks:
     pattern: './/FunctionDef/body//If'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "double-nested-if"
     code: "DNI"
@@ -15,7 +15,7 @@ checks:
     pattern: './/FunctionDef/body//If[ancestor::If and not(parent::orelse)]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "explicit-return-in-init"
     code: "RET"
@@ -24,7 +24,7 @@ checks:
     pattern: './/FunctionDef[@name="__init__"]/body/Return'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "none-comparison"
     code: "NONE"
@@ -33,7 +33,7 @@ checks:
     pattern: './/FunctionDef//Compare/left[@id="input_dirs"]/following-sibling::Compare/ops/NotEq | .//FunctionDef//Compare/comparators[@id="input_dirs"]/following-sibling::Compare/ops/NotEq'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "no-exception-type"
     code: "EXC"
@@ -42,7 +42,7 @@ checks:
     pattern: './/FunctionDef//Try/ExceptHandler[not(ExceptHandler/type)]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "boolean-comparison"
     code: "BOOL"
@@ -51,7 +51,7 @@ checks:
     pattern: './/FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "missing-annotations"
     code: "ANNOT"
@@ -60,7 +60,7 @@ checks:
     pattern: './/FunctionDef[not(args/arg/annotation) or not(returns)]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "key-function"
     code: "KFUN"
@@ -69,7 +69,7 @@ checks:
     pattern: './/FunctionDef//Call/func/Attribute[@attr="keys"]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "multi-value-key-literal"
     code: "MVKL"
@@ -78,7 +78,7 @@ checks:
     pattern: './/FunctionDef/body/Assign/value/Dict/keys/Name[preceding-sibling::Name/@id = @id]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "assert-tuple"
     code: "AT"
@@ -87,7 +87,7 @@ checks:
     pattern: './/FunctionDef[./body/Assert/test/Tuple]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "loop-variable-iterates-overrides-iterator"
     code: "LVITOI"
@@ -96,7 +96,7 @@ checks:
     pattern: './/FunctionDef/body/For[target/Name/@id = iter/Name/@id]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "function-uses-loop-variable"
     code: "FLV"
@@ -105,7 +105,7 @@ checks:
     pattern: './/FunctionDef[body//comprehension/target/Name]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "nested-depth"
     code: "ND"
@@ -114,7 +114,7 @@ checks:
     pattern: './/FunctionDef//FunctionDef/ancestor::*'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "number-of-conditions-in-function"
     code: "#Cond"
@@ -123,7 +123,7 @@ checks:
     pattern: './/FunctionDef//If/following-sibling::If | .//FunctionDef//If/following-sibling::Elif | .//FunctionDef//If/following-sibling::Else'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "nested-conditions"
     code: "IFIF"
@@ -132,7 +132,7 @@ checks:
     pattern: './/FunctionDef//If/descendant::If'
     count:
       min: 1
-      max: 1
+      max: 500
 
   - name: "nested-condition-loops"
     code: "IFOR"
@@ -141,7 +141,7 @@ checks:
     pattern: './/FunctionDef//if//For'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "nested-loop-conditions"
     code: "VFF"
@@ -150,7 +150,7 @@ checks:
     pattern: './/FunctionDef[//(If/following-sibling::For | For/following-sibling::If)]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "nested-loop-conditions-ff"
     code: "FF"
@@ -159,7 +159,7 @@ checks:
     pattern: './/FunctionDef//For[.//For]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "number-of-assertions"
     code: "NOA"
@@ -168,7 +168,7 @@ checks:
     pattern: './/FunctionDef/body/Assert'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "count-test-method-lines"
     code: "LOF"
@@ -177,7 +177,7 @@ checks:
     pattern: './/FunctionDef[starts-with(@name, "test_")]/body/*'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "count-method-lines"
     code: "CML"
@@ -186,7 +186,7 @@ checks:
     pattern: './/FunctionDef/body/* | .//FunctionDef/body/Return'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "test-methods-invoking-method"
     code: "TMIM"
@@ -195,7 +195,7 @@ checks:
     pattern: './/FunctionDef[starts-with(@name, "test_")]//Assert[count(.//Call[func/Name/@id="test_function"]) > 0]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "not-using-context-manager"
     code: "DUCM"
@@ -204,7 +204,7 @@ checks:
     pattern: './/FunctionDef//*[starts-with(., "with open")]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "multiple-returns-in-function"
     code: "MRET"
@@ -213,7 +213,7 @@ checks:
     pattern: './/FunctionDef[count(body//Return) > 2]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "complex-expressions"
     code: "COMPLEX"
@@ -222,7 +222,7 @@ checks:
     pattern: './/FunctionDef//BinOp[count(descendant::BinOp) > 2]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "unused-variables"
     code: "UNUSED"
@@ -242,12 +242,6 @@ checks:
     id: "F027"
     description: "Methods with high cyclomatic complexity are hard to test and understand."
     pattern: './/FunctionDef[count(.//If | .//For | .//While | .//And | .//Or) > 10]'
-
-  - name: "long-parameter-list"
-    code: "LPL"
-    id: "F028"
-    description: "Functions with long parameter lists are hard to understand and use."
-    pattern: './/FunctionDef[count(./args/args) > 5]'
 
   - name: "long-method-chaining"
     code: "LMC"
@@ -303,21 +297,3 @@ checks:
     id: "P002"
     description: "A method or function with too many parameters."
     pattern: './/FunctionDef[count(./args/args) > 5]'
-
-  - name: "long-method"
-    code: "LM"
-    id: "P003"
-    description: "A method or function that is too long."
-    pattern: './/FunctionDef[count(./body/*) > 50]'
-
-  - name: "long-message-chain"
-    code: "LMC"
-    id: "P004"
-    description: "An expression accessing an object through a long chain of attributes or methods using the dot operator."
-    pattern: './/Call[count(./func/Attribute) > 3]'
-
-  - name: "long-scope-chaining"
-    code: "LSC"
-    id: "P005"
-    description: "A multiply-nested method or function."
-    pattern: './/FunctionDef[count(.//If | .//For | .//While | .//Try) > 3]'

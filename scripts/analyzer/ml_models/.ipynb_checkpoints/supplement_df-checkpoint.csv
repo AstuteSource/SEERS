@@ -1,0 +1,40 @@
+description,pattern
+single-nested-if,.//FunctionDef/body//If
+double-nested-if,.//FunctionDef/body//If[ancestor::If and not(parent::orelse)]
+explicit-return-in-init,".//FunctionDef[@name=""__init__""]/body/Return"
+none-comparison,".//FunctionDef//Compare/left[@id=""input_dirs""]/following-sibling::Compare/ops/NotEq | .//FunctionDef//Compare/comparators[@id=""input_dirs""]/following-sibling::Compare/ops/NotEq"
+no-exception-type,.//FunctionDef//Try/ExceptHandler[not(ExceptHandler/type)]
+boolean-comparison,.//FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq
+missing-annotations,.//FunctionDef[not(args/arg/annotation) or not(returns)]
+key-function,".//FunctionDef//Call/func/Attribute[@attr=""keys""]"
+multi-value-key-literal,.//FunctionDef/body/Assign/value/Dict/keys/Name[preceding-sibling::Name/@id = @id]
+assert-tuple,.//FunctionDef[./body/Assert/test/Tuple]
+loop-variable-iterates-overrides-iterator,.//FunctionDef/body/For[target/Name/@id = iter/Name/@id]
+function-uses-loop-variable,.//FunctionDef[body//comprehension/target/Name]
+nested-depth,.//FunctionDef//FunctionDef/ancestor::*
+number-of-conditions-in-function,.//FunctionDef//If/following-sibling::If | .//FunctionDef//If/following-sibling::Elif | .//FunctionDef//If/following-sibling::Else
+nested-conditions,.//FunctionDef//If/descendant::If
+nested-condition-loops,.//FunctionDef//if//For
+nested-loop-conditions,.//FunctionDef[//(If/following-sibling::For | For/following-sibling::If)]
+nested-loop-conditions-ff,.//FunctionDef//For[.//For]
+number-of-assertions,.//FunctionDef/body/Assert
+count-test-method-lines,".//FunctionDef[starts-with(@name, ""test_"")]/body/*"
+count-method-lines,.//FunctionDef/body/* | .//FunctionDef/body/Return
+test-methods-invoking-method,".//FunctionDef[starts-with(@name, ""test_"")]//Assert[count(.//Call[func/Name/@id=""test_function""]) > 0]"
+not-using-context-manager,".//FunctionDef//*[starts-with(., ""with open"")]"
+multiple-returns-in-function,.//FunctionDef[count(body//Return) > 2]
+complex-expressions,.//FunctionDef//BinOp[count(descendant::BinOp) > 2]
+unused-variables,"//FunctionDef[starts-with(@name, ""test_"")]//Assert[count(.//Call[func/Name]) > 0]"
+method-too-long,.//FunctionDef[count(./body/*) > 50]
+high-cyclomatic-complexity,.//FunctionDef[count(.//If | .//For | .//While | .//And | .//Or) > 10]
+long-parameter-list,.//FunctionDef[count(./args/args) > 5]
+long-method-chaining,.//Call[count(./func/Attribute) > 3]
+deeply-nested-control-structures,.//FunctionDef[count(.//If | .//For | .//While | .//Try) > 3]
+god-function,.//FunctionDef[count(./body/*) > 100]
+empty-catch-block,.//ExceptHandler[not(./body/*)]
+magic-numbers,.//Num
+use-of-global-variables,.//Global
+large-class,.//ClassDef[count(./body/*) > 50]
+long-method,.//FunctionDef[count(./body/*) > 50]
+long-message-chain,.//Call[count(./func/Attribute) > 3]
+long-scope-chaining,.//FunctionDef[count(.//If | .//For | .//While | .//Try) > 3]

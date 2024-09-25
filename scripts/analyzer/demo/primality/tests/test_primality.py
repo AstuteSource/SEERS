@@ -22,7 +22,6 @@ def test_exhaustive_primality_prime_number():
     # asset that the divisor_list holds 2 values
     assert len(divisor_list) == 2
 
-
 def test_exhaustive_primality_not_prime_number():
     """Confirm that a primality testing function can detect a prime number."""
     primality_tuple = main.primality_test_exhaustive(27)

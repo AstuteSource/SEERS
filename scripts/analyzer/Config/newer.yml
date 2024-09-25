@@ -6,7 +6,7 @@ checks:
     pattern: './/FunctionDef[count(body//Return) > 2]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "complex-expressions"
     code: "COMPLEX"
@@ -15,7 +15,7 @@ checks:
     pattern: './/BinOp[count(descendant::BinOp) > 2]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "unused-variables"
     code: "UNUSED"
@@ -24,7 +24,7 @@ checks:
     pattern: './/Assign/targets/Name[not(following-sibling::*)]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "long-method-chains"
     code: "CHAIN"
@@ -33,7 +33,7 @@ checks:
     pattern: './/Call[count(ancestor::Call) > 2]'
     count:
       min: 1
-      max: 10
+      max: 500
 
 # maybe count all lambda, 
   - name: "long-lambda-functions" 
@@ -43,7 +43,7 @@ checks:
     pattern: './/Lambda[count(body//*) > 5]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "redundant-conditionals"
     code: "REDUNDANT"
@@ -52,7 +52,7 @@ checks:
     pattern: './/If[test//BoolOp[count(values) = 1]]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "nested-ternary-operators"
     code: "TERNARY"
@@ -61,7 +61,7 @@ checks:
     pattern: './/IfExp[count(descendant::IfExp) > 1]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "duplicate-code"
     code: "DUPLICATE"
@@ -70,7 +70,7 @@ checks:
     pattern: './/FunctionDef[count(ancestor::FunctionDef//body//*[self::Assign or self::If]) > 1]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "hard-coded-paths"
     code: "PATH"
@@ -79,7 +79,7 @@ checks:
     pattern: './/Str[contains(@value, "/") or contains(@value, "\\\\")]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "magic-strings"
     code: "MAGICSTR"
@@ -88,7 +88,7 @@ checks:
     pattern: './/Str[count(ancestor::Assign) > 0 and not(ancestor::FunctionDef//args//arg)]'
     count:
       min: 1
-      max: 10
+      max: 500
   - name: "single-nested-if"
     code: "SNI"
     id: "CL001"
@@ -96,7 +96,7 @@ checks:
     pattern: './/FunctionDef/body//If'
     count:
       min: 1
-      max: 10
+      max: 500
   - name: "double-nested-if"
     code: "DNI"
     id: "CL002"
@@ -104,7 +104,7 @@ checks:
     pattern: './/FunctionDef/body//If[ancestor::If and not(parent::orelse)]'
     count:
       min: 1
-      max: 10
+      max: 500
   - name: "explicit-return-in-init"
     code: "RET"
     id: "RET001"
@@ -112,7 +112,7 @@ checks:
     pattern: './/FunctionDef[@name="__init__"]/body/Return'
     count:
       min: 1
-      max: 10
+      max: 500
   - name: "none-comparison"
     code: "NONE"
     id: "NONE001"
@@ -120,7 +120,7 @@ checks:
     pattern: './/FunctionDef//Compare/left[@id="input_dirs"]/following-sibling::Compare/ops/NotEq | .//FunctionDef//Compare/comparators[@id="input_dirs"]/following-sibling::Compare/ops/NotEq'
     count:
       min: 1
-      max: 10
+      max: 500
   - name: "no-exception-type"
     code: "EXC"
     id: "EXC001"
@@ -128,7 +128,7 @@ checks:
     pattern: './/FunctionDef//Try/ExceptHandler[not(ExceptHandler/type)]'
     count:
       min: 1
-      max: 10
+      max: 500
   - name: "boolean-comparison"
     code: "BOOL"
     id: "BOOL001"
@@ -136,7 +136,7 @@ checks:
     pattern: './/FunctionDef//Compare/ops/Is | .//FunctionDef//Compare/ops/Eq'
     count:
       min: 1
-      max: 10
+      max: 500
   - name: "missing-annotations"
     code: "ANNOT"
     id: "ANNOT001"
@@ -144,7 +144,7 @@ checks:
     pattern: './/FunctionDef[not(args/arg/annotation) or not(returns)]'
     count:
       min: 1
-      max: 10
+      max: 500
 
   - name: "assert-tuple"
     code: "AT"
@@ -153,7 +153,7 @@ checks:
     pattern: './/FunctionDef[./body/Assert/test/Tuple]'
     count:
       min: 1
-      max: 10
+      max: 500
   - name: "loop-variable-iterates-overrides-iterator"
     code: "LVITOI"
     id: "LVITOI001"
@@ -161,7 +161,7 @@ checks:
     pattern: './/FunctionDef/body/For[target/Name/@id = iter/Name/@id]'
     count:
       min: 1
-      max: 10
+      max: 500
   - name: "function-uses-loop-variable"
     code: "FLV"
     id: "FLV001"
@@ -169,7 +169,7 @@ checks:
     pattern: './/FunctionDef[body//comprehension/target/Name]'
     count:
       min: 1
-      max: 10
+      max: 500
     - name: "nested-conditions"
     code: "IFIF"
     id: "CL001"
@@ -177,7 +177,7 @@ checks:
     pattern: './/FunctionDef//If/descendant::If'
     count:
       min: 1
-      max: 1
+      max: 500
   
   
   
