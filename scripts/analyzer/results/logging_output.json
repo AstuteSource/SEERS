@@ -1,0 +1,619 @@
+[
+  {
+    "function_name": "fileConfig",
+    "function_scope": "8-48",
+    "patterns": [
+      {
+        "lineno": 38,
+        "coloffset": 4,
+        "linematch": "if not tool_table:",
+        "context": "        toml_dict = tomllib.load(stream)\n\n    tool_table = toml_dict.get(\"tool\", {})\n\n    if not tool_table:\n        raise KeyError(\n            \"Tool table not found in TOML file. See https://peps.python.org/pep-0518/#tool-table\"\n        )\n\n    tool_table_logging = tool_table.get(\"logging\", {})",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 45,
+        "coloffset": 4,
+        "linematch": "if not tool_table_logging:",
+        "context": "        )\n\n    tool_table_logging = tool_table.get(\"logging\", {})\n\n    if not tool_table_logging:\n        raise KeyError(\"Logging section not found in tool table. See documentation\")\n\n    logging.config.dictConfig(tool_table_logging)",
+        "pattern": ".//FunctionDef/body//If",
+        "check_id": "CL001",
+        "check_name": "single-nested-if"
+      },
+      {
+        "lineno": 8,
+        "coloffset": 0,
+        "linematch": "def fileConfig(fname: Union[str, Path]) -> None:",
+        "context": "from typing import Union\nfrom pathlib import Path\n\n\ndef fileConfig(fname: Union[str, Path]) -> None:\n    \"\"\"Imitates Python's native logging `fileConfig` interface, but allows\n    the developer to pass in a TOML file instead of a ConfigParser-form file.\n\n    >>> logging518.config.fileConfig(\"pyproject.toml\")\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 45,
+        "coloffset": 4,
+        "linematch": "if not tool_table_logging:",
+        "context": "        )\n\n    tool_table_logging = tool_table.get(\"logging\", {})\n\n    if not tool_table_logging:\n        raise KeyError(\"Logging section not found in tool table. See documentation\")\n\n    logging.config.dictConfig(tool_table_logging)",
+        "pattern": ".//FunctionDef//If/following-sibling::If | .//FunctionDef//If/following-sibling::Elif | .//FunctionDef//If/following-sibling::Else",
+        "check_id": "F002",
+        "check_name": "number-of-conditions-in-function"
+      },
+      {
+        "lineno": 9,
+        "coloffset": 4,
+        "linematch": "\"\"\"Imitates Python's native logging `fileConfig` interface, but allows",
+        "context": "from pathlib import Path\n\n\ndef fileConfig(fname: Union[str, Path]) -> None:\n    \"\"\"Imitates Python's native logging `fileConfig` interface, but allows\n    the developer to pass in a TOML file instead of a ConfigParser-form file.\n\n    >>> logging518.config.fileConfig(\"pyproject.toml\")\n\n    Parameters",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 28,
+        "coloffset": 4,
+        "linematch": "try:",
+        "context": "        If logging not found in tool table\n    \"\"\"\n\n    # tomli/tomlib compatibility layer\n    try:\n        import tomllib  # type: ignore\n    except ModuleNotFoundError:\n        import tomli as tomllib  # type: ignore\n\n    with open(fname, \"rb\") as stream:",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 33,
+        "coloffset": 4,
+        "linematch": "with open(fname, \"rb\") as stream:",
+        "context": "        import tomllib  # type: ignore\n    except ModuleNotFoundError:\n        import tomli as tomllib  # type: ignore\n\n    with open(fname, \"rb\") as stream:\n        toml_dict = tomllib.load(stream)\n\n    tool_table = toml_dict.get(\"tool\", {})\n\n    if not tool_table:",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 36,
+        "coloffset": 4,
+        "linematch": "tool_table = toml_dict.get(\"tool\", {})",
+        "context": "\n    with open(fname, \"rb\") as stream:\n        toml_dict = tomllib.load(stream)\n\n    tool_table = toml_dict.get(\"tool\", {})\n\n    if not tool_table:\n        raise KeyError(\n            \"Tool table not found in TOML file. See https://peps.python.org/pep-0518/#tool-table\"\n        )",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 38,
+        "coloffset": 4,
+        "linematch": "if not tool_table:",
+        "context": "        toml_dict = tomllib.load(stream)\n\n    tool_table = toml_dict.get(\"tool\", {})\n\n    if not tool_table:\n        raise KeyError(\n            \"Tool table not found in TOML file. See https://peps.python.org/pep-0518/#tool-table\"\n        )\n\n    tool_table_logging = tool_table.get(\"logging\", {})",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 43,
+        "coloffset": 4,
+        "linematch": "tool_table_logging = tool_table.get(\"logging\", {})",
+        "context": "        raise KeyError(\n            \"Tool table not found in TOML file. See https://peps.python.org/pep-0518/#tool-table\"\n        )\n\n    tool_table_logging = tool_table.get(\"logging\", {})\n\n    if not tool_table_logging:\n        raise KeyError(\"Logging section not found in tool table. See documentation\")\n\n    logging.config.dictConfig(tool_table_logging)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 45,
+        "coloffset": 4,
+        "linematch": "if not tool_table_logging:",
+        "context": "        )\n\n    tool_table_logging = tool_table.get(\"logging\", {})\n\n    if not tool_table_logging:\n        raise KeyError(\"Logging section not found in tool table. See documentation\")\n\n    logging.config.dictConfig(tool_table_logging)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 48,
+        "coloffset": 4,
+        "linematch": "logging.config.dictConfig(tool_table_logging)",
+        "context": "\n    if not tool_table_logging:\n        raise KeyError(\"Logging section not found in tool table. See documentation\")\n\n    logging.config.dictConfig(tool_table_logging)",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #11",
+        "line": 13,
+        "description": [
+          "    logging518.config.fileConfig(\"tests/mock/success.toml\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #12",
+        "line": 14,
+        "description": [
+          "    logger = logging.getLogger(\"project.child\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_logging_config.py\n+++ tests/test_logging_config.py\n@@ -11,7 +11,7 @@\n \n def test_successful_config():\n     logging518.config.fileConfig(\"tests/mock/success.toml\")\n-    logger = logging.getLogger(\"project.child\")\n+    logger = logging.getLogger(\"XXproject.childXX\")\n \n     print(\"\\n\")  # helps make pytest output more readable\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #13",
+        "line": 14,
+        "description": [
+          "    logger = logging.getLogger(\"project.child\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #14",
+        "line": 16,
+        "description": [
+          "    print(\"\\n\")  # helps make pytest output more readable"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_logging_config.py\n+++ tests/test_logging_config.py\n@@ -13,7 +13,7 @@\n     logging518.config.fileConfig(\"tests/mock/success.toml\")\n     logger = logging.getLogger(\"project.child\")\n \n-    print(\"\\n\")  # helps make pytest output more readable\n+    print(\"XX\\nXX\")  # helps make pytest output more readable\n \n     logger.debug(\"This should appear in consoleChild\")\n     logger.info(\"This should appear in consoleChild\")\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #15",
+        "line": 18,
+        "description": [
+          "    logger.debug(\"This should appear in consoleChild\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_logging_config.py\n+++ tests/test_logging_config.py\n@@ -15,7 +15,7 @@\n \n     print(\"\\n\")  # helps make pytest output more readable\n \n-    logger.debug(\"This should appear in consoleChild\")\n+    logger.debug(\"XXThis should appear in consoleChildXX\")\n     logger.info(\"This should appear in consoleChild\")\n     logger.warning(\"This should appear in consoleChild and consoleParent\")\n     logger.error(\"This should appear in consoleChild and consoleParent\")\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #16",
+        "line": 19,
+        "description": [
+          "    logger.info(\"This should appear in consoleChild\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_logging_config.py\n+++ tests/test_logging_config.py\n@@ -16,7 +16,7 @@\n     print(\"\\n\")  # helps make pytest output more readable\n \n     logger.debug(\"This should appear in consoleChild\")\n-    logger.info(\"This should appear in consoleChild\")\n+    logger.info(\"XXThis should appear in consoleChildXX\")\n     logger.warning(\"This should appear in consoleChild and consoleParent\")\n     logger.error(\"This should appear in consoleChild and consoleParent\")\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #17",
+        "line": 20,
+        "description": [
+          "    logger.warning(\"This should appear in consoleChild and consoleParent\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_logging_config.py\n+++ tests/test_logging_config.py\n@@ -17,7 +17,7 @@\n \n     logger.debug(\"This should appear in consoleChild\")\n     logger.info(\"This should appear in consoleChild\")\n-    logger.warning(\"This should appear in consoleChild and consoleParent\")\n+    logger.warning(\"XXThis should appear in consoleChild and consoleParentXX\")\n     logger.error(\"This should appear in consoleChild and consoleParent\")\n \n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #18",
+        "line": 21,
+        "description": [
+          "    logger.error(\"This should appear in consoleChild and consoleParent\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_logging_config.py\n+++ tests/test_logging_config.py\n@@ -18,7 +18,7 @@\n     logger.debug(\"This should appear in consoleChild\")\n     logger.info(\"This should appear in consoleChild\")\n     logger.warning(\"This should appear in consoleChild and consoleParent\")\n-    logger.error(\"This should appear in consoleChild and consoleParent\")\n+    logger.error(\"XXThis should appear in consoleChild and consoleParentXX\")\n \n \n def test_failure_config():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #19",
+        "line": 26,
+        "description": [
+          "        logging518.config.fileConfig(\"tests/mock/failure.toml\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #20",
+        "line": 31,
+        "description": [
+          "        logging518.config.fileConfig(\"tests/mock/missing_tool_table.toml\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #21",
+        "line": 36,
+        "description": [
+          "        logging518.config.fileConfig(\"tests/mock/missing_logging_in_tool_table.toml\")"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 45.45454545454545
+  },
+  {
+    "function_name": "test_successful_config",
+    "function_scope": "12-21",
+    "patterns": [
+      {
+        "lineno": 12,
+        "coloffset": 0,
+        "linematch": "def test_successful_config():",
+        "context": "except ModuleNotFoundError:\n    import tomli as tomllib\n\n\ndef test_successful_config():\n    logging518.config.fileConfig(\"tests/mock/success.toml\")\n    logger = logging.getLogger(\"project.child\")\n\n    print(\"\\n\")  # helps make pytest output more readable\n",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 13,
+        "coloffset": 4,
+        "linematch": "logging518.config.fileConfig(\"tests/mock/success.toml\")",
+        "context": "    import tomli as tomllib\n\n\ndef test_successful_config():\n    logging518.config.fileConfig(\"tests/mock/success.toml\")\n    logger = logging.getLogger(\"project.child\")\n\n    print(\"\\n\")  # helps make pytest output more readable\n\n    logger.debug(\"This should appear in consoleChild\")",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 4,
+        "linematch": "logger = logging.getLogger(\"project.child\")",
+        "context": "\n\ndef test_successful_config():\n    logging518.config.fileConfig(\"tests/mock/success.toml\")\n    logger = logging.getLogger(\"project.child\")\n\n    print(\"\\n\")  # helps make pytest output more readable\n\n    logger.debug(\"This should appear in consoleChild\")\n    logger.info(\"This should appear in consoleChild\")",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 16,
+        "coloffset": 4,
+        "linematch": "print(\"\\n\")  # helps make pytest output more readable",
+        "context": "def test_successful_config():\n    logging518.config.fileConfig(\"tests/mock/success.toml\")\n    logger = logging.getLogger(\"project.child\")\n\n    print(\"\\n\")  # helps make pytest output more readable\n\n    logger.debug(\"This should appear in consoleChild\")\n    logger.info(\"This should appear in consoleChild\")\n    logger.warning(\"This should appear in consoleChild and consoleParent\")\n    logger.error(\"This should appear in consoleChild and consoleParent\")",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 18,
+        "coloffset": 4,
+        "linematch": "logger.debug(\"This should appear in consoleChild\")",
+        "context": "    logger = logging.getLogger(\"project.child\")\n\n    print(\"\\n\")  # helps make pytest output more readable\n\n    logger.debug(\"This should appear in consoleChild\")\n    logger.info(\"This should appear in consoleChild\")\n    logger.warning(\"This should appear in consoleChild and consoleParent\")\n    logger.error(\"This should appear in consoleChild and consoleParent\")\n\n",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 19,
+        "coloffset": 4,
+        "linematch": "logger.info(\"This should appear in consoleChild\")",
+        "context": "\n    print(\"\\n\")  # helps make pytest output more readable\n\n    logger.debug(\"This should appear in consoleChild\")\n    logger.info(\"This should appear in consoleChild\")\n    logger.warning(\"This should appear in consoleChild and consoleParent\")\n    logger.error(\"This should appear in consoleChild and consoleParent\")\n\n\ndef test_failure_config():",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 20,
+        "coloffset": 4,
+        "linematch": "logger.warning(\"This should appear in consoleChild and consoleParent\")",
+        "context": "    print(\"\\n\")  # helps make pytest output more readable\n\n    logger.debug(\"This should appear in consoleChild\")\n    logger.info(\"This should appear in consoleChild\")\n    logger.warning(\"This should appear in consoleChild and consoleParent\")\n    logger.error(\"This should appear in consoleChild and consoleParent\")\n\n\ndef test_failure_config():\n    with pytest.raises(tomllib.TOMLDecodeError):",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 21,
+        "coloffset": 4,
+        "linematch": "logger.error(\"This should appear in consoleChild and consoleParent\")",
+        "context": "\n    logger.debug(\"This should appear in consoleChild\")\n    logger.info(\"This should appear in consoleChild\")\n    logger.warning(\"This should appear in consoleChild and consoleParent\")\n    logger.error(\"This should appear in consoleChild and consoleParent\")\n\n\ndef test_failure_config():\n    with pytest.raises(tomllib.TOMLDecodeError):\n        logging518.config.fileConfig(\"tests/mock/failure.toml\")",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 13,
+        "coloffset": 4,
+        "linematch": "logging518.config.fileConfig(\"tests/mock/success.toml\")",
+        "context": "    import tomli as tomllib\n\n\ndef test_successful_config():\n    logging518.config.fileConfig(\"tests/mock/success.toml\")\n    logger = logging.getLogger(\"project.child\")\n\n    print(\"\\n\")  # helps make pytest output more readable\n\n    logger.debug(\"This should appear in consoleChild\")",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 14,
+        "coloffset": 4,
+        "linematch": "logger = logging.getLogger(\"project.child\")",
+        "context": "\n\ndef test_successful_config():\n    logging518.config.fileConfig(\"tests/mock/success.toml\")\n    logger = logging.getLogger(\"project.child\")\n\n    print(\"\\n\")  # helps make pytest output more readable\n\n    logger.debug(\"This should appear in consoleChild\")\n    logger.info(\"This should appear in consoleChild\")",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 16,
+        "coloffset": 4,
+        "linematch": "print(\"\\n\")  # helps make pytest output more readable",
+        "context": "def test_successful_config():\n    logging518.config.fileConfig(\"tests/mock/success.toml\")\n    logger = logging.getLogger(\"project.child\")\n\n    print(\"\\n\")  # helps make pytest output more readable\n\n    logger.debug(\"This should appear in consoleChild\")\n    logger.info(\"This should appear in consoleChild\")\n    logger.warning(\"This should appear in consoleChild and consoleParent\")\n    logger.error(\"This should appear in consoleChild and consoleParent\")",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 18,
+        "coloffset": 4,
+        "linematch": "logger.debug(\"This should appear in consoleChild\")",
+        "context": "    logger = logging.getLogger(\"project.child\")\n\n    print(\"\\n\")  # helps make pytest output more readable\n\n    logger.debug(\"This should appear in consoleChild\")\n    logger.info(\"This should appear in consoleChild\")\n    logger.warning(\"This should appear in consoleChild and consoleParent\")\n    logger.error(\"This should appear in consoleChild and consoleParent\")\n\n",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 19,
+        "coloffset": 4,
+        "linematch": "logger.info(\"This should appear in consoleChild\")",
+        "context": "\n    print(\"\\n\")  # helps make pytest output more readable\n\n    logger.debug(\"This should appear in consoleChild\")\n    logger.info(\"This should appear in consoleChild\")\n    logger.warning(\"This should appear in consoleChild and consoleParent\")\n    logger.error(\"This should appear in consoleChild and consoleParent\")\n\n\ndef test_failure_config():",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 20,
+        "coloffset": 4,
+        "linematch": "logger.warning(\"This should appear in consoleChild and consoleParent\")",
+        "context": "    print(\"\\n\")  # helps make pytest output more readable\n\n    logger.debug(\"This should appear in consoleChild\")\n    logger.info(\"This should appear in consoleChild\")\n    logger.warning(\"This should appear in consoleChild and consoleParent\")\n    logger.error(\"This should appear in consoleChild and consoleParent\")\n\n\ndef test_failure_config():\n    with pytest.raises(tomllib.TOMLDecodeError):",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      },
+      {
+        "lineno": 21,
+        "coloffset": 4,
+        "linematch": "logger.error(\"This should appear in consoleChild and consoleParent\")",
+        "context": "\n    logger.debug(\"This should appear in consoleChild\")\n    logger.info(\"This should appear in consoleChild\")\n    logger.warning(\"This should appear in consoleChild and consoleParent\")\n    logger.error(\"This should appear in consoleChild and consoleParent\")\n\n\ndef test_failure_config():\n    with pytest.raises(tomllib.TOMLDecodeError):\n        logging518.config.fileConfig(\"tests/mock/failure.toml\")",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #11",
+        "line": 13,
+        "description": [
+          "    logging518.config.fileConfig(\"tests/mock/success.toml\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #12",
+        "line": 14,
+        "description": [
+          "    logger = logging.getLogger(\"project.child\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_logging_config.py\n+++ tests/test_logging_config.py\n@@ -11,7 +11,7 @@\n \n def test_successful_config():\n     logging518.config.fileConfig(\"tests/mock/success.toml\")\n-    logger = logging.getLogger(\"project.child\")\n+    logger = logging.getLogger(\"XXproject.childXX\")\n \n     print(\"\\n\")  # helps make pytest output more readable\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #13",
+        "line": 14,
+        "description": [
+          "    logger = logging.getLogger(\"project.child\")"
+        ],
+        "failure": []
+      },
+      {
+        "name": "Mutant #14",
+        "line": 16,
+        "description": [
+          "    print(\"\\n\")  # helps make pytest output more readable"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_logging_config.py\n+++ tests/test_logging_config.py\n@@ -13,7 +13,7 @@\n     logging518.config.fileConfig(\"tests/mock/success.toml\")\n     logger = logging.getLogger(\"project.child\")\n \n-    print(\"\\n\")  # helps make pytest output more readable\n+    print(\"XX\\nXX\")  # helps make pytest output more readable\n \n     logger.debug(\"This should appear in consoleChild\")\n     logger.info(\"This should appear in consoleChild\")\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #15",
+        "line": 18,
+        "description": [
+          "    logger.debug(\"This should appear in consoleChild\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_logging_config.py\n+++ tests/test_logging_config.py\n@@ -15,7 +15,7 @@\n \n     print(\"\\n\")  # helps make pytest output more readable\n \n-    logger.debug(\"This should appear in consoleChild\")\n+    logger.debug(\"XXThis should appear in consoleChildXX\")\n     logger.info(\"This should appear in consoleChild\")\n     logger.warning(\"This should appear in consoleChild and consoleParent\")\n     logger.error(\"This should appear in consoleChild and consoleParent\")\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #16",
+        "line": 19,
+        "description": [
+          "    logger.info(\"This should appear in consoleChild\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_logging_config.py\n+++ tests/test_logging_config.py\n@@ -16,7 +16,7 @@\n     print(\"\\n\")  # helps make pytest output more readable\n \n     logger.debug(\"This should appear in consoleChild\")\n-    logger.info(\"This should appear in consoleChild\")\n+    logger.info(\"XXThis should appear in consoleChildXX\")\n     logger.warning(\"This should appear in consoleChild and consoleParent\")\n     logger.error(\"This should appear in consoleChild and consoleParent\")\n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #17",
+        "line": 20,
+        "description": [
+          "    logger.warning(\"This should appear in consoleChild and consoleParent\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_logging_config.py\n+++ tests/test_logging_config.py\n@@ -17,7 +17,7 @@\n \n     logger.debug(\"This should appear in consoleChild\")\n     logger.info(\"This should appear in consoleChild\")\n-    logger.warning(\"This should appear in consoleChild and consoleParent\")\n+    logger.warning(\"XXThis should appear in consoleChild and consoleParentXX\")\n     logger.error(\"This should appear in consoleChild and consoleParent\")\n \n \n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      },
+      {
+        "name": "Mutant #18",
+        "line": 21,
+        "description": [
+          "    logger.error(\"This should appear in consoleChild and consoleParent\")"
+        ],
+        "failure": [
+          {
+            "inner": "--- tests/test_logging_config.py\n+++ tests/test_logging_config.py\n@@ -18,7 +18,7 @@\n     logger.debug(\"This should appear in consoleChild\")\n     logger.info(\"This should appear in consoleChild\")\n     logger.warning(\"This should appear in consoleChild and consoleParent\")\n-    logger.error(\"This should appear in consoleChild and consoleParent\")\n+    logger.error(\"XXThis should appear in consoleChild and consoleParentXX\")\n \n \n def test_failure_config():\n",
+            "type": "failure",
+            "message": "bad_survived"
+          }
+        ]
+      }
+    ],
+    "mutation_score": 25.0
+  },
+  {
+    "function_name": "test_failure_config",
+    "function_scope": "24-26",
+    "patterns": [
+      {
+        "lineno": 24,
+        "coloffset": 0,
+        "linematch": "def test_failure_config():",
+        "context": "    logger.warning(\"This should appear in consoleChild and consoleParent\")\n    logger.error(\"This should appear in consoleChild and consoleParent\")\n\n\ndef test_failure_config():\n    with pytest.raises(tomllib.TOMLDecodeError):\n        logging518.config.fileConfig(\"tests/mock/failure.toml\")\n\n\ndef test_config_without_tool_table():",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 25,
+        "coloffset": 4,
+        "linematch": "with pytest.raises(tomllib.TOMLDecodeError):",
+        "context": "    logger.error(\"This should appear in consoleChild and consoleParent\")\n\n\ndef test_failure_config():\n    with pytest.raises(tomllib.TOMLDecodeError):\n        logging518.config.fileConfig(\"tests/mock/failure.toml\")\n\n\ndef test_config_without_tool_table():\n    with pytest.raises(KeyError):",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 25,
+        "coloffset": 4,
+        "linematch": "with pytest.raises(tomllib.TOMLDecodeError):",
+        "context": "    logger.error(\"This should appear in consoleChild and consoleParent\")\n\n\ndef test_failure_config():\n    with pytest.raises(tomllib.TOMLDecodeError):\n        logging518.config.fileConfig(\"tests/mock/failure.toml\")\n\n\ndef test_config_without_tool_table():\n    with pytest.raises(KeyError):",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #19",
+        "line": 26,
+        "description": [
+          "        logging518.config.fileConfig(\"tests/mock/failure.toml\")"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 100.0
+  },
+  {
+    "function_name": "test_config_without_tool_table",
+    "function_scope": "29-31",
+    "patterns": [
+      {
+        "lineno": 29,
+        "coloffset": 0,
+        "linematch": "def test_config_without_tool_table():",
+        "context": "    with pytest.raises(tomllib.TOMLDecodeError):\n        logging518.config.fileConfig(\"tests/mock/failure.toml\")\n\n\ndef test_config_without_tool_table():\n    with pytest.raises(KeyError):\n        logging518.config.fileConfig(\"tests/mock/missing_tool_table.toml\")\n\n\ndef test_config_without_logging_in_tool_table():",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 30,
+        "coloffset": 4,
+        "linematch": "with pytest.raises(KeyError):",
+        "context": "        logging518.config.fileConfig(\"tests/mock/failure.toml\")\n\n\ndef test_config_without_tool_table():\n    with pytest.raises(KeyError):\n        logging518.config.fileConfig(\"tests/mock/missing_tool_table.toml\")\n\n\ndef test_config_without_logging_in_tool_table():\n    with pytest.raises(KeyError):",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 30,
+        "coloffset": 4,
+        "linematch": "with pytest.raises(KeyError):",
+        "context": "        logging518.config.fileConfig(\"tests/mock/failure.toml\")\n\n\ndef test_config_without_tool_table():\n    with pytest.raises(KeyError):\n        logging518.config.fileConfig(\"tests/mock/missing_tool_table.toml\")\n\n\ndef test_config_without_logging_in_tool_table():\n    with pytest.raises(KeyError):",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #20",
+        "line": 31,
+        "description": [
+          "        logging518.config.fileConfig(\"tests/mock/missing_tool_table.toml\")"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 100.0
+  },
+  {
+    "function_name": "test_config_without_logging_in_tool_table",
+    "function_scope": "34-36",
+    "patterns": [
+      {
+        "lineno": 34,
+        "coloffset": 0,
+        "linematch": "def test_config_without_logging_in_tool_table():",
+        "context": "    with pytest.raises(KeyError):\n        logging518.config.fileConfig(\"tests/mock/missing_tool_table.toml\")\n\n\ndef test_config_without_logging_in_tool_table():\n    with pytest.raises(KeyError):\n        logging518.config.fileConfig(\"tests/mock/missing_logging_in_tool_table.toml\")",
+        "pattern": ".//FunctionDef[not(args/arg/annotation) or not(returns)]",
+        "check_id": "ANNOT001",
+        "check_name": "missing-annotations"
+      },
+      {
+        "lineno": 35,
+        "coloffset": 4,
+        "linematch": "with pytest.raises(KeyError):",
+        "context": "        logging518.config.fileConfig(\"tests/mock/missing_tool_table.toml\")\n\n\ndef test_config_without_logging_in_tool_table():\n    with pytest.raises(KeyError):\n        logging518.config.fileConfig(\"tests/mock/missing_logging_in_tool_table.toml\")",
+        "pattern": ".//FunctionDef[starts-with(@name, \"test_\")]/body/*",
+        "check_id": "LOF001",
+        "check_name": "count-test-method-lines"
+      },
+      {
+        "lineno": 35,
+        "coloffset": 4,
+        "linematch": "with pytest.raises(KeyError):",
+        "context": "        logging518.config.fileConfig(\"tests/mock/missing_tool_table.toml\")\n\n\ndef test_config_without_logging_in_tool_table():\n    with pytest.raises(KeyError):\n        logging518.config.fileConfig(\"tests/mock/missing_logging_in_tool_table.toml\")",
+        "pattern": ".//FunctionDef/body/* | .//FunctionDef/body/Return",
+        "check_id": "CML001",
+        "check_name": "count-method-lines"
+      }
+    ],
+    "mutants": [
+      {
+        "name": "Mutant #21",
+        "line": 36,
+        "description": [
+          "        logging518.config.fileConfig(\"tests/mock/missing_logging_in_tool_table.toml\")"
+        ],
+        "failure": []
+      }
+    ],
+    "mutation_score": 100.0
+  }
+]
